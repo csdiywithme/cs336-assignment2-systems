@@ -1,0 +1,99 @@
+{
+  "run_id": "20260914T084933Z-profile-probe-nsys",
+  "seconds": 12.666603088378906,
+  "cases": [
+    {
+      "name": "nsys-small-s256",
+      "command": [
+        "nsys",
+        "profile",
+        "--trace=cuda,nvtx,osrt,cublas",
+        "--sample=none",
+        "--cpuctxsw=none",
+        "--capture-range=nvtx",
+        "--nvtx-capture=measurement",
+        "--capture-range-end=stop",
+        "--cuda-memory-usage=true",
+        "--pytorch=autograd-nvtx",
+        "--export=sqlite",
+        "-o",
+        "/data/20260914T084933Z-profile-probe-nsys/000-nsys-small-s256/profile",
+        "/usr/local/bin/python",
+        "-m",
+        "cs336_systems.experiments",
+        "--config",
+        "{\"name\": \"nsys-small-s256\", \"kind\": \"model\", \"size\": \"small\", \"seq\": 256, \"mode\": \"train\", \"dtype\": \"fp32\", \"warmup\": 5, \"steps\": 1, \"nsys\": true, \"timeout\": 300}",
+        "--output",
+        "/data/20260914T084933Z-profile-probe-nsys/000-nsys-small-s256"
+      ],
+      "started": 1789375781.6414998,
+      "returncode": 0,
+      "seconds": 9.753788471221924,
+      "status": "ok",
+      "result": {
+        "config": {
+          "name": "nsys-small-s256",
+          "kind": "model",
+          "size": "small",
+          "seq": 256,
+          "mode": "train",
+          "dtype": "fp32",
+          "warmup": 5,
+          "steps": 1,
+          "nsys": true,
+          "timeout": 300
+        },
+        "started_utc": "2026-09-14T08:49:46.174208+00:00",
+        "measurements": {
+          "samples_ms": [
+            74.16261600000063
+          ],
+          "mean_ms": 74.16261600000063,
+          "std_ms": 0.0,
+          "median_ms": 74.16261600000063,
+          "last_scalar": 5.821629524230957,
+          "parameters": 128625408,
+          "initial_memory": {
+            "allocated_bytes": 516058112,
+            "reserved_bytes": 568328192,
+            "peak_allocated_bytes": 516058112,
+            "peak_reserved_bytes": 568328192
+          },
+          "memory": {
+            "allocated_bytes": 2187604480,
+            "reserved_bytes": 3433037824,
+            "peak_allocated_bytes": 3251148800,
+            "peak_reserved_bytes": 3433037824
+          },
+          "stages": [
+            {
+              "stage": "after_forward",
+              "allocated_bytes": 3167262720,
+              "reserved_bytes": 3433037824,
+              "peak_allocated_bytes": 3167262720,
+              "peak_reserved_bytes": 3433037824
+            },
+            {
+              "stage": "after_backward_before_optimizer",
+              "allocated_bytes": 2228187648,
+              "reserved_bytes": 3433037824,
+              "peak_allocated_bytes": 3251148800,
+              "peak_reserved_bytes": 3433037824
+            },
+            {
+              "stage": "after_optimizer",
+              "allocated_bytes": 2229547520,
+              "reserved_bytes": 3433037824,
+              "peak_allocated_bytes": 3251148800,
+              "peak_reserved_bytes": 3433037824
+            }
+          ]
+        },
+        "status": "ok",
+        "wall_seconds": 4.303804636001587
+      }
+    }
+  ],
+  "estimated_compute_usd": 0.025116353931884765,
+  "cost_note": "Runtime estimate, not invoice; excludes startup/build/storage."
+}

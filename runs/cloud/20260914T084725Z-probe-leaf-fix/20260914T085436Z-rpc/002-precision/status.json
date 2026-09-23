@@ -1,0 +1,16 @@
+{
+  "name": "precision",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"precision\", \"kind\": \"precision\"}",
+    "--output",
+    "/data/20260914T084725Z-probe-leaf-fix/002-precision"
+  ],
+  "started": 1789375702.0982852,
+  "returncode": 0,
+  "seconds": 2.241424560546875,
+  "status": "ok"
+}

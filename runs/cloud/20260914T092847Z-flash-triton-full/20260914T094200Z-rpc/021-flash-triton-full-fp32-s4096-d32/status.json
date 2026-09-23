@@ -1,0 +1,67 @@
+{
+  "name": "flash-triton-full-fp32-s4096-d32",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"flash-triton-full-fp32-s4096-d32\", \"kind\": \"attention\", \"implementation\": \"triton-full\", \"batch\": 1, \"seq\": 4096, \"dim\": 32, \"dtype\": \"fp32\", \"causal\": true, \"triton_bench\": true, \"steps\": 10, \"warmup\": 5, \"timeout\": 240}",
+    "--output",
+    "/data/20260914T092847Z-flash-triton-full/021-flash-triton-full-fp32-s4096-d32"
+  ],
+  "started": 1789378314.0106325,
+  "returncode": 0,
+  "seconds": 6.382164478302002,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "flash-triton-full-fp32-s4096-d32",
+      "kind": "attention",
+      "implementation": "triton-full",
+      "batch": 1,
+      "seq": 4096,
+      "dim": 32,
+      "dtype": "fp32",
+      "causal": true,
+      "triton_bench": true,
+      "steps": 10,
+      "warmup": 5,
+      "timeout": 240
+    },
+    "started_utc": "2026-09-14T09:31:55.100863+00:00",
+    "measurements": {
+      "forward": {
+        "mean_ms": 0.1270264025245394,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory_before_backward": {
+        "allocated_bytes": 2637824,
+        "reserved_bytes": 272629760,
+        "peak_allocated_bytes": 271073280,
+        "peak_reserved_bytes": 272629760
+      },
+      "backward": {
+        "mean_ms": 0.5828345419309816,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "end_to_end": {
+        "mean_ms": 0.7079031563013705,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory": {
+        "allocated_bytes": 3670016,
+        "reserved_bytes": 274726912,
+        "peak_allocated_bytes": 272662528,
+        "peak_reserved_bytes": 274726912
+      }
+    },
+    "status": "ok",
+    "wall_seconds": 4.5953733921051025
+  }
+}

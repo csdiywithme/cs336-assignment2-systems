@@ -1,0 +1,430 @@
+{
+  "config": {
+    "name": "extended-attention",
+    "kind": "validate_attention",
+    "timeout": 600
+  },
+  "started_utc": "2026-09-14T08:47:45.651782+00:00",
+  "measurements": {
+    "checks": [
+      {
+        "implementation": "FlashAttentionTriton",
+        "dtype": "torch.float32",
+        "n": 32,
+        "d": 16,
+        "causal": false,
+        "max_abs_errors_output_dq_dk_dv": [
+          3.5762786865234375e-07,
+          3.8743019104003906e-07,
+          3.5762786865234375e-07,
+          3.5762786865234375e-07
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTritonFull",
+        "dtype": "torch.float32",
+        "n": 32,
+        "d": 16,
+        "causal": false,
+        "max_abs_errors_output_dq_dk_dv": [
+          3.5762786865234375e-07,
+          5.960464477539062e-07,
+          1.1920928955078125e-06,
+          3.5762786865234375e-07
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTriton",
+        "dtype": "torch.float32",
+        "n": 32,
+        "d": 16,
+        "causal": true,
+        "max_abs_errors_output_dq_dk_dv": [
+          3.5762786865234375e-07,
+          4.76837158203125e-07,
+          6.556510925292969e-07,
+          4.76837158203125e-07
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTritonFull",
+        "dtype": "torch.float32",
+        "n": 32,
+        "d": 16,
+        "causal": true,
+        "max_abs_errors_output_dq_dk_dv": [
+          3.5762786865234375e-07,
+          5.960464477539062e-07,
+          8.344650268554688e-07,
+          1.1920928955078125e-06
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTriton",
+        "dtype": "torch.float32",
+        "n": 128,
+        "d": 64,
+        "causal": false,
+        "max_abs_errors_output_dq_dk_dv": [
+          8.940696716308594e-07,
+          4.76837158203125e-07,
+          2.980232238769531e-07,
+          3.5762786865234375e-07
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTritonFull",
+        "dtype": "torch.float32",
+        "n": 128,
+        "d": 64,
+        "causal": false,
+        "max_abs_errors_output_dq_dk_dv": [
+          8.940696716308594e-07,
+          8.940696716308594e-07,
+          7.748603820800781e-07,
+          8.344650268554688e-07
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTriton",
+        "dtype": "torch.float32",
+        "n": 128,
+        "d": 64,
+        "causal": true,
+        "max_abs_errors_output_dq_dk_dv": [
+          9.5367431640625e-07,
+          1.443336714146426e-06,
+          1.6689300537109375e-06,
+          1.9073486328125e-06
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTritonFull",
+        "dtype": "torch.float32",
+        "n": 128,
+        "d": 64,
+        "causal": true,
+        "max_abs_errors_output_dq_dk_dv": [
+          9.5367431640625e-07,
+          1.4433363730859128e-06,
+          1.9073486328125e-06,
+          1.9073486328125e-06
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTriton",
+        "dtype": "torch.float32",
+        "n": 256,
+        "d": 128,
+        "causal": false,
+        "max_abs_errors_output_dq_dk_dv": [
+          7.450580596923828e-07,
+          5.960464477539062e-07,
+          7.450580596923828e-07,
+          3.8743019104003906e-07
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTritonFull",
+        "dtype": "torch.float32",
+        "n": 256,
+        "d": 128,
+        "causal": false,
+        "max_abs_errors_output_dq_dk_dv": [
+          7.450580596923828e-07,
+          1.4901161193847656e-06,
+          1.6093254089355469e-06,
+          7.152557373046875e-07
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTriton",
+        "dtype": "torch.float32",
+        "n": 256,
+        "d": 128,
+        "causal": true,
+        "max_abs_errors_output_dq_dk_dv": [
+          1.3709068298339844e-06,
+          2.1457672119140625e-06,
+          3.337860107421875e-06,
+          1.6689300537109375e-06
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTritonFull",
+        "dtype": "torch.float32",
+        "n": 256,
+        "d": 128,
+        "causal": true,
+        "max_abs_errors_output_dq_dk_dv": [
+          1.3709068298339844e-06,
+          3.0617786705988692e-06,
+          3.337860107421875e-06,
+          3.814697265625e-06
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTriton",
+        "dtype": "torch.float32",
+        "n": 63,
+        "d": 32,
+        "causal": false,
+        "max_abs_errors_output_dq_dk_dv": [
+          5.364418029785156e-07,
+          4.76837158203125e-07,
+          7.152557373046875e-07,
+          7.748603820800781e-07
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTritonFull",
+        "dtype": "torch.float32",
+        "n": 63,
+        "d": 32,
+        "causal": false,
+        "max_abs_errors_output_dq_dk_dv": [
+          5.364418029785156e-07,
+          8.344650268554688e-07,
+          9.5367431640625e-07,
+          7.152557373046875e-07
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTriton",
+        "dtype": "torch.float32",
+        "n": 63,
+        "d": 32,
+        "causal": true,
+        "max_abs_errors_output_dq_dk_dv": [
+          5.960464477539062e-07,
+          7.807615816091129e-07,
+          9.98377799987793e-07,
+          9.5367431640625e-07
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTritonFull",
+        "dtype": "torch.float32",
+        "n": 63,
+        "d": 32,
+        "causal": true,
+        "max_abs_errors_output_dq_dk_dv": [
+          5.960464477539062e-07,
+          7.152557373046875e-07,
+          7.748603820800781e-07,
+          1.1920928955078125e-06
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTriton",
+        "dtype": "torch.bfloat16",
+        "n": 32,
+        "d": 16,
+        "causal": false,
+        "max_abs_errors_output_dq_dk_dv": [
+          0.0035938024520874023,
+          0.002735614776611328,
+          0.005673885345458984,
+          0.0029381513595581055
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTritonFull",
+        "dtype": "torch.bfloat16",
+        "n": 32,
+        "d": 16,
+        "causal": false,
+        "max_abs_errors_output_dq_dk_dv": [
+          0.0035938024520874023,
+          0.005290389060974121,
+          0.009951114654541016,
+          0.0031245946884155273
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTriton",
+        "dtype": "torch.bfloat16",
+        "n": 32,
+        "d": 16,
+        "causal": true,
+        "max_abs_errors_output_dq_dk_dv": [
+          0.008930206298828125,
+          0.009317658841609955,
+          0.008241742849349976,
+          0.007338523864746094
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTritonFull",
+        "dtype": "torch.bfloat16",
+        "n": 32,
+        "d": 16,
+        "causal": true,
+        "max_abs_errors_output_dq_dk_dv": [
+          0.008930206298828125,
+          0.009439729154109955,
+          0.00917939841747284,
+          0.008286476135253906
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTriton",
+        "dtype": "torch.bfloat16",
+        "n": 128,
+        "d": 64,
+        "causal": false,
+        "max_abs_errors_output_dq_dk_dv": [
+          0.002039313316345215,
+          0.0021257996559143066,
+          0.0020567774772644043,
+          0.0018876194953918457
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTritonFull",
+        "dtype": "torch.bfloat16",
+        "n": 128,
+        "d": 64,
+        "causal": false,
+        "max_abs_errors_output_dq_dk_dv": [
+          0.002039313316345215,
+          0.002758026123046875,
+          0.0026833415031433105,
+          0.0034151077270507812
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTriton",
+        "dtype": "torch.bfloat16",
+        "n": 128,
+        "d": 64,
+        "causal": true,
+        "max_abs_errors_output_dq_dk_dv": [
+          0.007484912872314453,
+          0.008110731840133667,
+          0.009332656860351562,
+          0.006815433502197266
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTritonFull",
+        "dtype": "torch.bfloat16",
+        "n": 128,
+        "d": 64,
+        "causal": true,
+        "max_abs_errors_output_dq_dk_dv": [
+          0.007484912872314453,
+          0.008110731840133667,
+          0.009332656860351562,
+          0.00894784927368164
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTriton",
+        "dtype": "torch.bfloat16",
+        "n": 256,
+        "d": 128,
+        "causal": false,
+        "max_abs_errors_output_dq_dk_dv": [
+          0.0014391839504241943,
+          0.0021341443061828613,
+          0.001958906650543213,
+          0.0017980337142944336
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTritonFull",
+        "dtype": "torch.bfloat16",
+        "n": 256,
+        "d": 128,
+        "causal": false,
+        "max_abs_errors_output_dq_dk_dv": [
+          0.0014391839504241943,
+          0.004137217998504639,
+          0.00586092472076416,
+          0.0023134946823120117
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTriton",
+        "dtype": "torch.bfloat16",
+        "n": 256,
+        "d": 128,
+        "causal": true,
+        "max_abs_errors_output_dq_dk_dv": [
+          0.006523609161376953,
+          0.008863985538482666,
+          0.008470296859741211,
+          0.014790534973144531
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTritonFull",
+        "dtype": "torch.bfloat16",
+        "n": 256,
+        "d": 128,
+        "causal": true,
+        "max_abs_errors_output_dq_dk_dv": [
+          0.006523609161376953,
+          0.010335922241210938,
+          0.009181499481201172,
+          0.014790534973144531
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTriton",
+        "dtype": "torch.bfloat16",
+        "n": 63,
+        "d": 32,
+        "causal": false,
+        "max_abs_errors_output_dq_dk_dv": [
+          0.002468705177307129,
+          0.004160881042480469,
+          0.0040476322174072266,
+          0.0029249191284179688
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTritonFull",
+        "dtype": "torch.bfloat16",
+        "n": 63,
+        "d": 32,
+        "causal": false,
+        "max_abs_errors_output_dq_dk_dv": [
+          0.002468705177307129,
+          0.004160881042480469,
+          0.0046956539154052734,
+          0.00374758243560791
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTriton",
+        "dtype": "torch.bfloat16",
+        "n": 63,
+        "d": 32,
+        "causal": true,
+        "max_abs_errors_output_dq_dk_dv": [
+          0.007088899612426758,
+          0.005781501531600952,
+          0.005719184875488281,
+          0.0076982975006103516
+        ]
+      },
+      {
+        "implementation": "FlashAttentionTritonFull",
+        "dtype": "torch.bfloat16",
+        "n": 63,
+        "d": 32,
+        "causal": true,
+        "max_abs_errors_output_dq_dk_dv": [
+          0.007088899612426758,
+          0.007768392562866211,
+          0.008221030235290527,
+          0.01135396957397461
+        ]
+      }
+    ]
+  },
+  "status": "ok",
+  "wall_seconds": 32.70173192024231
+}

@@ -1,0 +1,117 @@
+{
+  "config": {
+    "name": "profile-xl-s512-plain",
+    "kind": "model",
+    "size": "xl",
+    "seq": 512,
+    "mode": "train",
+    "dtype": "fp32",
+    "annotate": true,
+    "nsys": false,
+    "warmup": 5,
+    "steps": 5,
+    "timeout": 300
+  },
+  "started_utc": "2026-09-14T09:25:29.560252+00:00",
+  "measurements": {
+    "samples_ms": [
+      938.7205860000165,
+      937.2067619999882,
+      938.1534709999926,
+      937.5813080000057,
+      938.1889510000008
+    ],
+    "mean_ms": 937.9702156000008,
+    "std_ms": 0.5870677079275352,
+    "median_ms": 938.1534709999926,
+    "cuda_event_stages": {
+      "forward": {
+        "samples_ms": [
+          291.62982177734375,
+          291.66168212890625,
+          291.6134338378906,
+          291.7081298828125,
+          291.700439453125
+        ],
+        "mean_ms": 291.66270141601564,
+        "std_ms": 0.04182495929493152,
+        "median_ms": 291.66168212890625
+      },
+      "loss": {
+        "samples_ms": [
+          0.06764800101518631,
+          0.06643199920654297,
+          0.06758400052785873,
+          0.0676800012588501,
+          0.06569600105285645
+        ],
+        "mean_ms": 0.06700800061225891,
+        "std_ms": 0.0009008442915948647,
+        "median_ms": 0.06758400052785873
+      },
+      "backward": {
+        "samples_ms": [
+          565.66162109375,
+          563.8369750976562,
+          564.948974609375,
+          564.487060546875,
+          564.92236328125
+        ],
+        "mean_ms": 564.7713989257812,
+        "std_ms": 0.670972255882402,
+        "median_ms": 564.92236328125
+      },
+      "optimizer": {
+        "samples_ms": [
+          80.1220474243164,
+          80.49874877929688,
+          80.48242950439453,
+          80.28899383544922,
+          80.20588684082031
+        ],
+        "mean_ms": 80.31962127685547,
+        "std_ms": 0.16695970352136072,
+        "median_ms": 80.28899383544922
+      }
+    },
+    "last_scalar": 7.089056968688965,
+    "parameters": 3406809600,
+    "initial_memory": {
+      "allocated_bytes": 13762373632,
+      "reserved_bytes": 13763608576,
+      "peak_allocated_bytes": 13762373632,
+      "peak_reserved_bytes": 13763608576
+    },
+    "memory": {
+      "allocated_bytes": 54661849600,
+      "reserved_bytes": 72655831040,
+      "peak_allocated_bytes": 70371290112,
+      "peak_reserved_bytes": 72655831040
+    },
+    "stages": [
+      {
+        "stage": "after_forward",
+        "allocated_bytes": 70018407424,
+        "reserved_bytes": 72655831040,
+        "peak_allocated_bytes": 70018407424,
+        "peak_reserved_bytes": 72655831040
+      },
+      {
+        "stage": "after_backward_before_optimizer",
+        "allocated_bytes": 54744130048,
+        "reserved_bytes": 72655831040,
+        "peak_allocated_bytes": 70371290112,
+        "peak_reserved_bytes": 72655831040
+      },
+      {
+        "stage": "after_optimizer",
+        "allocated_bytes": 54743769600,
+        "reserved_bytes": 72655831040,
+        "peak_allocated_bytes": 70371290112,
+        "peak_reserved_bytes": 72655831040
+      }
+    ]
+  },
+  "status": "ok",
+  "wall_seconds": 12.200916767120361
+}

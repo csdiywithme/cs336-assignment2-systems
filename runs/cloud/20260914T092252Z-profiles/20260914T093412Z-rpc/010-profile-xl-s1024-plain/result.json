@@ -1,0 +1,117 @@
+{
+  "config": {
+    "name": "profile-xl-s1024-plain",
+    "kind": "model",
+    "size": "xl",
+    "seq": 1024,
+    "mode": "train",
+    "dtype": "fp32",
+    "annotate": true,
+    "nsys": false,
+    "warmup": 5,
+    "steps": 5,
+    "timeout": 300
+  },
+  "started_utc": "2026-09-14T09:26:18.005079+00:00",
+  "measurements": {
+    "samples_ms": [
+      1789.0883199999905,
+      1788.7930709999864,
+      1788.8965380000172,
+      1789.0910469999994,
+      1788.90253900002
+    ],
+    "mean_ms": 1788.9543030000027,
+    "std_ms": 0.13102627844026987,
+    "median_ms": 1788.90253900002,
+    "cuda_event_stages": {
+      "forward": {
+        "samples_ms": [
+          568.0809936523438,
+          568.04443359375,
+          568.1248779296875,
+          568.1410522460938,
+          568.0771484375
+        ],
+        "mean_ms": 568.093701171875,
+        "std_ms": 0.03897718172084225,
+        "median_ms": 568.0809936523438
+      },
+      "loss": {
+        "samples_ms": [
+          0.11177600175142288,
+          0.11212799698114395,
+          0.11158400028944016,
+          0.11231999844312668,
+          0.11203200370073318
+        ],
+        "mean_ms": 0.11196800023317337,
+        "std_ms": 0.0002906533660620414,
+        "median_ms": 0.11203200370073318
+      },
+      "backward": {
+        "samples_ms": [
+          1138.948974609375,
+          1138.989501953125,
+          1138.8426513671875,
+          1138.9993896484375,
+          1138.9180908203125
+        ],
+        "mean_ms": 1138.9397216796874,
+        "std_ms": 0.06327420183655766,
+        "median_ms": 1138.948974609375
+      },
+      "optimizer": {
+        "samples_ms": [
+          80.34003448486328,
+          80.38098907470703,
+          80.2580795288086,
+          80.43421173095703,
+          80.20684814453125
+        ],
+        "mean_ms": 80.32403259277343,
+        "std_ms": 0.09181713542656803,
+        "median_ms": 80.34003448486328
+      }
+    },
+    "last_scalar": 7.793753623962402,
+    "parameters": 3406809600,
+    "initial_memory": {
+      "allocated_bytes": 13762570240,
+      "reserved_bytes": 13763608576,
+      "peak_allocated_bytes": 13762570240,
+      "peak_reserved_bytes": 13763608576
+    },
+    "memory": {
+      "allocated_bytes": 54661325312,
+      "reserved_bytes": 127005622272,
+      "peak_allocated_bytes": 117533903872,
+      "peak_reserved_bytes": 127005622272
+    },
+    "stages": [
+      {
+        "stage": "after_forward",
+        "allocated_bytes": 116197604352,
+        "reserved_bytes": 127005622272,
+        "peak_allocated_bytes": 116197604352,
+        "peak_reserved_bytes": 127005622272
+      },
+      {
+        "stage": "after_backward_before_optimizer",
+        "allocated_bytes": 54825165312,
+        "reserved_bytes": 127005622272,
+        "peak_allocated_bytes": 117533903872,
+        "peak_reserved_bytes": 127005622272
+      },
+      {
+        "stage": "after_optimizer",
+        "allocated_bytes": 54825165312,
+        "reserved_bytes": 127005622272,
+        "peak_allocated_bytes": 117533903872,
+        "peak_reserved_bytes": 127005622272
+      }
+    ]
+  },
+  "status": "ok",
+  "wall_seconds": 21.80906343460083
+}

@@ -1,0 +1,16 @@
+{
+  "name": "extended-attention",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"extended-attention\", \"kind\": \"validate_attention\", \"timeout\": 600}",
+    "--output",
+    "/data/20260914T082016Z-probe/001-extended-attention"
+  ],
+  "started": 1789374050.5634468,
+  "returncode": 1,
+  "seconds": 12.126952648162842,
+  "status": "failed"
+}

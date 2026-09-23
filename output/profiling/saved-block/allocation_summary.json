@@ -1,0 +1,712 @@
+{
+  "source": "runs/cloud/20260914T092252Z-profiles/20260914T102148Z-storage-api/012-profile-saved-block-xl-s2048/profile.sqlite",
+  "source_sha256": "2e418403bde36ba9ee521b0a7484f0a2029c1b6a3260efbfc692c0df4041a378",
+  "event_count": 1357,
+  "device_dynamic_allocation_count": 35,
+  "device_dynamic_deallocation_count": 0,
+  "device_static_event_count": 1322,
+  "device_gross_allocated_bytes_whole_trace": 18518116352,
+  "measurement_cpu_ms": 285.51346,
+  "measurement_device_allocation_groups": [
+    {
+      "name": "aten::div",
+      "count": 3,
+      "gross_allocation_bytes": 6442450944
+    },
+    {
+      "name": "aten::bmm",
+      "count": 12,
+      "gross_allocation_bytes": 4702078976
+    },
+    {
+      "name": "aten::mul",
+      "count": 4,
+      "gross_allocation_bytes": 2315255808
+    },
+    {
+      "name": "aten::exp",
+      "count": 1,
+      "gross_allocation_bytes": 2147483648
+    },
+    {
+      "name": "aten::neg",
+      "count": 1,
+      "gross_allocation_bytes": 2147483648
+    },
+    {
+      "name": "aten::pow",
+      "count": 1,
+      "gross_allocation_bytes": 83886080
+    },
+    {
+      "name": "aten::cat",
+      "count": 1,
+      "gross_allocation_bytes": 83886080
+    },
+    {
+      "name": "aten::sub",
+      "count": 1,
+      "gross_allocation_bytes": 41943040
+    },
+    {
+      "name": "aten::add",
+      "count": 1,
+      "gross_allocation_bytes": 41943040
+    },
+    {
+      "name": "aten::max",
+      "count": 1,
+      "gross_allocation_bytes": 2097152
+    }
+  ],
+  "allocations": [
+    {
+      "start": -389075637,
+      "address": 47518024990720,
+      "bytes": 2097152,
+      "memoryOperationType": 0,
+      "correlationId": 1,
+      "globalPid": 281482174136320,
+      "launch_api": null,
+      "innermost_aten_range": null,
+      "nvtx_ancestors": [],
+      "in_measurement": false,
+      "phase_evidence": "before_measurement"
+    },
+    {
+      "start": -319578111,
+      "address": 47517538451456,
+      "bytes": 27262976,
+      "memoryOperationType": 0,
+      "correlationId": 12,
+      "globalPid": 281482174136320,
+      "launch_api": null,
+      "innermost_aten_range": null,
+      "nvtx_ancestors": [],
+      "in_measurement": false,
+      "phase_evidence": "before_measurement"
+    },
+    {
+      "start": -290694522,
+      "address": 47517565714432,
+      "bytes": 27262976,
+      "memoryOperationType": 0,
+      "correlationId": 18,
+      "globalPid": 281482174136320,
+      "launch_api": null,
+      "innermost_aten_range": null,
+      "nvtx_ancestors": [],
+      "in_measurement": false,
+      "phase_evidence": "before_measurement"
+    },
+    {
+      "start": -290105133,
+      "address": 47517592977408,
+      "bytes": 27262976,
+      "memoryOperationType": 0,
+      "correlationId": 24,
+      "globalPid": 281482174136320,
+      "launch_api": null,
+      "innermost_aten_range": null,
+      "nvtx_ancestors": [],
+      "in_measurement": false,
+      "phase_evidence": "before_measurement"
+    },
+    {
+      "start": -289483415,
+      "address": 47517620240384,
+      "bytes": 27262976,
+      "memoryOperationType": 0,
+      "correlationId": 30,
+      "globalPid": 281482174136320,
+      "launch_api": null,
+      "innermost_aten_range": null,
+      "nvtx_ancestors": [],
+      "in_measurement": false,
+      "phase_evidence": "before_measurement"
+    },
+    {
+      "start": -288862107,
+      "address": 47517647503360,
+      "bytes": 104857600,
+      "memoryOperationType": 0,
+      "correlationId": 36,
+      "globalPid": 281482174136320,
+      "launch_api": null,
+      "innermost_aten_range": null,
+      "nvtx_ancestors": [],
+      "in_measurement": false,
+      "phase_evidence": "before_measurement"
+    },
+    {
+      "start": -288158120,
+      "address": 47517752360960,
+      "bytes": 104857600,
+      "memoryOperationType": 0,
+      "correlationId": 42,
+      "globalPid": 281482174136320,
+      "launch_api": null,
+      "innermost_aten_range": null,
+      "nvtx_ancestors": [],
+      "in_measurement": false,
+      "phase_evidence": "before_measurement"
+    },
+    {
+      "start": -287531172,
+      "address": 47517857218560,
+      "bytes": 104857600,
+      "memoryOperationType": 0,
+      "correlationId": 48,
+      "globalPid": 281482174136320,
+      "launch_api": null,
+      "innermost_aten_range": null,
+      "nvtx_ancestors": [],
+      "in_measurement": false,
+      "phase_evidence": "before_measurement"
+    },
+    {
+      "start": -281958658,
+      "address": 47518947737600,
+      "bytes": 83886080,
+      "memoryOperationType": 0,
+      "correlationId": 56,
+      "globalPid": 281482174136320,
+      "launch_api": null,
+      "innermost_aten_range": null,
+      "nvtx_ancestors": [],
+      "in_measurement": false,
+      "phase_evidence": "before_measurement"
+    },
+    {
+      "start": 1002261802,
+      "address": 47519048400896,
+      "bytes": 83886080,
+      "memoryOperationType": 0,
+      "correlationId": 66,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::pow, seq = 0, op_id = 112",
+      "nvtx_ancestors": [
+        "aten::pow, seq = 0, op_id = 112",
+        "measurement"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "before_first_autograd_backward"
+    },
+    {
+      "start": 1025080258,
+      "address": 47519216173056,
+      "bytes": 83886080,
+      "memoryOperationType": 0,
+      "correlationId": 124,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::mul, seq = 5, op_id = 119",
+      "nvtx_ancestors": [
+        "aten::mul, seq = 5, op_id = 119",
+        "measurement"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "before_first_autograd_backward"
+    },
+    {
+      "start": 1026063459,
+      "address": 47519316836352,
+      "bytes": 83886080,
+      "memoryOperationType": 0,
+      "correlationId": 138,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::bmm, seq = 15, op_id = 140",
+      "nvtx_ancestors": [
+        "aten::bmm, seq = 15, op_id = 140",
+        "aten::einsum, seq = 6, op_id = 121",
+        "measurement"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "before_first_autograd_backward"
+    },
+    {
+      "start": 1061929606,
+      "address": 47519400722432,
+      "bytes": 1024,
+      "memoryOperationType": 0,
+      "correlationId": 1273,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::bmm, seq = 15, op_id = 140",
+      "nvtx_ancestors": [
+        "cublasCreate_v2",
+        "aten::bmm, seq = 15, op_id = 140",
+        "aten::einsum, seq = 6, op_id = 121",
+        "measurement"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "before_first_autograd_backward"
+    },
+    {
+      "start": 1061945205,
+      "address": 47519400723456,
+      "bytes": 131072,
+      "memoryOperationType": 0,
+      "correlationId": 1282,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::bmm, seq = 15, op_id = 140",
+      "nvtx_ancestors": [
+        "cublasCreate_v2",
+        "aten::bmm, seq = 15, op_id = 140",
+        "aten::einsum, seq = 6, op_id = 121",
+        "measurement"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "before_first_autograd_backward"
+    },
+    {
+      "start": 1065372120,
+      "address": 47519417499648,
+      "bytes": 67108864,
+      "memoryOperationType": 0,
+      "correlationId": 1291,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::bmm, seq = 15, op_id = 140",
+      "nvtx_ancestors": [
+        "cublasCreate_v2",
+        "aten::bmm, seq = 15, op_id = 140",
+        "aten::einsum, seq = 6, op_id = 121",
+        "measurement"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "before_first_autograd_backward"
+    },
+    {
+      "start": 1066981919,
+      "address": 47517962076160,
+      "bytes": 20971520,
+      "memoryOperationType": 0,
+      "correlationId": 1302,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::bmm, seq = 15, op_id = 140",
+      "nvtx_ancestors": [
+        "aten::bmm, seq = 15, op_id = 140",
+        "aten::einsum, seq = 6, op_id = 121",
+        "measurement"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "before_first_autograd_backward"
+    },
+    {
+      "start": 1113273667,
+      "address": 47519585271808,
+      "bytes": 83886080,
+      "memoryOperationType": 0,
+      "correlationId": 1449,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::bmm, seq = 28, op_id = 164",
+      "nvtx_ancestors": [
+        "aten::bmm, seq = 28, op_id = 164",
+        "aten::einsum, seq = 19, op_id = 145",
+        "measurement"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "before_first_autograd_backward"
+    },
+    {
+      "start": 1113716059,
+      "address": 47519685935104,
+      "bytes": 83886080,
+      "memoryOperationType": 0,
+      "correlationId": 1466,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::bmm, seq = 41, op_id = 188",
+      "nvtx_ancestors": [
+        "aten::bmm, seq = 41, op_id = 188",
+        "aten::einsum, seq = 32, op_id = 169",
+        "measurement"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "before_first_autograd_backward"
+    },
+    {
+      "start": 1114713170,
+      "address": 47517983047680,
+      "bytes": 41943040,
+      "memoryOperationType": 0,
+      "correlationId": 1486,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::mul, seq = 54, op_id = 220",
+      "nvtx_ancestors": [
+        "aten::mul, seq = 54, op_id = 220",
+        "measurement"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "before_first_autograd_backward"
+    },
+    {
+      "start": 1115390227,
+      "address": 47519786598400,
+      "bytes": 41943040,
+      "memoryOperationType": 0,
+      "correlationId": 1500,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::mul, seq = 55, op_id = 221",
+      "nvtx_ancestors": [
+        "aten::mul, seq = 55, op_id = 221",
+        "measurement"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "before_first_autograd_backward"
+    },
+    {
+      "start": 1115656872,
+      "address": 47519853707264,
+      "bytes": 41943040,
+      "memoryOperationType": 0,
+      "correlationId": 1514,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::sub, seq = 56, op_id = 222",
+      "nvtx_ancestors": [
+        "aten::sub, seq = 56, op_id = 222",
+        "measurement"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "before_first_autograd_backward"
+    },
+    {
+      "start": 1115973536,
+      "address": 47519920816128,
+      "bytes": 41943040,
+      "memoryOperationType": 0,
+      "correlationId": 1548,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::add, seq = 59, op_id = 225",
+      "nvtx_ancestors": [
+        "aten::add, seq = 59, op_id = 225",
+        "measurement"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "before_first_autograd_backward"
+    },
+    {
+      "start": 1116268140,
+      "address": 47519987924992,
+      "bytes": 83886080,
+      "memoryOperationType": 0,
+      "correlationId": 1562,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::cat, seq = 60, op_id = 227",
+      "nvtx_ancestors": [
+        "aten::cat, seq = 60, op_id = 227",
+        "aten::concat, seq = 60, op_id = 226",
+        "measurement"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "before_first_autograd_backward"
+    },
+    {
+      "start": 1124135430,
+      "address": 47520591904768,
+      "bytes": 2147483648,
+      "memoryOperationType": 0,
+      "correlationId": 1681,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::bmm, seq = 79, op_id = 279",
+      "nvtx_ancestors": [
+        "aten::bmm, seq = 79, op_id = 279",
+        "aten::einsum, seq = 71, op_id = 262",
+        "measurement"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "before_first_autograd_backward"
+    },
+    {
+      "start": 1124912446,
+      "address": 47522739388416,
+      "bytes": 2147483648,
+      "memoryOperationType": 0,
+      "correlationId": 1698,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::div, seq = 83, op_id = 284",
+      "nvtx_ancestors": [
+        "aten::div, seq = 83, op_id = 284",
+        "measurement"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "before_first_autograd_backward"
+    },
+    {
+      "start": 1126553914,
+      "address": 47520071811072,
+      "bytes": 2097152,
+      "memoryOperationType": 0,
+      "correlationId": 1742,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::max, seq = 85, op_id = 293",
+      "nvtx_ancestors": [
+        "aten::max, seq = 85, op_id = 293",
+        "measurement"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "before_first_autograd_backward"
+    },
+    {
+      "start": 1133349715,
+      "address": 47524886872064,
+      "bytes": 2147483648,
+      "memoryOperationType": 0,
+      "correlationId": 1774,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::exp, seq = 87, op_id = 295",
+      "nvtx_ancestors": [
+        "aten::exp, seq = 87, op_id = 295",
+        "measurement"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "before_first_autograd_backward"
+    },
+    {
+      "start": 1144575531,
+      "address": 47527034355712,
+      "bytes": 2147483648,
+      "memoryOperationType": 0,
+      "correlationId": 1802,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::div, seq = 89, op_id = 297",
+      "nvtx_ancestors": [
+        "aten::div, seq = 89, op_id = 297",
+        "measurement"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "before_first_autograd_backward"
+    },
+    {
+      "start": 1187296907,
+      "address": 47519400854528,
+      "bytes": 1024,
+      "memoryOperationType": 0,
+      "correlationId": 2122,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::bmm, op_id = 472",
+      "nvtx_ancestors": [
+        "cublasCreate_v2",
+        "aten::bmm, op_id = 472",
+        "BmmBackward0, seq = 164, op_id = 469",
+        "autograd::engine::evaluate_function: BmmBackward0, op_id = 468"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "autograd_backward"
+    },
+    {
+      "start": 1187343136,
+      "address": 47519400855552,
+      "bytes": 131072,
+      "memoryOperationType": 0,
+      "correlationId": 2131,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::bmm, op_id = 472",
+      "nvtx_ancestors": [
+        "cublasCreate_v2",
+        "aten::bmm, op_id = 472",
+        "BmmBackward0, seq = 164, op_id = 469",
+        "autograd::engine::evaluate_function: BmmBackward0, op_id = 468"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "autograd_backward"
+    },
+    {
+      "start": 1187872616,
+      "address": 47520256360448,
+      "bytes": 67108864,
+      "memoryOperationType": 0,
+      "correlationId": 2140,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::bmm, op_id = 472",
+      "nvtx_ancestors": [
+        "cublasCreate_v2",
+        "aten::bmm, op_id = 472",
+        "BmmBackward0, seq = 164, op_id = 469",
+        "autograd::engine::evaluate_function: BmmBackward0, op_id = 468"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "autograd_backward"
+    },
+    {
+      "start": 1247162666,
+      "address": 47529181839360,
+      "bytes": 2147483648,
+      "memoryOperationType": 0,
+      "correlationId": 2889,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::bmm, op_id = 798",
+      "nvtx_ancestors": [
+        "aten::bmm, op_id = 798",
+        "BmmBackward0, seq = 99, op_id = 792",
+        "autograd::engine::evaluate_function: BmmBackward0, op_id = 791"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "autograd_backward"
+    },
+    {
+      "start": 1248156987,
+      "address": 47531329323008,
+      "bytes": 2147483648,
+      "memoryOperationType": 0,
+      "correlationId": 2956,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::div, op_id = 836",
+      "nvtx_ancestors": [
+        "aten::div, op_id = 836",
+        "DivBackward0, seq = 89, op_id = 834",
+        "autograd::engine::evaluate_function: DivBackward0, op_id = 833"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "autograd_backward"
+    },
+    {
+      "start": 1248632348,
+      "address": 47533476806656,
+      "bytes": 2147483648,
+      "memoryOperationType": 0,
+      "correlationId": 2970,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::neg, op_id = 837",
+      "nvtx_ancestors": [
+        "aten::neg, op_id = 837",
+        "DivBackward0, seq = 89, op_id = 834",
+        "autograd::engine::evaluate_function: DivBackward0, op_id = 833"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "autograd_backward"
+    },
+    {
+      "start": 1249045911,
+      "address": 47535624290304,
+      "bytes": 2147483648,
+      "memoryOperationType": 0,
+      "correlationId": 2984,
+      "globalPid": 281482174136320,
+      "launch_api": "cudaMalloc_v3020",
+      "innermost_aten_range": "aten::mul, op_id = 838",
+      "nvtx_ancestors": [
+        "aten::mul, op_id = 838",
+        "DivBackward0, seq = 89, op_id = 834",
+        "autograd::engine::evaluate_function: DivBackward0, op_id = 833"
+      ],
+      "in_measurement": true,
+      "phase_evidence": "autograd_backward"
+    }
+  ],
+  "limitations": [
+    "Only CUDA device allocations are visible; zero deallocation events. PyTorch caching means CUDA segments are not logical tensor active lifetimes.",
+    "Gross allocation groups are not saved-for-backward residual contributions or peak memory.",
+    "Existing hook accounting provides separate residual and gradient evidence, but does not derive gradients from this Nsight net decline.",
+    "GPU kernel table absent; that does not itself invalidate allocation events.",
+    "Nsight GUI screenshot has not been produced locally."
+  ],
+  "decision": "Reuse existing allocation/NVTX report for partial evidence. Strict memory_profiling(f) net-change derivation cannot be completed from these events. If required, add one bounded single-block GPU memory trace with CUDA allocator caching disabled and explicit phase NVTX; no full XL model rerun needed.",
+  "first_autograd_engine_backward_start_ns": 1186804866,
+  "gross_allocation_groups_by_phase": {
+    "before_measurement": [
+      {
+        "name": "unattributed",
+        "count": 9,
+        "gross_allocation_bytes": 509607936
+      }
+    ],
+    "before_first_autograd_backward": [
+      {
+        "name": "aten::div",
+        "count": 2,
+        "gross_allocation_bytes": 4294967296
+      },
+      {
+        "name": "aten::bmm",
+        "count": 8,
+        "gross_allocation_bytes": 2487354368
+      },
+      {
+        "name": "aten::exp",
+        "count": 1,
+        "gross_allocation_bytes": 2147483648
+      },
+      {
+        "name": "aten::mul",
+        "count": 3,
+        "gross_allocation_bytes": 167772160
+      },
+      {
+        "name": "aten::pow",
+        "count": 1,
+        "gross_allocation_bytes": 83886080
+      },
+      {
+        "name": "aten::cat",
+        "count": 1,
+        "gross_allocation_bytes": 83886080
+      },
+      {
+        "name": "aten::sub",
+        "count": 1,
+        "gross_allocation_bytes": 41943040
+      },
+      {
+        "name": "aten::add",
+        "count": 1,
+        "gross_allocation_bytes": 41943040
+      },
+      {
+        "name": "aten::max",
+        "count": 1,
+        "gross_allocation_bytes": 2097152
+      }
+    ],
+    "autograd_backward": [
+      {
+        "name": "aten::bmm",
+        "count": 4,
+        "gross_allocation_bytes": 2214724608
+      },
+      {
+        "name": "aten::div",
+        "count": 1,
+        "gross_allocation_bytes": 2147483648
+      },
+      {
+        "name": "aten::neg",
+        "count": 1,
+        "gross_allocation_bytes": 2147483648
+      },
+      {
+        "name": "aten::mul",
+        "count": 1,
+        "gross_allocation_bytes": 2147483648
+      }
+    ]
+  },
+  "cuda_enum_mapping": {
+    "memKind2": "Device",
+    "memKind5": "Device Static",
+    "memoryOperationType0": "Allocation",
+    "memoryOperationType1": "Deallocation"
+  }
+}

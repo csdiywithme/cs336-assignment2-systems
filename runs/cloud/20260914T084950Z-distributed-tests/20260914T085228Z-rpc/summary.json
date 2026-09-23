@@ -1,0 +1,26 @@
+{
+  "run_id": "20260914T084950Z-distributed-tests",
+  "seconds": 51.1391224861145,
+  "cases": [
+    {
+      "name": "distributed-repeat-0",
+      "command": [
+        "/usr/local/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "--tb=short",
+        "tests/test_ddp.py",
+        "tests/test_fsdp.py",
+        "tests/test_sharded_optimizer.py",
+        "--junitxml=/data/20260914T084950Z-distributed-tests/000-distributed-repeat-0/junit.xml"
+      ],
+      "started": 1789375824.5787115,
+      "returncode": 0,
+      "seconds": 47.4001624584198,
+      "status": "ok"
+    }
+  ],
+  "estimated_compute_usd": 0.10140274319526671,
+  "cost_note": "Runtime estimate, not invoice; excludes startup/build/storage."
+}

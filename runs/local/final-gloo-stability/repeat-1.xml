@@ -1,0 +1,1209 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="8" skipped="0" tests="8" time="9.559" timestamp="2026-09-14T18:53:11.851925+08:00" hostname="192.168.10.100"><testcase classname="tests.test_ddp" name="test_DistributedDataParallel[ToyModel]" time="0.922"><failure message="torch.multiprocessing.spawn.ProcessRaisedException: &#10;&#10;-- Process 0 terminated with the following error:&#10;Traceback (most recent call last):&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py&quot;, line 87, in _wrap&#10;    fn(i, *args)&#10;    ~~^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/test_ddp.py&quot;, line 40, in _test_DistributedDataParallel&#10;    device = _setup_process_group(rank=rank, world_size=world_size, backend=&quot;gloo&quot;)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/common.py&quot;, line 87, in _setup_process_group&#10;    dist.init_process_group(backend, rank=rank, world_size=world_size)&#10;    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py&quot;, line 83, in wrapper&#10;    return func(*args, **kwargs)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py&quot;, line 97, in wrapper&#10;    func_return = func(*args, **kwargs)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py&quot;, line 1831, in init_process_group&#10;    store, rank, world_size = next(rendezvous_iterator)&#10;                              ~~~~^^^^^^^^^^^^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py&quot;, line 280, in _env_rendezvous_handler&#10;    store = _create_c10d_store(&#10;        master_addr, master_port, rank, world_size, timeout, use_libuv&#10;    )&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py&quot;, line 199, in _create_c10d_store&#10;    return TCPStore(&#10;        host_name=hostname,&#10;    ...&lt;5 lines&gt;...&#10;        use_libuv=use_libuv,&#10;    )&#10;torch.distributed.DistNetworkError: The server socket has failed to bind. port: 12390, useIpv6: 0, code: -1, name: EPERM, message: operation not permitted">model_class = &lt;class 'tests.common.ToyModel'&gt;
+
+    @pytest.mark.parametrize("model_class", [ToyModel, ToyModelWithTiedWeights])
+    def test_DistributedDataParallel(model_class):
+        world_size = 2
+&gt;       mp.spawn(
+            _test_DistributedDataParallel,
+            args=(world_size, model_class),
+            nprocs=world_size,
+            join=True,
+        )
+
+tests/test_ddp.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:340: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:296: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;torch.multiprocessing.spawn.ProcessContext object at 0x10dfe1fd0&gt;
+timeout = None, grace_period = None
+
+    def join(self, timeout: float | None = None, grace_period: float | None = None):
+        r"""Join one or more processes within spawn context.
+    
+        Attempt to join one or more processes in this spawn context.
+        If one of them exited with a non-zero exit status, this function
+        kills the remaining processes (optionally with a grace period)
+        and raises an exception with the cause of the first process exiting.
+    
+        Returns ``True`` if all processes have been joined successfully,
+        ``False`` if there are more processes that need to be joined.
+    
+        Args:
+            timeout (float): Wait this long (in seconds) before giving up on waiting.
+            grace_period (float): When any processes fail, wait this long (in seconds)
+                for others to shutdown gracefully before terminating them. If they
+                still don't exit, wait another grace period before killing them.
+        """
+        # Ensure this function can be called even when we're done.
+        if len(self.sentinels) == 0:
+            return True
+    
+        # Wait for any process to fail or all of them to succeed.
+        ready = multiprocessing.connection.wait(
+            self.sentinels.keys(),
+            timeout=timeout,
+        )
+    
+        error_index = None
+        for sentinel in ready:
+            index = self.sentinels.pop(sentinel)
+            process = self.processes[index]
+            process.join()
+            if process.exitcode != 0:
+                error_index = index
+                break
+    
+        # Return if there was no error.
+        if error_index is None:
+            # Return whether or not all processes have been joined.
+            return len(self.sentinels) == 0
+        # An error occurred. Clean-up all processes before returning.
+        # First, allow a grace period for processes to shutdown themselves.
+        if grace_period is not None:
+            self._join_procs_with_timeout(grace_period)
+        # Then, terminate processes that are still alive. Try SIGTERM first.
+        for process in self.processes:
+            if process.is_alive():
+                log.warning("Terminating process %s via signal SIGTERM", process.pid)
+                process.terminate()
+    
+        # Try SIGKILL if the process isn't going down after another grace_period.
+        # The reason is related to python signal handling is limited
+        # to main thread and if that is in c/c++ land and stuck it won't
+        # to handle it. We have seen processes getting stuck not handling
+        # SIGTERM for the above reason.
+        self._join_procs_with_timeout(30 if grace_period is None else grace_period)
+        for process in self.processes:
+            if process.is_alive():
+                log.warning(
+                    "Unable to shutdown process %s via SIGTERM , forcefully exiting via SIGKILL",
+                    process.pid,
+                )
+                process.kill()
+            process.join()
+    
+        # The file will only be created if the process crashed.
+        failed_process = self.processes[error_index]
+        if not os.access(self.error_files[error_index], os.R_OK):
+            exitcode = self.processes[error_index].exitcode
+            if exitcode &lt; 0:
+                try:
+                    name = signal.Signals(-exitcode).name
+                except ValueError:
+                    name = f"&lt;Unknown signal {-exitcode}&gt;"
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with signal {name}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                    signal_name=name,
+                )
+            else:
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with exit code {exitcode:d}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                )
+    
+        with open(self.error_files[error_index], "rb") as fh:
+            original_trace = pickle.load(fh)
+        msg = f"\n\n-- Process {error_index:d} terminated with the following error:\n"
+        msg += original_trace
+&gt;       raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E       torch.multiprocessing.spawn.ProcessRaisedException: 
+E       
+E       -- Process 0 terminated with the following error:
+E       Traceback (most recent call last):
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py", line 87, in _wrap
+E           fn(i, *args)
+E           ~~^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/test_ddp.py", line 40, in _test_DistributedDataParallel
+E           device = _setup_process_group(rank=rank, world_size=world_size, backend="gloo")
+E         File "/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/common.py", line 87, in _setup_process_group
+E           dist.init_process_group(backend, rank=rank, world_size=world_size)
+E           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 83, in wrapper
+E           return func(*args, **kwargs)
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 97, in wrapper
+E           func_return = func(*args, **kwargs)
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py", line 1831, in init_process_group
+E           store, rank, world_size = next(rendezvous_iterator)
+E                                     ~~~~^^^^^^^^^^^^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 280, in _env_rendezvous_handler
+E           store = _create_c10d_store(
+E               master_addr, master_port, rank, world_size, timeout, use_libuv
+E           )
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 199, in _create_c10d_store
+E           return TCPStore(
+E               host_name=hostname,
+E           ...&lt;5 lines&gt;...
+E               use_libuv=use_libuv,
+E           )
+E       torch.distributed.DistNetworkError: The server socket has failed to bind. port: 12390, useIpv6: 0, code: -1, name: EPERM, message: operation not permitted
+
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:211: ProcessRaisedException</failure></testcase><testcase classname="tests.test_ddp" name="test_DistributedDataParallel[ToyModelWithTiedWeights]" time="0.857"><failure message="torch.multiprocessing.spawn.ProcessRaisedException: &#10;&#10;-- Process 0 terminated with the following error:&#10;Traceback (most recent call last):&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py&quot;, line 87, in _wrap&#10;    fn(i, *args)&#10;    ~~^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/test_ddp.py&quot;, line 40, in _test_DistributedDataParallel&#10;    device = _setup_process_group(rank=rank, world_size=world_size, backend=&quot;gloo&quot;)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/common.py&quot;, line 87, in _setup_process_group&#10;    dist.init_process_group(backend, rank=rank, world_size=world_size)&#10;    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py&quot;, line 83, in wrapper&#10;    return func(*args, **kwargs)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py&quot;, line 97, in wrapper&#10;    func_return = func(*args, **kwargs)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py&quot;, line 1831, in init_process_group&#10;    store, rank, world_size = next(rendezvous_iterator)&#10;                              ~~~~^^^^^^^^^^^^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py&quot;, line 280, in _env_rendezvous_handler&#10;    store = _create_c10d_store(&#10;        master_addr, master_port, rank, world_size, timeout, use_libuv&#10;    )&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py&quot;, line 199, in _create_c10d_store&#10;    return TCPStore(&#10;        host_name=hostname,&#10;    ...&lt;5 lines&gt;...&#10;        use_libuv=use_libuv,&#10;    )&#10;torch.distributed.DistNetworkError: The server socket has failed to bind. port: 12390, useIpv6: 0, code: -1, name: EPERM, message: operation not permitted">model_class = &lt;class 'tests.common.ToyModelWithTiedWeights'&gt;
+
+    @pytest.mark.parametrize("model_class", [ToyModel, ToyModelWithTiedWeights])
+    def test_DistributedDataParallel(model_class):
+        world_size = 2
+&gt;       mp.spawn(
+            _test_DistributedDataParallel,
+            args=(world_size, model_class),
+            nprocs=world_size,
+            join=True,
+        )
+
+tests/test_ddp.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:340: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:296: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;torch.multiprocessing.spawn.ProcessContext object at 0x10dfee490&gt;
+timeout = None, grace_period = None
+
+    def join(self, timeout: float | None = None, grace_period: float | None = None):
+        r"""Join one or more processes within spawn context.
+    
+        Attempt to join one or more processes in this spawn context.
+        If one of them exited with a non-zero exit status, this function
+        kills the remaining processes (optionally with a grace period)
+        and raises an exception with the cause of the first process exiting.
+    
+        Returns ``True`` if all processes have been joined successfully,
+        ``False`` if there are more processes that need to be joined.
+    
+        Args:
+            timeout (float): Wait this long (in seconds) before giving up on waiting.
+            grace_period (float): When any processes fail, wait this long (in seconds)
+                for others to shutdown gracefully before terminating them. If they
+                still don't exit, wait another grace period before killing them.
+        """
+        # Ensure this function can be called even when we're done.
+        if len(self.sentinels) == 0:
+            return True
+    
+        # Wait for any process to fail or all of them to succeed.
+        ready = multiprocessing.connection.wait(
+            self.sentinels.keys(),
+            timeout=timeout,
+        )
+    
+        error_index = None
+        for sentinel in ready:
+            index = self.sentinels.pop(sentinel)
+            process = self.processes[index]
+            process.join()
+            if process.exitcode != 0:
+                error_index = index
+                break
+    
+        # Return if there was no error.
+        if error_index is None:
+            # Return whether or not all processes have been joined.
+            return len(self.sentinels) == 0
+        # An error occurred. Clean-up all processes before returning.
+        # First, allow a grace period for processes to shutdown themselves.
+        if grace_period is not None:
+            self._join_procs_with_timeout(grace_period)
+        # Then, terminate processes that are still alive. Try SIGTERM first.
+        for process in self.processes:
+            if process.is_alive():
+                log.warning("Terminating process %s via signal SIGTERM", process.pid)
+                process.terminate()
+    
+        # Try SIGKILL if the process isn't going down after another grace_period.
+        # The reason is related to python signal handling is limited
+        # to main thread and if that is in c/c++ land and stuck it won't
+        # to handle it. We have seen processes getting stuck not handling
+        # SIGTERM for the above reason.
+        self._join_procs_with_timeout(30 if grace_period is None else grace_period)
+        for process in self.processes:
+            if process.is_alive():
+                log.warning(
+                    "Unable to shutdown process %s via SIGTERM , forcefully exiting via SIGKILL",
+                    process.pid,
+                )
+                process.kill()
+            process.join()
+    
+        # The file will only be created if the process crashed.
+        failed_process = self.processes[error_index]
+        if not os.access(self.error_files[error_index], os.R_OK):
+            exitcode = self.processes[error_index].exitcode
+            if exitcode &lt; 0:
+                try:
+                    name = signal.Signals(-exitcode).name
+                except ValueError:
+                    name = f"&lt;Unknown signal {-exitcode}&gt;"
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with signal {name}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                    signal_name=name,
+                )
+            else:
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with exit code {exitcode:d}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                )
+    
+        with open(self.error_files[error_index], "rb") as fh:
+            original_trace = pickle.load(fh)
+        msg = f"\n\n-- Process {error_index:d} terminated with the following error:\n"
+        msg += original_trace
+&gt;       raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E       torch.multiprocessing.spawn.ProcessRaisedException: 
+E       
+E       -- Process 0 terminated with the following error:
+E       Traceback (most recent call last):
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py", line 87, in _wrap
+E           fn(i, *args)
+E           ~~^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/test_ddp.py", line 40, in _test_DistributedDataParallel
+E           device = _setup_process_group(rank=rank, world_size=world_size, backend="gloo")
+E         File "/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/common.py", line 87, in _setup_process_group
+E           dist.init_process_group(backend, rank=rank, world_size=world_size)
+E           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 83, in wrapper
+E           return func(*args, **kwargs)
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 97, in wrapper
+E           func_return = func(*args, **kwargs)
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py", line 1831, in init_process_group
+E           store, rank, world_size = next(rendezvous_iterator)
+E                                     ~~~~^^^^^^^^^^^^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 280, in _env_rendezvous_handler
+E           store = _create_c10d_store(
+E               master_addr, master_port, rank, world_size, timeout, use_libuv
+E           )
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 199, in _create_c10d_store
+E           return TCPStore(
+E               host_name=hostname,
+E           ...&lt;5 lines&gt;...
+E               use_libuv=use_libuv,
+E           )
+E       torch.distributed.DistNetworkError: The server socket has failed to bind. port: 12390, useIpv6: 0, code: -1, name: EPERM, message: operation not permitted
+
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:211: ProcessRaisedException</failure></testcase><testcase classname="tests.test_fsdp" name="test_fsdp_correctness[fp32]" time="1.620"><failure message="torch.multiprocessing.spawn.ProcessRaisedException: &#10;&#10;-- Process 0 terminated with the following error:&#10;Traceback (most recent call last):&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py&quot;, line 87, in _wrap&#10;    fn(i, *args)&#10;    ~~^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/test_fsdp.py&quot;, line 120, in _test_fsdp_correctness&#10;    device = _setup_process_group(rank=rank, world_size=world_size, backend=&quot;gloo&quot;)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/common.py&quot;, line 87, in _setup_process_group&#10;    dist.init_process_group(backend, rank=rank, world_size=world_size)&#10;    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py&quot;, line 83, in wrapper&#10;    return func(*args, **kwargs)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py&quot;, line 97, in wrapper&#10;    func_return = func(*args, **kwargs)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py&quot;, line 1831, in init_process_group&#10;    store, rank, world_size = next(rendezvous_iterator)&#10;                              ~~~~^^^^^^^^^^^^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py&quot;, line 280, in _env_rendezvous_handler&#10;    store = _create_c10d_store(&#10;        master_addr, master_port, rank, world_size, timeout, use_libuv&#10;    )&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py&quot;, line 199, in _create_c10d_store&#10;    return TCPStore(&#10;        host_name=hostname,&#10;    ...&lt;5 lines&gt;...&#10;        use_libuv=use_libuv,&#10;    )&#10;torch.distributed.DistNetworkError: The server socket has failed to bind. port: 12390, useIpv6: 0, code: -1, name: EPERM, message: operation not permitted">compute_dtype = None
+
+    @pytest.mark.filterwarnings("error")
+    @pytest.mark.parametrize("compute_dtype", [None, torch.float16], ids=["fp32", "fp16"])
+    def test_fsdp_correctness(compute_dtype):
+        """Test that FSDP produces the same results as non-parallel training."""
+        world_size = 2
+&gt;       mp.spawn(
+            _test_fsdp_correctness,
+            args=(world_size, compute_dtype),
+            nprocs=world_size,
+            join=True,
+        )
+
+tests/test_fsdp.py:110: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:340: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:296: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;torch.multiprocessing.spawn.ProcessContext object at 0x10dfeefd0&gt;
+timeout = None, grace_period = None
+
+    def join(self, timeout: float | None = None, grace_period: float | None = None):
+        r"""Join one or more processes within spawn context.
+    
+        Attempt to join one or more processes in this spawn context.
+        If one of them exited with a non-zero exit status, this function
+        kills the remaining processes (optionally with a grace period)
+        and raises an exception with the cause of the first process exiting.
+    
+        Returns ``True`` if all processes have been joined successfully,
+        ``False`` if there are more processes that need to be joined.
+    
+        Args:
+            timeout (float): Wait this long (in seconds) before giving up on waiting.
+            grace_period (float): When any processes fail, wait this long (in seconds)
+                for others to shutdown gracefully before terminating them. If they
+                still don't exit, wait another grace period before killing them.
+        """
+        # Ensure this function can be called even when we're done.
+        if len(self.sentinels) == 0:
+            return True
+    
+        # Wait for any process to fail or all of them to succeed.
+        ready = multiprocessing.connection.wait(
+            self.sentinels.keys(),
+            timeout=timeout,
+        )
+    
+        error_index = None
+        for sentinel in ready:
+            index = self.sentinels.pop(sentinel)
+            process = self.processes[index]
+            process.join()
+            if process.exitcode != 0:
+                error_index = index
+                break
+    
+        # Return if there was no error.
+        if error_index is None:
+            # Return whether or not all processes have been joined.
+            return len(self.sentinels) == 0
+        # An error occurred. Clean-up all processes before returning.
+        # First, allow a grace period for processes to shutdown themselves.
+        if grace_period is not None:
+            self._join_procs_with_timeout(grace_period)
+        # Then, terminate processes that are still alive. Try SIGTERM first.
+        for process in self.processes:
+            if process.is_alive():
+                log.warning("Terminating process %s via signal SIGTERM", process.pid)
+                process.terminate()
+    
+        # Try SIGKILL if the process isn't going down after another grace_period.
+        # The reason is related to python signal handling is limited
+        # to main thread and if that is in c/c++ land and stuck it won't
+        # to handle it. We have seen processes getting stuck not handling
+        # SIGTERM for the above reason.
+        self._join_procs_with_timeout(30 if grace_period is None else grace_period)
+        for process in self.processes:
+            if process.is_alive():
+                log.warning(
+                    "Unable to shutdown process %s via SIGTERM , forcefully exiting via SIGKILL",
+                    process.pid,
+                )
+                process.kill()
+            process.join()
+    
+        # The file will only be created if the process crashed.
+        failed_process = self.processes[error_index]
+        if not os.access(self.error_files[error_index], os.R_OK):
+            exitcode = self.processes[error_index].exitcode
+            if exitcode &lt; 0:
+                try:
+                    name = signal.Signals(-exitcode).name
+                except ValueError:
+                    name = f"&lt;Unknown signal {-exitcode}&gt;"
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with signal {name}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                    signal_name=name,
+                )
+            else:
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with exit code {exitcode:d}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                )
+    
+        with open(self.error_files[error_index], "rb") as fh:
+            original_trace = pickle.load(fh)
+        msg = f"\n\n-- Process {error_index:d} terminated with the following error:\n"
+        msg += original_trace
+&gt;       raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E       torch.multiprocessing.spawn.ProcessRaisedException: 
+E       
+E       -- Process 0 terminated with the following error:
+E       Traceback (most recent call last):
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py", line 87, in _wrap
+E           fn(i, *args)
+E           ~~^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/test_fsdp.py", line 120, in _test_fsdp_correctness
+E           device = _setup_process_group(rank=rank, world_size=world_size, backend="gloo")
+E         File "/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/common.py", line 87, in _setup_process_group
+E           dist.init_process_group(backend, rank=rank, world_size=world_size)
+E           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 83, in wrapper
+E           return func(*args, **kwargs)
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 97, in wrapper
+E           func_return = func(*args, **kwargs)
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py", line 1831, in init_process_group
+E           store, rank, world_size = next(rendezvous_iterator)
+E                                     ~~~~^^^^^^^^^^^^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 280, in _env_rendezvous_handler
+E           store = _create_c10d_store(
+E               master_addr, master_port, rank, world_size, timeout, use_libuv
+E           )
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 199, in _create_c10d_store
+E           return TCPStore(
+E               host_name=hostname,
+E           ...&lt;5 lines&gt;...
+E               use_libuv=use_libuv,
+E           )
+E       torch.distributed.DistNetworkError: The server socket has failed to bind. port: 12390, useIpv6: 0, code: -1, name: EPERM, message: operation not permitted
+
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:211: ProcessRaisedException</failure></testcase><testcase classname="tests.test_fsdp" name="test_fsdp_correctness[fp16]" time="1.379"><failure message="torch.multiprocessing.spawn.ProcessRaisedException: &#10;&#10;-- Process 0 terminated with the following error:&#10;Traceback (most recent call last):&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py&quot;, line 87, in _wrap&#10;    fn(i, *args)&#10;    ~~^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/test_fsdp.py&quot;, line 120, in _test_fsdp_correctness&#10;    device = _setup_process_group(rank=rank, world_size=world_size, backend=&quot;gloo&quot;)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/common.py&quot;, line 87, in _setup_process_group&#10;    dist.init_process_group(backend, rank=rank, world_size=world_size)&#10;    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py&quot;, line 83, in wrapper&#10;    return func(*args, **kwargs)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py&quot;, line 97, in wrapper&#10;    func_return = func(*args, **kwargs)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py&quot;, line 1831, in init_process_group&#10;    store, rank, world_size = next(rendezvous_iterator)&#10;                              ~~~~^^^^^^^^^^^^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py&quot;, line 280, in _env_rendezvous_handler&#10;    store = _create_c10d_store(&#10;        master_addr, master_port, rank, world_size, timeout, use_libuv&#10;    )&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py&quot;, line 199, in _create_c10d_store&#10;    return TCPStore(&#10;        host_name=hostname,&#10;    ...&lt;5 lines&gt;...&#10;        use_libuv=use_libuv,&#10;    )&#10;torch.distributed.DistNetworkError: The server socket has failed to bind. port: 12390, useIpv6: 0, code: -1, name: EPERM, message: operation not permitted">compute_dtype = torch.float16
+
+    @pytest.mark.filterwarnings("error")
+    @pytest.mark.parametrize("compute_dtype", [None, torch.float16], ids=["fp32", "fp16"])
+    def test_fsdp_correctness(compute_dtype):
+        """Test that FSDP produces the same results as non-parallel training."""
+        world_size = 2
+&gt;       mp.spawn(
+            _test_fsdp_correctness,
+            args=(world_size, compute_dtype),
+            nprocs=world_size,
+            join=True,
+        )
+
+tests/test_fsdp.py:110: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:340: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:296: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;torch.multiprocessing.spawn.ProcessContext object at 0x10dfda780&gt;
+timeout = None, grace_period = None
+
+    def join(self, timeout: float | None = None, grace_period: float | None = None):
+        r"""Join one or more processes within spawn context.
+    
+        Attempt to join one or more processes in this spawn context.
+        If one of them exited with a non-zero exit status, this function
+        kills the remaining processes (optionally with a grace period)
+        and raises an exception with the cause of the first process exiting.
+    
+        Returns ``True`` if all processes have been joined successfully,
+        ``False`` if there are more processes that need to be joined.
+    
+        Args:
+            timeout (float): Wait this long (in seconds) before giving up on waiting.
+            grace_period (float): When any processes fail, wait this long (in seconds)
+                for others to shutdown gracefully before terminating them. If they
+                still don't exit, wait another grace period before killing them.
+        """
+        # Ensure this function can be called even when we're done.
+        if len(self.sentinels) == 0:
+            return True
+    
+        # Wait for any process to fail or all of them to succeed.
+        ready = multiprocessing.connection.wait(
+            self.sentinels.keys(),
+            timeout=timeout,
+        )
+    
+        error_index = None
+        for sentinel in ready:
+            index = self.sentinels.pop(sentinel)
+            process = self.processes[index]
+            process.join()
+            if process.exitcode != 0:
+                error_index = index
+                break
+    
+        # Return if there was no error.
+        if error_index is None:
+            # Return whether or not all processes have been joined.
+            return len(self.sentinels) == 0
+        # An error occurred. Clean-up all processes before returning.
+        # First, allow a grace period for processes to shutdown themselves.
+        if grace_period is not None:
+            self._join_procs_with_timeout(grace_period)
+        # Then, terminate processes that are still alive. Try SIGTERM first.
+        for process in self.processes:
+            if process.is_alive():
+                log.warning("Terminating process %s via signal SIGTERM", process.pid)
+                process.terminate()
+    
+        # Try SIGKILL if the process isn't going down after another grace_period.
+        # The reason is related to python signal handling is limited
+        # to main thread and if that is in c/c++ land and stuck it won't
+        # to handle it. We have seen processes getting stuck not handling
+        # SIGTERM for the above reason.
+        self._join_procs_with_timeout(30 if grace_period is None else grace_period)
+        for process in self.processes:
+            if process.is_alive():
+                log.warning(
+                    "Unable to shutdown process %s via SIGTERM , forcefully exiting via SIGKILL",
+                    process.pid,
+                )
+                process.kill()
+            process.join()
+    
+        # The file will only be created if the process crashed.
+        failed_process = self.processes[error_index]
+        if not os.access(self.error_files[error_index], os.R_OK):
+            exitcode = self.processes[error_index].exitcode
+            if exitcode &lt; 0:
+                try:
+                    name = signal.Signals(-exitcode).name
+                except ValueError:
+                    name = f"&lt;Unknown signal {-exitcode}&gt;"
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with signal {name}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                    signal_name=name,
+                )
+            else:
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with exit code {exitcode:d}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                )
+    
+        with open(self.error_files[error_index], "rb") as fh:
+            original_trace = pickle.load(fh)
+        msg = f"\n\n-- Process {error_index:d} terminated with the following error:\n"
+        msg += original_trace
+&gt;       raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E       torch.multiprocessing.spawn.ProcessRaisedException: 
+E       
+E       -- Process 0 terminated with the following error:
+E       Traceback (most recent call last):
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py", line 87, in _wrap
+E           fn(i, *args)
+E           ~~^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/test_fsdp.py", line 120, in _test_fsdp_correctness
+E           device = _setup_process_group(rank=rank, world_size=world_size, backend="gloo")
+E         File "/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/common.py", line 87, in _setup_process_group
+E           dist.init_process_group(backend, rank=rank, world_size=world_size)
+E           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 83, in wrapper
+E           return func(*args, **kwargs)
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 97, in wrapper
+E           func_return = func(*args, **kwargs)
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py", line 1831, in init_process_group
+E           store, rank, world_size = next(rendezvous_iterator)
+E                                     ~~~~^^^^^^^^^^^^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 280, in _env_rendezvous_handler
+E           store = _create_c10d_store(
+E               master_addr, master_port, rank, world_size, timeout, use_libuv
+E           )
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 199, in _create_c10d_store
+E           return TCPStore(
+E               host_name=hostname,
+E           ...&lt;5 lines&gt;...
+E               use_libuv=use_libuv,
+E           )
+E       torch.distributed.DistNetworkError: The server socket has failed to bind. port: 12390, useIpv6: 0, code: -1, name: EPERM, message: operation not permitted
+
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:211: ProcessRaisedException</failure></testcase><testcase classname="tests.test_fsdp" name="test_fsdp_gradient_sync[fp32]" time="1.478"><failure message="torch.multiprocessing.spawn.ProcessRaisedException: &#10;&#10;-- Process 0 terminated with the following error:&#10;Traceback (most recent call last):&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py&quot;, line 87, in _wrap&#10;    fn(i, *args)&#10;    ~~^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/test_fsdp.py&quot;, line 207, in _test_fsdp_gradient_sync&#10;    device = _setup_process_group(rank=rank, world_size=world_size, backend=&quot;gloo&quot;)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/common.py&quot;, line 87, in _setup_process_group&#10;    dist.init_process_group(backend, rank=rank, world_size=world_size)&#10;    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py&quot;, line 83, in wrapper&#10;    return func(*args, **kwargs)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py&quot;, line 97, in wrapper&#10;    func_return = func(*args, **kwargs)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py&quot;, line 1831, in init_process_group&#10;    store, rank, world_size = next(rendezvous_iterator)&#10;                              ~~~~^^^^^^^^^^^^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py&quot;, line 280, in _env_rendezvous_handler&#10;    store = _create_c10d_store(&#10;        master_addr, master_port, rank, world_size, timeout, use_libuv&#10;    )&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py&quot;, line 199, in _create_c10d_store&#10;    return TCPStore(&#10;        host_name=hostname,&#10;    ...&lt;5 lines&gt;...&#10;        use_libuv=use_libuv,&#10;    )&#10;torch.distributed.DistNetworkError: The server socket has failed to bind. port: 12390, useIpv6: 0, code: -1, name: EPERM, message: operation not permitted">compute_dtype = None
+
+    @pytest.mark.filterwarnings("error")
+    @pytest.mark.parametrize("compute_dtype", [None, torch.float16], ids=["fp32", "fp16"])
+    def test_fsdp_gradient_sync(compute_dtype):
+        """Test that gradients are properly synchronized and correctly shaped."""
+        world_size = 2
+&gt;       mp.spawn(
+            _test_fsdp_gradient_sync,
+            args=(world_size, compute_dtype),
+            nprocs=world_size,
+            join=True,
+        )
+
+tests/test_fsdp.py:195: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:340: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:296: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;torch.multiprocessing.spawn.ProcessContext object at 0x10dfdaea0&gt;
+timeout = None, grace_period = None
+
+    def join(self, timeout: float | None = None, grace_period: float | None = None):
+        r"""Join one or more processes within spawn context.
+    
+        Attempt to join one or more processes in this spawn context.
+        If one of them exited with a non-zero exit status, this function
+        kills the remaining processes (optionally with a grace period)
+        and raises an exception with the cause of the first process exiting.
+    
+        Returns ``True`` if all processes have been joined successfully,
+        ``False`` if there are more processes that need to be joined.
+    
+        Args:
+            timeout (float): Wait this long (in seconds) before giving up on waiting.
+            grace_period (float): When any processes fail, wait this long (in seconds)
+                for others to shutdown gracefully before terminating them. If they
+                still don't exit, wait another grace period before killing them.
+        """
+        # Ensure this function can be called even when we're done.
+        if len(self.sentinels) == 0:
+            return True
+    
+        # Wait for any process to fail or all of them to succeed.
+        ready = multiprocessing.connection.wait(
+            self.sentinels.keys(),
+            timeout=timeout,
+        )
+    
+        error_index = None
+        for sentinel in ready:
+            index = self.sentinels.pop(sentinel)
+            process = self.processes[index]
+            process.join()
+            if process.exitcode != 0:
+                error_index = index
+                break
+    
+        # Return if there was no error.
+        if error_index is None:
+            # Return whether or not all processes have been joined.
+            return len(self.sentinels) == 0
+        # An error occurred. Clean-up all processes before returning.
+        # First, allow a grace period for processes to shutdown themselves.
+        if grace_period is not None:
+            self._join_procs_with_timeout(grace_period)
+        # Then, terminate processes that are still alive. Try SIGTERM first.
+        for process in self.processes:
+            if process.is_alive():
+                log.warning("Terminating process %s via signal SIGTERM", process.pid)
+                process.terminate()
+    
+        # Try SIGKILL if the process isn't going down after another grace_period.
+        # The reason is related to python signal handling is limited
+        # to main thread and if that is in c/c++ land and stuck it won't
+        # to handle it. We have seen processes getting stuck not handling
+        # SIGTERM for the above reason.
+        self._join_procs_with_timeout(30 if grace_period is None else grace_period)
+        for process in self.processes:
+            if process.is_alive():
+                log.warning(
+                    "Unable to shutdown process %s via SIGTERM , forcefully exiting via SIGKILL",
+                    process.pid,
+                )
+                process.kill()
+            process.join()
+    
+        # The file will only be created if the process crashed.
+        failed_process = self.processes[error_index]
+        if not os.access(self.error_files[error_index], os.R_OK):
+            exitcode = self.processes[error_index].exitcode
+            if exitcode &lt; 0:
+                try:
+                    name = signal.Signals(-exitcode).name
+                except ValueError:
+                    name = f"&lt;Unknown signal {-exitcode}&gt;"
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with signal {name}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                    signal_name=name,
+                )
+            else:
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with exit code {exitcode:d}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                )
+    
+        with open(self.error_files[error_index], "rb") as fh:
+            original_trace = pickle.load(fh)
+        msg = f"\n\n-- Process {error_index:d} terminated with the following error:\n"
+        msg += original_trace
+&gt;       raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E       torch.multiprocessing.spawn.ProcessRaisedException: 
+E       
+E       -- Process 0 terminated with the following error:
+E       Traceback (most recent call last):
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py", line 87, in _wrap
+E           fn(i, *args)
+E           ~~^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/test_fsdp.py", line 207, in _test_fsdp_gradient_sync
+E           device = _setup_process_group(rank=rank, world_size=world_size, backend="gloo")
+E         File "/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/common.py", line 87, in _setup_process_group
+E           dist.init_process_group(backend, rank=rank, world_size=world_size)
+E           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 83, in wrapper
+E           return func(*args, **kwargs)
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 97, in wrapper
+E           func_return = func(*args, **kwargs)
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py", line 1831, in init_process_group
+E           store, rank, world_size = next(rendezvous_iterator)
+E                                     ~~~~^^^^^^^^^^^^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 280, in _env_rendezvous_handler
+E           store = _create_c10d_store(
+E               master_addr, master_port, rank, world_size, timeout, use_libuv
+E           )
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 199, in _create_c10d_store
+E           return TCPStore(
+E               host_name=hostname,
+E           ...&lt;5 lines&gt;...
+E               use_libuv=use_libuv,
+E           )
+E       torch.distributed.DistNetworkError: The server socket has failed to bind. port: 12390, useIpv6: 0, code: -1, name: EPERM, message: operation not permitted
+
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:211: ProcessRaisedException</failure></testcase><testcase classname="tests.test_fsdp" name="test_fsdp_gradient_sync[fp16]" time="1.534"><failure message="torch.multiprocessing.spawn.ProcessRaisedException: &#10;&#10;-- Process 0 terminated with the following error:&#10;Traceback (most recent call last):&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py&quot;, line 87, in _wrap&#10;    fn(i, *args)&#10;    ~~^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/test_fsdp.py&quot;, line 207, in _test_fsdp_gradient_sync&#10;    device = _setup_process_group(rank=rank, world_size=world_size, backend=&quot;gloo&quot;)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/common.py&quot;, line 87, in _setup_process_group&#10;    dist.init_process_group(backend, rank=rank, world_size=world_size)&#10;    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py&quot;, line 83, in wrapper&#10;    return func(*args, **kwargs)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py&quot;, line 97, in wrapper&#10;    func_return = func(*args, **kwargs)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py&quot;, line 1831, in init_process_group&#10;    store, rank, world_size = next(rendezvous_iterator)&#10;                              ~~~~^^^^^^^^^^^^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py&quot;, line 280, in _env_rendezvous_handler&#10;    store = _create_c10d_store(&#10;        master_addr, master_port, rank, world_size, timeout, use_libuv&#10;    )&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py&quot;, line 199, in _create_c10d_store&#10;    return TCPStore(&#10;        host_name=hostname,&#10;    ...&lt;5 lines&gt;...&#10;        use_libuv=use_libuv,&#10;    )&#10;torch.distributed.DistNetworkError: The server socket has failed to bind. port: 12390, useIpv6: 0, code: -1, name: EPERM, message: operation not permitted">compute_dtype = torch.float16
+
+    @pytest.mark.filterwarnings("error")
+    @pytest.mark.parametrize("compute_dtype", [None, torch.float16], ids=["fp32", "fp16"])
+    def test_fsdp_gradient_sync(compute_dtype):
+        """Test that gradients are properly synchronized and correctly shaped."""
+        world_size = 2
+&gt;       mp.spawn(
+            _test_fsdp_gradient_sync,
+            args=(world_size, compute_dtype),
+            nprocs=world_size,
+            join=True,
+        )
+
+tests/test_fsdp.py:195: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:340: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:296: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;torch.multiprocessing.spawn.ProcessContext object at 0x10e0120f0&gt;
+timeout = None, grace_period = None
+
+    def join(self, timeout: float | None = None, grace_period: float | None = None):
+        r"""Join one or more processes within spawn context.
+    
+        Attempt to join one or more processes in this spawn context.
+        If one of them exited with a non-zero exit status, this function
+        kills the remaining processes (optionally with a grace period)
+        and raises an exception with the cause of the first process exiting.
+    
+        Returns ``True`` if all processes have been joined successfully,
+        ``False`` if there are more processes that need to be joined.
+    
+        Args:
+            timeout (float): Wait this long (in seconds) before giving up on waiting.
+            grace_period (float): When any processes fail, wait this long (in seconds)
+                for others to shutdown gracefully before terminating them. If they
+                still don't exit, wait another grace period before killing them.
+        """
+        # Ensure this function can be called even when we're done.
+        if len(self.sentinels) == 0:
+            return True
+    
+        # Wait for any process to fail or all of them to succeed.
+        ready = multiprocessing.connection.wait(
+            self.sentinels.keys(),
+            timeout=timeout,
+        )
+    
+        error_index = None
+        for sentinel in ready:
+            index = self.sentinels.pop(sentinel)
+            process = self.processes[index]
+            process.join()
+            if process.exitcode != 0:
+                error_index = index
+                break
+    
+        # Return if there was no error.
+        if error_index is None:
+            # Return whether or not all processes have been joined.
+            return len(self.sentinels) == 0
+        # An error occurred. Clean-up all processes before returning.
+        # First, allow a grace period for processes to shutdown themselves.
+        if grace_period is not None:
+            self._join_procs_with_timeout(grace_period)
+        # Then, terminate processes that are still alive. Try SIGTERM first.
+        for process in self.processes:
+            if process.is_alive():
+                log.warning("Terminating process %s via signal SIGTERM", process.pid)
+                process.terminate()
+    
+        # Try SIGKILL if the process isn't going down after another grace_period.
+        # The reason is related to python signal handling is limited
+        # to main thread and if that is in c/c++ land and stuck it won't
+        # to handle it. We have seen processes getting stuck not handling
+        # SIGTERM for the above reason.
+        self._join_procs_with_timeout(30 if grace_period is None else grace_period)
+        for process in self.processes:
+            if process.is_alive():
+                log.warning(
+                    "Unable to shutdown process %s via SIGTERM , forcefully exiting via SIGKILL",
+                    process.pid,
+                )
+                process.kill()
+            process.join()
+    
+        # The file will only be created if the process crashed.
+        failed_process = self.processes[error_index]
+        if not os.access(self.error_files[error_index], os.R_OK):
+            exitcode = self.processes[error_index].exitcode
+            if exitcode &lt; 0:
+                try:
+                    name = signal.Signals(-exitcode).name
+                except ValueError:
+                    name = f"&lt;Unknown signal {-exitcode}&gt;"
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with signal {name}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                    signal_name=name,
+                )
+            else:
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with exit code {exitcode:d}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                )
+    
+        with open(self.error_files[error_index], "rb") as fh:
+            original_trace = pickle.load(fh)
+        msg = f"\n\n-- Process {error_index:d} terminated with the following error:\n"
+        msg += original_trace
+&gt;       raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E       torch.multiprocessing.spawn.ProcessRaisedException: 
+E       
+E       -- Process 0 terminated with the following error:
+E       Traceback (most recent call last):
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py", line 87, in _wrap
+E           fn(i, *args)
+E           ~~^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/test_fsdp.py", line 207, in _test_fsdp_gradient_sync
+E           device = _setup_process_group(rank=rank, world_size=world_size, backend="gloo")
+E         File "/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/common.py", line 87, in _setup_process_group
+E           dist.init_process_group(backend, rank=rank, world_size=world_size)
+E           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 83, in wrapper
+E           return func(*args, **kwargs)
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 97, in wrapper
+E           func_return = func(*args, **kwargs)
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py", line 1831, in init_process_group
+E           store, rank, world_size = next(rendezvous_iterator)
+E                                     ~~~~^^^^^^^^^^^^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 280, in _env_rendezvous_handler
+E           store = _create_c10d_store(
+E               master_addr, master_port, rank, world_size, timeout, use_libuv
+E           )
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 199, in _create_c10d_store
+E           return TCPStore(
+E               host_name=hostname,
+E           ...&lt;5 lines&gt;...
+E               use_libuv=use_libuv,
+E           )
+E       torch.distributed.DistNetworkError: The server socket has failed to bind. port: 12390, useIpv6: 0, code: -1, name: EPERM, message: operation not permitted
+
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:211: ProcessRaisedException</failure></testcase><testcase classname="tests.test_sharded_optimizer" name="test_sharded_optimizer[ToyModel]" time="0.829"><failure message="torch.multiprocessing.spawn.ProcessRaisedException: &#10;&#10;-- Process 0 terminated with the following error:&#10;Traceback (most recent call last):&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py&quot;, line 87, in _wrap&#10;    fn(i, *args)&#10;    ~~^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/test_sharded_optimizer.py&quot;, line 31, in _test_sharded_optimizer&#10;    device = _setup_process_group(rank=rank, world_size=world_size, backend=&quot;gloo&quot;)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/common.py&quot;, line 87, in _setup_process_group&#10;    dist.init_process_group(backend, rank=rank, world_size=world_size)&#10;    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py&quot;, line 83, in wrapper&#10;    return func(*args, **kwargs)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py&quot;, line 97, in wrapper&#10;    func_return = func(*args, **kwargs)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py&quot;, line 1831, in init_process_group&#10;    store, rank, world_size = next(rendezvous_iterator)&#10;                              ~~~~^^^^^^^^^^^^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py&quot;, line 280, in _env_rendezvous_handler&#10;    store = _create_c10d_store(&#10;        master_addr, master_port, rank, world_size, timeout, use_libuv&#10;    )&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py&quot;, line 199, in _create_c10d_store&#10;    return TCPStore(&#10;        host_name=hostname,&#10;    ...&lt;5 lines&gt;...&#10;        use_libuv=use_libuv,&#10;    )&#10;torch.distributed.DistNetworkError: The server socket has failed to bind. port: 12390, useIpv6: 0, code: -1, name: EPERM, message: operation not permitted">model_class = &lt;class 'tests.common.ToyModel'&gt;
+
+    @pytest.mark.parametrize("model_class", [ToyModel, ToyModelWithTiedWeights])
+    def test_sharded_optimizer(model_class):
+        world_size = 2
+&gt;       mp.spawn(
+            _test_sharded_optimizer,
+            args=(world_size, model_class),
+            nprocs=world_size,
+            join=True,
+        )
+
+tests/test_sharded_optimizer.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:340: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:296: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;torch.multiprocessing.spawn.ProcessContext object at 0x10e0567a0&gt;
+timeout = None, grace_period = None
+
+    def join(self, timeout: float | None = None, grace_period: float | None = None):
+        r"""Join one or more processes within spawn context.
+    
+        Attempt to join one or more processes in this spawn context.
+        If one of them exited with a non-zero exit status, this function
+        kills the remaining processes (optionally with a grace period)
+        and raises an exception with the cause of the first process exiting.
+    
+        Returns ``True`` if all processes have been joined successfully,
+        ``False`` if there are more processes that need to be joined.
+    
+        Args:
+            timeout (float): Wait this long (in seconds) before giving up on waiting.
+            grace_period (float): When any processes fail, wait this long (in seconds)
+                for others to shutdown gracefully before terminating them. If they
+                still don't exit, wait another grace period before killing them.
+        """
+        # Ensure this function can be called even when we're done.
+        if len(self.sentinels) == 0:
+            return True
+    
+        # Wait for any process to fail or all of them to succeed.
+        ready = multiprocessing.connection.wait(
+            self.sentinels.keys(),
+            timeout=timeout,
+        )
+    
+        error_index = None
+        for sentinel in ready:
+            index = self.sentinels.pop(sentinel)
+            process = self.processes[index]
+            process.join()
+            if process.exitcode != 0:
+                error_index = index
+                break
+    
+        # Return if there was no error.
+        if error_index is None:
+            # Return whether or not all processes have been joined.
+            return len(self.sentinels) == 0
+        # An error occurred. Clean-up all processes before returning.
+        # First, allow a grace period for processes to shutdown themselves.
+        if grace_period is not None:
+            self._join_procs_with_timeout(grace_period)
+        # Then, terminate processes that are still alive. Try SIGTERM first.
+        for process in self.processes:
+            if process.is_alive():
+                log.warning("Terminating process %s via signal SIGTERM", process.pid)
+                process.terminate()
+    
+        # Try SIGKILL if the process isn't going down after another grace_period.
+        # The reason is related to python signal handling is limited
+        # to main thread and if that is in c/c++ land and stuck it won't
+        # to handle it. We have seen processes getting stuck not handling
+        # SIGTERM for the above reason.
+        self._join_procs_with_timeout(30 if grace_period is None else grace_period)
+        for process in self.processes:
+            if process.is_alive():
+                log.warning(
+                    "Unable to shutdown process %s via SIGTERM , forcefully exiting via SIGKILL",
+                    process.pid,
+                )
+                process.kill()
+            process.join()
+    
+        # The file will only be created if the process crashed.
+        failed_process = self.processes[error_index]
+        if not os.access(self.error_files[error_index], os.R_OK):
+            exitcode = self.processes[error_index].exitcode
+            if exitcode &lt; 0:
+                try:
+                    name = signal.Signals(-exitcode).name
+                except ValueError:
+                    name = f"&lt;Unknown signal {-exitcode}&gt;"
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with signal {name}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                    signal_name=name,
+                )
+            else:
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with exit code {exitcode:d}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                )
+    
+        with open(self.error_files[error_index], "rb") as fh:
+            original_trace = pickle.load(fh)
+        msg = f"\n\n-- Process {error_index:d} terminated with the following error:\n"
+        msg += original_trace
+&gt;       raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E       torch.multiprocessing.spawn.ProcessRaisedException: 
+E       
+E       -- Process 0 terminated with the following error:
+E       Traceback (most recent call last):
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py", line 87, in _wrap
+E           fn(i, *args)
+E           ~~^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/test_sharded_optimizer.py", line 31, in _test_sharded_optimizer
+E           device = _setup_process_group(rank=rank, world_size=world_size, backend="gloo")
+E         File "/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/common.py", line 87, in _setup_process_group
+E           dist.init_process_group(backend, rank=rank, world_size=world_size)
+E           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 83, in wrapper
+E           return func(*args, **kwargs)
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 97, in wrapper
+E           func_return = func(*args, **kwargs)
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py", line 1831, in init_process_group
+E           store, rank, world_size = next(rendezvous_iterator)
+E                                     ~~~~^^^^^^^^^^^^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 280, in _env_rendezvous_handler
+E           store = _create_c10d_store(
+E               master_addr, master_port, rank, world_size, timeout, use_libuv
+E           )
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 199, in _create_c10d_store
+E           return TCPStore(
+E               host_name=hostname,
+E           ...&lt;5 lines&gt;...
+E               use_libuv=use_libuv,
+E           )
+E       torch.distributed.DistNetworkError: The server socket has failed to bind. port: 12390, useIpv6: 0, code: -1, name: EPERM, message: operation not permitted
+
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:211: ProcessRaisedException</failure></testcase><testcase classname="tests.test_sharded_optimizer" name="test_sharded_optimizer[ToyModelWithTiedWeights]" time="0.827"><failure message="torch.multiprocessing.spawn.ProcessRaisedException: &#10;&#10;-- Process 0 terminated with the following error:&#10;Traceback (most recent call last):&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py&quot;, line 87, in _wrap&#10;    fn(i, *args)&#10;    ~~^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/test_sharded_optimizer.py&quot;, line 31, in _test_sharded_optimizer&#10;    device = _setup_process_group(rank=rank, world_size=world_size, backend=&quot;gloo&quot;)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/common.py&quot;, line 87, in _setup_process_group&#10;    dist.init_process_group(backend, rank=rank, world_size=world_size)&#10;    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py&quot;, line 83, in wrapper&#10;    return func(*args, **kwargs)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py&quot;, line 97, in wrapper&#10;    func_return = func(*args, **kwargs)&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py&quot;, line 1831, in init_process_group&#10;    store, rank, world_size = next(rendezvous_iterator)&#10;                              ~~~~^^^^^^^^^^^^^^^^^^^^^&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py&quot;, line 280, in _env_rendezvous_handler&#10;    store = _create_c10d_store(&#10;        master_addr, master_port, rank, world_size, timeout, use_libuv&#10;    )&#10;  File &quot;/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py&quot;, line 199, in _create_c10d_store&#10;    return TCPStore(&#10;        host_name=hostname,&#10;    ...&lt;5 lines&gt;...&#10;        use_libuv=use_libuv,&#10;    )&#10;torch.distributed.DistNetworkError: The server socket has failed to bind. port: 12390, useIpv6: 0, code: -1, name: EPERM, message: operation not permitted">model_class = &lt;class 'tests.common.ToyModelWithTiedWeights'&gt;
+
+    @pytest.mark.parametrize("model_class", [ToyModel, ToyModelWithTiedWeights])
+    def test_sharded_optimizer(model_class):
+        world_size = 2
+&gt;       mp.spawn(
+            _test_sharded_optimizer,
+            args=(world_size, model_class),
+            nprocs=world_size,
+            join=True,
+        )
+
+tests/test_sharded_optimizer.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:340: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:296: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;torch.multiprocessing.spawn.ProcessContext object at 0x10e057240&gt;
+timeout = None, grace_period = None
+
+    def join(self, timeout: float | None = None, grace_period: float | None = None):
+        r"""Join one or more processes within spawn context.
+    
+        Attempt to join one or more processes in this spawn context.
+        If one of them exited with a non-zero exit status, this function
+        kills the remaining processes (optionally with a grace period)
+        and raises an exception with the cause of the first process exiting.
+    
+        Returns ``True`` if all processes have been joined successfully,
+        ``False`` if there are more processes that need to be joined.
+    
+        Args:
+            timeout (float): Wait this long (in seconds) before giving up on waiting.
+            grace_period (float): When any processes fail, wait this long (in seconds)
+                for others to shutdown gracefully before terminating them. If they
+                still don't exit, wait another grace period before killing them.
+        """
+        # Ensure this function can be called even when we're done.
+        if len(self.sentinels) == 0:
+            return True
+    
+        # Wait for any process to fail or all of them to succeed.
+        ready = multiprocessing.connection.wait(
+            self.sentinels.keys(),
+            timeout=timeout,
+        )
+    
+        error_index = None
+        for sentinel in ready:
+            index = self.sentinels.pop(sentinel)
+            process = self.processes[index]
+            process.join()
+            if process.exitcode != 0:
+                error_index = index
+                break
+    
+        # Return if there was no error.
+        if error_index is None:
+            # Return whether or not all processes have been joined.
+            return len(self.sentinels) == 0
+        # An error occurred. Clean-up all processes before returning.
+        # First, allow a grace period for processes to shutdown themselves.
+        if grace_period is not None:
+            self._join_procs_with_timeout(grace_period)
+        # Then, terminate processes that are still alive. Try SIGTERM first.
+        for process in self.processes:
+            if process.is_alive():
+                log.warning("Terminating process %s via signal SIGTERM", process.pid)
+                process.terminate()
+    
+        # Try SIGKILL if the process isn't going down after another grace_period.
+        # The reason is related to python signal handling is limited
+        # to main thread and if that is in c/c++ land and stuck it won't
+        # to handle it. We have seen processes getting stuck not handling
+        # SIGTERM for the above reason.
+        self._join_procs_with_timeout(30 if grace_period is None else grace_period)
+        for process in self.processes:
+            if process.is_alive():
+                log.warning(
+                    "Unable to shutdown process %s via SIGTERM , forcefully exiting via SIGKILL",
+                    process.pid,
+                )
+                process.kill()
+            process.join()
+    
+        # The file will only be created if the process crashed.
+        failed_process = self.processes[error_index]
+        if not os.access(self.error_files[error_index], os.R_OK):
+            exitcode = self.processes[error_index].exitcode
+            if exitcode &lt; 0:
+                try:
+                    name = signal.Signals(-exitcode).name
+                except ValueError:
+                    name = f"&lt;Unknown signal {-exitcode}&gt;"
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with signal {name}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                    signal_name=name,
+                )
+            else:
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with exit code {exitcode:d}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                )
+    
+        with open(self.error_files[error_index], "rb") as fh:
+            original_trace = pickle.load(fh)
+        msg = f"\n\n-- Process {error_index:d} terminated with the following error:\n"
+        msg += original_trace
+&gt;       raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E       torch.multiprocessing.spawn.ProcessRaisedException: 
+E       
+E       -- Process 0 terminated with the following error:
+E       Traceback (most recent call last):
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py", line 87, in _wrap
+E           fn(i, *args)
+E           ~~^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/test_sharded_optimizer.py", line 31, in _test_sharded_optimizer
+E           device = _setup_process_group(rank=rank, world_size=world_size, backend="gloo")
+E         File "/Users/simida/csdiy/cs336/cs336-assignment2-systems/tests/common.py", line 87, in _setup_process_group
+E           dist.init_process_group(backend, rank=rank, world_size=world_size)
+E           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 83, in wrapper
+E           return func(*args, **kwargs)
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 97, in wrapper
+E           func_return = func(*args, **kwargs)
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py", line 1831, in init_process_group
+E           store, rank, world_size = next(rendezvous_iterator)
+E                                     ~~~~^^^^^^^^^^^^^^^^^^^^^
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 280, in _env_rendezvous_handler
+E           store = _create_c10d_store(
+E               master_addr, master_port, rank, world_size, timeout, use_libuv
+E           )
+E         File "/Users/simida/csdiy/cs336/cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 199, in _create_c10d_store
+E           return TCPStore(
+E               host_name=hostname,
+E           ...&lt;5 lines&gt;...
+E               use_libuv=use_libuv,
+E           )
+E       torch.distributed.DistNetworkError: The server socket has failed to bind. port: 12390, useIpv6: 0, code: -1, name: EPERM, message: operation not permitted
+
+../cs336-assignment1-basics/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:211: ProcessRaisedException</failure></testcase></testsuite></testsuites>

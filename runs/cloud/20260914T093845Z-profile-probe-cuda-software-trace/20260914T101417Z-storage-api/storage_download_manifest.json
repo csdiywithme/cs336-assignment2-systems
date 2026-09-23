@@ -1,0 +1,58 @@
+[
+  {
+    "path": "000-nsys-small-s256/stdout.log",
+    "bytes": 8881,
+    "remote": "20260914T093845Z-profile-probe-cuda-software-trace/000-nsys-small-s256/stdout.log",
+    "status": "downloaded",
+    "sha256": "41830c9e6f14560ae9cdc587a93e68a2e6158d700de529a4ca830eb901502258",
+    "received_bytes": 8881
+  },
+  {
+    "path": "000-nsys-small-s256/result.json",
+    "bytes": 2410,
+    "remote": "20260914T093845Z-profile-probe-cuda-software-trace/000-nsys-small-s256/result.json",
+    "status": "downloaded",
+    "sha256": "e6ea36c36411c1903c4af08304087fdfbbba8f413e14f7b76b6140eb313c3127",
+    "received_bytes": 2410
+  },
+  {
+    "path": "000-nsys-small-s256/profile.sqlite",
+    "bytes": 3129344,
+    "remote": "20260914T093845Z-profile-probe-cuda-software-trace/000-nsys-small-s256/profile.sqlite",
+    "status": "downloaded",
+    "sha256": "f52ab691be9d6b845636d7cc3c1ecd05da5da453de27a4a9930029b40a48d882",
+    "received_bytes": 3129344
+  },
+  {
+    "path": "000-nsys-small-s256/profile.nsys-rep",
+    "bytes": 769235,
+    "remote": "20260914T093845Z-profile-probe-cuda-software-trace/000-nsys-small-s256/profile.nsys-rep",
+    "status": "downloaded",
+    "sha256": "49a40e8b132dbb79e0434b66c0071ec304c437126cbc4c8810b5f449892c0fc4",
+    "received_bytes": 769235
+  },
+  {
+    "path": "000-nsys-small-s256/nsys_timeline.json",
+    "bytes": 1045820,
+    "remote": "20260914T093845Z-profile-probe-cuda-software-trace/000-nsys-small-s256/nsys_timeline.json",
+    "status": "downloaded",
+    "sha256": "8ce4db1a8ded06f7a6745452c887203e2921fe7cf15ab2b7dfbcafa3a849c2cc",
+    "received_bytes": 1045820
+  },
+  {
+    "path": "000-nsys-small-s256/nsys_summary.json",
+    "bytes": 68964,
+    "remote": "20260914T093845Z-profile-probe-cuda-software-trace/000-nsys-small-s256/nsys_summary.json",
+    "status": "downloaded",
+    "sha256": "c11c2949305273eb91cca909ff2cf3401d51c85b689c31a4d9cd47ae10055d00",
+    "received_bytes": 68964
+  },
+  {
+    "path": "environment.json",
+    "bytes": 3889,
+    "remote": "20260914T093845Z-profile-probe-cuda-software-trace/environment.json",
+    "status": "downloaded",
+    "sha256": "824e2e4edb699f9220d546b3bd248d38a37ed734cdc924307db9b4a4ca352c19",
+    "received_bytes": 3889
+  }
+]

@@ -1,0 +1,74 @@
+{
+  "config": {
+    "name": "xl-fp32-forward-w5",
+    "kind": "model",
+    "size": "xl",
+    "dtype": "fp32",
+    "mode": "forward",
+    "warmup": 5,
+    "steps": 10,
+    "timeout": 500
+  },
+  "started_utc": "2026-09-14T08:55:04.585807+00:00",
+  "measurements": {
+    "samples_ms": [
+      292.66494300000545,
+      292.9366230000028,
+      292.72323100002495,
+      292.6293870000052,
+      292.61633799998776,
+      292.57492899998283,
+      292.79135200002315,
+      292.62783400000103,
+      292.61632599997256,
+      292.64372299999764
+    ],
+    "mean_ms": 292.68246860000033,
+    "std_ms": 0.1085436197086792,
+    "median_ms": 292.6365550000014,
+    "cuda_event_stages": {
+      "forward": {
+        "samples_ms": [
+          291.65313720703125,
+          291.7314453125,
+          291.6510009765625,
+          291.6438293457031,
+          291.6267395019531,
+          291.5926208496094,
+          291.6236267089844,
+          291.6414489746094,
+          291.636962890625,
+          291.6658020019531
+        ],
+        "mean_ms": 291.64666137695315,
+        "std_ms": 0.03588957378150903,
+        "median_ms": 291.64263916015625
+      }
+    },
+    "last_scalar": -0.2137499302625656,
+    "parameters": 3406809600,
+    "initial_memory": {
+      "allocated_bytes": 13762373632,
+      "reserved_bytes": 13763608576,
+      "peak_allocated_bytes": 13762373632,
+      "peak_reserved_bytes": 13763608576
+    },
+    "memory": {
+      "allocated_bytes": 13852813312,
+      "reserved_bytes": 43465572352,
+      "peak_allocated_bytes": 42672408576,
+      "peak_reserved_bytes": 43465572352
+    },
+    "stages": [
+      {
+        "stage": "after_forward",
+        "allocated_bytes": 42672408576,
+        "reserved_bytes": 43465572352,
+        "peak_allocated_bytes": 42672408576,
+        "peak_reserved_bytes": 43465572352
+      }
+    ]
+  },
+  "status": "ok",
+  "wall_seconds": 7.069228172302246
+}

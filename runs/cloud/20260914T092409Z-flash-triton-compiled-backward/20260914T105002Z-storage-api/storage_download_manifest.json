@@ -1,0 +1,74 @@
+[
+  {
+    "path": "summary.json",
+    "bytes": 179437,
+    "remote": "20260914T092409Z-flash-triton-compiled-backward/summary.json",
+    "status": "downloaded",
+    "sha256": "0cb5b296014e9391a7a1387c1623d44f3a683b8f73a0e038a68951897118f8f4",
+    "received_bytes": 179437
+  },
+  {
+    "path": "079-flash-triton-bf16-s65536-d128/stdout.log",
+    "bytes": 1522,
+    "remote": "20260914T092409Z-flash-triton-compiled-backward/079-flash-triton-bf16-s65536-d128/stdout.log",
+    "status": "downloaded",
+    "sha256": "a74af132ebcd9026db8d65264530a86c21ae081cfa8683678cc99f6492d18604",
+    "received_bytes": 1522
+  },
+  {
+    "path": "079-flash-triton-bf16-s65536-d128/status.json",
+    "bytes": 1987,
+    "remote": "20260914T092409Z-flash-triton-compiled-backward/079-flash-triton-bf16-s65536-d128/status.json",
+    "status": "downloaded",
+    "sha256": "7b865455b350d3b3e04a1d5061cda6ff63687382b32835c27ea6197d2460e19f",
+    "received_bytes": 1987
+  },
+  {
+    "path": "079-flash-triton-bf16-s65536-d128/result.json",
+    "bytes": 1242,
+    "remote": "20260914T092409Z-flash-triton-compiled-backward/079-flash-triton-bf16-s65536-d128/result.json",
+    "status": "downloaded",
+    "sha256": "478d05629d22779d1deb75089f003e73d70f25640b73b0eefd3338943d64af1a",
+    "received_bytes": 1242
+  },
+  {
+    "path": "079-flash-triton-bf16-s65536-d128/partial.json",
+    "bytes": 451,
+    "remote": "20260914T092409Z-flash-triton-compiled-backward/079-flash-triton-bf16-s65536-d128/partial.json",
+    "status": "downloaded",
+    "sha256": "3bc47607a44c2c8b9f820152f40976344cf1e28b09b881b07f36411ce3c32159",
+    "received_bytes": 451
+  },
+  {
+    "path": "078-flash-triton-bf16-s65536-d64/stdout.log",
+    "bytes": 1518,
+    "remote": "20260914T092409Z-flash-triton-compiled-backward/078-flash-triton-bf16-s65536-d64/stdout.log",
+    "status": "downloaded",
+    "sha256": "96817b9e11dd86504d6117a6e00e94b74e0f169b049206b25fa943710b047832",
+    "received_bytes": 1518
+  },
+  {
+    "path": "078-flash-triton-bf16-s65536-d64/status.json",
+    "bytes": 1978,
+    "remote": "20260914T092409Z-flash-triton-compiled-backward/078-flash-triton-bf16-s65536-d64/status.json",
+    "status": "downloaded",
+    "sha256": "0a80fd839a71ab9b66156e62cccacc6bca3c8a46dc9e1ed59823a7ec09b39153",
+    "received_bytes": 1978
+  },
+  {
+    "path": "078-flash-triton-bf16-s65536-d64/result.json",
+    "bytes": 1238,
+    "remote": "20260914T092409Z-flash-triton-compiled-backward/078-flash-triton-bf16-s65536-d64/result.json",
+    "status": "downloaded",
+    "sha256": "fc92bf58519359928b5b555fb44fd13ce482faadff1aa9203ef4d569611983e9",
+    "received_bytes": 1238
+  },
+  {
+    "path": "078-flash-triton-bf16-s65536-d64/partial.json",
+    "bytes": 451,
+    "remote": "20260914T092409Z-flash-triton-compiled-backward/078-flash-triton-bf16-s65536-d64/partial.json",
+    "status": "downloaded",
+    "sha256": "0cb65df348006d295132fc9354885b4220aac42dd931aa82920934f6dedf33ca",
+    "received_bytes": 451
+  }
+]

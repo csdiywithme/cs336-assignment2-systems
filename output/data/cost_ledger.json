@@ -1,0 +1,555 @@
+{
+  "currency": "USD",
+  "price_source": "https://modal.com/pricing",
+  "rates": {
+    "B200_per_gpu_second": 0.001736,
+    "cpu_per_core_second": 1.31e-05,
+    "ram_per_GiB_second": 2.22e-06,
+    "cpu_cores": 8,
+    "ram_GiB": 64
+  },
+  "note": "INCOMPLETE runtime-only subtotal, NOT invoice or total spend. Excludes missing-summary jobs, startup/imports/image build/storage/CPU artifact jobs. Early multi-GPU raw estimates corrected using exact dispatch GPU count. Raw files unchanged.",
+  "runs": [
+    {
+      "run_id": "20260914T082016Z-probe",
+      "run_code": "R01",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T082016Z-probe/dispatch.json",
+      "runtime_seconds": 39.791377544403076,
+      "raw_estimate_usd": 0.07890152670524596,
+      "corrected_runtime_estimate_usd": 0.07890152670524596,
+      "rate_per_second": 0.00198288,
+      "source": "runs/cloud/20260914T082016Z-probe/20260914T084906Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T082016Z-probe/20260914T082303Z/summary.json",
+          "pointer": ""
+        },
+        {
+          "path": "runs/cloud/20260914T082016Z-probe/20260914T084906Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 2
+    },
+    {
+      "run_id": "20260914T084725Z-probe-leaf-fix",
+      "run_code": "R02",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T084725Z-probe-leaf-fix/dispatch.json",
+      "runtime_seconds": 55.62215614318848,
+      "raw_estimate_usd": 0.11029206097320556,
+      "corrected_runtime_estimate_usd": 0.11029206097320556,
+      "rate_per_second": 0.00198288,
+      "source": "runs/cloud/20260914T084725Z-probe-leaf-fix/20260914T085436Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T084725Z-probe-leaf-fix/20260914T085436Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 3
+    },
+    {
+      "run_id": "20260914T084933Z-profile-probe-nsys",
+      "run_code": "R03",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T084933Z-profile-probe-nsys/dispatch.json",
+      "runtime_seconds": 12.666603088378906,
+      "raw_estimate_usd": 0.025116353931884765,
+      "corrected_runtime_estimate_usd": 0.025116353931884765,
+      "rate_per_second": 0.00198288,
+      "source": "runs/cloud/20260914T084933Z-profile-probe-nsys/20260914T085439Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T084933Z-profile-probe-nsys/20260914T085439Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 1
+    },
+    {
+      "run_id": "20260914T084942Z-models-small-medium",
+      "run_code": "R04",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T084942Z-models-small-medium/dispatch.json",
+      "runtime_seconds": 174.18693137168884,
+      "raw_estimate_usd": 0.34539178247829433,
+      "corrected_runtime_estimate_usd": 0.34539178247829433,
+      "rate_per_second": 0.00198288,
+      "source": "runs/cloud/20260914T084942Z-models-small-medium/20260914T085455Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T084942Z-models-small-medium/20260914T085455Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 30
+    },
+    {
+      "run_id": "20260914T084950Z-distributed-tests",
+      "run_code": "R05",
+      "gpu_count": 2,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T084950Z-distributed-tests/dispatch.json",
+      "runtime_seconds": 51.1391224861145,
+      "raw_estimate_usd": 0.10140274319526671,
+      "corrected_runtime_estimate_usd": 0.1901802598311615,
+      "rate_per_second": 0.00371888,
+      "source": "runs/cloud/20260914T084950Z-distributed-tests/20260914T085228Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T084950Z-distributed-tests/20260914T085228Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 1
+    },
+    {
+      "run_id": "20260914T085158Z-models-large-xl-10b",
+      "run_code": "R06",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T085158Z-models-large-xl-10b/dispatch.json",
+      "runtime_seconds": 840.8384957313538,
+      "raw_estimate_usd": 1.6672818364157866,
+      "corrected_runtime_estimate_usd": 1.6672818364157866,
+      "rate_per_second": 0.00198288,
+      "source": "runs/cloud/20260914T085158Z-models-large-xl-10b/20260914T091555Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T085158Z-models-large-xl-10b/20260914T091555Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 45
+    },
+    {
+      "run_id": "20260914T085159Z-attention-matrix",
+      "run_code": "R07",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T085159Z-attention-matrix/dispatch.json",
+      "runtime_seconds": 640.6824533939362,
+      "raw_estimate_usd": 1.270396423185768,
+      "corrected_runtime_estimate_usd": 1.270396423185768,
+      "rate_per_second": 0.00198288,
+      "source": "runs/cloud/20260914T085159Z-attention-matrix/20260914T091626Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T085159Z-attention-matrix/20260914T091626Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 40
+    },
+    {
+      "run_id": "20260914T085559Z-communication-and-xl",
+      "run_code": "R08",
+      "gpu_count": 2,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T085559Z-communication-and-xl/dispatch.json",
+      "runtime_seconds": 264.1199355125427,
+      "raw_estimate_usd": 0.5237181377291107,
+      "corrected_runtime_estimate_usd": 0.9822303457788849,
+      "rate_per_second": 0.00371888,
+      "source": "runs/cloud/20260914T085559Z-communication-and-xl/20260914T091516Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T085559Z-communication-and-xl/20260914T091516Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 13
+    },
+    {
+      "run_id": "20260914T085600Z-memory-and-checkpoint",
+      "run_code": "R09",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T085600Z-memory-and-checkpoint/dispatch.json",
+      "runtime_seconds": 278.0662364959717,
+      "raw_estimate_usd": 0.5513719790231323,
+      "corrected_runtime_estimate_usd": 0.5513719790231323,
+      "rate_per_second": 0.00198288,
+      "source": "runs/cloud/20260914T085600Z-memory-and-checkpoint/20260914T091525Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T085600Z-memory-and-checkpoint/20260914T091525Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 16
+    },
+    {
+      "run_id": "20260914T085757Z-nsys-probe-and-fit-nvtx-filter-fix",
+      "run_code": "R10",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T085757Z-nsys-probe-and-fit-nvtx-filter-fix/dispatch.json",
+      "runtime_seconds": 51.74832463264465,
+      "raw_estimate_usd": 0.10261071794757842,
+      "corrected_runtime_estimate_usd": 0.10261071794757842,
+      "rate_per_second": 0.00198288,
+      "source": "runs/cloud/20260914T085757Z-nsys-probe-and-fit-nvtx-filter-fix/20260914T091531Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T085757Z-nsys-probe-and-fit-nvtx-filter-fix/20260914T091531Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 7
+    },
+    {
+      "run_id": "20260914T091103Z-optimized-validation",
+      "run_code": "R11",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T091103Z-optimized-validation/dispatch.json",
+      "runtime_seconds": 11.531143188476562,
+      "raw_estimate_usd": 0.022864873205566405,
+      "corrected_runtime_estimate_usd": 0.022864873205566405,
+      "rate_per_second": 0.00198288,
+      "source": "runs/status/20260914T091103Z-optimized-validation-20260914T102152Z.json",
+      "sources": [
+        {
+          "path": "runs/status/20260914T091103Z-optimized-validation-20260914T102152Z.json",
+          "pointer": "/result"
+        }
+      ],
+      "case_count": 1
+    },
+    {
+      "run_id": "20260914T091830Z-optimized-validation-fp32-oracle",
+      "run_code": "R12",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T091830Z-optimized-validation-fp32-oracle/dispatch.json",
+      "runtime_seconds": 16.37254047393799,
+      "raw_estimate_usd": 0.03246478305496216,
+      "corrected_runtime_estimate_usd": 0.03246478305496216,
+      "rate_per_second": 0.00198288,
+      "source": "runs/cloud/20260914T091830Z-optimized-validation-fp32-oracle/20260914T093348Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T091830Z-optimized-validation-fp32-oracle/20260914T093348Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 2
+    },
+    {
+      "run_id": "20260914T091834Z-profile-probe-keyword-fix",
+      "run_code": "R13",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T091834Z-profile-probe-keyword-fix/dispatch.json",
+      "runtime_seconds": 39.326534032821655,
+      "raw_estimate_usd": 0.07797979780300139,
+      "corrected_runtime_estimate_usd": 0.07797979780300139,
+      "rate_per_second": 0.00198288,
+      "source": "runs/cloud/20260914T091834Z-profile-probe-keyword-fix/20260914T093349Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T091834Z-profile-probe-keyword-fix/20260914T093349Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 1
+    },
+    {
+      "run_id": "20260914T091848Z-flash-eager",
+      "run_code": "R14",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T091848Z-flash-eager/dispatch.json",
+      "runtime_seconds": 838.9281191825867,
+      "raw_estimate_usd": 1.6634937889647672,
+      "corrected_runtime_estimate_usd": 1.6634937889647672,
+      "rate_per_second": 0.00198288,
+      "source": "runs/cloud/20260914T091848Z-flash-eager/20260914T094025Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T091848Z-flash-eager/20260914T094025Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 80
+    },
+    {
+      "run_id": "20260914T091931Z-models-compile-small-medium",
+      "run_code": "R15",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T091931Z-models-compile-small-medium/dispatch.json",
+      "runtime_seconds": 286.72272968292236,
+      "raw_estimate_usd": 0.568536766233673,
+      "corrected_runtime_estimate_usd": 0.568536766233673,
+      "rate_per_second": 0.00198288,
+      "source": "runs/cloud/20260914T091931Z-models-compile-small-medium/20260914T093353Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T091931Z-models-compile-small-medium/20260914T093353Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 4
+    },
+    {
+      "run_id": "20260914T091932Z-communication",
+      "run_code": "R16",
+      "gpu_count": 4,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T091932Z-communication/dispatch.json",
+      "runtime_seconds": 158.35836505889893,
+      "raw_estimate_usd": 0.3140056349079895,
+      "corrected_runtime_estimate_usd": 1.138736000134735,
+      "rate_per_second": 0.00719088,
+      "source": "runs/cloud/20260914T091932Z-communication/20260914T093400Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T091932Z-communication/20260914T093400Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 8
+    },
+    {
+      "run_id": "20260914T092247Z-leaderboard-first-full",
+      "run_code": "R17",
+      "gpu_count": 2,
+      "job_timeout_seconds": 720,
+      "dispatch_source": "runs/dispatch/20260914T092247Z-leaderboard-first-full/dispatch.json",
+      "runtime_seconds": 65.40226483345032,
+      "raw_estimate_usd": 0.12968484289295196,
+      "corrected_runtime_estimate_usd": 0.2432231746438217,
+      "rate_per_second": 0.00371888,
+      "source": "runs/cloud/20260914T092247Z-leaderboard-first-full/20260914T093403Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/status/20260914T092247Z-leaderboard-first-full-20260914T092842Z.json",
+          "pointer": "/result"
+        },
+        {
+          "path": "runs/cloud/20260914T092247Z-leaderboard-first-full/20260914T093403Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 1
+    },
+    {
+      "run_id": "20260914T092252Z-profiles",
+      "run_code": "R18",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T092252Z-profiles/dispatch.json",
+      "runtime_seconds": 281.52171301841736,
+      "raw_estimate_usd": 0.5582237743099594,
+      "corrected_runtime_estimate_usd": 0.5582237743099594,
+      "rate_per_second": 0.00198288,
+      "source": "runs/cloud/20260914T092252Z-profiles/20260914T093412Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T092252Z-profiles/20260914T093412Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 13
+    },
+    {
+      "run_id": "20260914T092406Z-distributed-profiles",
+      "run_code": "R19",
+      "gpu_count": 2,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T092406Z-distributed-profiles/dispatch.json",
+      "runtime_seconds": 110.41730880737305,
+      "raw_estimate_usd": 0.21894427328796384,
+      "corrected_runtime_estimate_usd": 0.41062872137756345,
+      "rate_per_second": 0.00371888,
+      "source": "runs/cloud/20260914T092406Z-distributed-profiles/20260914T093416Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T092406Z-distributed-profiles/20260914T093416Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 3
+    },
+    {
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward",
+      "run_code": "R20",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T092409Z-flash-triton-compiled-backward/dispatch.json",
+      "runtime_seconds": 992.881707906723,
+      "raw_estimate_usd": 1.9687652809740828,
+      "corrected_runtime_estimate_usd": 1.9687652809740828,
+      "rate_per_second": 0.00198288,
+      "source": "runs/cloud/20260914T092409Z-flash-triton-compiled-backward/20260914T105002Z-storage-api/summary.json",
+      "sources": [
+        {
+          "path": "runs/status/20260914T092409Z-flash-triton-compiled-backward-20260914T100623Z.json",
+          "pointer": "/result"
+        },
+        {
+          "path": "runs/cloud/20260914T092409Z-flash-triton-compiled-backward/20260914T105002Z-storage-api/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 80
+    },
+    {
+      "run_id": "20260914T092847Z-communication",
+      "run_code": "R21",
+      "gpu_count": 6,
+      "job_timeout_seconds": 900,
+      "dispatch_source": "runs/dispatch/20260914T092847Z-communication/dispatch.json",
+      "runtime_seconds": 197.10840582847595,
+      "raw_estimate_usd": 0.39084231574916833,
+      "corrected_runtime_estimate_usd": 2.1017432783403396,
+      "rate_per_second": 0.01066288,
+      "source": "runs/cloud/20260914T092847Z-communication/20260914T094207Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T092847Z-communication/20260914T094207Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 8
+    },
+    {
+      "run_id": "20260914T092847Z-flash-triton-full",
+      "run_code": "R22",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T092847Z-flash-triton-full/dispatch.json",
+      "runtime_seconds": 680.6682288646698,
+      "raw_estimate_usd": 1.3496834176511763,
+      "corrected_runtime_estimate_usd": 1.3496834176511763,
+      "rate_per_second": 0.00198288,
+      "source": "runs/cloud/20260914T092847Z-flash-triton-full/20260914T094200Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T092847Z-flash-triton-full/20260914T094200Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 80
+    },
+    {
+      "run_id": "20260914T093124Z-tuned-validation",
+      "run_code": "R23",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T093124Z-tuned-validation/dispatch.json",
+      "runtime_seconds": 20.51838183403015,
+      "raw_estimate_usd": 0.0406854889710617,
+      "corrected_runtime_estimate_usd": 0.0406854889710617,
+      "rate_per_second": 0.00198288,
+      "source": "runs/cloud/20260914T093124Z-tuned-validation/20260914T094213Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/status/20260914T093124Z-tuned-validation-20260914T093546Z.json",
+          "pointer": "/result"
+        },
+        {
+          "path": "runs/cloud/20260914T093124Z-tuned-validation/20260914T094213Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 1
+    },
+    {
+      "run_id": "20260914T093129Z-models-compile-large-xl",
+      "run_code": "R24",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T093129Z-models-compile-large-xl/dispatch.json",
+      "runtime_seconds": 258.4301416873932,
+      "raw_estimate_usd": 0.5124359593490981,
+      "corrected_runtime_estimate_usd": 0.5124359593490981,
+      "rate_per_second": 0.00198288,
+      "source": "runs/cloud/20260914T093129Z-models-compile-large-xl/20260914T094210Z-rpc/summary.json",
+      "sources": [
+        {
+          "path": "runs/cloud/20260914T093129Z-models-compile-large-xl/20260914T094210Z-rpc/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 4
+    },
+    {
+      "run_id": "20260914T093842Z-leaderboard-tuned",
+      "run_code": "R25",
+      "gpu_count": 2,
+      "job_timeout_seconds": 720,
+      "dispatch_source": "runs/dispatch/20260914T093842Z-leaderboard-tuned/dispatch.json",
+      "runtime_seconds": 82.87293648719788,
+      "raw_estimate_usd": 0.30819450604351045,
+      "corrected_runtime_estimate_usd": 0.30819450604351045,
+      "rate_per_second": 0.00371888,
+      "source": "runs/cloud/20260914T093842Z-leaderboard-tuned/20260914T105045Z-storage-api/summary.json",
+      "sources": [
+        {
+          "path": "runs/status/20260914T093842Z-leaderboard-tuned-20260914T094503Z.json",
+          "pointer": "/result"
+        },
+        {
+          "path": "runs/cloud/20260914T093842Z-leaderboard-tuned/20260914T105045Z-storage-api/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 1
+    },
+    {
+      "run_id": "20260914T093845Z-profile-probe-cuda-software-trace",
+      "run_code": "R26",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T093845Z-profile-probe-cuda-software-trace/dispatch.json",
+      "runtime_seconds": 36.27493190765381,
+      "raw_estimate_usd": 0.07192883698104857,
+      "corrected_runtime_estimate_usd": 0.07192883698104857,
+      "rate_per_second": 0.00198288,
+      "source": "runs/status/20260914T093845Z-profile-probe-cuda-software-trace-20260914T094503Z.json",
+      "sources": [
+        {
+          "path": "runs/status/20260914T093845Z-profile-probe-cuda-software-trace-20260914T094503Z.json",
+          "pointer": "/result"
+        }
+      ],
+      "case_count": 1
+    },
+    {
+      "run_id": "20260914T093858Z-models-compile-10b",
+      "run_code": "R27",
+      "gpu_count": 1,
+      "job_timeout_seconds": 1800,
+      "dispatch_source": "runs/dispatch/20260914T093858Z-models-compile-10b/dispatch.json",
+      "runtime_seconds": 232.65929245948792,
+      "raw_estimate_usd": 0.46133545783206936,
+      "corrected_runtime_estimate_usd": 0.46133545783206936,
+      "rate_per_second": 0.00198288,
+      "source": "runs/cloud/20260914T093858Z-models-compile-10b/20260914T104956Z-storage-api/summary.json",
+      "sources": [
+        {
+          "path": "runs/status/20260914T093858Z-models-compile-10b-20260914T094503Z.json",
+          "pointer": "/result"
+        },
+        {
+          "path": "runs/cloud/20260914T093858Z-models-compile-10b/20260914T104956Z-storage-api/summary.json",
+          "pointer": ""
+        }
+      ],
+      "case_count": 2
+    }
+  ],
+  "missing_summary_runs": [],
+  "is_complete_total": false,
+  "is_invoice": false,
+  "total_corrected_runtime_estimate_usd": 16.85469719214138
+}

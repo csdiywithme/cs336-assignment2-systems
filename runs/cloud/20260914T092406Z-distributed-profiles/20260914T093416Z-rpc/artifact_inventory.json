@@ -1,0 +1,166 @@
+[
+  {
+    "path": "environment.json",
+    "bytes": 4598
+  },
+  {
+    "path": "nvidia-smi.txt",
+    "bytes": 22639
+  },
+  {
+    "path": "nvlink-status.txt",
+    "bytes": 944
+  },
+  {
+    "path": "pip-freeze.txt",
+    "bytes": 1691
+  },
+  {
+    "path": "progress.json",
+    "bytes": 13674
+  },
+  {
+    "path": "summary.json",
+    "bytes": 14722
+  },
+  {
+    "path": "topology.txt",
+    "bytes": 89
+  },
+  {
+    "path": "000-profile-xl-naive/profile.nsys-rep",
+    "bytes": 3699250
+  },
+  {
+    "path": "000-profile-xl-naive/profile.sqlite",
+    "bytes": 14041088
+  },
+  {
+    "path": "000-profile-xl-naive/ranks.json",
+    "bytes": 2327
+  },
+  {
+    "path": "000-profile-xl-naive/result.json",
+    "bytes": 3049
+  },
+  {
+    "path": "000-profile-xl-naive/status.json",
+    "bytes": 4268
+  },
+  {
+    "path": "000-profile-xl-naive/stdout.log",
+    "bytes": 10659
+  },
+  {
+    "path": "000-profile-xl-naive/trace-analysis.log",
+    "bytes": 598
+  },
+  {
+    "path": "001-profile-xl-overlap/profile.nsys-rep",
+    "bytes": 3815050
+  },
+  {
+    "path": "001-profile-xl-overlap/profile.sqlite",
+    "bytes": 14274560
+  },
+  {
+    "path": "001-profile-xl-overlap/ranks.json",
+    "bytes": 2348
+  },
+  {
+    "path": "001-profile-xl-overlap/result.json",
+    "bytes": 3073
+  },
+  {
+    "path": "001-profile-xl-overlap/status.json",
+    "bytes": 4301
+  },
+  {
+    "path": "001-profile-xl-overlap/stdout.log",
+    "bytes": 10364
+  },
+  {
+    "path": "001-profile-xl-overlap/trace-analysis.log",
+    "bytes": 598
+  },
+  {
+    "path": "002-profile-xl-fsdp/profile.nsys-rep",
+    "bytes": 4087589
+  },
+  {
+    "path": "002-profile-xl-fsdp/profile.sqlite",
+    "bytes": 14020608
+  },
+  {
+    "path": "002-profile-xl-fsdp/ranks.json",
+    "bytes": 2346
+  },
+  {
+    "path": "002-profile-xl-fsdp/result.json",
+    "bytes": 3067
+  },
+  {
+    "path": "002-profile-xl-fsdp/status.json",
+    "bytes": 4281
+  },
+  {
+    "path": "002-profile-xl-fsdp/stdout.log",
+    "bytes": 10298
+  },
+  {
+    "path": "002-profile-xl-fsdp/trace-analysis.log",
+    "bytes": 598
+  },
+  {
+    "path": "source/__init__.py",
+    "bytes": 151
+  },
+  {
+    "path": "source/attention.py",
+    "bytes": 4548
+  },
+  {
+    "path": "source/checkpointing.py",
+    "bytes": 783
+  },
+  {
+    "path": "source/ddp.py",
+    "bytes": 2092
+  },
+  {
+    "path": "source/experiment_plans.py",
+    "bytes": 6098
+  },
+  {
+    "path": "source/experiments.py",
+    "bytes": 26094
+  },
+  {
+    "path": "source/fsdp.py",
+    "bytes": 8580
+  },
+  {
+    "path": "source/nsight_summary.py",
+    "bytes": 3692
+  },
+  {
+    "path": "source/optimized_model.py",
+    "bytes": 4783
+  },
+  {
+    "path": "source/profiling.py",
+    "bytes": 3700
+  },
+  {
+    "path": "source/sharded_optimizer.py",
+    "bytes": 2834
+  },
+  {
+    "path": "source/triton_attention.py",
+    "bytes": 6954
+  },
+  {
+    "path": "source/triton_optimizer.py",
+    "bytes": 764
+  }
+]

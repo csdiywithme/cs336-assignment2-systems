@@ -1,0 +1,2436 @@
+{
+  "run_id": "20260914T092252Z-profiles",
+  "seconds": 281.52171301841736,
+  "cases": [
+    {
+      "name": "profile-small-s256-plain",
+      "command": [
+        "/usr/local/bin/python",
+        "-m",
+        "cs336_systems.experiments",
+        "--config",
+        "{\"name\": \"profile-small-s256-plain\", \"kind\": \"model\", \"size\": \"small\", \"seq\": 256, \"mode\": \"train\", \"dtype\": \"fp32\", \"annotate\": true, \"nsys\": false, \"warmup\": 5, \"steps\": 5, \"timeout\": 300}",
+        "--output",
+        "/data/20260914T092252Z-profiles/000-profile-small-s256-plain"
+      ],
+      "started": 1789377781.0905926,
+      "returncode": 0,
+      "seconds": 4.817839622497559,
+      "status": "ok",
+      "result": {
+        "config": {
+          "name": "profile-small-s256-plain",
+          "kind": "model",
+          "size": "small",
+          "seq": 256,
+          "mode": "train",
+          "dtype": "fp32",
+          "annotate": true,
+          "nsys": false,
+          "warmup": 5,
+          "steps": 5,
+          "timeout": 300
+        },
+        "started_utc": "2026-09-14T09:23:02.483613+00:00",
+        "measurements": {
+          "samples_ms": [
+            36.99752600000039,
+            36.63876300000091,
+            36.98476599999978,
+            36.84836900000121,
+            37.0886350000017
+          ],
+          "mean_ms": 36.9116118000008,
+          "std_ms": 0.1750115135432447,
+          "median_ms": 36.98476599999978,
+          "cuda_event_stages": {
+            "forward": {
+              "samples_ms": [
+                10.0797758102417,
+                9.885855674743652,
+                10.172160148620605,
+                9.97094440460205,
+                10.19983959197998
+              ],
+              "mean_ms": 10.061715126037598,
+              "std_ms": 0.1330117756990777,
+              "median_ms": 10.0797758102417
+            },
+            "loss": {
+              "samples_ms": [
+                0.045152001082897186,
+                0.04505600035190582,
+                0.04601600021123886,
+                0.046112000942230225,
+                0.04495999962091446
+              ],
+              "mean_ms": 0.04545920044183731,
+              "std_ms": 0.0005572965312073301,
+              "median_ms": 0.045152001082897186
+            },
+            "backward": {
+              "samples_ms": [
+                18.406272888183594,
+                18.41881561279297,
+                18.415647506713867,
+                18.44220733642578,
+                18.45142364501953
+              ],
+              "mean_ms": 18.426873397827148,
+              "std_ms": 0.01906025864641026,
+              "median_ms": 18.41881561279297
+            },
+            "optimizer": {
+              "samples_ms": [
+                7.664735794067383,
+                7.640063762664795,
+                7.5766401290893555,
+                7.644320011138916,
+                7.775424003601074
+              ],
+              "mean_ms": 7.660236740112305,
+              "std_ms": 0.07234817173114025,
+              "median_ms": 7.644320011138916
+            }
+          },
+          "last_scalar": 3.224956512451172,
+          "parameters": 128625408,
+          "initial_memory": {
+            "allocated_bytes": 516058112,
+            "reserved_bytes": 568328192,
+            "peak_allocated_bytes": 516058112,
+            "peak_reserved_bytes": 568328192
+          },
+          "memory": {
+            "allocated_bytes": 2189603328,
+            "reserved_bytes": 3474980864,
+            "peak_allocated_bytes": 3255179264,
+            "peak_reserved_bytes": 3474980864
+          },
+          "stages": [
+            {
+              "stage": "after_forward",
+              "allocated_bytes": 3171293184,
+              "reserved_bytes": 3474980864,
+              "peak_allocated_bytes": 3171293184,
+              "peak_reserved_bytes": 3474980864
+            },
+            {
+              "stage": "after_backward_before_optimizer",
+              "allocated_bytes": 2230809088,
+              "reserved_bytes": 3474980864,
+              "peak_allocated_bytes": 3255179264,
+              "peak_reserved_bytes": 3474980864
+            },
+            {
+              "stage": "after_optimizer",
+              "allocated_bytes": 2231546368,
+              "reserved_bytes": 3474980864,
+              "peak_allocated_bytes": 3255179264,
+              "peak_reserved_bytes": 3474980864
+            }
+          ]
+        },
+        "status": "ok",
+        "wall_seconds": 2.644350290298462
+      }
+    },
+    {
+      "name": "profile-small-s256-nsys",
+      "command": [
+        "nsys",
+        "profile",
+        "--trace=cuda,nvtx,osrt,cublas",
+        "--sample=none",
+        "--cpuctxsw=none",
+        "--capture-range=nvtx",
+        "--nvtx-capture=measurement",
+        "--capture-range-end=stop",
+        "--env-var=NSYS_NVTX_PROFILER_REGISTER_ONLY=0",
+        "--cuda-memory-usage=true",
+        "--pytorch=autograd-nvtx",
+        "--export=sqlite",
+        "-o",
+        "/data/20260914T092252Z-profiles/001-profile-small-s256-nsys/profile",
+        "/usr/local/bin/python",
+        "-m",
+        "cs336_systems.experiments",
+        "--config",
+        "{\"name\": \"profile-small-s256-nsys\", \"kind\": \"model\", \"size\": \"small\", \"seq\": 256, \"mode\": \"train\", \"dtype\": \"fp32\", \"annotate\": true, \"nsys\": true, \"warmup\": 5, \"steps\": 1, \"timeout\": 300}",
+        "--output",
+        "/data/20260914T092252Z-profiles/001-profile-small-s256-nsys"
+      ],
+      "started": 1789377794.5207827,
+      "returncode": 0,
+      "seconds": 18.48116707801819,
+      "status": "ok",
+      "trace_created": true,
+      "result": {
+        "config": {
+          "name": "profile-small-s256-nsys",
+          "kind": "model",
+          "size": "small",
+          "seq": 256,
+          "mode": "train",
+          "dtype": "fp32",
+          "annotate": true,
+          "nsys": true,
+          "warmup": 5,
+          "steps": 1,
+          "timeout": 300
+        },
+        "started_utc": "2026-09-14T09:23:16.917481+00:00",
+        "measurements": {
+          "samples_ms": [
+            56.08544300000062
+          ],
+          "mean_ms": 56.08544300000062,
+          "std_ms": 0.0,
+          "median_ms": 56.08544300000062,
+          "cuda_event_stages": {
+            "forward": {
+              "samples_ms": [
+                15.778335571289062
+              ],
+              "mean_ms": 15.778335571289062,
+              "std_ms": 0.0,
+              "median_ms": 15.778335571289062
+            },
+            "loss": {
+              "samples_ms": [
+                0.045343998819589615
+              ],
+              "mean_ms": 0.045343998819589615,
+              "std_ms": 0.0,
+              "median_ms": 0.045343998819589615
+            },
+            "backward": {
+              "samples_ms": [
+                25.776447296142578
+              ],
+              "mean_ms": 25.776447296142578,
+              "std_ms": 0.0,
+              "median_ms": 25.776447296142578
+            },
+            "optimizer": {
+              "samples_ms": [
+                12.446720123291016
+              ],
+              "mean_ms": 12.446720123291016,
+              "std_ms": 0.0,
+              "median_ms": 12.446720123291016
+            }
+          },
+          "last_scalar": 5.821629524230957,
+          "parameters": 128625408,
+          "initial_memory": {
+            "allocated_bytes": 516058112,
+            "reserved_bytes": 568328192,
+            "peak_allocated_bytes": 516058112,
+            "peak_reserved_bytes": 568328192
+          },
+          "memory": {
+            "allocated_bytes": 2187604480,
+            "reserved_bytes": 3433037824,
+            "peak_allocated_bytes": 3251148800,
+            "peak_reserved_bytes": 3433037824
+          },
+          "stages": [
+            {
+              "stage": "after_forward",
+              "allocated_bytes": 3167262720,
+              "reserved_bytes": 3433037824,
+              "peak_allocated_bytes": 3167262720,
+              "peak_reserved_bytes": 3433037824
+            },
+            {
+              "stage": "after_backward_before_optimizer",
+              "allocated_bytes": 2228187648,
+              "reserved_bytes": 3433037824,
+              "peak_allocated_bytes": 3251148800,
+              "peak_reserved_bytes": 3433037824
+            },
+            {
+              "stage": "after_optimizer",
+              "allocated_bytes": 2229547520,
+              "reserved_bytes": 3433037824,
+              "peak_allocated_bytes": 3251148800,
+              "peak_reserved_bytes": 3433037824
+            }
+          ]
+        },
+        "status": "ok",
+        "wall_seconds": 15.143033027648926
+      }
+    },
+    {
+      "name": "profile-small-s1024-plain",
+      "command": [
+        "/usr/local/bin/python",
+        "-m",
+        "cs336_systems.experiments",
+        "--config",
+        "{\"name\": \"profile-small-s1024-plain\", \"kind\": \"model\", \"size\": \"small\", \"seq\": 1024, \"mode\": \"train\", \"dtype\": \"fp32\", \"annotate\": true, \"nsys\": false, \"warmup\": 5, \"steps\": 5, \"timeout\": 300}",
+        "--output",
+        "/data/20260914T092252Z-profiles/002-profile-small-s1024-plain"
+      ],
+      "started": 1789377815.4124017,
+      "returncode": 0,
+      "seconds": 5.27349853515625,
+      "status": "ok",
+      "result": {
+        "config": {
+          "name": "profile-small-s1024-plain",
+          "kind": "model",
+          "size": "small",
+          "seq": 1024,
+          "mode": "train",
+          "dtype": "fp32",
+          "annotate": true,
+          "nsys": false,
+          "warmup": 5,
+          "steps": 5,
+          "timeout": 300
+        },
+        "started_utc": "2026-09-14T09:23:36.692851+00:00",
+        "measurements": {
+          "samples_ms": [
+            113.89127300000013,
+            114.20629799999915,
+            114.12573900000211,
+            113.8843439999988,
+            114.31607600000149
+          ],
+          "mean_ms": 114.08474600000034,
+          "std_ms": 0.19206876827524907,
+          "median_ms": 114.12573900000211,
+          "cuda_event_stages": {
+            "forward": {
+              "samples_ms": [
+                36.576961517333984,
+                36.6987190246582,
+                36.52096176147461,
+                36.567649841308594,
+                36.72140884399414
+              ],
+              "mean_ms": 36.617140197753905,
+              "std_ms": 0.08780798502179833,
+              "median_ms": 36.576961517333984
+            },
+            "loss": {
+              "samples_ms": [
+                0.1157120019197464,
+                0.11366400122642517,
+                0.11369600147008896,
+                0.11488000303506851,
+                0.11468800157308578
+              ],
+              "mean_ms": 0.11452800184488296,
+              "std_ms": 0.0008645927683809373,
+              "median_ms": 0.11468800157308578
+            },
+            "backward": {
+              "samples_ms": [
+                68.98381042480469,
+                68.99616241455078,
+                69.18656158447266,
+                68.98467254638672,
+                68.99100494384766
+              ],
+              "mean_ms": 69.0284423828125,
+              "std_ms": 0.08853396294250573,
+              "median_ms": 68.99100494384766
+            },
+            "optimizer": {
+              "samples_ms": [
+                7.589951992034912,
+                7.546879768371582,
+                7.493663787841797,
+                7.555071830749512,
+                7.671840190887451
+              ],
+              "mean_ms": 7.571481513977051,
+              "std_ms": 0.0658466868608775,
+              "median_ms": 7.555071830749512
+            }
+          },
+          "last_scalar": 6.76149845123291,
+          "parameters": 128625408,
+          "initial_memory": {
+            "allocated_bytes": 516303872,
+            "reserved_bytes": 568328192,
+            "peak_allocated_bytes": 516303872,
+            "peak_reserved_bytes": 568328192
+          },
+          "memory": {
+            "allocated_bytes": 2113974784,
+            "reserved_bytes": 12549357568,
+            "peak_allocated_bytes": 11707195392,
+            "peak_reserved_bytes": 12549357568
+          },
+          "stages": [
+            {
+              "stage": "after_forward",
+              "allocated_bytes": 11331520512,
+              "reserved_bytes": 12549357568,
+              "peak_allocated_bytes": 11331520512,
+              "peak_reserved_bytes": 12549357568
+            },
+            {
+              "stage": "after_backward_before_optimizer",
+              "allocated_bytes": 2276340224,
+              "reserved_bytes": 12549357568,
+              "peak_allocated_bytes": 11707195392,
+              "peak_reserved_bytes": 12549357568
+            },
+            {
+              "stage": "after_optimizer",
+              "allocated_bytes": 2277814784,
+              "reserved_bytes": 12549357568,
+              "peak_allocated_bytes": 11707195392,
+              "peak_reserved_bytes": 12549357568
+            }
+          ]
+        },
+        "status": "ok",
+        "wall_seconds": 3.2157020568847656
+      }
+    },
+    {
+      "name": "profile-small-s1024-nsys",
+      "command": [
+        "nsys",
+        "profile",
+        "--trace=cuda,nvtx,osrt,cublas",
+        "--sample=none",
+        "--cpuctxsw=none",
+        "--capture-range=nvtx",
+        "--nvtx-capture=measurement",
+        "--capture-range-end=stop",
+        "--env-var=NSYS_NVTX_PROFILER_REGISTER_ONLY=0",
+        "--cuda-memory-usage=true",
+        "--pytorch=autograd-nvtx",
+        "--export=sqlite",
+        "-o",
+        "/data/20260914T092252Z-profiles/003-profile-small-s1024-nsys/profile",
+        "/usr/local/bin/python",
+        "-m",
+        "cs336_systems.experiments",
+        "--config",
+        "{\"name\": \"profile-small-s1024-nsys\", \"kind\": \"model\", \"size\": \"small\", \"seq\": 1024, \"mode\": \"train\", \"dtype\": \"fp32\", \"annotate\": true, \"nsys\": true, \"warmup\": 5, \"steps\": 1, \"timeout\": 300}",
+        "--output",
+        "/data/20260914T092252Z-profiles/003-profile-small-s1024-nsys"
+      ],
+      "started": 1789377824.0010622,
+      "returncode": 0,
+      "seconds": 19.70239496231079,
+      "status": "ok",
+      "trace_created": true,
+      "result": {
+        "config": {
+          "name": "profile-small-s1024-nsys",
+          "kind": "model",
+          "size": "small",
+          "seq": 1024,
+          "mode": "train",
+          "dtype": "fp32",
+          "annotate": true,
+          "nsys": true,
+          "warmup": 5,
+          "steps": 1,
+          "timeout": 300
+        },
+        "started_utc": "2026-09-14T09:23:46.422837+00:00",
+        "measurements": {
+          "samples_ms": [
+            115.1588880000034
+          ],
+          "mean_ms": 115.1588880000034,
+          "std_ms": 0.0,
+          "median_ms": 115.1588880000034,
+          "cuda_event_stages": {
+            "forward": {
+              "samples_ms": [
+                36.976993560791016
+              ],
+              "mean_ms": 36.976993560791016,
+              "std_ms": 0.0,
+              "median_ms": 36.976993560791016
+            },
+            "loss": {
+              "samples_ms": [
+                0.11472000181674957
+              ],
+              "mean_ms": 0.11472000181674957,
+              "std_ms": 0.0,
+              "median_ms": 0.11472000181674957
+            },
+            "backward": {
+              "samples_ms": [
+                69.03702545166016
+              ],
+              "mean_ms": 69.03702545166016,
+              "std_ms": 0.0,
+              "median_ms": 69.03702545166016
+            },
+            "optimizer": {
+              "samples_ms": [
+                7.574751853942871
+              ],
+              "mean_ms": 7.574751853942871,
+              "std_ms": 0.0,
+              "median_ms": 7.574751853942871
+            }
+          },
+          "last_scalar": 7.536059856414795,
+          "parameters": 128625408,
+          "initial_memory": {
+            "allocated_bytes": 516303872,
+            "reserved_bytes": 568328192,
+            "peak_allocated_bytes": 516303872,
+            "peak_reserved_bytes": 568328192
+          },
+          "memory": {
+            "allocated_bytes": 2111549952,
+            "reserved_bytes": 12549357568,
+            "peak_allocated_bytes": 11704885248,
+            "peak_reserved_bytes": 12549357568
+          },
+          "stages": [
+            {
+              "stage": "after_forward",
+              "allocated_bytes": 11329161216,
+              "reserved_bytes": 12549357568,
+              "peak_allocated_bytes": 11329161216,
+              "peak_reserved_bytes": 12549357568
+            },
+            {
+              "stage": "after_backward_before_optimizer",
+              "allocated_bytes": 2273538560,
+              "reserved_bytes": 12549357568,
+              "peak_allocated_bytes": 11704885248,
+              "peak_reserved_bytes": 12549357568
+            },
+            {
+              "stage": "after_optimizer",
+              "allocated_bytes": 2275389952,
+              "reserved_bytes": 12549357568,
+              "peak_allocated_bytes": 11704885248,
+              "peak_reserved_bytes": 12549357568
+            }
+          ]
+        },
+        "status": "ok",
+        "wall_seconds": 16.248236179351807
+      }
+    },
+    {
+      "name": "profile-small-s4096-plain",
+      "command": [
+        "/usr/local/bin/python",
+        "-m",
+        "cs336_systems.experiments",
+        "--config",
+        "{\"name\": \"profile-small-s4096-plain\", \"kind\": \"model\", \"size\": \"small\", \"seq\": 4096, \"mode\": \"train\", \"dtype\": \"fp32\", \"annotate\": true, \"nsys\": false, \"warmup\": 5, \"steps\": 5, \"timeout\": 300}",
+        "--output",
+        "/data/20260914T092252Z-profiles/004-profile-small-s4096-plain"
+      ],
+      "started": 1789377846.1640205,
+      "returncode": 0,
+      "seconds": 12.539735555648804,
+      "status": "ok",
+      "result": {
+        "config": {
+          "name": "profile-small-s4096-plain",
+          "kind": "model",
+          "size": "small",
+          "seq": 4096,
+          "mode": "train",
+          "dtype": "fp32",
+          "annotate": true,
+          "nsys": false,
+          "warmup": 5,
+          "steps": 5,
+          "timeout": 300
+        },
+        "started_utc": "2026-09-14T09:24:07.274881+00:00",
+        "measurements": {
+          "samples_ms": [
+            764.2870380000062,
+            766.5634800000021,
+            763.7311639999922,
+            764.0715130000046,
+            764.4469579999935
+          ],
+          "mean_ms": 764.6200305999997,
+          "std_ms": 1.1190162149189538,
+          "median_ms": 764.2870380000062,
+          "cuda_event_stages": {
+            "forward": {
+              "samples_ms": [
+                256.8854675292969,
+                256.9072570800781,
+                256.6186218261719,
+                256.9399719238281,
+                256.6293640136719
+              ],
+              "mean_ms": 256.7961364746094,
+              "std_ms": 0.1583832116105756,
+              "median_ms": 256.8854675292969
+            },
+            "loss": {
+              "samples_ms": [
+                0.3654719889163971,
+                0.3632960021495819,
+                0.36531201004981995,
+                0.36563199758529663,
+                0.36563199758529663
+              ],
+              "mean_ms": 0.3650687992572784,
+              "std_ms": 0.0009998634518336793,
+              "median_ms": 0.3654719889163971
+            },
+            "backward": {
+              "samples_ms": [
+                498.69091796875,
+                498.6849670410156,
+                498.74615478515625,
+                498.6542053222656,
+                498.72747802734375
+              ],
+              "mean_ms": 498.70074462890625,
+              "std_ms": 0.03635986618075791,
+              "median_ms": 498.69091796875
+            },
+            "optimizer": {
+              "samples_ms": [
+                7.588895797729492,
+                9.828319549560547,
+                7.472095966339111,
+                7.482367992401123,
+                7.6216959953308105
+              ],
+              "mean_ms": 7.998675060272217,
+              "std_ms": 1.0248767910215313,
+              "median_ms": 7.588895797729492
+            }
+          },
+          "last_scalar": 8.165119171142578,
+          "parameters": 128625408,
+          "initial_memory": {
+            "allocated_bytes": 517286912,
+            "reserved_bytes": 570425344,
+            "peak_allocated_bytes": 517286912,
+            "peak_reserved_bytes": 570425344
+          },
+          "memory": {
+            "allocated_bytes": 2090414592,
+            "reserved_bytes": 113799856128,
+            "peak_allocated_bytes": 109681958912,
+            "peak_reserved_bytes": 113799856128
+          },
+          "stages": [
+            {
+              "stage": "after_forward",
+              "allocated_bytes": 98699773952,
+              "reserved_bytes": 113799856128,
+              "peak_allocated_bytes": 102472451072,
+              "peak_reserved_bytes": 113799856128
+            },
+            {
+              "stage": "after_backward_before_optimizer",
+              "allocated_bytes": 2745561600,
+              "reserved_bytes": 113799856128,
+              "peak_allocated_bytes": 109681958912,
+              "peak_reserved_bytes": 113799856128
+            },
+            {
+              "stage": "after_optimizer",
+              "allocated_bytes": 2745774592,
+              "reserved_bytes": 113799856128,
+              "peak_allocated_bytes": 109681958912,
+              "peak_reserved_bytes": 113799856128
+            }
+          ]
+        },
+        "status": "ok",
+        "wall_seconds": 10.419463634490967
+      }
+    },
+    {
+      "name": "profile-small-s4096-nsys",
+      "command": [
+        "nsys",
+        "profile",
+        "--trace=cuda,nvtx,osrt,cublas",
+        "--sample=none",
+        "--cpuctxsw=none",
+        "--capture-range=nvtx",
+        "--nvtx-capture=measurement",
+        "--capture-range-end=stop",
+        "--env-var=NSYS_NVTX_PROFILER_REGISTER_ONLY=0",
+        "--cuda-memory-usage=true",
+        "--pytorch=autograd-nvtx",
+        "--export=sqlite",
+        "-o",
+        "/data/20260914T092252Z-profiles/005-profile-small-s4096-nsys/profile",
+        "/usr/local/bin/python",
+        "-m",
+        "cs336_systems.experiments",
+        "--config",
+        "{\"name\": \"profile-small-s4096-nsys\", \"kind\": \"model\", \"size\": \"small\", \"seq\": 4096, \"mode\": \"train\", \"dtype\": \"fp32\", \"annotate\": true, \"nsys\": true, \"warmup\": 5, \"steps\": 1, \"timeout\": 300}",
+        "--output",
+        "/data/20260914T092252Z-profiles/005-profile-small-s4096-nsys"
+      ],
+      "started": 1789377861.0914452,
+      "returncode": 0,
+      "seconds": 25.68481159210205,
+      "status": "ok",
+      "trace_created": true,
+      "result": {
+        "config": {
+          "name": "profile-small-s4096-nsys",
+          "kind": "model",
+          "size": "small",
+          "seq": 4096,
+          "mode": "train",
+          "dtype": "fp32",
+          "annotate": true,
+          "nsys": true,
+          "warmup": 5,
+          "steps": 1,
+          "timeout": 300
+        },
+        "started_utc": "2026-09-14T09:24:23.484245+00:00",
+        "measurements": {
+          "samples_ms": [
+            765.5636709999953
+          ],
+          "mean_ms": 765.5636709999953,
+          "std_ms": 0.0,
+          "median_ms": 765.5636709999953,
+          "cuda_event_stages": {
+            "forward": {
+              "samples_ms": [
+                256.92706298828125
+              ],
+              "mean_ms": 256.92706298828125,
+              "std_ms": 0.0,
+              "median_ms": 256.92706298828125
+            },
+            "loss": {
+              "samples_ms": [
+                0.3646720051765442
+              ],
+              "mean_ms": 0.3646720051765442,
+              "std_ms": 0.0,
+              "median_ms": 0.3646720051765442
+            },
+            "backward": {
+              "samples_ms": [
+                498.74114990234375
+              ],
+              "mean_ms": 498.74114990234375,
+              "std_ms": 0.0,
+              "median_ms": 498.74114990234375
+            },
+            "optimizer": {
+              "samples_ms": [
+                7.730303764343262
+              ],
+              "mean_ms": 7.730303764343262,
+              "std_ms": 0.0,
+              "median_ms": 7.730303764343262
+            }
+          },
+          "last_scalar": 8.47366714477539,
+          "parameters": 128625408,
+          "initial_memory": {
+            "allocated_bytes": 517286912,
+            "reserved_bytes": 570425344,
+            "peak_allocated_bytes": 517286912,
+            "peak_reserved_bytes": 570425344
+          },
+          "memory": {
+            "allocated_bytes": 2094608896,
+            "reserved_bytes": 113799856128,
+            "peak_allocated_bytes": 109682417664,
+            "peak_reserved_bytes": 113799856128
+          },
+          "stages": [
+            {
+              "stage": "after_forward",
+              "allocated_bytes": 98700232704,
+              "reserved_bytes": 113799856128,
+              "peak_allocated_bytes": 102472909824,
+              "peak_reserved_bytes": 113799856128
+            },
+            {
+              "stage": "after_backward_before_optimizer",
+              "allocated_bytes": 2748871168,
+              "reserved_bytes": 113799856128,
+              "peak_allocated_bytes": 109682417664,
+              "peak_reserved_bytes": 113799856128
+            },
+            {
+              "stage": "after_optimizer",
+              "allocated_bytes": 2749968896,
+              "reserved_bytes": 113799856128,
+              "peak_allocated_bytes": 109682417664,
+              "peak_reserved_bytes": 113799856128
+            }
+          ]
+        },
+        "status": "ok",
+        "wall_seconds": 22.131279468536377
+      }
+    },
+    {
+      "name": "profile-xl-s256-plain",
+      "command": [
+        "/usr/local/bin/python",
+        "-m",
+        "cs336_systems.experiments",
+        "--config",
+        "{\"name\": \"profile-xl-s256-plain\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 256, \"mode\": \"train\", \"dtype\": \"fp32\", \"annotate\": true, \"nsys\": false, \"warmup\": 5, \"steps\": 5, \"timeout\": 300}",
+        "--output",
+        "/data/20260914T092252Z-profiles/006-profile-xl-s256-plain"
+      ],
+      "started": 1789377889.0622668,
+      "returncode": 0,
+      "seconds": 9.98956561088562,
+      "status": "ok",
+      "result": {
+        "config": {
+          "name": "profile-xl-s256-plain",
+          "kind": "model",
+          "size": "xl",
+          "seq": 256,
+          "mode": "train",
+          "dtype": "fp32",
+          "annotate": true,
+          "nsys": false,
+          "warmup": 5,
+          "steps": 5,
+          "timeout": 300
+        },
+        "started_utc": "2026-09-14T09:24:50.266924+00:00",
+        "measurements": {
+          "samples_ms": [
+            532.2432580000083,
+            533.4240270000095,
+            532.9671510000082,
+            533.0713190000012,
+            532.5385090000054
+          ],
+          "mean_ms": 532.8488528000065,
+          "std_ms": 0.46297121146912557,
+          "median_ms": 532.9671510000082,
+          "cuda_event_stages": {
+            "forward": {
+              "samples_ms": [
+                149.8525390625,
+                149.95628356933594,
+                149.99221801757812,
+                150.0621795654297,
+                149.95654296875
+              ],
+              "mean_ms": 149.96395263671874,
+              "std_ms": 0.07578615238491013,
+              "median_ms": 149.95654296875
+            },
+            "loss": {
+              "samples_ms": [
+                0.04540799930691719,
+                0.045951999723911285,
+                0.04598399996757507,
+                0.0459199994802475,
+                0.04435199871659279
+              ],
+              "mean_ms": 0.04552319943904877,
+              "std_ms": 0.0006961751372334681,
+              "median_ms": 0.0459199994802475
+            },
+            "backward": {
+              "samples_ms": [
+                301.1461181640625,
+                301.9355773925781,
+                301.17889404296875,
+                301.1867980957031,
+                301.23583984375
+              ],
+              "mean_ms": 301.3366455078125,
+              "std_ms": 0.336348637870232,
+              "median_ms": 301.1867980957031
+            },
+            "optimizer": {
+              "samples_ms": [
+                80.1434555053711,
+                80.34512329101562,
+                80.47315216064453,
+                80.26834869384766,
+                80.16182708740234
+              ],
+              "mean_ms": 80.27838134765625,
+              "std_ms": 0.136272419474411,
+              "median_ms": 80.26834869384766
+            }
+          },
+          "last_scalar": 6.4427490234375,
+          "parameters": 3406809600,
+          "initial_memory": {
+            "allocated_bytes": 13762275328,
+            "reserved_bytes": 13763608576,
+            "peak_allocated_bytes": 13762275328,
+            "peak_reserved_bytes": 13763608576
+          },
+          "memory": {
+            "allocated_bytes": 54662472192,
+            "reserved_bytes": 60836282368,
+            "peak_allocated_bytes": 55226999296,
+            "peak_reserved_bytes": 60836282368
+          },
+          "stages": [
+            {
+              "stage": "after_forward",
+              "allocated_bytes": 53377633280,
+              "reserved_bytes": 60836282368,
+              "peak_allocated_bytes": 53377633280,
+              "peak_reserved_bytes": 60836282368
+            },
+            {
+              "stage": "after_backward_before_optimizer",
+              "allocated_bytes": 54703071744,
+              "reserved_bytes": 60836282368,
+              "peak_allocated_bytes": 54814667776,
+              "peak_reserved_bytes": 60836282368
+            },
+            {
+              "stage": "after_optimizer",
+              "allocated_bytes": 54703432192,
+              "reserved_bytes": 60836282368,
+              "peak_allocated_bytes": 55226999296,
+              "peak_reserved_bytes": 60836282368
+            }
+          ]
+        },
+        "status": "ok",
+        "wall_seconds": 7.8660783767700195
+      }
+    },
+    {
+      "name": "profile-xl-s256-nsys",
+      "command": [
+        "nsys",
+        "profile",
+        "--trace=cuda,nvtx,osrt,cublas",
+        "--sample=none",
+        "--cpuctxsw=none",
+        "--capture-range=nvtx",
+        "--nvtx-capture=measurement",
+        "--capture-range-end=stop",
+        "--env-var=NSYS_NVTX_PROFILER_REGISTER_ONLY=0",
+        "--cuda-memory-usage=true",
+        "--pytorch=autograd-nvtx",
+        "--export=sqlite",
+        "-o",
+        "/data/20260914T092252Z-profiles/007-profile-xl-s256-nsys/profile",
+        "/usr/local/bin/python",
+        "-m",
+        "cs336_systems.experiments",
+        "--config",
+        "{\"name\": \"profile-xl-s256-nsys\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 256, \"mode\": \"train\", \"dtype\": \"fp32\", \"annotate\": true, \"nsys\": true, \"warmup\": 5, \"steps\": 1, \"timeout\": 300}",
+        "--output",
+        "/data/20260914T092252Z-profiles/007-profile-xl-s256-nsys"
+      ],
+      "started": 1789377900.7935083,
+      "returncode": 0,
+      "seconds": 23.92923927307129,
+      "status": "ok",
+      "trace_created": true,
+      "result": {
+        "config": {
+          "name": "profile-xl-s256-nsys",
+          "kind": "model",
+          "size": "xl",
+          "seq": 256,
+          "mode": "train",
+          "dtype": "fp32",
+          "annotate": true,
+          "nsys": true,
+          "warmup": 5,
+          "steps": 1,
+          "timeout": 300
+        },
+        "started_utc": "2026-09-14T09:25:03.316542+00:00",
+        "measurements": {
+          "samples_ms": [
+            534.8026810000022
+          ],
+          "mean_ms": 534.8026810000022,
+          "std_ms": 0.0,
+          "median_ms": 534.8026810000022,
+          "cuda_event_stages": {
+            "forward": {
+              "samples_ms": [
+                150.51727294921875
+              ],
+              "mean_ms": 150.51727294921875,
+              "std_ms": 0.0,
+              "median_ms": 150.51727294921875
+            },
+            "loss": {
+              "samples_ms": [
+                0.04560000076889992
+              ],
+              "mean_ms": 0.04560000076889992,
+              "std_ms": 0.0,
+              "median_ms": 0.04560000076889992
+            },
+            "backward": {
+              "samples_ms": [
+                301.4457092285156
+              ],
+              "mean_ms": 301.4457092285156,
+              "std_ms": 0.0,
+              "median_ms": 301.4457092285156
+            },
+            "optimizer": {
+              "samples_ms": [
+                80.25804901123047
+              ],
+              "mean_ms": 80.25804901123047,
+              "std_ms": 0.0,
+              "median_ms": 80.25804901123047
+            }
+          },
+          "last_scalar": 7.572788238525391,
+          "parameters": 3406809600,
+          "initial_memory": {
+            "allocated_bytes": 13762275328,
+            "reserved_bytes": 13763608576,
+            "peak_allocated_bytes": 13762275328,
+            "peak_reserved_bytes": 13763608576
+          },
+          "memory": {
+            "allocated_bytes": 54662111744,
+            "reserved_bytes": 60836282368,
+            "peak_allocated_bytes": 55227720192,
+            "peak_reserved_bytes": 60836282368
+          },
+          "stages": [
+            {
+              "stage": "after_forward",
+              "allocated_bytes": 53377272832,
+              "reserved_bytes": 60836282368,
+              "peak_allocated_bytes": 53377272832,
+              "peak_reserved_bytes": 60836282368
+            },
+            {
+              "stage": "after_backward_before_optimizer",
+              "allocated_bytes": 54702711296,
+              "reserved_bytes": 60836282368,
+              "peak_allocated_bytes": 54814307328,
+              "peak_reserved_bytes": 60836282368
+            },
+            {
+              "stage": "after_optimizer",
+              "allocated_bytes": 54703071744,
+              "reserved_bytes": 60836282368,
+              "peak_allocated_bytes": 55227720192,
+              "peak_reserved_bytes": 60836282368
+            }
+          ]
+        },
+        "status": "ok",
+        "wall_seconds": 20.379493713378906
+      }
+    },
+    {
+      "name": "profile-xl-s512-plain",
+      "command": [
+        "/usr/local/bin/python",
+        "-m",
+        "cs336_systems.experiments",
+        "--config",
+        "{\"name\": \"profile-xl-s512-plain\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 512, \"mode\": \"train\", \"dtype\": \"fp32\", \"annotate\": true, \"nsys\": false, \"warmup\": 5, \"steps\": 5, \"timeout\": 300}",
+        "--output",
+        "/data/20260914T092252Z-profiles/008-profile-xl-s512-plain"
+      ],
+      "started": 1789377928.335505,
+      "returncode": 0,
+      "seconds": 14.285208940505981,
+      "status": "ok",
+      "result": {
+        "config": {
+          "name": "profile-xl-s512-plain",
+          "kind": "model",
+          "size": "xl",
+          "seq": 512,
+          "mode": "train",
+          "dtype": "fp32",
+          "annotate": true,
+          "nsys": false,
+          "warmup": 5,
+          "steps": 5,
+          "timeout": 300
+        },
+        "started_utc": "2026-09-14T09:25:29.560252+00:00",
+        "measurements": {
+          "samples_ms": [
+            938.7205860000165,
+            937.2067619999882,
+            938.1534709999926,
+            937.5813080000057,
+            938.1889510000008
+          ],
+          "mean_ms": 937.9702156000008,
+          "std_ms": 0.5870677079275352,
+          "median_ms": 938.1534709999926,
+          "cuda_event_stages": {
+            "forward": {
+              "samples_ms": [
+                291.62982177734375,
+                291.66168212890625,
+                291.6134338378906,
+                291.7081298828125,
+                291.700439453125
+              ],
+              "mean_ms": 291.66270141601564,
+              "std_ms": 0.04182495929493152,
+              "median_ms": 291.66168212890625
+            },
+            "loss": {
+              "samples_ms": [
+                0.06764800101518631,
+                0.06643199920654297,
+                0.06758400052785873,
+                0.0676800012588501,
+                0.06569600105285645
+              ],
+              "mean_ms": 0.06700800061225891,
+              "std_ms": 0.0009008442915948647,
+              "median_ms": 0.06758400052785873
+            },
+            "backward": {
+              "samples_ms": [
+                565.66162109375,
+                563.8369750976562,
+                564.948974609375,
+                564.487060546875,
+                564.92236328125
+              ],
+              "mean_ms": 564.7713989257812,
+              "std_ms": 0.670972255882402,
+              "median_ms": 564.92236328125
+            },
+            "optimizer": {
+              "samples_ms": [
+                80.1220474243164,
+                80.49874877929688,
+                80.48242950439453,
+                80.28899383544922,
+                80.20588684082031
+              ],
+              "mean_ms": 80.31962127685547,
+              "std_ms": 0.16695970352136072,
+              "median_ms": 80.28899383544922
+            }
+          },
+          "last_scalar": 7.089056968688965,
+          "parameters": 3406809600,
+          "initial_memory": {
+            "allocated_bytes": 13762373632,
+            "reserved_bytes": 13763608576,
+            "peak_allocated_bytes": 13762373632,
+            "peak_reserved_bytes": 13763608576
+          },
+          "memory": {
+            "allocated_bytes": 54661849600,
+            "reserved_bytes": 72655831040,
+            "peak_allocated_bytes": 70371290112,
+            "peak_reserved_bytes": 72655831040
+          },
+          "stages": [
+            {
+              "stage": "after_forward",
+              "allocated_bytes": 70018407424,
+              "reserved_bytes": 72655831040,
+              "peak_allocated_bytes": 70018407424,
+              "peak_reserved_bytes": 72655831040
+            },
+            {
+              "stage": "after_backward_before_optimizer",
+              "allocated_bytes": 54744130048,
+              "reserved_bytes": 72655831040,
+              "peak_allocated_bytes": 70371290112,
+              "peak_reserved_bytes": 72655831040
+            },
+            {
+              "stage": "after_optimizer",
+              "allocated_bytes": 54743769600,
+              "reserved_bytes": 72655831040,
+              "peak_allocated_bytes": 70371290112,
+              "peak_reserved_bytes": 72655831040
+            }
+          ]
+        },
+        "status": "ok",
+        "wall_seconds": 12.200916767120361
+      }
+    },
+    {
+      "name": "profile-xl-s512-nsys",
+      "command": [
+        "nsys",
+        "profile",
+        "--trace=cuda,nvtx,osrt,cublas",
+        "--sample=none",
+        "--cpuctxsw=none",
+        "--capture-range=nvtx",
+        "--nvtx-capture=measurement",
+        "--capture-range-end=stop",
+        "--env-var=NSYS_NVTX_PROFILER_REGISTER_ONLY=0",
+        "--cuda-memory-usage=true",
+        "--pytorch=autograd-nvtx",
+        "--export=sqlite",
+        "-o",
+        "/data/20260914T092252Z-profiles/009-profile-xl-s512-nsys/profile",
+        "/usr/local/bin/python",
+        "-m",
+        "cs336_systems.experiments",
+        "--config",
+        "{\"name\": \"profile-xl-s512-nsys\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 512, \"mode\": \"train\", \"dtype\": \"fp32\", \"annotate\": true, \"nsys\": true, \"warmup\": 5, \"steps\": 1, \"timeout\": 300}",
+        "--output",
+        "/data/20260914T092252Z-profiles/009-profile-xl-s512-nsys"
+      ],
+      "started": 1789377944.7874017,
+      "returncode": 0,
+      "seconds": 27.734172105789185,
+      "status": "ok",
+      "trace_created": true,
+      "result": {
+        "config": {
+          "name": "profile-xl-s512-nsys",
+          "kind": "model",
+          "size": "xl",
+          "seq": 512,
+          "mode": "train",
+          "dtype": "fp32",
+          "annotate": true,
+          "nsys": true,
+          "warmup": 5,
+          "steps": 1,
+          "timeout": 300
+        },
+        "started_utc": "2026-09-14T09:25:47.397155+00:00",
+        "measurements": {
+          "samples_ms": [
+            939.7937699999943
+          ],
+          "mean_ms": 939.7937699999943,
+          "std_ms": 0.0,
+          "median_ms": 939.7937699999943,
+          "cuda_event_stages": {
+            "forward": {
+              "samples_ms": [
+                292.001708984375
+              ],
+              "mean_ms": 292.001708984375,
+              "std_ms": 0.0,
+              "median_ms": 292.001708984375
+            },
+            "loss": {
+              "samples_ms": [
+                0.0681919977068901
+              ],
+              "mean_ms": 0.0681919977068901,
+              "std_ms": 0.0,
+              "median_ms": 0.0681919977068901
+            },
+            "backward": {
+              "samples_ms": [
+                565.0411376953125
+              ],
+              "mean_ms": 565.0411376953125,
+              "std_ms": 0.0,
+              "median_ms": 565.0411376953125
+            },
+            "optimizer": {
+              "samples_ms": [
+                80.1295394897461
+              ],
+              "mean_ms": 80.1295394897461,
+              "std_ms": 0.0,
+              "median_ms": 80.1295394897461
+            }
+          },
+          "last_scalar": 7.644526958465576,
+          "parameters": 3406809600,
+          "initial_memory": {
+            "allocated_bytes": 13762373632,
+            "reserved_bytes": 13763608576,
+            "peak_allocated_bytes": 13762373632,
+            "peak_reserved_bytes": 13763608576
+          },
+          "memory": {
+            "allocated_bytes": 54662210048,
+            "reserved_bytes": 72655831040,
+            "peak_allocated_bytes": 70371290112,
+            "peak_reserved_bytes": 72655831040
+          },
+          "stages": [
+            {
+              "stage": "after_forward",
+              "allocated_bytes": 70018407424,
+              "reserved_bytes": 72655831040,
+              "peak_allocated_bytes": 70018407424,
+              "peak_reserved_bytes": 72655831040
+            },
+            {
+              "stage": "after_backward_before_optimizer",
+              "allocated_bytes": 54744130048,
+              "reserved_bytes": 72655831040,
+              "peak_allocated_bytes": 70371290112,
+              "peak_reserved_bytes": 72655831040
+            },
+            {
+              "stage": "after_optimizer",
+              "allocated_bytes": 54744130048,
+              "reserved_bytes": 72655831040,
+              "peak_allocated_bytes": 70371290112,
+              "peak_reserved_bytes": 72655831040
+            }
+          ]
+        },
+        "status": "ok",
+        "wall_seconds": 23.78761100769043
+      }
+    },
+    {
+      "name": "profile-xl-s1024-plain",
+      "command": [
+        "/usr/local/bin/python",
+        "-m",
+        "cs336_systems.experiments",
+        "--config",
+        "{\"name\": \"profile-xl-s1024-plain\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 1024, \"mode\": \"train\", \"dtype\": \"fp32\", \"annotate\": true, \"nsys\": false, \"warmup\": 5, \"steps\": 5, \"timeout\": 300}",
+        "--output",
+        "/data/20260914T092252Z-profiles/010-profile-xl-s1024-plain"
+      ],
+      "started": 1789377976.696271,
+      "returncode": 0,
+      "seconds": 24.12386131286621,
+      "status": "ok",
+      "result": {
+        "config": {
+          "name": "profile-xl-s1024-plain",
+          "kind": "model",
+          "size": "xl",
+          "seq": 1024,
+          "mode": "train",
+          "dtype": "fp32",
+          "annotate": true,
+          "nsys": false,
+          "warmup": 5,
+          "steps": 5,
+          "timeout": 300
+        },
+        "started_utc": "2026-09-14T09:26:18.005079+00:00",
+        "measurements": {
+          "samples_ms": [
+            1789.0883199999905,
+            1788.7930709999864,
+            1788.8965380000172,
+            1789.0910469999994,
+            1788.90253900002
+          ],
+          "mean_ms": 1788.9543030000027,
+          "std_ms": 0.13102627844026987,
+          "median_ms": 1788.90253900002,
+          "cuda_event_stages": {
+            "forward": {
+              "samples_ms": [
+                568.0809936523438,
+                568.04443359375,
+                568.1248779296875,
+                568.1410522460938,
+                568.0771484375
+              ],
+              "mean_ms": 568.093701171875,
+              "std_ms": 0.03897718172084225,
+              "median_ms": 568.0809936523438
+            },
+            "loss": {
+              "samples_ms": [
+                0.11177600175142288,
+                0.11212799698114395,
+                0.11158400028944016,
+                0.11231999844312668,
+                0.11203200370073318
+              ],
+              "mean_ms": 0.11196800023317337,
+              "std_ms": 0.0002906533660620414,
+              "median_ms": 0.11203200370073318
+            },
+            "backward": {
+              "samples_ms": [
+                1138.948974609375,
+                1138.989501953125,
+                1138.8426513671875,
+                1138.9993896484375,
+                1138.9180908203125
+              ],
+              "mean_ms": 1138.9397216796874,
+              "std_ms": 0.06327420183655766,
+              "median_ms": 1138.948974609375
+            },
+            "optimizer": {
+              "samples_ms": [
+                80.34003448486328,
+                80.38098907470703,
+                80.2580795288086,
+                80.43421173095703,
+                80.20684814453125
+              ],
+              "mean_ms": 80.32403259277343,
+              "std_ms": 0.09181713542656803,
+              "median_ms": 80.34003448486328
+            }
+          },
+          "last_scalar": 7.793753623962402,
+          "parameters": 3406809600,
+          "initial_memory": {
+            "allocated_bytes": 13762570240,
+            "reserved_bytes": 13763608576,
+            "peak_allocated_bytes": 13762570240,
+            "peak_reserved_bytes": 13763608576
+          },
+          "memory": {
+            "allocated_bytes": 54661325312,
+            "reserved_bytes": 127005622272,
+            "peak_allocated_bytes": 117533903872,
+            "peak_reserved_bytes": 127005622272
+          },
+          "stages": [
+            {
+              "stage": "after_forward",
+              "allocated_bytes": 116197604352,
+              "reserved_bytes": 127005622272,
+              "peak_allocated_bytes": 116197604352,
+              "peak_reserved_bytes": 127005622272
+            },
+            {
+              "stage": "after_backward_before_optimizer",
+              "allocated_bytes": 54825165312,
+              "reserved_bytes": 127005622272,
+              "peak_allocated_bytes": 117533903872,
+              "peak_reserved_bytes": 127005622272
+            },
+            {
+              "stage": "after_optimizer",
+              "allocated_bytes": 54825165312,
+              "reserved_bytes": 127005622272,
+              "peak_allocated_bytes": 117533903872,
+              "peak_reserved_bytes": 127005622272
+            }
+          ]
+        },
+        "status": "ok",
+        "wall_seconds": 21.80906343460083
+      }
+    },
+    {
+      "name": "profile-xl-s1024-nsys",
+      "command": [
+        "nsys",
+        "profile",
+        "--trace=cuda,nvtx,osrt,cublas",
+        "--sample=none",
+        "--cpuctxsw=none",
+        "--capture-range=nvtx",
+        "--nvtx-capture=measurement",
+        "--capture-range-end=stop",
+        "--env-var=NSYS_NVTX_PROFILER_REGISTER_ONLY=0",
+        "--cuda-memory-usage=true",
+        "--pytorch=autograd-nvtx",
+        "--export=sqlite",
+        "-o",
+        "/data/20260914T092252Z-profiles/011-profile-xl-s1024-nsys/profile",
+        "/usr/local/bin/python",
+        "-m",
+        "cs336_systems.experiments",
+        "--config",
+        "{\"name\": \"profile-xl-s1024-nsys\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 1024, \"mode\": \"train\", \"dtype\": \"fp32\", \"annotate\": true, \"nsys\": true, \"warmup\": 5, \"steps\": 1, \"timeout\": 300}",
+        "--output",
+        "/data/20260914T092252Z-profiles/011-profile-xl-s1024-nsys"
+      ],
+      "started": 1789378002.584233,
+      "returncode": 0,
+      "seconds": 33.20621299743652,
+      "status": "ok",
+      "trace_created": true,
+      "result": {
+        "config": {
+          "name": "profile-xl-s1024-nsys",
+          "kind": "model",
+          "size": "xl",
+          "seq": 1024,
+          "mode": "train",
+          "dtype": "fp32",
+          "annotate": true,
+          "nsys": true,
+          "warmup": 5,
+          "steps": 1,
+          "timeout": 300
+        },
+        "started_utc": "2026-09-14T09:26:45.178542+00:00",
+        "measurements": {
+          "samples_ms": [
+            1789.4369799999765
+          ],
+          "mean_ms": 1789.4369799999765,
+          "std_ms": 0.0,
+          "median_ms": 1789.4369799999765,
+          "cuda_event_stages": {
+            "forward": {
+              "samples_ms": [
+                568.1934814453125
+              ],
+              "mean_ms": 568.1934814453125,
+              "std_ms": 0.0,
+              "median_ms": 568.1934814453125
+            },
+            "loss": {
+              "samples_ms": [
+                0.11062400043010712
+              ],
+              "mean_ms": 0.11062400043010712,
+              "std_ms": 0.0,
+              "median_ms": 0.11062400043010712
+            },
+            "backward": {
+              "samples_ms": [
+                1138.913330078125
+              ],
+              "mean_ms": 1138.913330078125,
+              "std_ms": 0.0,
+              "median_ms": 1138.913330078125
+            },
+            "optimizer": {
+              "samples_ms": [
+                80.39746856689453
+              ],
+              "mean_ms": 80.39746856689453,
+              "std_ms": 0.0,
+              "median_ms": 80.39746856689453
+            }
+          },
+          "last_scalar": 8.805024147033691,
+          "parameters": 3406809600,
+          "initial_memory": {
+            "allocated_bytes": 13762570240,
+            "reserved_bytes": 13763608576,
+            "peak_allocated_bytes": 13762570240,
+            "peak_reserved_bytes": 13763608576
+          },
+          "memory": {
+            "allocated_bytes": 54661325312,
+            "reserved_bytes": 126468751360,
+            "peak_allocated_bytes": 117534362624,
+            "peak_reserved_bytes": 126468751360
+          },
+          "stages": [
+            {
+              "stage": "after_forward",
+              "allocated_bytes": 116198063104,
+              "reserved_bytes": 126468751360,
+              "peak_allocated_bytes": 116198063104,
+              "peak_reserved_bytes": 126468751360
+            },
+            {
+              "stage": "after_backward_before_optimizer",
+              "allocated_bytes": 54825624064,
+              "reserved_bytes": 126468751360,
+              "peak_allocated_bytes": 117534362624,
+              "peak_reserved_bytes": 126468751360
+            },
+            {
+              "stage": "after_optimizer",
+              "allocated_bytes": 54825165312,
+              "reserved_bytes": 126468751360,
+              "peak_allocated_bytes": 117534362624,
+              "peak_reserved_bytes": 126468751360
+            }
+          ]
+        },
+        "status": "ok",
+        "wall_seconds": 29.496495962142944
+      }
+    },
+    {
+      "name": "profile-saved-block-xl-s2048",
+      "command": [
+        "nsys",
+        "profile",
+        "--trace=cuda,nvtx,osrt,cublas",
+        "--sample=none",
+        "--cpuctxsw=none",
+        "--capture-range=nvtx",
+        "--nvtx-capture=measurement",
+        "--capture-range-end=stop",
+        "--env-var=NSYS_NVTX_PROFILER_REGISTER_ONLY=0",
+        "--cuda-memory-usage=true",
+        "--pytorch=autograd-nvtx",
+        "--export=sqlite",
+        "-o",
+        "/data/20260914T092252Z-profiles/012-profile-saved-block-xl-s2048/profile",
+        "/usr/local/bin/python",
+        "-m",
+        "cs336_systems.experiments",
+        "--config",
+        "{\"name\": \"profile-saved-block-xl-s2048\", \"kind\": \"saved_block\", \"seq\": 2048, \"nsys\": true}",
+        "--output",
+        "/data/20260914T092252Z-profiles/012-profile-saved-block-xl-s2048"
+      ],
+      "started": 1789378038.637946,
+      "returncode": 0,
+      "seconds": 17.92309021949768,
+      "status": "ok",
+      "trace_created": true,
+      "result": {
+        "config": {
+          "name": "profile-saved-block-xl-s2048",
+          "kind": "saved_block",
+          "seq": 2048,
+          "nsys": true
+        },
+        "started_utc": "2026-09-14T09:27:21.210934+00:00",
+        "measurements": {
+          "records": [
+            {
+              "shape": [
+                4,
+                2048,
+                2560
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 83886080,
+              "storage_bytes": 83886080,
+              "storage_ptr": 47518947737600,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "ln1",
+              "producer": "leaf"
+            },
+            {
+              "shape": [
+                4,
+                2048,
+                1
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 32768,
+              "storage_bytes": 32768,
+              "storage_ptr": 47518026668032,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "ln1",
+              "producer": "RsqrtBackward0"
+            },
+            {
+              "shape": [
+                4,
+                2048,
+                1
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 32768,
+              "storage_bytes": 32768,
+              "storage_ptr": 47518026668032,
+              "parameter_or_buffer": false,
+              "duplicate": true,
+              "module": "ln1",
+              "producer": "RsqrtBackward0"
+            },
+            {
+              "shape": [
+                4,
+                2048,
+                2560
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 83886080,
+              "storage_bytes": 83886080,
+              "storage_ptr": 47518947737600,
+              "parameter_or_buffer": false,
+              "duplicate": true,
+              "module": "ln1",
+              "producer": "leaf"
+            },
+            {
+              "shape": [
+                4,
+                2048,
+                2560
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 83886080,
+              "storage_bytes": 83886080,
+              "storage_ptr": 47519048400896,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "ln1",
+              "producer": "MulBackward0"
+            },
+            {
+              "shape": [
+                2560
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 10240,
+              "storage_bytes": 10240,
+              "storage_ptr": 47518026647552,
+              "parameter_or_buffer": true,
+              "duplicate": false,
+              "module": "ln1",
+              "producer": "leaf"
+            },
+            {
+              "shape": [
+                1,
+                2560,
+                2560
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 26214400,
+              "storage_bytes": 26214400,
+              "storage_ptr": 47517538451456,
+              "parameter_or_buffer": true,
+              "duplicate": false,
+              "module": "attn.q_proj",
+              "producer": "ReshapeAliasBackward0"
+            },
+            {
+              "shape": [
+                1,
+                8192,
+                2560
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 83886080,
+              "storage_bytes": 83886080,
+              "storage_ptr": 47519216173056,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "attn.q_proj",
+              "producer": "ViewBackward0"
+            },
+            {
+              "shape": [
+                1,
+                2560,
+                2560
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 26214400,
+              "storage_bytes": 26214400,
+              "storage_ptr": 47517565714432,
+              "parameter_or_buffer": true,
+              "duplicate": false,
+              "module": "attn.k_proj",
+              "producer": "ReshapeAliasBackward0"
+            },
+            {
+              "shape": [
+                1,
+                8192,
+                2560
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 83886080,
+              "storage_bytes": 83886080,
+              "storage_ptr": 47519216173056,
+              "parameter_or_buffer": false,
+              "duplicate": true,
+              "module": "attn.k_proj",
+              "producer": "ViewBackward0"
+            },
+            {
+              "shape": [
+                1,
+                2560,
+                2560
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 26214400,
+              "storage_bytes": 26214400,
+              "storage_ptr": 47517592977408,
+              "parameter_or_buffer": true,
+              "duplicate": false,
+              "module": "attn.v_proj",
+              "producer": "ReshapeAliasBackward0"
+            },
+            {
+              "shape": [
+                1,
+                8192,
+                2560
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 83886080,
+              "storage_bytes": 83886080,
+              "storage_ptr": 47519216173056,
+              "parameter_or_buffer": false,
+              "duplicate": true,
+              "module": "attn.v_proj",
+              "producer": "ViewBackward0"
+            },
+            {
+              "shape": [
+                2048,
+                40
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 327680,
+              "storage_bytes": 655360,
+              "storage_ptr": 47518025992192,
+              "parameter_or_buffer": true,
+              "duplicate": false,
+              "module": "attn.positional_encoder",
+              "producer": "leaf"
+            },
+            {
+              "shape": [
+                2048,
+                40
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 327680,
+              "storage_bytes": 655360,
+              "storage_ptr": 47518025992192,
+              "parameter_or_buffer": true,
+              "duplicate": false,
+              "module": "attn.positional_encoder",
+              "producer": "leaf"
+            },
+            {
+              "shape": [
+                2048,
+                40
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 327680,
+              "storage_bytes": 655360,
+              "storage_ptr": 47518025992192,
+              "parameter_or_buffer": true,
+              "duplicate": false,
+              "module": "attn.positional_encoder",
+              "producer": "leaf"
+            },
+            {
+              "shape": [
+                2048,
+                40
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 327680,
+              "storage_bytes": 655360,
+              "storage_ptr": 47518025992192,
+              "parameter_or_buffer": true,
+              "duplicate": false,
+              "module": "attn.positional_encoder",
+              "producer": "leaf"
+            },
+            {
+              "shape": [
+                2048,
+                40
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 327680,
+              "storage_bytes": 655360,
+              "storage_ptr": 47518025992192,
+              "parameter_or_buffer": true,
+              "duplicate": false,
+              "module": "attn.positional_encoder",
+              "producer": "leaf"
+            },
+            {
+              "shape": [
+                2048,
+                40
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 327680,
+              "storage_bytes": 655360,
+              "storage_ptr": 47518025992192,
+              "parameter_or_buffer": true,
+              "duplicate": false,
+              "module": "attn.positional_encoder",
+              "producer": "leaf"
+            },
+            {
+              "shape": [
+                2048,
+                40
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 327680,
+              "storage_bytes": 655360,
+              "storage_ptr": 47518025992192,
+              "parameter_or_buffer": true,
+              "duplicate": false,
+              "module": "attn.positional_encoder",
+              "producer": "leaf"
+            },
+            {
+              "shape": [
+                2048,
+                40
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 327680,
+              "storage_bytes": 655360,
+              "storage_ptr": 47518025992192,
+              "parameter_or_buffer": true,
+              "duplicate": false,
+              "module": "attn.positional_encoder",
+              "producer": "leaf"
+            },
+            {
+              "shape": [
+                128,
+                80,
+                2048
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 83886080,
+              "storage_bytes": 83886080,
+              "storage_ptr": 47519316836352,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "attn",
+              "producer": "ReshapeAliasBackward0"
+            },
+            {
+              "shape": [
+                128,
+                2048,
+                80
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 83886080,
+              "storage_bytes": 83886080,
+              "storage_ptr": 47519987924992,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "attn",
+              "producer": "ViewBackward0"
+            },
+            {
+              "shape": [
+                1,
+                2048,
+                2048
+              ],
+              "dtype": "torch.bool",
+              "logical_bytes": 4194304,
+              "storage_bytes": 4194304,
+              "storage_ptr": 47517970595840,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "attn",
+              "producer": "leaf"
+            },
+            {
+              "shape": [
+                4,
+                32,
+                2048,
+                1
+              ],
+              "dtype": "torch.int64",
+              "logical_bytes": 2097152,
+              "storage_bytes": 2097152,
+              "storage_ptr": 47517974790144,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "attn",
+              "producer": "leaf"
+            },
+            {
+              "shape": [
+                4,
+                32,
+                2048,
+                2048
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 2147483648,
+              "storage_bytes": 2147483648,
+              "storage_ptr": 47524886872064,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "attn",
+              "producer": "ExpBackward0"
+            },
+            {
+              "shape": [
+                4,
+                32,
+                2048,
+                1
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 1048576,
+              "storage_bytes": 1048576,
+              "storage_ptr": 47520071811072,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "attn",
+              "producer": "SumBackward1"
+            },
+            {
+              "shape": [
+                4,
+                32,
+                2048,
+                2048
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 2147483648,
+              "storage_bytes": 2147483648,
+              "storage_ptr": 47524886872064,
+              "parameter_or_buffer": false,
+              "duplicate": true,
+              "module": "attn",
+              "producer": "ExpBackward0"
+            },
+            {
+              "shape": [
+                128,
+                2048,
+                80
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 83886080,
+              "storage_bytes": 83886080,
+              "storage_ptr": 47519585271808,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "attn",
+              "producer": "UnsafeViewBackward0"
+            },
+            {
+              "shape": [
+                128,
+                2048,
+                2048
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 2147483648,
+              "storage_bytes": 2147483648,
+              "storage_ptr": 47527034355712,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "attn",
+              "producer": "ViewBackward0"
+            },
+            {
+              "shape": [
+                1,
+                2560,
+                2560
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 26214400,
+              "storage_bytes": 26214400,
+              "storage_ptr": 47517620240384,
+              "parameter_or_buffer": true,
+              "duplicate": false,
+              "module": "attn.output_proj",
+              "producer": "ReshapeAliasBackward0"
+            },
+            {
+              "shape": [
+                1,
+                8192,
+                2560
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 83886080,
+              "storage_bytes": 83886080,
+              "storage_ptr": 47522823274496,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "attn.output_proj",
+              "producer": "ViewBackward0"
+            },
+            {
+              "shape": [
+                4,
+                2048,
+                2560
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 83886080,
+              "storage_bytes": 83886080,
+              "storage_ptr": 47519685935104,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "ln2",
+              "producer": "AddBackward0"
+            },
+            {
+              "shape": [
+                4,
+                2048,
+                1
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 32768,
+              "storage_bytes": 32768,
+              "storage_ptr": 47518026700800,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "ln2",
+              "producer": "RsqrtBackward0"
+            },
+            {
+              "shape": [
+                4,
+                2048,
+                1
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 32768,
+              "storage_bytes": 32768,
+              "storage_ptr": 47518026700800,
+              "parameter_or_buffer": false,
+              "duplicate": true,
+              "module": "ln2",
+              "producer": "RsqrtBackward0"
+            },
+            {
+              "shape": [
+                4,
+                2048,
+                2560
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 83886080,
+              "storage_bytes": 83886080,
+              "storage_ptr": 47519685935104,
+              "parameter_or_buffer": false,
+              "duplicate": true,
+              "module": "ln2",
+              "producer": "AddBackward0"
+            },
+            {
+              "shape": [
+                4,
+                2048,
+                2560
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 83886080,
+              "storage_bytes": 83886080,
+              "storage_ptr": 47522907160576,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "ln2",
+              "producer": "MulBackward0"
+            },
+            {
+              "shape": [
+                2560
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 10240,
+              "storage_bytes": 10240,
+              "storage_ptr": 47518026657792,
+              "parameter_or_buffer": true,
+              "duplicate": false,
+              "module": "ln2",
+              "producer": "leaf"
+            },
+            {
+              "shape": [
+                1,
+                2560,
+                10240
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 104857600,
+              "storage_bytes": 104857600,
+              "storage_ptr": 47517647503360,
+              "parameter_or_buffer": true,
+              "duplicate": false,
+              "module": "ffn.w1",
+              "producer": "ReshapeAliasBackward0"
+            },
+            {
+              "shape": [
+                1,
+                8192,
+                2560
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 83886080,
+              "storage_bytes": 83886080,
+              "storage_ptr": 47522991046656,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "ffn.w1",
+              "producer": "ViewBackward0"
+            },
+            {
+              "shape": [
+                4,
+                2048,
+                10240
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 335544320,
+              "storage_bytes": 335544320,
+              "storage_ptr": 47523410477056,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "ffn",
+              "producer": "SigmoidBackward0"
+            },
+            {
+              "shape": [
+                4,
+                2048,
+                10240
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 335544320,
+              "storage_bytes": 335544320,
+              "storage_ptr": 47523410477056,
+              "parameter_or_buffer": false,
+              "duplicate": true,
+              "module": "ffn",
+              "producer": "SigmoidBackward0"
+            },
+            {
+              "shape": [
+                4,
+                2048,
+                10240
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 335544320,
+              "storage_bytes": 335544320,
+              "storage_ptr": 47523074932736,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "ffn",
+              "producer": "ViewBackward0"
+            },
+            {
+              "shape": [
+                1,
+                2560,
+                10240
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 104857600,
+              "storage_bytes": 104857600,
+              "storage_ptr": 47517857218560,
+              "parameter_or_buffer": true,
+              "duplicate": false,
+              "module": "ffn.w3",
+              "producer": "ReshapeAliasBackward0"
+            },
+            {
+              "shape": [
+                1,
+                8192,
+                2560
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 83886080,
+              "storage_bytes": 83886080,
+              "storage_ptr": 47522991046656,
+              "parameter_or_buffer": false,
+              "duplicate": true,
+              "module": "ffn.w3",
+              "producer": "ViewBackward0"
+            },
+            {
+              "shape": [
+                4,
+                2048,
+                10240
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 335544320,
+              "storage_bytes": 335544320,
+              "storage_ptr": 47524081565696,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "ffn",
+              "producer": "ViewBackward0"
+            },
+            {
+              "shape": [
+                4,
+                2048,
+                10240
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 335544320,
+              "storage_bytes": 335544320,
+              "storage_ptr": 47523746021376,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "ffn",
+              "producer": "MulBackward0"
+            },
+            {
+              "shape": [
+                1,
+                10240,
+                2560
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 104857600,
+              "storage_bytes": 104857600,
+              "storage_ptr": 47517752360960,
+              "parameter_or_buffer": true,
+              "duplicate": false,
+              "module": "ffn.w2",
+              "producer": "ReshapeAliasBackward0"
+            },
+            {
+              "shape": [
+                1,
+                8192,
+                10240
+              ],
+              "dtype": "torch.float32",
+              "logical_bytes": 335544320,
+              "storage_bytes": 335544320,
+              "storage_ptr": 47524417110016,
+              "parameter_or_buffer": false,
+              "duplicate": false,
+              "module": "ffn.w2",
+              "producer": "ViewBackward0"
+            }
+          ],
+          "unique_saved_bytes": 6818955264,
+          "top_operations": [
+            {
+              "name": "attn:ViewBackward0",
+              "bytes": 2231369728,
+              "percent": 32.723043950446424
+            },
+            {
+              "name": "attn:ExpBackward0",
+              "bytes": 2147483648,
+              "percent": 31.49285432824919
+            },
+            {
+              "name": "ffn:ViewBackward0",
+              "bytes": 671088640,
+              "percent": 9.841516977577871
+            },
+            {
+              "name": "ffn:SigmoidBackward0",
+              "bytes": 335544320,
+              "percent": 4.920758488788936
+            },
+            {
+              "name": "ffn:MulBackward0",
+              "bytes": 335544320,
+              "percent": 4.920758488788936
+            },
+            {
+              "name": "ffn.w2:ViewBackward0",
+              "bytes": 335544320,
+              "percent": 4.920758488788936
+            },
+            {
+              "name": "ln1:leaf",
+              "bytes": 83886080,
+              "percent": 1.230189622197234
+            },
+            {
+              "name": "ln1:MulBackward0",
+              "bytes": 83886080,
+              "percent": 1.230189622197234
+            },
+            {
+              "name": "attn.q_proj:ViewBackward0",
+              "bytes": 83886080,
+              "percent": 1.230189622197234
+            },
+            {
+              "name": "attn:ReshapeAliasBackward0",
+              "bytes": 83886080,
+              "percent": 1.230189622197234
+            },
+            {
+              "name": "attn:UnsafeViewBackward0",
+              "bytes": 83886080,
+              "percent": 1.230189622197234
+            },
+            {
+              "name": "attn.output_proj:ViewBackward0",
+              "bytes": 83886080,
+              "percent": 1.230189622197234
+            },
+            {
+              "name": "ln2:AddBackward0",
+              "bytes": 83886080,
+              "percent": 1.230189622197234
+            },
+            {
+              "name": "ln2:MulBackward0",
+              "bytes": 83886080,
+              "percent": 1.230189622197234
+            },
+            {
+              "name": "ffn.w1:ViewBackward0",
+              "bytes": 83886080,
+              "percent": 1.230189622197234
+            },
+            {
+              "name": "attn:leaf",
+              "bytes": 6291456,
+              "percent": 0.09226422166479255
+            },
+            {
+              "name": "attn:SumBackward1",
+              "bytes": 1048576,
+              "percent": 0.015377370277465425
+            },
+            {
+              "name": "ln1:RsqrtBackward0",
+              "bytes": 32768,
+              "percent": 0.00048054282117079454
+            },
+            {
+              "name": "ln2:RsqrtBackward0",
+              "bytes": 32768,
+              "percent": 0.00048054282117079454
+            }
+          ],
+          "before_forward_bytes": 508186624,
+          "after_forward_bytes": 7335661568,
+          "after_backward_bytes": 1112449024,
+          "peak_bytes": 14345501696,
+          "parameter_gradient_bytes": 419450880,
+          "input_gradient_bytes": 83886080
+        },
+        "status": "ok",
+        "wall_seconds": 14.287699460983276
+      }
+    }
+  ],
+  "estimated_compute_usd": 0.5582237743099594,
+  "cost_note": "Runtime estimate, not invoice; excludes startup/build/storage."
+}

@@ -1,0 +1,627 @@
+{
+  "StringIds": {
+    "count": 16590,
+    "columns": [
+      "id",
+      "value"
+    ]
+  },
+  "ANALYSIS_FILE": {
+    "count": 2,
+    "columns": [
+      "id",
+      "filename",
+      "contentId",
+      "globalPid"
+    ]
+  },
+  "ProcessStreams": {
+    "count": 2,
+    "columns": [
+      "globalPid",
+      "filenameId",
+      "contentId"
+    ]
+  },
+  "TARGET_INFO_SYSTEM_ENV": {
+    "count": 73,
+    "columns": [
+      "globalVid",
+      "devStateName",
+      "name",
+      "nameEnum",
+      "value"
+    ]
+  },
+  "TARGET_INFO_SESSION_START_TIME": {
+    "count": 1,
+    "columns": [
+      "utcEpochNs",
+      "utcTime",
+      "localTime",
+      "systemClockNs",
+      "sessionStartCntVctNs"
+    ]
+  },
+  "ANALYSIS_DETAILS": {
+    "count": 1,
+    "columns": [
+      "globalVid",
+      "duration",
+      "startTime",
+      "stopTime"
+    ]
+  },
+  "PROCESSES": {
+    "count": 7,
+    "columns": [
+      "globalPid",
+      "pid",
+      "name"
+    ]
+  },
+  "CUPTI_ACTIVITY_KIND_RUNTIME": {
+    "count": 3707,
+    "columns": [
+      "start",
+      "end",
+      "eventClass",
+      "globalTid",
+      "correlationId",
+      "nameId",
+      "returnValue",
+      "callchainId"
+    ]
+  },
+  "CUPTI_ACTIVITY_KIND_CUDA_EVENT": {
+    "count": 5,
+    "columns": [
+      "timestamp",
+      "deviceId",
+      "contextId",
+      "greenContextId",
+      "streamId",
+      "correlationId",
+      "globalPid",
+      "eventId",
+      "eventSyncId"
+    ]
+  },
+  "CUPTI_ACTIVITY_KIND_SYNCHRONIZATION": {
+    "count": 3,
+    "columns": [
+      "start",
+      "end",
+      "deviceId",
+      "contextId",
+      "greenContextId",
+      "streamId",
+      "correlationId",
+      "globalPid",
+      "deprecatedSyncType",
+      "syncType",
+      "eventId",
+      "eventSyncId"
+    ]
+  },
+  "CUDA_GPU_MEMORY_USAGE_EVENTS": {
+    "count": 2911,
+    "columns": [
+      "start",
+      "globalPid",
+      "deviceId",
+      "contextId",
+      "address",
+      "pc",
+      "bytes",
+      "memKind",
+      "memoryOperationType",
+      "name",
+      "correlationId",
+      "streamId",
+      "localMemoryPoolAddress",
+      "localMemoryPoolReleaseThreshold",
+      "localMemoryPoolSize",
+      "localMemoryPoolUtilizedSize",
+      "importedMemoryPoolAddress",
+      "importedMemoryPoolProcessId"
+    ]
+  },
+  "DIAGNOSTIC_EVENT": {
+    "count": 24,
+    "columns": [
+      "timestamp",
+      "timestampType",
+      "source",
+      "severity",
+      "text",
+      "globalPid"
+    ]
+  },
+  "NVTX_EVENTS": {
+    "count": 17081,
+    "columns": [
+      "start",
+      "end",
+      "eventType",
+      "rangeId",
+      "category",
+      "color",
+      "text",
+      "globalTid",
+      "endGlobalTid",
+      "textId",
+      "domainId",
+      "uint64Value",
+      "int64Value",
+      "doubleValue",
+      "uint32Value",
+      "int32Value",
+      "floatValue",
+      "jsonTextId",
+      "jsonText",
+      "binaryData",
+      "eventId"
+    ]
+  },
+  "OSRT_API": {
+    "count": 5,
+    "columns": [
+      "start",
+      "end",
+      "eventClass",
+      "globalTid",
+      "nameId",
+      "returnValue",
+      "nestingLevel",
+      "callchainId",
+      "argumentsId"
+    ]
+  },
+  "OSRT_CALLCHAINS": {
+    "count": 23,
+    "columns": [
+      "id",
+      "symbol",
+      "module",
+      "kernelMode",
+      "thumbCode",
+      "unresolved",
+      "specialEntry",
+      "originalIP",
+      "unwindMethod",
+      "stackDepth"
+    ]
+  },
+  "PROFILER_OVERHEAD": {
+    "count": 12,
+    "columns": [
+      "start",
+      "end",
+      "globalTid",
+      "nameId",
+      "overheadType"
+    ]
+  },
+  "ThreadNames": {
+    "count": 45,
+    "columns": [
+      "nameId",
+      "priority",
+      "globalTid"
+    ]
+  },
+  "TARGET_INFO_GPU": {
+    "count": 1,
+    "columns": [
+      "vmId",
+      "id",
+      "name",
+      "busLocation",
+      "isDiscrete",
+      "l2CacheSize",
+      "totalMemory",
+      "memoryBandwidth",
+      "clockRate",
+      "smCount",
+      "pwGpuId",
+      "uuid",
+      "luid",
+      "chipName",
+      "cuDevice",
+      "ctxswDevPath",
+      "ctrlDevPath",
+      "revision",
+      "nodeMask",
+      "constantMemory",
+      "maxIPC",
+      "maxRegistersPerBlock",
+      "maxShmemPerBlock",
+      "maxShmemPerBlockOptin",
+      "maxShmemPerSm",
+      "maxRegistersPerSm",
+      "threadsPerWarp",
+      "asyncEngines",
+      "maxWarpsPerSm",
+      "maxBlocksPerSm",
+      "maxThreadsPerBlock",
+      "maxBlockDimX",
+      "maxBlockDimY",
+      "maxBlockDimZ",
+      "maxGridDimX",
+      "maxGridDimY",
+      "maxGridDimZ",
+      "computeMajor",
+      "computeMinor",
+      "smMajor",
+      "smMinor",
+      "numaNodeId"
+    ]
+  },
+  "TARGET_INFO_CUDA_DEVICE": {
+    "count": 1,
+    "columns": [
+      "gpuId",
+      "cudaId",
+      "pid",
+      "uuid",
+      "numMultiprocessors"
+    ]
+  },
+  "TARGET_INFO_CUDA_STREAM": {
+    "count": 7,
+    "columns": [
+      "streamId",
+      "hwId",
+      "vmId",
+      "processId",
+      "contextId",
+      "priority",
+      "flag"
+    ]
+  },
+  "ENUM_NSYS_EVENT_TYPE": {
+    "count": 158,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_NSYS_EVENT_CLASS": {
+    "count": 100,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_NSYS_GENERIC_EVENT_SOURCE": {
+    "count": 4,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_NSYS_GENERIC_EVENT_GROUP": {
+    "count": 5,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_NSYS_GENERIC_EVENT_FIELD_TYPE": {
+    "count": 4,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_NSYS_GENERIC_EVENT_FIELD_ETW_PROPERTY": {
+    "count": 8,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_NSYS_GENERIC_EVENT_FIELD_ETW_TYPE": {
+    "count": 22,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_NSYS_GENERIC_EVENT_FIELD_ETW_FLAGS": {
+    "count": 7,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_CUDA_MEMCPY_OPER": {
+    "count": 14,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_CUDA_MEM_KIND": {
+    "count": 8,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_CUDA_MEMPOOL_TYPE": {
+    "count": 3,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_CUDA_MEMPOOL_OPER": {
+    "count": 4,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_CUDA_DEV_MEM_EVENT_OPER": {
+    "count": 2,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_CUDA_KERNEL_LAUNCH_TYPE": {
+    "count": 4,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_CUDA_SHARED_MEM_LIMIT_CONFIG": {
+    "count": 2,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_CUDA_UNIF_MEM_MIGRATION": {
+    "count": 6,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_CUDA_UNIF_MEM_ACCESS_TYPE": {
+    "count": 5,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_CUDA_FUNC_CACHE_CONFIG": {
+    "count": 4,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_CUPTI_STREAM_TYPE": {
+    "count": 4,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_CUPTI_SYNC_TYPE": {
+    "count": 5,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_CUPTI_OVERHEAD_TYPE": {
+    "count": 9,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_CUPTI_JIT_ENTRY_TYPE": {
+    "count": 3,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_CUPTI_JIT_OPERATION_TYPE": {
+    "count": 4,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_STACK_UNWIND_METHOD": {
+    "count": 10,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_SAMPLING_THREAD_STATE": {
+    "count": 11,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_SCHEDULING_THREAD_BLOCK": {
+    "count": 62,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_DIAGNOSTIC_SEVERITY_LEVEL": {
+    "count": 5,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_DIAGNOSTIC_SOURCE_TYPE": {
+    "count": 4,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "ENUM_DIAGNOSTIC_TIMESTAMP_SOURCE": {
+    "count": 3,
+    "columns": [
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  "META_DATA_CAPTURE": {
+    "count": 131,
+    "columns": [
+      "name",
+      "value"
+    ]
+  },
+  "META_DATA_EXPORT": {
+    "count": 35,
+    "columns": [
+      "name",
+      "value"
+    ]
+  },
+  "diagnostic_messages": [
+    [
+      1,
+      "Profiling has started."
+    ],
+    [
+      1,
+      "Profiling has stopped."
+    ],
+    [
+      2,
+      "Scheduling information is absent. The thread activity is deduced based on OS runtime libraries traces. This is inaccurate and does not take into account asynchronous interrupts and exception faults."
+    ],
+    [
+      1,
+      "Process was launched by the profiler, see /tmp/nvidia/nsight_systems/quadd_session_1028/streams/pid_39_stdout.log and stderr.log for program output"
+    ],
+    [
+      1,
+      "Common injection library initialized successfully."
+    ],
+    [
+      1,
+      "PyTorch autograd_nvtx injection initialized successfully."
+    ],
+    [
+      1,
+      "OS runtime libraries injection initialized successfully."
+    ],
+    [
+      1,
+      "Buffers holding CUDA trace data will be flushed on CudaProfilerStop() call. See --flush-on-cudaprofilerstop to control this behavior."
+    ],
+    [
+      1,
+      "Loaded CUPTI library: /opt/nvidia/nsight-systems-cli/2026.5.1/target-linux-x64/libcupti.so.13.4"
+    ],
+    [
+      1,
+      "Enabling trace for device graph launch"
+    ],
+    [
+      1,
+      "CUDA injection initialized successfully."
+    ],
+    [
+      1,
+      "NVTX injection initialized successfully."
+    ],
+    [
+      1,
+      "Starting the profiling session using NVTX trigger."
+    ],
+    [
+      3,
+      "ActivityEnable(CUPTI_ACTIVITY_KIND_UNIFIED_MEMORY_COUNTER) returned 1: CUPTI_ERROR_INVALID_PARAMETER"
+    ],
+    [
+      1,
+      "Stopping the profiling session using NVTX trigger."
+    ],
+    [
+      1,
+      "Hardware tracing used for CUDA tracing."
+    ],
+    [
+      1,
+      "Number of CUPTI events produced: \t6636, CUPTI buffers: 50."
+    ],
+    [
+      1,
+      "Number of incomplete CUPTI events dropped: 3688. Incomplete events appear when GPU timestamp information have not been retrieved at the time the profiling session was stopped."
+    ],
+    [
+      2,
+      "Not all NVTX events might have been collected."
+    ],
+    [
+      1,
+      "Number of NVTX events collected: \t17081."
+    ],
+    [
+      2,
+      "Not all CUDA events might have been collected."
+    ],
+    [
+      1,
+      "Number of CUDA events collected: \t3707."
+    ],
+    [
+      2,
+      "Not all OS runtime libraries events might have been collected."
+    ],
+    [
+      1,
+      "Number of OS runtime libraries events collected: \t4."
+    ]
+  ]
+}

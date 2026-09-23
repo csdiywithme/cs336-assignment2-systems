@@ -1,0 +1,67 @@
+{
+  "name": "flash-triton-fp32-s65536-d16",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"flash-triton-fp32-s65536-d16\", \"kind\": \"attention\", \"implementation\": \"triton\", \"batch\": 1, \"seq\": 65536, \"dim\": 16, \"dtype\": \"fp32\", \"causal\": true, \"triton_bench\": true, \"steps\": 10, \"warmup\": 5, \"timeout\": 240}",
+    "--output",
+    "/data/20260914T092409Z-flash-triton-compiled-backward/036-flash-triton-fp32-s65536-d16"
+  ],
+  "started": 1789378284.2633104,
+  "returncode": 0,
+  "seconds": 16.029423475265503,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "flash-triton-fp32-s65536-d16",
+      "kind": "attention",
+      "implementation": "triton",
+      "batch": 1,
+      "seq": 65536,
+      "dim": 16,
+      "dtype": "fp32",
+      "causal": true,
+      "triton_bench": true,
+      "steps": 10,
+      "warmup": 5,
+      "timeout": 240
+    },
+    "started_utc": "2026-09-14T09:31:25.543219+00:00",
+    "measurements": {
+      "forward": {
+        "mean_ms": 8.152966730522387,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory_before_backward": {
+        "allocated_bytes": 21233664,
+        "reserved_bytes": 291504128,
+        "peak_allocated_bytes": 289669120,
+        "peak_reserved_bytes": 291504128
+      },
+      "backward": {
+        "mean_ms": 43.529066721598305,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "end_to_end": {
+        "mean_ms": 51.6855110168457,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory": {
+        "allocated_bytes": 37879808,
+        "reserved_bytes": 69010980864,
+        "peak_allocated_bytes": 51838058496,
+        "peak_reserved_bytes": 69010980864
+      }
+    },
+    "status": "ok",
+    "wall_seconds": 12.655505418777466
+  }
+}

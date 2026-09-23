@@ -1,0 +1,67 @@
+{
+  "name": "flash-triton-full-bf16-s16384-d128",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"flash-triton-full-bf16-s16384-d128\", \"kind\": \"attention\", \"implementation\": \"triton-full\", \"batch\": 1, \"seq\": 16384, \"dim\": 128, \"dtype\": \"bf16\", \"causal\": true, \"triton_bench\": true, \"steps\": 10, \"warmup\": 5, \"timeout\": 240}",
+    "--output",
+    "/data/20260914T092847Z-flash-triton-full/071-flash-triton-full-bf16-s16384-d128"
+  ],
+  "started": 1789378740.4311914,
+  "returncode": 0,
+  "seconds": 5.817988634109497,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "flash-triton-full-bf16-s16384-d128",
+      "kind": "attention",
+      "implementation": "triton-full",
+      "batch": 1,
+      "seq": 16384,
+      "dim": 128,
+      "dtype": "bf16",
+      "causal": true,
+      "triton_bench": true,
+      "steps": 10,
+      "warmup": 5,
+      "timeout": 240
+    },
+    "started_utc": "2026-09-14T09:39:01.441131+00:00",
+    "measurements": {
+      "forward": {
+        "mean_ms": 0.4763984341247409,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory_before_backward": {
+        "allocated_bytes": 21037056,
+        "reserved_bytes": 291504128,
+        "peak_allocated_bytes": 289472512,
+        "peak_reserved_bytes": 291504128
+      },
+      "backward": {
+        "mean_ms": 1.1189628158296858,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "end_to_end": {
+        "mean_ms": 1.5903737977310852,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory": {
+        "allocated_bytes": 29360128,
+        "reserved_bytes": 559939584,
+        "peak_allocated_bytes": 302120960,
+        "peak_reserved_bytes": 559939584
+      }
+    },
+    "status": "ok",
+    "wall_seconds": 4.106305837631226
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "saved-block-xl-s2048",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"saved-block-xl-s2048\", \"kind\": \"saved_block\", \"seq\": 2048}",
+    "--output",
+    "/data/20260914T085600Z-memory-and-checkpoint/015-saved-block-xl-s2048"
+  ],
+  "started": 1789376438.6537912,
+  "returncode": 1,
+  "seconds": 3.454296588897705,
+  "status": "failed",
+  "result": {
+    "config": {
+      "name": "saved-block-xl-s2048",
+      "kind": "saved_block",
+      "seq": 2048
+    },
+    "started_utc": "2026-09-14T09:00:39.886721+00:00",
+    "status": "failed",
+    "traceback": "Traceback (most recent call last):\n  File \"/workspace/cs336_systems/experiments.py\", line 395, in main\n    result[\"measurements\"] = kinds[cfg[\"kind\"]](cfg, out)\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/cs336_systems/experiments.py\", line 379, in saved_block\n    return saved_tensor_accounting(block, x)\n  File \"/workspace/cs336_systems/profiling.py\", line 50, in saved_tensor_accounting\n    y = block(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1885, in _call_impl\n    return inner()\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1833, in inner\n    result = forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 382, in forward\n    x_attn = self.attn(self.ln1(x))\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1885, in _call_impl\n    return inner()\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1833, in inner\n    result = forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 491, in forward\n    *batch_dims, sequence_length, d_model = x.size()\n                                            ^^^^^^\nAttributeError: 'str' object has no attribute 'size'\n",
+    "wall_seconds": 1.508418083190918
+  }
+}

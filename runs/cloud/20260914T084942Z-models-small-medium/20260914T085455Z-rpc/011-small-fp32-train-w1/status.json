@@ -1,0 +1,85 @@
+{
+  "name": "small-fp32-train-w1",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"small-fp32-train-w1\", \"kind\": \"model\", \"size\": \"small\", \"dtype\": \"fp32\", \"mode\": \"train\", \"warmup\": 1, \"steps\": 10, \"timeout\": 500}",
+    "--output",
+    "/data/20260914T084942Z-models-small-medium/011-small-fp32-train-w1"
+  ],
+  "started": 1789375850.106791,
+  "returncode": 0,
+  "seconds": 4.258605480194092,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "small-fp32-train-w1",
+      "kind": "model",
+      "size": "small",
+      "dtype": "fp32",
+      "mode": "train",
+      "warmup": 1,
+      "steps": 10,
+      "timeout": 500
+    },
+    "started_utc": "2026-09-14T08:50:51.174543+00:00",
+    "measurements": {
+      "samples_ms": [
+        59.27008300000125,
+        56.90389800000162,
+        56.40320000000543,
+        56.311472000004414,
+        56.72260200000778,
+        56.403848999991624,
+        56.58479599999566,
+        56.2704919999959,
+        56.63344500000278,
+        56.375861000006466
+      ],
+      "mean_ms": 56.78796980000129,
+      "std_ms": 0.8946768143482524,
+      "median_ms": 56.49432249999364,
+      "last_scalar": 4.957366943359375,
+      "parameters": 128625408,
+      "initial_memory": {
+        "allocated_bytes": 516140032,
+        "reserved_bytes": 568328192,
+        "peak_allocated_bytes": 516140032,
+        "peak_reserved_bytes": 568328192
+      },
+      "memory": {
+        "allocated_bytes": 2111615488,
+        "reserved_bytes": 5746196480,
+        "peak_allocated_bytes": 5406877696,
+        "peak_reserved_bytes": 5746196480
+      },
+      "stages": [
+        {
+          "stage": "after_forward",
+          "allocated_bytes": 5243037696,
+          "reserved_bytes": 5746196480,
+          "peak_allocated_bytes": 5243037696,
+          "peak_reserved_bytes": 5746196480
+        },
+        {
+          "stage": "after_backward_before_optimizer",
+          "allocated_bytes": 2192388608,
+          "reserved_bytes": 5746196480,
+          "peak_allocated_bytes": 5406877696,
+          "peak_reserved_bytes": 5746196480
+        },
+        {
+          "stage": "after_optimizer",
+          "allocated_bytes": 2193535488,
+          "reserved_bytes": 5746196480,
+          "peak_allocated_bytes": 5406877696,
+          "peak_reserved_bytes": 5746196480
+        }
+      ]
+    },
+    "status": "ok",
+    "wall_seconds": 2.4793484210968018
+  }
+}

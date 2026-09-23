@@ -1,0 +1,131 @@
+{
+  "name": "xl-fp32-backward-w5",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"xl-fp32-backward-w5\", \"kind\": \"model\", \"size\": \"xl\", \"dtype\": \"fp32\", \"mode\": \"backward\", \"warmup\": 5, \"steps\": 10, \"timeout\": 500}",
+    "--output",
+    "/data/20260914T085158Z-models-large-xl-10b/016-xl-fp32-backward-w5"
+  ],
+  "started": 1789376116.0122962,
+  "returncode": 0,
+  "seconds": 18.92551851272583,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "xl-fp32-backward-w5",
+      "kind": "model",
+      "size": "xl",
+      "dtype": "fp32",
+      "mode": "backward",
+      "warmup": 5,
+      "steps": 10,
+      "timeout": 500
+    },
+    "started_utc": "2026-09-14T08:55:17.677601+00:00",
+    "measurements": {
+      "samples_ms": [
+        861.9472999999971,
+        862.0104640000079,
+        861.9286040000134,
+        862.0028070000103,
+        861.8998489999967,
+        861.982686999994,
+        861.964013000005,
+        861.6571359999909,
+        861.8594659999985,
+        861.776170000013
+      ],
+      "mean_ms": 861.9028496000027,
+      "std_ms": 0.11187317951618603,
+      "median_ms": 861.9379520000052,
+      "cuda_event_stages": {
+        "forward": {
+          "samples_ms": [
+            291.6844787597656,
+            291.7586975097656,
+            291.7188415527344,
+            291.7458190917969,
+            291.73675537109375,
+            291.7929382324219,
+            291.7184143066406,
+            291.69415283203125,
+            291.684814453125,
+            291.6475524902344
+          ],
+          "mean_ms": 291.71824645996094,
+          "std_ms": 0.042366728755960516,
+          "median_ms": 291.7186279296875
+        },
+        "loss": {
+          "samples_ms": [
+            0.06649599969387054,
+            0.06659200042486191,
+            0.06870400160551071,
+            0.06659200042486191,
+            0.06668800115585327,
+            0.06464000046253204,
+            0.06652799993753433,
+            0.0666240006685257,
+            0.06665600091218948,
+            0.06649599969387054
+          ],
+          "mean_ms": 0.06660160049796104,
+          "std_ms": 0.0009607170809907307,
+          "median_ms": 0.06659200042486191
+        },
+        "backward": {
+          "samples_ms": [
+            568.6456909179688,
+            568.67236328125,
+            568.6189575195312,
+            568.6641235351562,
+            568.6148681640625,
+            568.6456909179688,
+            568.6702880859375,
+            568.467529296875,
+            568.7132568359375,
+            568.6743774414062
+          ],
+          "mean_ms": 568.6387145996093,
+          "std_ms": 0.06663654045307081,
+          "median_ms": 568.6549072265625
+        }
+      },
+      "last_scalar": 9.4176664352417,
+      "parameters": 3406809600,
+      "initial_memory": {
+        "allocated_bytes": 13762373632,
+        "reserved_bytes": 13763608576,
+        "peak_allocated_bytes": 13762373632,
+        "peak_reserved_bytes": 13763608576
+      },
+      "memory": {
+        "allocated_bytes": 27407012352,
+        "reserved_bytes": 44606423040,
+        "peak_allocated_bytes": 43115731968,
+        "peak_reserved_bytes": 44606423040
+      },
+      "stages": [
+        {
+          "stage": "after_forward",
+          "allocated_bytes": 42762849280,
+          "reserved_bytes": 44606423040,
+          "peak_allocated_bytes": 42762849280,
+          "peak_reserved_bytes": 44606423040
+        },
+        {
+          "stage": "after_backward_before_optimizer",
+          "allocated_bytes": 27488932352,
+          "reserved_bytes": 44606423040,
+          "peak_allocated_bytes": 43115731968,
+          "peak_reserved_bytes": 44606423040
+        }
+      ]
+    },
+    "status": "ok",
+    "wall_seconds": 16.498939752578735
+  }
+}

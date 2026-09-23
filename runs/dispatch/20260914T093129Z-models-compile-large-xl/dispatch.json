@@ -1,0 +1,7 @@
+{
+  "run_id": "20260914T093129Z-models-compile-large-xl",
+  "call_id": "fc-01M2FM3QZR1C0D0J4AYGP4QSJV",
+  "gpu_count": 1,
+  "timeout_seconds": 1800,
+  "plan": "models-compile"
+}

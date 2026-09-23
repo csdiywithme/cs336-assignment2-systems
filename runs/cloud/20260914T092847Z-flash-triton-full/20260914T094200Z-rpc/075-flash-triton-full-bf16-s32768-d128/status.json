@@ -1,0 +1,67 @@
+{
+  "name": "flash-triton-full-bf16-s32768-d128",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"flash-triton-full-bf16-s32768-d128\", \"kind\": \"attention\", \"implementation\": \"triton-full\", \"batch\": 1, \"seq\": 32768, \"dim\": 128, \"dtype\": \"bf16\", \"causal\": true, \"triton_bench\": true, \"steps\": 10, \"warmup\": 5, \"timeout\": 240}",
+    "--output",
+    "/data/20260914T092847Z-flash-triton-full/075-flash-triton-full-bf16-s32768-d128"
+  ],
+  "started": 1789378775.5233366,
+  "returncode": 0,
+  "seconds": 6.483905553817749,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "flash-triton-full-bf16-s32768-d128",
+      "kind": "attention",
+      "implementation": "triton-full",
+      "batch": 1,
+      "seq": 32768,
+      "dim": 128,
+      "dtype": "bf16",
+      "causal": true,
+      "triton_bench": true,
+      "steps": 10,
+      "warmup": 5,
+      "timeout": 240
+    },
+    "started_utc": "2026-09-14T09:39:36.513007+00:00",
+    "measurements": {
+      "forward": {
+        "mean_ms": 1.574349331855774,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory_before_backward": {
+        "allocated_bytes": 42074112,
+        "reserved_bytes": 333447168,
+        "peak_allocated_bytes": 310509568,
+        "peak_reserved_bytes": 333447168
+      },
+      "backward": {
+        "mean_ms": 4.05676346093836,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "end_to_end": {
+        "mean_ms": 5.6264615792494554,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory": {
+        "allocated_bytes": 58720256,
+        "reserved_bytes": 601882624,
+        "peak_allocated_bytes": 335806464,
+        "peak_reserved_bytes": 601882624
+      }
+    },
+    "status": "ok",
+    "wall_seconds": 4.633228302001953
+  }
+}

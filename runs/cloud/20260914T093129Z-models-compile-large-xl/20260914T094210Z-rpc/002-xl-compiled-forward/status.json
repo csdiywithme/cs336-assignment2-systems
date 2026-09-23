@@ -1,0 +1,91 @@
+{
+  "name": "xl-compiled-forward",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"xl-compiled-forward\", \"kind\": \"model\", \"size\": \"xl\", \"dtype\": \"fp32\", \"mode\": \"forward\", \"compile\": true, \"warmup\": 5, \"steps\": 10, \"timeout\": 600}",
+    "--output",
+    "/data/20260914T093129Z-models-compile-large-xl/002-xl-compiled-forward"
+  ],
+  "started": 1789378429.9244993,
+  "returncode": 0,
+  "seconds": 60.99332809448242,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "xl-compiled-forward",
+      "kind": "model",
+      "size": "xl",
+      "dtype": "fp32",
+      "mode": "forward",
+      "compile": true,
+      "warmup": 5,
+      "steps": 10,
+      "timeout": 600
+    },
+    "started_utc": "2026-09-14T09:33:51.171594+00:00",
+    "measurements": {
+      "samples_ms": [
+        268.94512999999165,
+        268.47267700000543,
+        268.340778999999,
+        269.05823699999587,
+        268.7369920000151,
+        268.3521090000056,
+        268.8634200000024,
+        268.6716040000192,
+        268.30056000000013,
+        269.0818869999987
+      ],
+      "mean_ms": 268.6823395000033,
+      "std_ms": 0.30208865239541166,
+      "median_ms": 268.70429800001716,
+      "cuda_event_stages": {
+        "forward": {
+          "samples_ms": [
+            268.0460205078125,
+            267.6889343261719,
+            267.78582763671875,
+            268.11016845703125,
+            267.8771057128906,
+            267.61676025390625,
+            268.0383605957031,
+            267.8280944824219,
+            267.6026306152344,
+            268.146484375
+          ],
+          "mean_ms": 267.87403869628906,
+          "std_ms": 0.2029184240856887,
+          "median_ms": 267.85260009765625
+        }
+      },
+      "last_scalar": -0.21375013887882233,
+      "parameters": 3406809600,
+      "initial_memory": {
+        "allocated_bytes": 13762373632,
+        "reserved_bytes": 13763608576,
+        "peak_allocated_bytes": 13762373632,
+        "peak_reserved_bytes": 13763608576
+      },
+      "memory": {
+        "allocated_bytes": 13852813312,
+        "reserved_bytes": 36316381184,
+        "peak_allocated_bytes": 35932424192,
+        "peak_reserved_bytes": 36316381184
+      },
+      "stages": [
+        {
+          "stage": "after_forward",
+          "allocated_bytes": 35932424192,
+          "reserved_bytes": 36316381184,
+          "peak_allocated_bytes": 35932424192,
+          "peak_reserved_bytes": 36316381184
+        }
+      ]
+    },
+    "status": "ok",
+    "wall_seconds": 56.60116100311279
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "forward": {
+    "mean_ms": 0.1708415530679762,
+    "method": "triton.testing.do_bench",
+    "warmup_ms": 100,
+    "rep_ms": 300
+  },
+  "memory_before_backward": {
+    "allocated_bytes": 61472768,
+    "reserved_bytes": 394264576,
+    "peak_allocated_bytes": 380239872,
+    "peak_reserved_bytes": 394264576
+  },
+  "backward": {
+    "mean_ms": 0.2370917928116075,
+    "method": "triton.testing.do_bench",
+    "warmup_ms": 100,
+    "rep_ms": 300
+  }
+}

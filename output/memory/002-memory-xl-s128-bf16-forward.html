@@ -1,0 +1,16 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>002-memory-xl-s128-bf16-forward - PyTorch MemoryViz</title></head>
+<body><script type="module">
+import {add_local_files} from "https://cdn.jsdelivr.net/gh/pytorch/pytorch@v2.11.0/torch/utils/viz/MemoryViz.js";
+const response = await fetch("snapshots/002-memory-xl-s128-bf16-forward.pickle");
+const raw = new Uint8Array(await response.arrayBuffer());
+const padded = new Uint8Array(Math.ceil(raw.length / 3) * 3);
+padded.set(raw);
+const base64 = await new Promise((resolve, reject) => {
+  const reader = new FileReader();
+  reader.onload = () => resolve(reader.result.split(",")[1]);
+  reader.onerror = reject;
+  reader.readAsDataURL(new Blob([padded]));
+});
+add_local_files([{name: "002-memory-xl-s128-bf16-forward.pickle", base64}], 'Active Memory Timeline');
+</script></body></html>

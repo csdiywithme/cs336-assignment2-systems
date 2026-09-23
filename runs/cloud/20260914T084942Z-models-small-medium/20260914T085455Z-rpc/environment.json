@@ -1,0 +1,344 @@
+{
+  "python": "3.13.3 (main, May 21 2025, 23:35:07) [GCC 12.2.0]",
+  "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "triton": "3.6.0",
+  "gpu_count": 1,
+  "gpus": [
+    "_CudaDeviceProperties(name='NVIDIA B200', major=10, minor=0, total_memory=182631MB, multi_processor_count=148, uuid=a60fcb9b-42e5-c38a-8d5d-cdd7075eb688, pci_bus_id=3, pci_device_id=0, pci_domain_id=0, L2_cache_size=126MB)"
+  ],
+  "provenance": {
+    "sha256": {
+      "cs336_systems/ddp.py": "2d4eca4130246a0f3a09cd372423fe01ac9b589fda48ea70106e0bc51c5e05e8",
+      "cs336_systems/fsdp.py": "8fb98c7d901b3758f592f78cfa70d5495761590d8f3076a74bb11c2bab4f528f",
+      "cs336_systems/attention.py": "aad974d4702c22675bd13c9b9c3cac9e932042ebf56db28b3743f740055291f0",
+      "cs336_systems/experiment_plans.py": "a2e1ee9e330e02981ef3f286ed7434492e2ecec9729b6f46ec095bc9f821e700",
+      "cs336_systems/sharded_optimizer.py": "4caf3754140474cc192664646178af79e3261e9e6ea66eac4fc937d6c3256a96",
+      "cs336_systems/__init__.py": "7da6cd265923adde95304e89905879609644d72240c9e8adc94c35f74daaca7c",
+      "cs336_systems/experiments.py": "c5f374acb01b02e6563f54cbb5434240003395e0fab884b08759e4aa0a2be588",
+      "cs336_systems/triton_attention.py": "35f1bedc362aac80de33ac2e734b718bf354f4fd44a7a6651e3a61ccaadc1647",
+      "tests/conftest.py": "073528eb19341c864462bb52aa52dc68419e46305b3668386aa327bdf8d724ba",
+      "tests/test_fsdp.py": "bdb02a8aa961107e222b7b5681258146fc3781256b40aa7de1abc69e5c0d4bd1",
+      "tests/test_ddp.py": "c8cc4e947d69ec8e2ce55497c852a412cc1b3039fa9c54fce51c1d48701893e4",
+      "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/common.py": "49c3a2393b8b38b03cc6bd4a890ee522333de5a7dc0e54cf012feb8e6fbe3065",
+      "tests/test_attention.py": "88da8191dbfd36362d720c635a6161175dbdac5fe5663d32d2405367b77ec6e3",
+      "tests/test_sharded_optimizer.py": "80e927b623ecdd80b5a31daea95fe927bc30ba30608b33504aab1fdc81e55d0c",
+      "tests/adapters.py": "4f80f3af1f962fc026665c3b7944a1938c29e811a8555fe45b710fdf1f3faf23",
+      "cs336-basics/cs336_basics/__init__.py": "0155d453af68683e4b977456e1d24ba39d0541349ddff68c26aa70f92641a66c",
+      "cs336-basics/cs336_basics/model.py": "282f66bc7a57c66cbbbb6c95c32dfad9fa7c943fa652c84172aec6f1917c72fa",
+      "cs336-basics/cs336_basics/optimizer.py": "1fb3470056a1e80964d69dab326700076bb602985db35ec3af923f8636483bda",
+      "cs336-basics/cs336_basics/nn_utils.py": "1cb5fb5ae282dfc50a15ce546a1db12cd2e03c2b6a755ac4a5dbe88c70653756",
+      "cs336-basics/cs336_basics/data.py": "7705559bd8c67c26257b7f3ba819b131d5aef552c5de273859c35f8ed7f12c62"
+    },
+    "gpu": "B200:1",
+    "modal_sdk": "1.5.5",
+    "handout_sha256": "f5667e3b6fac23c3a6d4ad4a999445b96aab3fb2246904d13ec86b79320b1a84"
+  },
+  "cases": [
+    {
+      "name": "small-fp32-forward-w5",
+      "kind": "model",
+      "size": "small",
+      "dtype": "fp32",
+      "mode": "forward",
+      "warmup": 5,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "small-fp32-backward-w5",
+      "kind": "model",
+      "size": "small",
+      "dtype": "fp32",
+      "mode": "backward",
+      "warmup": 5,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "small-fp32-train-w5",
+      "kind": "model",
+      "size": "small",
+      "dtype": "fp32",
+      "mode": "train",
+      "warmup": 5,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "small-bf16-forward-w5",
+      "kind": "model",
+      "size": "small",
+      "dtype": "bf16",
+      "mode": "forward",
+      "warmup": 5,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "small-bf16-backward-w5",
+      "kind": "model",
+      "size": "small",
+      "dtype": "bf16",
+      "mode": "backward",
+      "warmup": 5,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "small-bf16-train-w5",
+      "kind": "model",
+      "size": "small",
+      "dtype": "bf16",
+      "mode": "train",
+      "warmup": 5,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "small-fp32-forward-w0",
+      "kind": "model",
+      "size": "small",
+      "dtype": "fp32",
+      "mode": "forward",
+      "warmup": 0,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "small-fp32-backward-w0",
+      "kind": "model",
+      "size": "small",
+      "dtype": "fp32",
+      "mode": "backward",
+      "warmup": 0,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "small-fp32-train-w0",
+      "kind": "model",
+      "size": "small",
+      "dtype": "fp32",
+      "mode": "train",
+      "warmup": 0,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "small-fp32-forward-w1",
+      "kind": "model",
+      "size": "small",
+      "dtype": "fp32",
+      "mode": "forward",
+      "warmup": 1,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "small-fp32-backward-w1",
+      "kind": "model",
+      "size": "small",
+      "dtype": "fp32",
+      "mode": "backward",
+      "warmup": 1,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "small-fp32-train-w1",
+      "kind": "model",
+      "size": "small",
+      "dtype": "fp32",
+      "mode": "train",
+      "warmup": 1,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "small-fp32-forward-w2",
+      "kind": "model",
+      "size": "small",
+      "dtype": "fp32",
+      "mode": "forward",
+      "warmup": 2,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "small-fp32-backward-w2",
+      "kind": "model",
+      "size": "small",
+      "dtype": "fp32",
+      "mode": "backward",
+      "warmup": 2,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "small-fp32-train-w2",
+      "kind": "model",
+      "size": "small",
+      "dtype": "fp32",
+      "mode": "train",
+      "warmup": 2,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "medium-fp32-forward-w5",
+      "kind": "model",
+      "size": "medium",
+      "dtype": "fp32",
+      "mode": "forward",
+      "warmup": 5,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "medium-fp32-backward-w5",
+      "kind": "model",
+      "size": "medium",
+      "dtype": "fp32",
+      "mode": "backward",
+      "warmup": 5,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "medium-fp32-train-w5",
+      "kind": "model",
+      "size": "medium",
+      "dtype": "fp32",
+      "mode": "train",
+      "warmup": 5,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "medium-bf16-forward-w5",
+      "kind": "model",
+      "size": "medium",
+      "dtype": "bf16",
+      "mode": "forward",
+      "warmup": 5,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "medium-bf16-backward-w5",
+      "kind": "model",
+      "size": "medium",
+      "dtype": "bf16",
+      "mode": "backward",
+      "warmup": 5,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "medium-bf16-train-w5",
+      "kind": "model",
+      "size": "medium",
+      "dtype": "bf16",
+      "mode": "train",
+      "warmup": 5,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "medium-fp32-forward-w0",
+      "kind": "model",
+      "size": "medium",
+      "dtype": "fp32",
+      "mode": "forward",
+      "warmup": 0,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "medium-fp32-backward-w0",
+      "kind": "model",
+      "size": "medium",
+      "dtype": "fp32",
+      "mode": "backward",
+      "warmup": 0,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "medium-fp32-train-w0",
+      "kind": "model",
+      "size": "medium",
+      "dtype": "fp32",
+      "mode": "train",
+      "warmup": 0,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "medium-fp32-forward-w1",
+      "kind": "model",
+      "size": "medium",
+      "dtype": "fp32",
+      "mode": "forward",
+      "warmup": 1,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "medium-fp32-backward-w1",
+      "kind": "model",
+      "size": "medium",
+      "dtype": "fp32",
+      "mode": "backward",
+      "warmup": 1,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "medium-fp32-train-w1",
+      "kind": "model",
+      "size": "medium",
+      "dtype": "fp32",
+      "mode": "train",
+      "warmup": 1,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "medium-fp32-forward-w2",
+      "kind": "model",
+      "size": "medium",
+      "dtype": "fp32",
+      "mode": "forward",
+      "warmup": 2,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "medium-fp32-backward-w2",
+      "kind": "model",
+      "size": "medium",
+      "dtype": "fp32",
+      "mode": "backward",
+      "warmup": 2,
+      "steps": 10,
+      "timeout": 500
+    },
+    {
+      "name": "medium-fp32-train-w2",
+      "kind": "model",
+      "size": "medium",
+      "dtype": "fp32",
+      "mode": "train",
+      "warmup": 2,
+      "steps": 10,
+      "timeout": 500
+    }
+  ],
+  "started_utc": "2026-09-14T08:49:48.564482+00:00",
+  "job_timeout_seconds": 1800,
+  "estimate_usd_per_second": 0.00198288
+}

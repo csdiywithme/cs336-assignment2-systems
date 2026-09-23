@@ -1,0 +1,94 @@
+[
+  {
+    "path": "environment.json",
+    "bytes": 3781
+  },
+  {
+    "path": "nvidia-smi.txt",
+    "bytes": 11447
+  },
+  {
+    "path": "nvlink-status.txt",
+    "bytes": 472
+  },
+  {
+    "path": "pip-freeze.txt",
+    "bytes": 1691
+  },
+  {
+    "path": "progress.json",
+    "bytes": 2471
+  },
+  {
+    "path": "summary.json",
+    "bytes": 2819
+  },
+  {
+    "path": "topology.txt",
+    "bytes": 603
+  },
+  {
+    "path": "000-tuned-validation/result.json",
+    "bytes": 1808
+  },
+  {
+    "path": "000-tuned-validation/status.json",
+    "bytes": 2345
+  },
+  {
+    "path": "000-tuned-validation/stdout.log",
+    "bytes": 1809
+  },
+  {
+    "path": "source/__init__.py",
+    "bytes": 151
+  },
+  {
+    "path": "source/attention.py",
+    "bytes": 5184
+  },
+  {
+    "path": "source/checkpointing.py",
+    "bytes": 783
+  },
+  {
+    "path": "source/ddp.py",
+    "bytes": 2092
+  },
+  {
+    "path": "source/experiment_plans.py",
+    "bytes": 6456
+  },
+  {
+    "path": "source/experiments.py",
+    "bytes": 26196
+  },
+  {
+    "path": "source/fsdp.py",
+    "bytes": 8580
+  },
+  {
+    "path": "source/nsight_summary.py",
+    "bytes": 3692
+  },
+  {
+    "path": "source/optimized_model.py",
+    "bytes": 4881
+  },
+  {
+    "path": "source/profiling.py",
+    "bytes": 3700
+  },
+  {
+    "path": "source/sharded_optimizer.py",
+    "bytes": 2834
+  },
+  {
+    "path": "source/triton_attention.py",
+    "bytes": 7023
+  },
+  {
+    "path": "source/triton_optimizer.py",
+    "bytes": 764
+  }
+]

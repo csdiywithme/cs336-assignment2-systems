@@ -1,0 +1,14 @@
+[
+  {
+    "path": "output/bundles/assignment2_code.zip",
+    "file_count": 52,
+    "bytes": 217136,
+    "sha256": "1c01437befcfa47890d2ea2c8080ebd50cd3c9e680cd61a2331836d1293724ee"
+  },
+  {
+    "path": "output/bundles/assignment2_existing_evidence.zip",
+    "file_count": 2353,
+    "bytes": 11998433,
+    "sha256": "0c9e4a23543d48cabf2b700215e7439b375547c80046875d8901b4f417607df6"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "environment.json": "b7fedf3f35e5b08658704301417e5178076b8431a2f46f082bc616ef1bd8fe07",
+  "nvidia-smi.txt": "110ee89281fc86b17d4a2dd50aa6be06c2a392ca92e2d81949e13fc808d6fc00",
+  "pip-freeze.txt": "6241e877cfcf6af3c9180b440e552ceab57ee0c57565ee8b08a7e818f23cafc4",
+  "progress.json": "bc76d3f6b91e4681bc4f64d9e7c8e5823e0dc1f292c6bbe18d1921fd2410b4d1",
+  "summary.json": "84be7ed62013d2ebbb54a0ad8fc1e61d01bd7cdac38f372f09ee28fcd11ab41e",
+  "topology.txt": "dccab91183a1bfe73d6a47cddaaa840c2aef64dcbf65ed3fcc7c774ceecc39ee",
+  "000-nsys-small-s256/result.json": "e7025b7f66149a109059cc2ce207c4e92cfba697b810c7bafaba9220bf379098",
+  "000-nsys-small-s256/status.json": "e6f7f9af7c011ace40d5df7f6210fc437b94b85eea543fe0030ab22eacacdbc5",
+  "000-nsys-small-s256/stdout.log": "cd4363f45fda744e8d9f5b7e6f059239d95ecf0a98bec70934ef15edd50e01b3",
+  "source/__init__.py": "7da6cd265923adde95304e89905879609644d72240c9e8adc94c35f74daaca7c",
+  "source/attention.py": "aad974d4702c22675bd13c9b9c3cac9e932042ebf56db28b3743f740055291f0",
+  "source/ddp.py": "2d4eca4130246a0f3a09cd372423fe01ac9b589fda48ea70106e0bc51c5e05e8",
+  "source/experiment_plans.py": "a2e1ee9e330e02981ef3f286ed7434492e2ecec9729b6f46ec095bc9f821e700",
+  "source/experiments.py": "c5f374acb01b02e6563f54cbb5434240003395e0fab884b08759e4aa0a2be588",
+  "source/fsdp.py": "8fb98c7d901b3758f592f78cfa70d5495761590d8f3076a74bb11c2bab4f528f",
+  "source/sharded_optimizer.py": "4caf3754140474cc192664646178af79e3261e9e6ea66eac4fc937d6c3256a96",
+  "source/triton_attention.py": "35f1bedc362aac80de33ac2e734b718bf354f4fd44a7a6651e3a61ccaadc1647"
+}

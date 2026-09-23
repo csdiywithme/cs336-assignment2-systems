@@ -1,0 +1,7 @@
+{
+  "run_id": "20260914T092247Z-leaderboard-first-full",
+  "call_id": "fc-01M2FKKTPT1WKXXNP6W93SPZ72",
+  "gpu_count": 2,
+  "timeout_seconds": 720,
+  "plan": "leaderboard"
+}

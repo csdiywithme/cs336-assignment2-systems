@@ -1,0 +1,210 @@
+[
+  {
+    "path": "environment.json",
+    "bytes": 6395
+  },
+  {
+    "path": "nvidia-smi.txt",
+    "bytes": 67355
+  },
+  {
+    "path": "nvlink-status.txt",
+    "bytes": 2832
+  },
+  {
+    "path": "pip-freeze.txt",
+    "bytes": 1691
+  },
+  {
+    "path": "progress.json",
+    "bytes": 56933
+  },
+  {
+    "path": "summary.json",
+    "bytes": 60758
+  },
+  {
+    "path": "topology.txt",
+    "bytes": 109
+  },
+  {
+    "path": "000-gloo-6ranks-1MB/ranks.json",
+    "bytes": 3930
+  },
+  {
+    "path": "000-gloo-6ranks-1MB/result.json",
+    "bytes": 5686
+  },
+  {
+    "path": "000-gloo-6ranks-1MB/status.json",
+    "bytes": 6604
+  },
+  {
+    "path": "000-gloo-6ranks-1MB/stdout.log",
+    "bytes": 5687
+  },
+  {
+    "path": "001-gloo-6ranks-10MB/ranks.json",
+    "bytes": 3904
+  },
+  {
+    "path": "001-gloo-6ranks-10MB/result.json",
+    "bytes": 5658
+  },
+  {
+    "path": "001-gloo-6ranks-10MB/status.json",
+    "bytes": 6581
+  },
+  {
+    "path": "001-gloo-6ranks-10MB/stdout.log",
+    "bytes": 5659
+  },
+  {
+    "path": "002-gloo-6ranks-100MB/ranks.json",
+    "bytes": 3918
+  },
+  {
+    "path": "002-gloo-6ranks-100MB/result.json",
+    "bytes": 5681
+  },
+  {
+    "path": "002-gloo-6ranks-100MB/status.json",
+    "bytes": 6609
+  },
+  {
+    "path": "002-gloo-6ranks-100MB/stdout.log",
+    "bytes": 5682
+  },
+  {
+    "path": "003-gloo-6ranks-1000MB/ranks.json",
+    "bytes": 3920
+  },
+  {
+    "path": "003-gloo-6ranks-1000MB/result.json",
+    "bytes": 5683
+  },
+  {
+    "path": "003-gloo-6ranks-1000MB/status.json",
+    "bytes": 6615
+  },
+  {
+    "path": "003-gloo-6ranks-1000MB/stdout.log",
+    "bytes": 5684
+  },
+  {
+    "path": "004-nccl-6ranks-1MB/ranks.json",
+    "bytes": 4092
+  },
+  {
+    "path": "004-nccl-6ranks-1MB/result.json",
+    "bytes": 5876
+  },
+  {
+    "path": "004-nccl-6ranks-1MB/status.json",
+    "bytes": 6796
+  },
+  {
+    "path": "004-nccl-6ranks-1MB/stdout.log",
+    "bytes": 6337
+  },
+  {
+    "path": "005-nccl-6ranks-10MB/ranks.json",
+    "bytes": 4084
+  },
+  {
+    "path": "005-nccl-6ranks-10MB/result.json",
+    "bytes": 5870
+  },
+  {
+    "path": "005-nccl-6ranks-10MB/status.json",
+    "bytes": 6793
+  },
+  {
+    "path": "005-nccl-6ranks-10MB/stdout.log",
+    "bytes": 6331
+  },
+  {
+    "path": "006-nccl-6ranks-100MB/ranks.json",
+    "bytes": 4024
+  },
+  {
+    "path": "006-nccl-6ranks-100MB/result.json",
+    "bytes": 5804
+  },
+  {
+    "path": "006-nccl-6ranks-100MB/status.json",
+    "bytes": 6732
+  },
+  {
+    "path": "006-nccl-6ranks-100MB/stdout.log",
+    "bytes": 6265
+  },
+  {
+    "path": "007-nccl-6ranks-1000MB/ranks.json",
+    "bytes": 3902
+  },
+  {
+    "path": "007-nccl-6ranks-1000MB/result.json",
+    "bytes": 5654
+  },
+  {
+    "path": "007-nccl-6ranks-1000MB/status.json",
+    "bytes": 6585
+  },
+  {
+    "path": "007-nccl-6ranks-1000MB/stdout.log",
+    "bytes": 6115
+  },
+  {
+    "path": "source/__init__.py",
+    "bytes": 151
+  },
+  {
+    "path": "source/attention.py",
+    "bytes": 4548
+  },
+  {
+    "path": "source/checkpointing.py",
+    "bytes": 783
+  },
+  {
+    "path": "source/ddp.py",
+    "bytes": 2092
+  },
+  {
+    "path": "source/experiment_plans.py",
+    "bytes": 6098
+  },
+  {
+    "path": "source/experiments.py",
+    "bytes": 26094
+  },
+  {
+    "path": "source/fsdp.py",
+    "bytes": 8580
+  },
+  {
+    "path": "source/nsight_summary.py",
+    "bytes": 3692
+  },
+  {
+    "path": "source/optimized_model.py",
+    "bytes": 4783
+  },
+  {
+    "path": "source/profiling.py",
+    "bytes": 3700
+  },
+  {
+    "path": "source/sharded_optimizer.py",
+    "bytes": 2834
+  },
+  {
+    "path": "source/triton_attention.py",
+    "bytes": 6954
+  },
+  {
+    "path": "source/triton_optimizer.py",
+    "bytes": 764
+  }
+]

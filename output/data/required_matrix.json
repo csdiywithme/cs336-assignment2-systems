@@ -1,0 +1,3392 @@
+{
+  "models": [
+    {
+      "configuration": {
+        "name": "small-fp32-forward-w5"
+      },
+      "status": "ok",
+      "source_index": "E007",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "small-fp32-backward-w5"
+      },
+      "status": "ok",
+      "source_index": "E008",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "small-fp32-train-w5"
+      },
+      "status": "ok",
+      "source_index": "E009",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "small-bf16-forward-w5"
+      },
+      "status": "ok",
+      "source_index": "E010",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "small-bf16-backward-w5"
+      },
+      "status": "ok",
+      "source_index": "E011",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "small-bf16-train-w5"
+      },
+      "status": "ok",
+      "source_index": "E012",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "small-fp32-forward-w0"
+      },
+      "status": "ok",
+      "source_index": "E013",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "small-fp32-backward-w0"
+      },
+      "status": "ok",
+      "source_index": "E014",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "small-fp32-train-w0"
+      },
+      "status": "ok",
+      "source_index": "E015",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "small-fp32-forward-w1"
+      },
+      "status": "ok",
+      "source_index": "E016",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "small-fp32-backward-w1"
+      },
+      "status": "ok",
+      "source_index": "E017",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "small-fp32-train-w1"
+      },
+      "status": "ok",
+      "source_index": "E018",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "small-fp32-forward-w2"
+      },
+      "status": "ok",
+      "source_index": "E019",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "small-fp32-backward-w2"
+      },
+      "status": "ok",
+      "source_index": "E020",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "small-fp32-train-w2"
+      },
+      "status": "ok",
+      "source_index": "E021",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "medium-fp32-forward-w5"
+      },
+      "status": "ok",
+      "source_index": "E022",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "medium-fp32-backward-w5"
+      },
+      "status": "ok",
+      "source_index": "E023",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "medium-fp32-train-w5"
+      },
+      "status": "ok",
+      "source_index": "E024",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "medium-bf16-forward-w5"
+      },
+      "status": "ok",
+      "source_index": "E025",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "medium-bf16-backward-w5"
+      },
+      "status": "ok",
+      "source_index": "E026",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "medium-bf16-train-w5"
+      },
+      "status": "ok",
+      "source_index": "E027",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "medium-fp32-forward-w0"
+      },
+      "status": "ok",
+      "source_index": "E028",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "medium-fp32-backward-w0"
+      },
+      "status": "ok",
+      "source_index": "E029",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "medium-fp32-train-w0"
+      },
+      "status": "ok",
+      "source_index": "E030",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "medium-fp32-forward-w1"
+      },
+      "status": "ok",
+      "source_index": "E031",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "medium-fp32-backward-w1"
+      },
+      "status": "ok",
+      "source_index": "E032",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "medium-fp32-train-w1"
+      },
+      "status": "ok",
+      "source_index": "E033",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "medium-fp32-forward-w2"
+      },
+      "status": "ok",
+      "source_index": "E034",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "medium-fp32-backward-w2"
+      },
+      "status": "ok",
+      "source_index": "E035",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "medium-fp32-train-w2"
+      },
+      "status": "ok",
+      "source_index": "E036",
+      "run_id": "20260914T084942Z-models-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "large-fp32-forward-w5"
+      },
+      "status": "ok",
+      "source_index": "E038",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "large-fp32-backward-w5"
+      },
+      "status": "ok",
+      "source_index": "E039",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "large-fp32-train-w5"
+      },
+      "status": "ok",
+      "source_index": "E040",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "large-bf16-forward-w5"
+      },
+      "status": "ok",
+      "source_index": "E041",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "large-bf16-backward-w5"
+      },
+      "status": "ok",
+      "source_index": "E042",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "large-bf16-train-w5"
+      },
+      "status": "ok",
+      "source_index": "E043",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "large-fp32-forward-w0"
+      },
+      "status": "ok",
+      "source_index": "E044",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "large-fp32-backward-w0"
+      },
+      "status": "ok",
+      "source_index": "E045",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "large-fp32-train-w0"
+      },
+      "status": "ok",
+      "source_index": "E046",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "large-fp32-forward-w1"
+      },
+      "status": "ok",
+      "source_index": "E047",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "large-fp32-backward-w1"
+      },
+      "status": "ok",
+      "source_index": "E048",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "large-fp32-train-w1"
+      },
+      "status": "ok",
+      "source_index": "E049",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "large-fp32-forward-w2"
+      },
+      "status": "ok",
+      "source_index": "E050",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "large-fp32-backward-w2"
+      },
+      "status": "ok",
+      "source_index": "E051",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "large-fp32-train-w2"
+      },
+      "status": "ok",
+      "source_index": "E052",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "xl-fp32-forward-w5"
+      },
+      "status": "ok",
+      "source_index": "E053",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "xl-fp32-backward-w5"
+      },
+      "status": "ok",
+      "source_index": "E054",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "xl-fp32-train-w5"
+      },
+      "status": "ok",
+      "source_index": "E055",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "xl-bf16-forward-w5"
+      },
+      "status": "ok",
+      "source_index": "E056",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "xl-bf16-backward-w5"
+      },
+      "status": "ok",
+      "source_index": "E057",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "xl-bf16-train-w5"
+      },
+      "status": "ok",
+      "source_index": "E058",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "xl-fp32-forward-w0"
+      },
+      "status": "ok",
+      "source_index": "E059",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "xl-fp32-backward-w0"
+      },
+      "status": "ok",
+      "source_index": "E060",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "xl-fp32-train-w0"
+      },
+      "status": "ok",
+      "source_index": "E061",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "xl-fp32-forward-w1"
+      },
+      "status": "ok",
+      "source_index": "E062",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "xl-fp32-backward-w1"
+      },
+      "status": "ok",
+      "source_index": "E063",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "xl-fp32-train-w1"
+      },
+      "status": "ok",
+      "source_index": "E064",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "xl-fp32-forward-w2"
+      },
+      "status": "ok",
+      "source_index": "E065",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "xl-fp32-backward-w2"
+      },
+      "status": "ok",
+      "source_index": "E066",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "xl-fp32-train-w2"
+      },
+      "status": "ok",
+      "source_index": "E067",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "10B-fp32-forward-w5"
+      },
+      "status": "ok",
+      "source_index": "E068",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "10B-fp32-backward-w5"
+      },
+      "status": "ok",
+      "source_index": "E069",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "10B-fp32-train-w5"
+      },
+      "status": "oom",
+      "source_index": "E070",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "10B-bf16-forward-w5"
+      },
+      "status": "ok",
+      "source_index": "E071",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "10B-bf16-backward-w5"
+      },
+      "status": "ok",
+      "source_index": "E072",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "10B-bf16-train-w5"
+      },
+      "status": "oom",
+      "source_index": "E073",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "10B-fp32-forward-w0"
+      },
+      "status": "ok",
+      "source_index": "E074",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "10B-fp32-backward-w0"
+      },
+      "status": "ok",
+      "source_index": "E075",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "10B-fp32-train-w0"
+      },
+      "status": "oom",
+      "source_index": "E076",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "10B-fp32-forward-w1"
+      },
+      "status": "ok",
+      "source_index": "E077",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "10B-fp32-backward-w1"
+      },
+      "status": "ok",
+      "source_index": "E078",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "10B-fp32-train-w1"
+      },
+      "status": "oom",
+      "source_index": "E079",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "10B-fp32-forward-w2"
+      },
+      "status": "ok",
+      "source_index": "E080",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "10B-fp32-backward-w2"
+      },
+      "status": "ok",
+      "source_index": "E081",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    },
+    {
+      "configuration": {
+        "name": "10B-fp32-train-w2"
+      },
+      "status": "oom",
+      "source_index": "E082",
+      "run_id": "20260914T085158Z-models-large-xl-10b"
+    }
+  ],
+  "models_compile_including_missing_train": [
+    {
+      "configuration": {
+        "name": "small-compiled-forward"
+      },
+      "status": "ok",
+      "source_index": "E243",
+      "run_id": "20260914T091931Z-models-compile-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "small-compiled-backward"
+      },
+      "status": "ok",
+      "source_index": "E244",
+      "run_id": "20260914T091931Z-models-compile-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "small-compiled-train"
+      },
+      "status": "missing_local_evidence",
+      "source_index": null,
+      "run_id": null
+    },
+    {
+      "configuration": {
+        "name": "medium-compiled-forward"
+      },
+      "status": "ok",
+      "source_index": "E245",
+      "run_id": "20260914T091931Z-models-compile-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "medium-compiled-backward"
+      },
+      "status": "ok",
+      "source_index": "E246",
+      "run_id": "20260914T091931Z-models-compile-small-medium"
+    },
+    {
+      "configuration": {
+        "name": "medium-compiled-train"
+      },
+      "status": "missing_local_evidence",
+      "source_index": null,
+      "run_id": null
+    },
+    {
+      "configuration": {
+        "name": "large-compiled-forward"
+      },
+      "status": "ok",
+      "source_index": "E441",
+      "run_id": "20260914T093129Z-models-compile-large-xl"
+    },
+    {
+      "configuration": {
+        "name": "large-compiled-backward"
+      },
+      "status": "ok",
+      "source_index": "E442",
+      "run_id": "20260914T093129Z-models-compile-large-xl"
+    },
+    {
+      "configuration": {
+        "name": "large-compiled-train"
+      },
+      "status": "missing_local_evidence",
+      "source_index": null,
+      "run_id": null
+    },
+    {
+      "configuration": {
+        "name": "xl-compiled-forward"
+      },
+      "status": "ok",
+      "source_index": "E443",
+      "run_id": "20260914T093129Z-models-compile-large-xl"
+    },
+    {
+      "configuration": {
+        "name": "xl-compiled-backward"
+      },
+      "status": "ok",
+      "source_index": "E444",
+      "run_id": "20260914T093129Z-models-compile-large-xl"
+    },
+    {
+      "configuration": {
+        "name": "xl-compiled-train"
+      },
+      "status": "missing_local_evidence",
+      "source_index": null,
+      "run_id": null
+    },
+    {
+      "configuration": {
+        "name": "10B-compiled-forward"
+      },
+      "status": "ok",
+      "source_index": "E447",
+      "run_id": "20260914T093858Z-models-compile-10b"
+    },
+    {
+      "configuration": {
+        "name": "10B-compiled-backward"
+      },
+      "status": "ok",
+      "source_index": "E448",
+      "run_id": "20260914T093858Z-models-compile-10b"
+    },
+    {
+      "configuration": {
+        "name": "10B-compiled-train"
+      },
+      "status": "missing_local_evidence",
+      "source_index": null,
+      "run_id": null
+    }
+  ],
+  "attention": [
+    {
+      "configuration": {
+        "name": "attention-eager-s256-d16"
+      },
+      "status": "ok",
+      "source_index": "E083",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-eager-s256-d32"
+      },
+      "status": "ok",
+      "source_index": "E084",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-eager-s256-d64"
+      },
+      "status": "ok",
+      "source_index": "E085",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-eager-s256-d128"
+      },
+      "status": "ok",
+      "source_index": "E086",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-eager-s1024-d16"
+      },
+      "status": "ok",
+      "source_index": "E087",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-eager-s1024-d32"
+      },
+      "status": "ok",
+      "source_index": "E088",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-eager-s1024-d64"
+      },
+      "status": "ok",
+      "source_index": "E089",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-eager-s1024-d128"
+      },
+      "status": "ok",
+      "source_index": "E090",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-eager-s4096-d16"
+      },
+      "status": "ok",
+      "source_index": "E091",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-eager-s4096-d32"
+      },
+      "status": "ok",
+      "source_index": "E092",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-eager-s4096-d64"
+      },
+      "status": "ok",
+      "source_index": "E093",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-eager-s4096-d128"
+      },
+      "status": "ok",
+      "source_index": "E094",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-eager-s8192-d16"
+      },
+      "status": "ok",
+      "source_index": "E095",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-eager-s8192-d32"
+      },
+      "status": "ok",
+      "source_index": "E096",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-eager-s8192-d64"
+      },
+      "status": "ok",
+      "source_index": "E097",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-eager-s8192-d128"
+      },
+      "status": "ok",
+      "source_index": "E098",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-eager-s16384-d16"
+      },
+      "status": "ok",
+      "source_index": "E099",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-eager-s16384-d32"
+      },
+      "status": "ok",
+      "source_index": "E100",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-eager-s16384-d64"
+      },
+      "status": "ok",
+      "source_index": "E101",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-eager-s16384-d128"
+      },
+      "status": "ok",
+      "source_index": "E102",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s256-d16"
+      },
+      "status": "ok",
+      "source_index": "E103",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s256-d32"
+      },
+      "status": "ok",
+      "source_index": "E104",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s256-d64"
+      },
+      "status": "ok",
+      "source_index": "E105",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s256-d128"
+      },
+      "status": "ok",
+      "source_index": "E106",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s1024-d16"
+      },
+      "status": "ok",
+      "source_index": "E107",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s1024-d32"
+      },
+      "status": "ok",
+      "source_index": "E108",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s1024-d64"
+      },
+      "status": "ok",
+      "source_index": "E109",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s1024-d128"
+      },
+      "status": "ok",
+      "source_index": "E110",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s4096-d16"
+      },
+      "status": "ok",
+      "source_index": "E111",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s4096-d32"
+      },
+      "status": "ok",
+      "source_index": "E112",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s4096-d64"
+      },
+      "status": "ok",
+      "source_index": "E113",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s4096-d128"
+      },
+      "status": "ok",
+      "source_index": "E114",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s8192-d16"
+      },
+      "status": "ok",
+      "source_index": "E115",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s8192-d32"
+      },
+      "status": "ok",
+      "source_index": "E116",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s8192-d64"
+      },
+      "status": "ok",
+      "source_index": "E117",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s8192-d128"
+      },
+      "status": "ok",
+      "source_index": "E118",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s16384-d16"
+      },
+      "status": "ok",
+      "source_index": "E119",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s16384-d32"
+      },
+      "status": "ok",
+      "source_index": "E120",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s16384-d64"
+      },
+      "status": "ok",
+      "source_index": "E121",
+      "run_id": "20260914T085159Z-attention-matrix"
+    },
+    {
+      "configuration": {
+        "name": "attention-compiled-s16384-d128"
+      },
+      "status": "ok",
+      "source_index": "E122",
+      "run_id": "20260914T085159Z-attention-matrix"
+    }
+  ],
+  "flash": [
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s128-d16"
+      },
+      "status": "ok",
+      "source_index": "E163",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s128-d32"
+      },
+      "status": "ok",
+      "source_index": "E164",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s128-d64"
+      },
+      "status": "ok",
+      "source_index": "E165",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s128-d128"
+      },
+      "status": "ok",
+      "source_index": "E166",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s256-d16"
+      },
+      "status": "ok",
+      "source_index": "E167",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s256-d32"
+      },
+      "status": "ok",
+      "source_index": "E168",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s256-d64"
+      },
+      "status": "ok",
+      "source_index": "E169",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s256-d128"
+      },
+      "status": "ok",
+      "source_index": "E170",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s512-d16"
+      },
+      "status": "ok",
+      "source_index": "E171",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s512-d32"
+      },
+      "status": "ok",
+      "source_index": "E172",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s512-d64"
+      },
+      "status": "ok",
+      "source_index": "E173",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s512-d128"
+      },
+      "status": "ok",
+      "source_index": "E174",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s1024-d16"
+      },
+      "status": "ok",
+      "source_index": "E175",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s1024-d32"
+      },
+      "status": "ok",
+      "source_index": "E176",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s1024-d64"
+      },
+      "status": "ok",
+      "source_index": "E177",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s1024-d128"
+      },
+      "status": "ok",
+      "source_index": "E178",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s2048-d16"
+      },
+      "status": "ok",
+      "source_index": "E179",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s2048-d32"
+      },
+      "status": "ok",
+      "source_index": "E180",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s2048-d64"
+      },
+      "status": "ok",
+      "source_index": "E181",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s2048-d128"
+      },
+      "status": "ok",
+      "source_index": "E182",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s4096-d16"
+      },
+      "status": "ok",
+      "source_index": "E183",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s4096-d32"
+      },
+      "status": "ok",
+      "source_index": "E184",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s4096-d64"
+      },
+      "status": "ok",
+      "source_index": "E185",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s4096-d128"
+      },
+      "status": "ok",
+      "source_index": "E186",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s8192-d16"
+      },
+      "status": "ok",
+      "source_index": "E187",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s8192-d32"
+      },
+      "status": "ok",
+      "source_index": "E188",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s8192-d64"
+      },
+      "status": "ok",
+      "source_index": "E189",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s8192-d128"
+      },
+      "status": "ok",
+      "source_index": "E190",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s16384-d16"
+      },
+      "status": "ok",
+      "source_index": "E191",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s16384-d32"
+      },
+      "status": "ok",
+      "source_index": "E192",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s16384-d64"
+      },
+      "status": "ok",
+      "source_index": "E193",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s16384-d128"
+      },
+      "status": "ok",
+      "source_index": "E194",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s32768-d16"
+      },
+      "status": "ok",
+      "source_index": "E195",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s32768-d32"
+      },
+      "status": "ok",
+      "source_index": "E196",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s32768-d64"
+      },
+      "status": "ok",
+      "source_index": "E197",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s32768-d128"
+      },
+      "status": "ok",
+      "source_index": "E198",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s65536-d16"
+      },
+      "status": "ok",
+      "source_index": "E199",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s65536-d32"
+      },
+      "status": "ok",
+      "source_index": "E200",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s65536-d64"
+      },
+      "status": "ok",
+      "source_index": "E201",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-fp32-s65536-d128"
+      },
+      "status": "ok",
+      "source_index": "E202",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s128-d16"
+      },
+      "status": "ok",
+      "source_index": "E203",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s128-d32"
+      },
+      "status": "ok",
+      "source_index": "E204",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s128-d64"
+      },
+      "status": "ok",
+      "source_index": "E205",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s128-d128"
+      },
+      "status": "ok",
+      "source_index": "E206",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s256-d16"
+      },
+      "status": "ok",
+      "source_index": "E207",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s256-d32"
+      },
+      "status": "ok",
+      "source_index": "E208",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s256-d64"
+      },
+      "status": "ok",
+      "source_index": "E209",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s256-d128"
+      },
+      "status": "ok",
+      "source_index": "E210",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s512-d16"
+      },
+      "status": "ok",
+      "source_index": "E211",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s512-d32"
+      },
+      "status": "ok",
+      "source_index": "E212",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s512-d64"
+      },
+      "status": "ok",
+      "source_index": "E213",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s512-d128"
+      },
+      "status": "ok",
+      "source_index": "E214",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s1024-d16"
+      },
+      "status": "ok",
+      "source_index": "E215",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s1024-d32"
+      },
+      "status": "ok",
+      "source_index": "E216",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s1024-d64"
+      },
+      "status": "ok",
+      "source_index": "E217",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s1024-d128"
+      },
+      "status": "ok",
+      "source_index": "E218",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s2048-d16"
+      },
+      "status": "ok",
+      "source_index": "E219",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s2048-d32"
+      },
+      "status": "ok",
+      "source_index": "E220",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s2048-d64"
+      },
+      "status": "ok",
+      "source_index": "E221",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s2048-d128"
+      },
+      "status": "ok",
+      "source_index": "E222",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s4096-d16"
+      },
+      "status": "ok",
+      "source_index": "E223",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s4096-d32"
+      },
+      "status": "ok",
+      "source_index": "E224",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s4096-d64"
+      },
+      "status": "ok",
+      "source_index": "E225",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s4096-d128"
+      },
+      "status": "ok",
+      "source_index": "E226",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s8192-d16"
+      },
+      "status": "ok",
+      "source_index": "E227",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s8192-d32"
+      },
+      "status": "ok",
+      "source_index": "E228",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s8192-d64"
+      },
+      "status": "ok",
+      "source_index": "E229",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s8192-d128"
+      },
+      "status": "ok",
+      "source_index": "E230",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s16384-d16"
+      },
+      "status": "ok",
+      "source_index": "E231",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s16384-d32"
+      },
+      "status": "ok",
+      "source_index": "E232",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s16384-d64"
+      },
+      "status": "ok",
+      "source_index": "E233",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s16384-d128"
+      },
+      "status": "ok",
+      "source_index": "E234",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s32768-d16"
+      },
+      "status": "ok",
+      "source_index": "E235",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s32768-d32"
+      },
+      "status": "ok",
+      "source_index": "E236",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s32768-d64"
+      },
+      "status": "ok",
+      "source_index": "E237",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s32768-d128"
+      },
+      "status": "ok",
+      "source_index": "E238",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s65536-d16"
+      },
+      "status": "ok",
+      "source_index": "E239",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s65536-d32"
+      },
+      "status": "ok",
+      "source_index": "E240",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s65536-d64"
+      },
+      "status": "ok",
+      "source_index": "E241",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-eager-bf16-s65536-d128"
+      },
+      "status": "ok",
+      "source_index": "E242",
+      "run_id": "20260914T091848Z-flash-eager"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s128-d16"
+      },
+      "status": "ok",
+      "source_index": "E272",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s128-d32"
+      },
+      "status": "ok",
+      "source_index": "E273",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s128-d64"
+      },
+      "status": "ok",
+      "source_index": "E274",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s128-d128"
+      },
+      "status": "ok",
+      "source_index": "E275",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s256-d16"
+      },
+      "status": "ok",
+      "source_index": "E276",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s256-d32"
+      },
+      "status": "ok",
+      "source_index": "E277",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s256-d64"
+      },
+      "status": "ok",
+      "source_index": "E278",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s256-d128"
+      },
+      "status": "ok",
+      "source_index": "E279",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s512-d16"
+      },
+      "status": "ok",
+      "source_index": "E280",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s512-d32"
+      },
+      "status": "ok",
+      "source_index": "E281",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s512-d64"
+      },
+      "status": "ok",
+      "source_index": "E282",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s512-d128"
+      },
+      "status": "ok",
+      "source_index": "E283",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s1024-d16"
+      },
+      "status": "ok",
+      "source_index": "E284",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s1024-d32"
+      },
+      "status": "ok",
+      "source_index": "E285",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s1024-d64"
+      },
+      "status": "ok",
+      "source_index": "E286",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s1024-d128"
+      },
+      "status": "ok",
+      "source_index": "E287",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s2048-d16"
+      },
+      "status": "ok",
+      "source_index": "E288",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s2048-d32"
+      },
+      "status": "ok",
+      "source_index": "E289",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s2048-d64"
+      },
+      "status": "ok",
+      "source_index": "E290",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s2048-d128"
+      },
+      "status": "ok",
+      "source_index": "E291",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s4096-d16"
+      },
+      "status": "ok",
+      "source_index": "E292",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s4096-d32"
+      },
+      "status": "ok",
+      "source_index": "E293",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s4096-d64"
+      },
+      "status": "ok",
+      "source_index": "E294",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s4096-d128"
+      },
+      "status": "ok",
+      "source_index": "E295",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s8192-d16"
+      },
+      "status": "ok",
+      "source_index": "E296",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s8192-d32"
+      },
+      "status": "ok",
+      "source_index": "E297",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s8192-d64"
+      },
+      "status": "ok",
+      "source_index": "E298",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s8192-d128"
+      },
+      "status": "ok",
+      "source_index": "E299",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s16384-d16"
+      },
+      "status": "ok",
+      "source_index": "E300",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s16384-d32"
+      },
+      "status": "ok",
+      "source_index": "E301",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s16384-d64"
+      },
+      "status": "ok",
+      "source_index": "E302",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s16384-d128"
+      },
+      "status": "ok",
+      "source_index": "E303",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s32768-d16"
+      },
+      "status": "ok",
+      "source_index": "E304",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s32768-d32"
+      },
+      "status": "ok",
+      "source_index": "E305",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s32768-d64"
+      },
+      "status": "ok",
+      "source_index": "E306",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s32768-d128"
+      },
+      "status": "ok",
+      "source_index": "E307",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s65536-d16"
+      },
+      "status": "ok",
+      "source_index": "E308",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s65536-d32"
+      },
+      "status": "ok",
+      "source_index": "E309",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s65536-d64"
+      },
+      "status": "ok",
+      "source_index": "E310",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-fp32-s65536-d128"
+      },
+      "status": "ok",
+      "source_index": "E311",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s128-d16"
+      },
+      "status": "ok",
+      "source_index": "E312",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s128-d32"
+      },
+      "status": "ok",
+      "source_index": "E313",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s128-d64"
+      },
+      "status": "ok",
+      "source_index": "E314",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s128-d128"
+      },
+      "status": "ok",
+      "source_index": "E315",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s256-d16"
+      },
+      "status": "ok",
+      "source_index": "E316",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s256-d32"
+      },
+      "status": "ok",
+      "source_index": "E317",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s256-d64"
+      },
+      "status": "ok",
+      "source_index": "E318",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s256-d128"
+      },
+      "status": "ok",
+      "source_index": "E319",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s512-d16"
+      },
+      "status": "ok",
+      "source_index": "E320",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s512-d32"
+      },
+      "status": "ok",
+      "source_index": "E321",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s512-d64"
+      },
+      "status": "ok",
+      "source_index": "E322",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s512-d128"
+      },
+      "status": "ok",
+      "source_index": "E323",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s1024-d16"
+      },
+      "status": "ok",
+      "source_index": "E324",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s1024-d32"
+      },
+      "status": "ok",
+      "source_index": "E325",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s1024-d64"
+      },
+      "status": "ok",
+      "source_index": "E326",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s1024-d128"
+      },
+      "status": "ok",
+      "source_index": "E327",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s2048-d16"
+      },
+      "status": "ok",
+      "source_index": "E328",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s2048-d32"
+      },
+      "status": "ok",
+      "source_index": "E329",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s2048-d64"
+      },
+      "status": "ok",
+      "source_index": "E330",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s2048-d128"
+      },
+      "status": "ok",
+      "source_index": "E331",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s4096-d16"
+      },
+      "status": "ok",
+      "source_index": "E332",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s4096-d32"
+      },
+      "status": "ok",
+      "source_index": "E333",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s4096-d64"
+      },
+      "status": "ok",
+      "source_index": "E334",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s4096-d128"
+      },
+      "status": "ok",
+      "source_index": "E335",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s8192-d16"
+      },
+      "status": "ok",
+      "source_index": "E336",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s8192-d32"
+      },
+      "status": "ok",
+      "source_index": "E337",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s8192-d64"
+      },
+      "status": "ok",
+      "source_index": "E338",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s8192-d128"
+      },
+      "status": "ok",
+      "source_index": "E339",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s16384-d16"
+      },
+      "status": "ok",
+      "source_index": "E340",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s16384-d32"
+      },
+      "status": "ok",
+      "source_index": "E341",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s16384-d64"
+      },
+      "status": "ok",
+      "source_index": "E342",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s16384-d128"
+      },
+      "status": "ok",
+      "source_index": "E343",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s32768-d16"
+      },
+      "status": "ok",
+      "source_index": "E344",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s32768-d32"
+      },
+      "status": "ok",
+      "source_index": "E345",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s32768-d64"
+      },
+      "status": "ok",
+      "source_index": "E346",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s32768-d128"
+      },
+      "status": "ok",
+      "source_index": "E347",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s65536-d16"
+      },
+      "status": "ok",
+      "source_index": "E348",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s65536-d32"
+      },
+      "status": "ok",
+      "source_index": "E349",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s65536-d64"
+      },
+      "status": "ok",
+      "source_index": "E350",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-bf16-s65536-d128"
+      },
+      "status": "ok",
+      "source_index": "E351",
+      "run_id": "20260914T092409Z-flash-triton-compiled-backward"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s128-d16"
+      },
+      "status": "ok",
+      "source_index": "E360",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s128-d32"
+      },
+      "status": "ok",
+      "source_index": "E361",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s128-d64"
+      },
+      "status": "ok",
+      "source_index": "E362",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s128-d128"
+      },
+      "status": "ok",
+      "source_index": "E363",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s256-d16"
+      },
+      "status": "ok",
+      "source_index": "E364",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s256-d32"
+      },
+      "status": "ok",
+      "source_index": "E365",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s256-d64"
+      },
+      "status": "ok",
+      "source_index": "E366",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s256-d128"
+      },
+      "status": "ok",
+      "source_index": "E367",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s512-d16"
+      },
+      "status": "ok",
+      "source_index": "E368",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s512-d32"
+      },
+      "status": "ok",
+      "source_index": "E369",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s512-d64"
+      },
+      "status": "ok",
+      "source_index": "E370",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s512-d128"
+      },
+      "status": "ok",
+      "source_index": "E371",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s1024-d16"
+      },
+      "status": "ok",
+      "source_index": "E372",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s1024-d32"
+      },
+      "status": "ok",
+      "source_index": "E373",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s1024-d64"
+      },
+      "status": "ok",
+      "source_index": "E374",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s1024-d128"
+      },
+      "status": "ok",
+      "source_index": "E375",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s2048-d16"
+      },
+      "status": "ok",
+      "source_index": "E376",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s2048-d32"
+      },
+      "status": "ok",
+      "source_index": "E377",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s2048-d64"
+      },
+      "status": "ok",
+      "source_index": "E378",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s2048-d128"
+      },
+      "status": "ok",
+      "source_index": "E379",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s4096-d16"
+      },
+      "status": "ok",
+      "source_index": "E380",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s4096-d32"
+      },
+      "status": "ok",
+      "source_index": "E381",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s4096-d64"
+      },
+      "status": "ok",
+      "source_index": "E382",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s4096-d128"
+      },
+      "status": "ok",
+      "source_index": "E383",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s8192-d16"
+      },
+      "status": "ok",
+      "source_index": "E384",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s8192-d32"
+      },
+      "status": "ok",
+      "source_index": "E385",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s8192-d64"
+      },
+      "status": "ok",
+      "source_index": "E386",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s8192-d128"
+      },
+      "status": "ok",
+      "source_index": "E387",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s16384-d16"
+      },
+      "status": "ok",
+      "source_index": "E388",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s16384-d32"
+      },
+      "status": "ok",
+      "source_index": "E389",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s16384-d64"
+      },
+      "status": "ok",
+      "source_index": "E390",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s16384-d128"
+      },
+      "status": "ok",
+      "source_index": "E391",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s32768-d16"
+      },
+      "status": "ok",
+      "source_index": "E392",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s32768-d32"
+      },
+      "status": "ok",
+      "source_index": "E393",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s32768-d64"
+      },
+      "status": "ok",
+      "source_index": "E394",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s32768-d128"
+      },
+      "status": "ok",
+      "source_index": "E395",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s65536-d16"
+      },
+      "status": "ok",
+      "source_index": "E396",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s65536-d32"
+      },
+      "status": "ok",
+      "source_index": "E397",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s65536-d64"
+      },
+      "status": "ok",
+      "source_index": "E398",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-fp32-s65536-d128"
+      },
+      "status": "ok",
+      "source_index": "E399",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s128-d16"
+      },
+      "status": "ok",
+      "source_index": "E400",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s128-d32"
+      },
+      "status": "ok",
+      "source_index": "E401",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s128-d64"
+      },
+      "status": "ok",
+      "source_index": "E402",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s128-d128"
+      },
+      "status": "ok",
+      "source_index": "E403",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s256-d16"
+      },
+      "status": "ok",
+      "source_index": "E404",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s256-d32"
+      },
+      "status": "ok",
+      "source_index": "E405",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s256-d64"
+      },
+      "status": "ok",
+      "source_index": "E406",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s256-d128"
+      },
+      "status": "ok",
+      "source_index": "E407",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s512-d16"
+      },
+      "status": "ok",
+      "source_index": "E408",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s512-d32"
+      },
+      "status": "ok",
+      "source_index": "E409",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s512-d64"
+      },
+      "status": "ok",
+      "source_index": "E410",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s512-d128"
+      },
+      "status": "ok",
+      "source_index": "E411",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s1024-d16"
+      },
+      "status": "ok",
+      "source_index": "E412",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s1024-d32"
+      },
+      "status": "ok",
+      "source_index": "E413",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s1024-d64"
+      },
+      "status": "ok",
+      "source_index": "E414",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s1024-d128"
+      },
+      "status": "ok",
+      "source_index": "E415",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s2048-d16"
+      },
+      "status": "ok",
+      "source_index": "E416",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s2048-d32"
+      },
+      "status": "ok",
+      "source_index": "E417",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s2048-d64"
+      },
+      "status": "ok",
+      "source_index": "E418",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s2048-d128"
+      },
+      "status": "ok",
+      "source_index": "E419",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s4096-d16"
+      },
+      "status": "ok",
+      "source_index": "E420",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s4096-d32"
+      },
+      "status": "ok",
+      "source_index": "E421",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s4096-d64"
+      },
+      "status": "ok",
+      "source_index": "E422",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s4096-d128"
+      },
+      "status": "ok",
+      "source_index": "E423",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s8192-d16"
+      },
+      "status": "ok",
+      "source_index": "E424",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s8192-d32"
+      },
+      "status": "ok",
+      "source_index": "E425",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s8192-d64"
+      },
+      "status": "ok",
+      "source_index": "E426",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s8192-d128"
+      },
+      "status": "ok",
+      "source_index": "E427",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s16384-d16"
+      },
+      "status": "ok",
+      "source_index": "E428",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s16384-d32"
+      },
+      "status": "ok",
+      "source_index": "E429",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s16384-d64"
+      },
+      "status": "ok",
+      "source_index": "E430",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s16384-d128"
+      },
+      "status": "ok",
+      "source_index": "E431",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s32768-d16"
+      },
+      "status": "ok",
+      "source_index": "E432",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s32768-d32"
+      },
+      "status": "ok",
+      "source_index": "E433",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s32768-d64"
+      },
+      "status": "ok",
+      "source_index": "E434",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s32768-d128"
+      },
+      "status": "ok",
+      "source_index": "E435",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s65536-d16"
+      },
+      "status": "ok",
+      "source_index": "E436",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s65536-d32"
+      },
+      "status": "ok",
+      "source_index": "E437",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s65536-d64"
+      },
+      "status": "ok",
+      "source_index": "E438",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    },
+    {
+      "configuration": {
+        "name": "flash-triton-full-bf16-s65536-d128"
+      },
+      "status": "ok",
+      "source_index": "E439",
+      "run_id": "20260914T092847Z-flash-triton-full"
+    }
+  ],
+  "communication": [
+    {
+      "configuration": {
+        "name": "gloo-2ranks-1MB"
+      },
+      "status": "ok",
+      "source_index": "E123",
+      "run_id": "20260914T085559Z-communication-and-xl"
+    },
+    {
+      "configuration": {
+        "name": "gloo-2ranks-10MB"
+      },
+      "status": "ok",
+      "source_index": "E124",
+      "run_id": "20260914T085559Z-communication-and-xl"
+    },
+    {
+      "configuration": {
+        "name": "gloo-2ranks-100MB"
+      },
+      "status": "ok",
+      "source_index": "E125",
+      "run_id": "20260914T085559Z-communication-and-xl"
+    },
+    {
+      "configuration": {
+        "name": "gloo-2ranks-1000MB"
+      },
+      "status": "ok",
+      "source_index": "E126",
+      "run_id": "20260914T085559Z-communication-and-xl"
+    },
+    {
+      "configuration": {
+        "name": "nccl-2ranks-1MB"
+      },
+      "status": "ok",
+      "source_index": "E127",
+      "run_id": "20260914T085559Z-communication-and-xl"
+    },
+    {
+      "configuration": {
+        "name": "nccl-2ranks-10MB"
+      },
+      "status": "ok",
+      "source_index": "E128",
+      "run_id": "20260914T085559Z-communication-and-xl"
+    },
+    {
+      "configuration": {
+        "name": "nccl-2ranks-100MB"
+      },
+      "status": "ok",
+      "source_index": "E129",
+      "run_id": "20260914T085559Z-communication-and-xl"
+    },
+    {
+      "configuration": {
+        "name": "nccl-2ranks-1000MB"
+      },
+      "status": "ok",
+      "source_index": "E130",
+      "run_id": "20260914T085559Z-communication-and-xl"
+    },
+    {
+      "configuration": {
+        "name": "gloo-4ranks-1MB"
+      },
+      "status": "ok",
+      "source_index": "E247",
+      "run_id": "20260914T091932Z-communication"
+    },
+    {
+      "configuration": {
+        "name": "gloo-4ranks-10MB"
+      },
+      "status": "ok",
+      "source_index": "E248",
+      "run_id": "20260914T091932Z-communication"
+    },
+    {
+      "configuration": {
+        "name": "gloo-4ranks-100MB"
+      },
+      "status": "ok",
+      "source_index": "E249",
+      "run_id": "20260914T091932Z-communication"
+    },
+    {
+      "configuration": {
+        "name": "gloo-4ranks-1000MB"
+      },
+      "status": "ok",
+      "source_index": "E250",
+      "run_id": "20260914T091932Z-communication"
+    },
+    {
+      "configuration": {
+        "name": "nccl-4ranks-1MB"
+      },
+      "status": "ok",
+      "source_index": "E251",
+      "run_id": "20260914T091932Z-communication"
+    },
+    {
+      "configuration": {
+        "name": "nccl-4ranks-10MB"
+      },
+      "status": "ok",
+      "source_index": "E252",
+      "run_id": "20260914T091932Z-communication"
+    },
+    {
+      "configuration": {
+        "name": "nccl-4ranks-100MB"
+      },
+      "status": "ok",
+      "source_index": "E253",
+      "run_id": "20260914T091932Z-communication"
+    },
+    {
+      "configuration": {
+        "name": "nccl-4ranks-1000MB"
+      },
+      "status": "ok",
+      "source_index": "E254",
+      "run_id": "20260914T091932Z-communication"
+    },
+    {
+      "configuration": {
+        "name": "gloo-6ranks-1MB"
+      },
+      "status": "ok",
+      "source_index": "E352",
+      "run_id": "20260914T092847Z-communication"
+    },
+    {
+      "configuration": {
+        "name": "gloo-6ranks-10MB"
+      },
+      "status": "ok",
+      "source_index": "E353",
+      "run_id": "20260914T092847Z-communication"
+    },
+    {
+      "configuration": {
+        "name": "gloo-6ranks-100MB"
+      },
+      "status": "ok",
+      "source_index": "E354",
+      "run_id": "20260914T092847Z-communication"
+    },
+    {
+      "configuration": {
+        "name": "gloo-6ranks-1000MB"
+      },
+      "status": "ok",
+      "source_index": "E355",
+      "run_id": "20260914T092847Z-communication"
+    },
+    {
+      "configuration": {
+        "name": "nccl-6ranks-1MB"
+      },
+      "status": "ok",
+      "source_index": "E356",
+      "run_id": "20260914T092847Z-communication"
+    },
+    {
+      "configuration": {
+        "name": "nccl-6ranks-10MB"
+      },
+      "status": "ok",
+      "source_index": "E357",
+      "run_id": "20260914T092847Z-communication"
+    },
+    {
+      "configuration": {
+        "name": "nccl-6ranks-100MB"
+      },
+      "status": "ok",
+      "source_index": "E358",
+      "run_id": "20260914T092847Z-communication"
+    },
+    {
+      "configuration": {
+        "name": "nccl-6ranks-1000MB"
+      },
+      "status": "ok",
+      "source_index": "E359",
+      "run_id": "20260914T092847Z-communication"
+    }
+  ],
+  "distributed_xl": [
+    {
+      "configuration": {
+        "name": "xl-naive-adamw"
+      },
+      "status": "ok",
+      "source_index": "E131",
+      "run_id": "20260914T085559Z-communication-and-xl"
+    },
+    {
+      "configuration": {
+        "name": "xl-flat-adamw"
+      },
+      "status": "ok",
+      "source_index": "E132",
+      "run_id": "20260914T085559Z-communication-and-xl"
+    },
+    {
+      "configuration": {
+        "name": "xl-overlap-adamw"
+      },
+      "status": "ok",
+      "source_index": "E133",
+      "run_id": "20260914T085559Z-communication-and-xl"
+    },
+    {
+      "configuration": {
+        "name": "xl-overlap-sharded"
+      },
+      "status": "ok",
+      "source_index": "E134",
+      "run_id": "20260914T085559Z-communication-and-xl"
+    },
+    {
+      "configuration": {
+        "name": "xl-fsdp-adamw"
+      },
+      "status": "ok",
+      "source_index": "E135",
+      "run_id": "20260914T085559Z-communication-and-xl"
+    }
+  ],
+  "memory": [
+    {
+      "configuration": {
+        "name": "memory-xl-s128-fp32-forward"
+      },
+      "status": "ok",
+      "source_index": "E136",
+      "run_id": "20260914T085600Z-memory-and-checkpoint"
+    },
+    {
+      "configuration": {
+        "name": "memory-xl-s128-fp32-train"
+      },
+      "status": "ok",
+      "source_index": "E137",
+      "run_id": "20260914T085600Z-memory-and-checkpoint"
+    },
+    {
+      "configuration": {
+        "name": "memory-xl-s128-bf16-forward"
+      },
+      "status": "ok",
+      "source_index": "E138",
+      "run_id": "20260914T085600Z-memory-and-checkpoint"
+    },
+    {
+      "configuration": {
+        "name": "memory-xl-s128-bf16-train"
+      },
+      "status": "ok",
+      "source_index": "E139",
+      "run_id": "20260914T085600Z-memory-and-checkpoint"
+    },
+    {
+      "configuration": {
+        "name": "memory-xl-s2048-fp32-forward"
+      },
+      "status": "oom",
+      "source_index": "E140",
+      "run_id": "20260914T085600Z-memory-and-checkpoint"
+    },
+    {
+      "configuration": {
+        "name": "memory-xl-s2048-fp32-train"
+      },
+      "status": "oom",
+      "source_index": "E141",
+      "run_id": "20260914T085600Z-memory-and-checkpoint"
+    },
+    {
+      "configuration": {
+        "name": "memory-xl-s2048-bf16-forward"
+      },
+      "status": "ok",
+      "source_index": "E142",
+      "run_id": "20260914T085600Z-memory-and-checkpoint"
+    },
+    {
+      "configuration": {
+        "name": "memory-xl-s2048-bf16-train"
+      },
+      "status": "oom",
+      "source_index": "E143",
+      "run_id": "20260914T085600Z-memory-and-checkpoint"
+    }
+  ],
+  "checkpoint": [
+    {
+      "configuration": {
+        "name": "checkpoint-1"
+      },
+      "status": "oom",
+      "source_index": "E144",
+      "run_id": "20260914T085600Z-memory-and-checkpoint"
+    },
+    {
+      "configuration": {
+        "name": "checkpoint-2"
+      },
+      "status": "ok",
+      "source_index": "E145",
+      "run_id": "20260914T085600Z-memory-and-checkpoint"
+    },
+    {
+      "configuration": {
+        "name": "checkpoint-4"
+      },
+      "status": "ok",
+      "source_index": "E146",
+      "run_id": "20260914T085600Z-memory-and-checkpoint"
+    },
+    {
+      "configuration": {
+        "name": "checkpoint-8"
+      },
+      "status": "ok",
+      "source_index": "E147",
+      "run_id": "20260914T085600Z-memory-and-checkpoint"
+    },
+    {
+      "configuration": {
+        "name": "checkpoint-16"
+      },
+      "status": "ok",
+      "source_index": "E148",
+      "run_id": "20260914T085600Z-memory-and-checkpoint"
+    },
+    {
+      "configuration": {
+        "name": "checkpoint-32"
+      },
+      "status": "ok",
+      "source_index": "E149",
+      "run_id": "20260914T085600Z-memory-and-checkpoint"
+    },
+    {
+      "configuration": {
+        "name": "checkpoint-64"
+      },
+      "status": "ok",
+      "source_index": "E150",
+      "run_id": "20260914T085600Z-memory-and-checkpoint"
+    }
+  ],
+  "distributed_repeat_recommended": [
+    {
+      "configuration": {
+        "name": "local-cpu-gloo-repeat-0",
+        "device": "cpu",
+        "backend": "gloo"
+      },
+      "status": "ok",
+      "source_index": null,
+      "run_id": null,
+      "local_test_source": "runs/local/final-gloo-stability-localhost/repeat-1.xml",
+      "note": "Original course distributed suites repeated locally; NOT CUDA/NCCL validation or another GPU job."
+    },
+    {
+      "configuration": {
+        "name": "local-cpu-gloo-repeat-1",
+        "device": "cpu",
+        "backend": "gloo"
+      },
+      "status": "ok",
+      "source_index": null,
+      "run_id": null,
+      "local_test_source": "runs/local/final-gloo-stability-localhost/repeat-2.xml",
+      "note": "Original course distributed suites repeated locally; NOT CUDA/NCCL validation or another GPU job."
+    },
+    {
+      "configuration": {
+        "name": "local-cpu-gloo-repeat-2",
+        "device": "cpu",
+        "backend": "gloo"
+      },
+      "status": "ok",
+      "source_index": null,
+      "run_id": null,
+      "local_test_source": "runs/local/final-gloo-stability-localhost/repeat-3.xml",
+      "note": "Original course distributed suites repeated locally; NOT CUDA/NCCL validation or another GPU job."
+    },
+    {
+      "configuration": {
+        "name": "local-cpu-gloo-repeat-3",
+        "device": "cpu",
+        "backend": "gloo"
+      },
+      "status": "ok",
+      "source_index": null,
+      "run_id": null,
+      "local_test_source": "runs/local/final-gloo-stability-localhost/repeat-4.xml",
+      "note": "Original course distributed suites repeated locally; NOT CUDA/NCCL validation or another GPU job."
+    },
+    {
+      "configuration": {
+        "name": "local-cpu-gloo-repeat-4",
+        "device": "cpu",
+        "backend": "gloo"
+      },
+      "status": "ok",
+      "source_index": null,
+      "run_id": null,
+      "local_test_source": "runs/local/final-gloo-stability-localhost/repeat-5.xml",
+      "note": "Original course distributed suites repeated locally; NOT CUDA/NCCL validation or another GPU job."
+    }
+  ]
+}

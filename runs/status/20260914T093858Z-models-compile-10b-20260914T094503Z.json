@@ -1,0 +1,242 @@
+{
+  "captured_at": "2026-09-14T09:44:51.831771+00:00",
+  "dispatch": {
+    "run_id": "20260914T093858Z-models-compile-10b",
+    "call_id": "fc-01M2FMHEN8CABKM8SRBQ9PW6TR",
+    "gpu_count": 1,
+    "timeout_seconds": 1800,
+    "plan": "models-compile"
+  },
+  "result": {
+    "run_id": "20260914T093858Z-models-compile-10b",
+    "seconds": 232.65929245948792,
+    "cases": [
+      {
+        "name": "10B-compiled-forward",
+        "command": [
+          "/usr/local/bin/python",
+          "-m",
+          "cs336_systems.experiments",
+          "--config",
+          "{\"name\": \"10B-compiled-forward\", \"kind\": \"model\", \"size\": \"10B\", \"dtype\": \"fp32\", \"mode\": \"forward\", \"compile\": true, \"warmup\": 5, \"steps\": 10, \"timeout\": 600}",
+          "--output",
+          "/data/20260914T093858Z-models-compile-10b/000-10B-compiled-forward"
+        ],
+        "started": 1789378745.938354,
+        "returncode": 0,
+        "seconds": 106.11402606964111,
+        "status": "ok",
+        "result": {
+          "config": {
+            "name": "10B-compiled-forward",
+            "kind": "model",
+            "size": "10B",
+            "dtype": "fp32",
+            "mode": "forward",
+            "compile": true,
+            "warmup": 5,
+            "steps": 10,
+            "timeout": 600
+          },
+          "started_utc": "2026-09-14T09:39:07.240859+00:00",
+          "measurements": {
+            "samples_ms": [
+              893.7655200000023,
+              893.3707630000072,
+              893.5763159999937,
+              893.4358209999971,
+              893.5969139999997,
+              893.3612470000014,
+              893.4216340000063,
+              893.4523869999964,
+              893.3703370000075,
+              893.6561619999992
+            ],
+            "mean_ms": 893.500710100001,
+            "std_ms": 0.13959987105390248,
+            "median_ms": 893.4441039999967,
+            "cuda_event_stages": {
+              "forward": {
+                "samples_ms": [
+                  892.2353515625,
+                  891.909912109375,
+                  892.1021728515625,
+                  891.9581909179688,
+                  892.128173828125,
+                  891.9193115234375,
+                  892.0154418945312,
+                  891.9805908203125,
+                  891.9632568359375,
+                  892.11376953125
+                ],
+                "mean_ms": 892.0326171875,
+                "std_ms": 0.10692809781254299,
+                "median_ms": 891.9980163574219
+              }
+            },
+            "last_scalar": -1.4639695882797241,
+            "parameters": 12832823808,
+            "initial_memory": {
+              "allocated_bytes": 51541764096,
+              "reserved_bytes": 51543801856,
+              "peak_allocated_bytes": 51541764096,
+              "peak_reserved_bytes": 51543801856
+            },
+            "memory": {
+              "allocated_bytes": 51632203776,
+              "reserved_bytes": 97842626560,
+              "peak_allocated_bytes": 97051543552,
+              "peak_reserved_bytes": 97842626560
+            },
+            "stages": [
+              {
+                "stage": "after_forward",
+                "allocated_bytes": 97051543552,
+                "reserved_bytes": 97842626560,
+                "peak_allocated_bytes": 97051543552,
+                "peak_reserved_bytes": 97842626560
+              }
+            ]
+          },
+          "status": "ok",
+          "wall_seconds": 100.43167018890381
+        }
+      },
+      {
+        "name": "10B-compiled-backward",
+        "command": [
+          "/usr/local/bin/python",
+          "-m",
+          "cs336_systems.experiments",
+          "--config",
+          "{\"name\": \"10B-compiled-backward\", \"kind\": \"model\", \"size\": \"10B\", \"dtype\": \"fp32\", \"mode\": \"backward\", \"compile\": true, \"warmup\": 5, \"steps\": 10, \"timeout\": 600}",
+          "--output",
+          "/data/20260914T093858Z-models-compile-10b/001-10B-compiled-backward"
+        ],
+        "started": 1789378854.4682615,
+        "returncode": 0,
+        "seconds": 120.44486927986145,
+        "status": "ok",
+        "result": {
+          "config": {
+            "name": "10B-compiled-backward",
+            "kind": "model",
+            "size": "10B",
+            "dtype": "fp32",
+            "mode": "backward",
+            "compile": true,
+            "warmup": 5,
+            "steps": 10,
+            "timeout": 600
+          },
+          "started_utc": "2026-09-14T09:40:55.765216+00:00",
+          "measurements": {
+            "samples_ms": [
+              2664.426067000022,
+              2666.042548000007,
+              2665.509270999991,
+              2665.349600000013,
+              2665.3827579999925,
+              2665.417170000012,
+              2665.280289000009,
+              2665.91000599999,
+              2665.3278989999762,
+              2665.2032169999984
+            ],
+            "mean_ms": 2665.3848825000014,
+            "std_ms": 0.4336613356625983,
+            "median_ms": 2665.366179000003,
+            "cuda_event_stages": {
+              "forward": {
+                "samples_ms": [
+                  891.5662841796875,
+                  892.2049560546875,
+                  892.1781616210938,
+                  892.0822143554688,
+                  892.0418090820312,
+                  892.0311279296875,
+                  892.018310546875,
+                  892.2401733398438,
+                  892.0904541015625,
+                  892.0397338867188
+                ],
+                "mean_ms": 892.0493225097656,
+                "std_ms": 0.18701938218366854,
+                "median_ms": 892.06201171875
+              },
+              "loss": {
+                "samples_ms": [
+                  0.0655359998345375,
+                  0.0655680000782013,
+                  0.06659200042486191,
+                  0.06566400080919266,
+                  0.0655680000782013,
+                  0.06620799750089645,
+                  0.06569600105285645,
+                  0.06639999896287918,
+                  0.06611199676990509,
+                  0.06646399945020676
+                ],
+                "mean_ms": 0.06598079949617386,
+                "std_ms": 0.0004178960052738821,
+                "median_ms": 0.06590399891138077
+              },
+              "backward": {
+                "samples_ms": [
+                  1771.123046875,
+                  1771.05322265625,
+                  1771.03564453125,
+                  1771.0040283203125,
+                  1771.0205078125,
+                  1771.0460205078125,
+                  1771.0550537109375,
+                  1771.1033935546875,
+                  1771.03173828125,
+                  1771.1036376953125
+                ],
+                "mean_ms": 1771.0576293945312,
+                "std_ms": 0.03951955852754996,
+                "median_ms": 1771.0496215820312
+              }
+            },
+            "last_scalar": 9.510079383850098,
+            "parameters": 12832823808,
+            "initial_memory": {
+              "allocated_bytes": 51541764096,
+              "reserved_bytes": 51543801856,
+              "peak_allocated_bytes": 51541764096,
+              "peak_reserved_bytes": 51543801856
+            },
+            "memory": {
+              "allocated_bytes": 102890328576,
+              "reserved_bytes": 133502599168,
+              "peak_allocated_bytes": 103198970880,
+              "peak_reserved_bytes": 133502599168
+            },
+            "stages": [
+              {
+                "stage": "after_forward",
+                "allocated_bytes": 97141984256,
+                "reserved_bytes": 133502599168,
+                "peak_allocated_bytes": 97141984256,
+                "peak_reserved_bytes": 133502599168
+              },
+              {
+                "stage": "after_backward_before_optimizer",
+                "allocated_bytes": 102972248576,
+                "reserved_bytes": 133502599168,
+                "peak_allocated_bytes": 103198970880,
+                "peak_reserved_bytes": 133502599168
+              }
+            ]
+          },
+          "status": "ok",
+          "wall_seconds": 114.13508319854736
+        }
+      }
+    ],
+    "estimated_compute_usd": 0.46133545783206936,
+    "cost_note": "Runtime estimate, not invoice; excludes startup/build/storage."
+  },
+  "status": "returned"
+}

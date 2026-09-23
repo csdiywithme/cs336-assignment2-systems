@@ -1,0 +1,105 @@
+{
+  "config": {
+    "name": "profile-xl-fsdp",
+    "kind": "distributed",
+    "world": 2,
+    "size": "xl",
+    "strategy": "fsdp",
+    "optimizer": "adamw",
+    "nsys": true,
+    "warmup": 5,
+    "steps": 1,
+    "timeout": 300
+  },
+  "started_utc": "2026-09-14T09:27:23.590347+00:00",
+  "measurements": {
+    "ranks": [
+      {
+        "memory_after_initialization": {
+          "allocated_bytes": 6880192512,
+          "reserved_bytes": 14023655424,
+          "peak_allocated_bytes": 13916301312,
+          "peak_reserved_bytes": 14023655424
+        },
+        "step": {
+          "samples_ms": [
+            4998.112765999991
+          ],
+          "mean_ms": 4998.112765999991,
+          "std_ms": 0.0,
+          "median_ms": 4998.112765999991
+        },
+        "exposed_sync": {
+          "samples_ms": [
+            0.7592519999946035
+          ],
+          "mean_ms": 0.7592519999946035,
+          "std_ms": 0.0,
+          "median_ms": 0.7592519999946035
+        },
+        "memory_stages": [
+          {
+            "before_optimizer": {
+              "allocated_bytes": 27436606464,
+              "reserved_bytes": 37205573632,
+              "peak_allocated_bytes": 35487884800,
+              "peak_reserved_bytes": 37205573632
+            },
+            "after_optimizer": {
+              "allocated_bytes": 27439752192,
+              "reserved_bytes": 37205573632,
+              "peak_allocated_bytes": 35487884800,
+              "peak_reserved_bytes": 37205573632
+            }
+          }
+        ],
+        "loss": 7.3677873611450195,
+        "communication_note": "Exposed wait only; overlapped traffic is not counted as zero traffic."
+      },
+      {
+        "memory_after_initialization": {
+          "allocated_bytes": 6880192512,
+          "reserved_bytes": 14023655424,
+          "peak_allocated_bytes": 13916301312,
+          "peak_reserved_bytes": 14023655424
+        },
+        "step": {
+          "samples_ms": [
+            4998.871737000001
+          ],
+          "mean_ms": 4998.871737000001,
+          "std_ms": 0.0,
+          "median_ms": 4998.871737000001
+        },
+        "exposed_sync": {
+          "samples_ms": [
+            0.7233879999972714
+          ],
+          "mean_ms": 0.7233879999972714,
+          "std_ms": 0.0,
+          "median_ms": 0.7233879999972714
+        },
+        "memory_stages": [
+          {
+            "before_optimizer": {
+              "allocated_bytes": 27436606464,
+              "reserved_bytes": 37205573632,
+              "peak_allocated_bytes": 35487884800,
+              "peak_reserved_bytes": 37205573632
+            },
+            "after_optimizer": {
+              "allocated_bytes": 27439752192,
+              "reserved_bytes": 37205573632,
+              "peak_allocated_bytes": 35487884800,
+              "peak_reserved_bytes": 37205573632
+            }
+          }
+        ],
+        "loss": 7.3677873611450195,
+        "communication_note": "Exposed wait only; overlapped traffic is not counted as zero traffic."
+      }
+    ]
+  },
+  "status": "ok",
+  "wall_seconds": 30.972976684570312
+}

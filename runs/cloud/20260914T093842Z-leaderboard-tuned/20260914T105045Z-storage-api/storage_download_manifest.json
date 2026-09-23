@@ -1,0 +1,218 @@
+[
+  {
+    "path": "summary.json",
+    "bytes": 7940,
+    "remote": "20260914T093842Z-leaderboard-tuned/summary.json",
+    "status": "downloaded",
+    "sha256": "720384fa6ec7e1e280a532dde5b8eeaa70f60e0682a4a4c07758587a91581326",
+    "received_bytes": 7940
+  },
+  {
+    "path": "artifact_inventory.json",
+    "bytes": 13148,
+    "remote": "20260914T093842Z-leaderboard-tuned/artifact_inventory.json",
+    "status": "downloaded",
+    "sha256": "b74bd5f365eb1158ec209cea36c6d8eb9bea6f3ec4d52d7501eb224c82b639fd",
+    "received_bytes": 13148
+  },
+  {
+    "path": "progress.json",
+    "bytes": 7310,
+    "remote": "20260914T093842Z-leaderboard-tuned/progress.json",
+    "status": "downloaded",
+    "sha256": "a6a1213050bfd75b7c125c05dd98b90f69f93dcd2371849674eddb901e996238",
+    "received_bytes": 7310
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/stdout.log",
+    "bytes": 10181,
+    "remote": "20260914T093842Z-leaderboard-tuned/000-leaderboard-tuned-8b-32768/stdout.log",
+    "status": "downloaded",
+    "sha256": "916f5bf750eea7f6faf0ca9c611f5534b34fe59a439e36d0f19e970f25a94fde",
+    "received_bytes": 10181
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/status.json",
+    "bytes": 6904,
+    "remote": "20260914T093842Z-leaderboard-tuned/000-leaderboard-tuned-8b-32768/status.json",
+    "status": "downloaded",
+    "sha256": "e69956374ca0160373faf7f1a4c1b34717ac63c0497b39aa90bcdb50f78a0b67",
+    "received_bytes": 6904
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/result.json",
+    "bytes": 6003,
+    "remote": "20260914T093842Z-leaderboard-tuned/000-leaderboard-tuned-8b-32768/result.json",
+    "status": "downloaded",
+    "sha256": "d218d020ee5f1b399e98c5104e51dc0283735d828d5952cb975fde06592ec4f9",
+    "received_bytes": 6003
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/rank1-progress.json",
+    "bytes": 1878,
+    "remote": "20260914T093842Z-leaderboard-tuned/000-leaderboard-tuned-8b-32768/rank1-progress.json",
+    "status": "downloaded",
+    "sha256": "8a9daa4ebd541b6654b5178a870bf33da797d9849d4bb376446490c2dca027c4",
+    "received_bytes": 1878
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/rank0-progress.json",
+    "bytes": 1882,
+    "remote": "20260914T093842Z-leaderboard-tuned/000-leaderboard-tuned-8b-32768/rank0-progress.json",
+    "status": "downloaded",
+    "sha256": "d124c318015fd82f1871fb4056b63b84dc72557beb931db801d5fd96cfba6862",
+    "received_bytes": 1882
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/leaderboard-ranks.json",
+    "bytes": 4547,
+    "remote": "20260914T093842Z-leaderboard-tuned/000-leaderboard-tuned-8b-32768/leaderboard-ranks.json",
+    "status": "downloaded",
+    "sha256": "bdb4fe51726f0fe16b26ae7518bf219a7d61c41216ad24a0dc51c1b9da522017",
+    "received_bytes": 4547
+  },
+  {
+    "path": "topology.txt",
+    "bytes": 89,
+    "remote": "20260914T093842Z-leaderboard-tuned/topology.txt",
+    "status": "downloaded",
+    "sha256": "94ac860090fe76f982d866eb81a9b5b6aa98ef65fd0275c8b5ddbc90bb8f58ac",
+    "received_bytes": 89
+  },
+  {
+    "path": "source/triton_optimizer.py",
+    "bytes": 764,
+    "remote": "20260914T093842Z-leaderboard-tuned/source/triton_optimizer.py",
+    "status": "downloaded",
+    "sha256": "eb2ed254d7bbec01ed8be2739904cb9f052a2189a6e9310d2307e6bf4fbd2c02",
+    "received_bytes": 764
+  },
+  {
+    "path": "source/triton_attention.py",
+    "bytes": 7023,
+    "remote": "20260914T093842Z-leaderboard-tuned/source/triton_attention.py",
+    "status": "downloaded",
+    "sha256": "4fc6b54f45f3ec237bf8b570fb7747ba0250e1e057c049a52049db1dfc8001eb",
+    "received_bytes": 7023
+  },
+  {
+    "path": "source/sharded_optimizer.py",
+    "bytes": 2834,
+    "remote": "20260914T093842Z-leaderboard-tuned/source/sharded_optimizer.py",
+    "status": "downloaded",
+    "sha256": "f1a5f6ea0c559f5f0169be654371787ac21d3fa6d31bc3db53cba7387a8303c9",
+    "received_bytes": 2834
+  },
+  {
+    "path": "source/profiling.py",
+    "bytes": 3700,
+    "remote": "20260914T093842Z-leaderboard-tuned/source/profiling.py",
+    "status": "downloaded",
+    "sha256": "cdd49140e1c655413635a189bf915bc0a4f0f7bf1525b1dc57c497600fec4335",
+    "received_bytes": 3700
+  },
+  {
+    "path": "source/optimized_model.py",
+    "bytes": 4881,
+    "remote": "20260914T093842Z-leaderboard-tuned/source/optimized_model.py",
+    "status": "downloaded",
+    "sha256": "343ca47380992f7a738ae93e4e3a9ec3b132826aa8711ef62968ba73f77afe9f",
+    "received_bytes": 4881
+  },
+  {
+    "path": "source/nsight_summary.py",
+    "bytes": 3692,
+    "remote": "20260914T093842Z-leaderboard-tuned/source/nsight_summary.py",
+    "status": "downloaded",
+    "sha256": "98f56826007fb23706a94e31f2edaf611ac21cc18bd6fa7290e188364988013a",
+    "received_bytes": 3692
+  },
+  {
+    "path": "source/fsdp.py",
+    "bytes": 8580,
+    "remote": "20260914T093842Z-leaderboard-tuned/source/fsdp.py",
+    "status": "downloaded",
+    "sha256": "3708861a9d45e22deada16b90b48281bd1371f20c323163cf4268a0b5410092c",
+    "received_bytes": 8580
+  },
+  {
+    "path": "source/experiments.py",
+    "bytes": 26196,
+    "remote": "20260914T093842Z-leaderboard-tuned/source/experiments.py",
+    "status": "downloaded",
+    "sha256": "b50a93c1c0a3a8fd3893c8236f0d683054b1644ca39346fd38c69e6bab5434fe",
+    "received_bytes": 26196
+  },
+  {
+    "path": "source/experiment_plans.py",
+    "bytes": 6456,
+    "remote": "20260914T093842Z-leaderboard-tuned/source/experiment_plans.py",
+    "status": "downloaded",
+    "sha256": "c81a6a312325d4a808f110bfde911fc477c25f219e3925e8ff5033b4470696ef",
+    "received_bytes": 6456
+  },
+  {
+    "path": "source/ddp.py",
+    "bytes": 2092,
+    "remote": "20260914T093842Z-leaderboard-tuned/source/ddp.py",
+    "status": "downloaded",
+    "sha256": "2d4eca4130246a0f3a09cd372423fe01ac9b589fda48ea70106e0bc51c5e05e8",
+    "received_bytes": 2092
+  },
+  {
+    "path": "source/checkpointing.py",
+    "bytes": 783,
+    "remote": "20260914T093842Z-leaderboard-tuned/source/checkpointing.py",
+    "status": "downloaded",
+    "sha256": "60e5829096bfb9afde053979af41eafc70ac14c809e51df092d807129c23a8f5",
+    "received_bytes": 783
+  },
+  {
+    "path": "source/attention.py",
+    "bytes": 5416,
+    "remote": "20260914T093842Z-leaderboard-tuned/source/attention.py",
+    "status": "downloaded",
+    "sha256": "6147222fdbbdebd3d904b527bdcbd62009911382ba9762334bda4a645557b106",
+    "received_bytes": 5416
+  },
+  {
+    "path": "source/__init__.py",
+    "bytes": 151,
+    "remote": "20260914T093842Z-leaderboard-tuned/source/__init__.py",
+    "status": "downloaded",
+    "sha256": "7da6cd265923adde95304e89905879609644d72240c9e8adc94c35f74daaca7c",
+    "received_bytes": 151
+  },
+  {
+    "path": "pip-freeze.txt",
+    "bytes": 1691,
+    "remote": "20260914T093842Z-leaderboard-tuned/pip-freeze.txt",
+    "status": "downloaded",
+    "sha256": "6241e877cfcf6af3c9180b440e552ceab57ee0c57565ee8b08a7e818f23cafc4",
+    "received_bytes": 1691
+  },
+  {
+    "path": "nvlink-status.txt",
+    "bytes": 944,
+    "remote": "20260914T093842Z-leaderboard-tuned/nvlink-status.txt",
+    "status": "downloaded",
+    "sha256": "528d263db349c2a422ee3b495e4589e456fdf05550dcb8f64822df780ccc8998",
+    "received_bytes": 944
+  },
+  {
+    "path": "nvidia-smi.txt",
+    "bytes": 22634,
+    "remote": "20260914T093842Z-leaderboard-tuned/nvidia-smi.txt",
+    "status": "downloaded",
+    "sha256": "37ac76358052666d2d9cb13092cf01081ded13062c48ff074cd752d49da1d95f",
+    "received_bytes": 22634
+  },
+  {
+    "path": "environment.json",
+    "bytes": 4087,
+    "remote": "20260914T093842Z-leaderboard-tuned/environment.json",
+    "status": "downloaded",
+    "sha256": "183e2d64a3a3b90d19f9f2a34c519e549448c73ea8c39a892b877197f56a8ee1",
+    "received_bytes": 4087
+  }
+]

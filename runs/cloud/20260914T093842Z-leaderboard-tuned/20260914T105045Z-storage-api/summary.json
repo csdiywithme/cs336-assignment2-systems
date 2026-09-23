@@ -1,0 +1,209 @@
+{
+  "run_id": "20260914T093842Z-leaderboard-tuned",
+  "seconds": 82.87293648719788,
+  "cases": [
+    {
+      "name": "leaderboard-tuned-8b-32768",
+      "command": [
+        "/usr/local/bin/python",
+        "-m",
+        "cs336_systems.experiments",
+        "--config",
+        "{\"name\": \"leaderboard-tuned-8b-32768\", \"kind\": \"leaderboard\", \"seq\": 32768, \"warmup\": 2, \"steps\": 5, \"chunk\": 512, \"tuned\": true, \"timeout\": 590}",
+        "--output",
+        "/data/20260914T093842Z-leaderboard-tuned/000-leaderboard-tuned-8b-32768"
+      ],
+      "started": 1789378795.5946465,
+      "returncode": 0,
+      "seconds": 76.17323350906372,
+      "status": "ok",
+      "result": {
+        "config": {
+          "name": "leaderboard-tuned-8b-32768",
+          "kind": "leaderboard",
+          "seq": 32768,
+          "warmup": 2,
+          "steps": 5,
+          "chunk": 512,
+          "tuned": true,
+          "timeout": 590
+        },
+        "started_utc": "2026-09-14T09:39:59.053866+00:00",
+        "measurements": {
+          "rank_max_step": {
+            "samples_ms": [
+              6799.804107,
+              6778.172392000009,
+              6732.982269000005,
+              6759.455822000007,
+              6730.328560999993
+            ],
+            "mean_ms": 6760.148630200003,
+            "std_ms": 29.686446911017235,
+            "median_ms": 6759.455822000007
+          },
+          "ranks": [
+            {
+              "measurements": [
+                {
+                  "iteration": 0,
+                  "warmup": true,
+                  "step_ms": 16779.899094999997,
+                  "loss": 11.956319808959961,
+                  "allocated_bytes": 95202214912,
+                  "reserved_bytes": 98073313280,
+                  "peak_allocated_bytes": 95202214912,
+                  "peak_reserved_bytes": 98073313280
+                },
+                {
+                  "iteration": 1,
+                  "warmup": true,
+                  "step_ms": 6827.612859000005,
+                  "loss": 11.582795143127441,
+                  "allocated_bytes": 95202214912,
+                  "reserved_bytes": 109181927424,
+                  "peak_allocated_bytes": 105114328576,
+                  "peak_reserved_bytes": 109181927424
+                },
+                {
+                  "iteration": 2,
+                  "warmup": false,
+                  "step_ms": 6799.804107,
+                  "loss": 11.203941345214844,
+                  "allocated_bytes": 95202214912,
+                  "reserved_bytes": 109181927424,
+                  "peak_allocated_bytes": 105112231424,
+                  "peak_reserved_bytes": 109181927424
+                },
+                {
+                  "iteration": 3,
+                  "warmup": false,
+                  "step_ms": 6778.159973000001,
+                  "loss": 12.236401557922363,
+                  "allocated_bytes": 95202214912,
+                  "reserved_bytes": 109181927424,
+                  "peak_allocated_bytes": 105112231424,
+                  "peak_reserved_bytes": 109181927424
+                },
+                {
+                  "iteration": 4,
+                  "warmup": false,
+                  "step_ms": 6732.982269000005,
+                  "loss": 10.809362411499023,
+                  "allocated_bytes": 95202214912,
+                  "reserved_bytes": 109181927424,
+                  "peak_allocated_bytes": 105112231424,
+                  "peak_reserved_bytes": 109181927424
+                },
+                {
+                  "iteration": 5,
+                  "warmup": false,
+                  "step_ms": 6759.455822000007,
+                  "loss": 13.934100151062012,
+                  "allocated_bytes": 95202214912,
+                  "reserved_bytes": 109181927424,
+                  "peak_allocated_bytes": 105112231424,
+                  "peak_reserved_bytes": 109181927424
+                },
+                {
+                  "iteration": 6,
+                  "warmup": false,
+                  "step_ms": 6730.307934999999,
+                  "loss": 12.498113632202148,
+                  "allocated_bytes": 95202214912,
+                  "reserved_bytes": 109181927424,
+                  "peak_allocated_bytes": 105112231424,
+                  "peak_reserved_bytes": 109181927424
+                }
+              ],
+              "cold_start_total_seconds": 65.77323878899999,
+              "parameters": 8125698048
+            },
+            {
+              "measurements": [
+                {
+                  "iteration": 0,
+                  "warmup": true,
+                  "step_ms": 16779.864067,
+                  "loss": 11.956929206848145,
+                  "allocated_bytes": 99883222016,
+                  "reserved_bytes": 102749962240,
+                  "peak_allocated_bytes": 99883222016,
+                  "peak_reserved_bytes": 102749962240
+                },
+                {
+                  "iteration": 1,
+                  "warmup": true,
+                  "step_ms": 6827.615358999999,
+                  "loss": 11.555665016174316,
+                  "allocated_bytes": 99883222016,
+                  "reserved_bytes": 113627889664,
+                  "peak_allocated_bytes": 109794287104,
+                  "peak_reserved_bytes": 113627889664
+                },
+                {
+                  "iteration": 2,
+                  "warmup": false,
+                  "step_ms": 6799.744718,
+                  "loss": 10.329179763793945,
+                  "allocated_bytes": 99883222016,
+                  "reserved_bytes": 113627889664,
+                  "peak_allocated_bytes": 109793238528,
+                  "peak_reserved_bytes": 113627889664
+                },
+                {
+                  "iteration": 3,
+                  "warmup": false,
+                  "step_ms": 6778.172392000009,
+                  "loss": 10.988273620605469,
+                  "allocated_bytes": 99883222016,
+                  "reserved_bytes": 113627889664,
+                  "peak_allocated_bytes": 109793238528,
+                  "peak_reserved_bytes": 113627889664
+                },
+                {
+                  "iteration": 4,
+                  "warmup": false,
+                  "step_ms": 6732.956072000007,
+                  "loss": 14.359672546386719,
+                  "allocated_bytes": 99883222016,
+                  "reserved_bytes": 113627889664,
+                  "peak_allocated_bytes": 109793238528,
+                  "peak_reserved_bytes": 113627889664
+                },
+                {
+                  "iteration": 5,
+                  "warmup": false,
+                  "step_ms": 6759.418583000013,
+                  "loss": 10.709273338317871,
+                  "allocated_bytes": 99883222016,
+                  "reserved_bytes": 113627889664,
+                  "peak_allocated_bytes": 109793238528,
+                  "peak_reserved_bytes": 113627889664
+                },
+                {
+                  "iteration": 6,
+                  "warmup": false,
+                  "step_ms": 6730.328560999993,
+                  "loss": 11.159960746765137,
+                  "allocated_bytes": 99883222016,
+                  "reserved_bytes": 113627889664,
+                  "peak_allocated_bytes": 109793238528,
+                  "peak_reserved_bytes": 113627889664
+                }
+              ],
+              "cold_start_total_seconds": 65.780723682,
+              "parameters": 8125698048
+            }
+          ],
+          "loss_reduction": "global token mean; equal local batch/token counts on both ranks",
+          "timing": "Synchronized wall-clock full forward, CE, backward, gradient all-reduce, AdamW, owner broadcast"
+        },
+        "status": "ok",
+        "wall_seconds": 72.39000058174133
+      }
+    }
+  ],
+  "estimated_compute_usd": 0.30819450604351045,
+  "cost_note": "Runtime estimate, not invoice; excludes startup/build/storage."
+}

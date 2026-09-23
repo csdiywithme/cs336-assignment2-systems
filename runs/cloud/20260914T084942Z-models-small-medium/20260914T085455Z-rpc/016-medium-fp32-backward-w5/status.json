@@ -1,0 +1,78 @@
+{
+  "name": "medium-fp32-backward-w5",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"medium-fp32-backward-w5\", \"kind\": \"model\", \"size\": \"medium\", \"dtype\": \"fp32\", \"mode\": \"backward\", \"warmup\": 5, \"steps\": 10, \"timeout\": 500}",
+    "--output",
+    "/data/20260914T084942Z-models-small-medium/016-medium-fp32-backward-w5"
+  ],
+  "started": 1789375875.4692223,
+  "returncode": 0,
+  "seconds": 6.068474769592285,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "medium-fp32-backward-w5",
+      "kind": "model",
+      "size": "medium",
+      "dtype": "fp32",
+      "mode": "backward",
+      "warmup": 5,
+      "steps": 10,
+      "timeout": 500
+    },
+    "started_utc": "2026-09-14T08:51:16.648492+00:00",
+    "measurements": {
+      "samples_ms": [
+        140.2686319999873,
+        139.9679390000017,
+        139.87744099999588,
+        140.06333799999027,
+        140.03440000000467,
+        139.58802000000503,
+        140.19198699999436,
+        139.85747499999945,
+        139.63395999999761,
+        139.55545099999256
+      ],
+      "mean_ms": 139.90386429999688,
+      "std_ms": 0.24933135046214056,
+      "median_ms": 139.9226899999988,
+      "last_scalar": 9.305209159851074,
+      "parameters": 423183360,
+      "initial_memory": {
+        "allocated_bytes": 1694863360,
+        "reserved_bytes": 1696595968,
+        "peak_allocated_bytes": 1694863360,
+        "peak_reserved_bytes": 1696595968
+      },
+      "memory": {
+        "allocated_bytes": 3405619712,
+        "reserved_bytes": 11869880320,
+        "peak_allocated_bytes": 11342754816,
+        "peak_reserved_bytes": 11869880320
+      },
+      "stages": [
+        {
+          "stage": "after_forward",
+          "allocated_bytes": 11178914816,
+          "reserved_bytes": 11869880320,
+          "peak_allocated_bytes": 11178914816,
+          "peak_reserved_bytes": 11869880320
+        },
+        {
+          "stage": "after_backward_before_optimizer",
+          "allocated_bytes": 3487539712,
+          "reserved_bytes": 11869880320,
+          "peak_allocated_bytes": 11342754816,
+          "peak_reserved_bytes": 11869880320
+        }
+      ]
+    },
+    "status": "ok",
+    "wall_seconds": 4.174895524978638
+  }
+}

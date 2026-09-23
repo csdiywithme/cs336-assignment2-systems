@@ -1,0 +1,42 @@
+[
+  {
+    "source": "runs/cloud/20260914T085600Z-memory-and-checkpoint/20260914T100931Z-storage-api/000-memory-xl-s128-fp32-forward/memory_snapshot.pickle",
+    "html": "output/memory/000-memory-xl-s128-fp32-forward.html",
+    "snapshot_bytes": 4855741,
+    "snapshot_sha256": "4f3b4a73726cd83916054d8c1fb6ff8d4a104edd487f1f39127df18c28d05eda",
+    "viewer": "https://cdn.jsdelivr.net/gh/pytorch/pytorch@v2.11.0/torch/utils/viz/MemoryViz.js",
+    "kind": "Official PyTorch MemoryViz, existing local snapshot"
+  },
+  {
+    "source": "runs/cloud/20260914T085600Z-memory-and-checkpoint/20260914T100931Z-storage-api/001-memory-xl-s128-fp32-train/memory_snapshot.pickle",
+    "html": "output/memory/001-memory-xl-s128-fp32-train.html",
+    "snapshot_bytes": 13519759,
+    "snapshot_sha256": "eeae8fd0c929be4b0e06d57dfbb9ae18f33b98d0d59f7321e29f6a503e8cefdc",
+    "viewer": "https://cdn.jsdelivr.net/gh/pytorch/pytorch@v2.11.0/torch/utils/viz/MemoryViz.js",
+    "kind": "Official PyTorch MemoryViz, existing local snapshot"
+  },
+  {
+    "source": "runs/cloud/20260914T085600Z-memory-and-checkpoint/20260914T100931Z-storage-api/002-memory-xl-s128-bf16-forward/memory_snapshot.pickle",
+    "html": "output/memory/002-memory-xl-s128-bf16-forward.html",
+    "snapshot_bytes": 6389445,
+    "snapshot_sha256": "246da25459ad4ee58b92effee00d5b1cbe24865278f84f01180dca1dcf56e7c9",
+    "viewer": "https://cdn.jsdelivr.net/gh/pytorch/pytorch@v2.11.0/torch/utils/viz/MemoryViz.js",
+    "kind": "Official PyTorch MemoryViz, existing local snapshot"
+  },
+  {
+    "source": "runs/cloud/20260914T085600Z-memory-and-checkpoint/20260914T100931Z-storage-api/003-memory-xl-s128-bf16-train/memory_snapshot.pickle",
+    "html": "output/memory/003-memory-xl-s128-bf16-train.html",
+    "snapshot_bytes": 15785817,
+    "snapshot_sha256": "272810c4c4e0c89f28f2643a4c9dfd660d96b75f5f23f4555facbdfc8df0abca",
+    "viewer": "https://cdn.jsdelivr.net/gh/pytorch/pytorch@v2.11.0/torch/utils/viz/MemoryViz.js",
+    "kind": "Official PyTorch MemoryViz, existing local snapshot"
+  },
+  {
+    "source": "runs/cloud/20260914T085600Z-memory-and-checkpoint/20260914T100931Z-storage-api/006-memory-xl-s2048-bf16-forward/memory_snapshot.pickle",
+    "html": "output/memory/006-memory-xl-s2048-bf16-forward.html",
+    "snapshot_bytes": 6358788,
+    "snapshot_sha256": "8b154e328e85d67bc6d875f50cb1d2b5917af24c19b5b77c3b7d19c8cc60f087",
+    "viewer": "https://cdn.jsdelivr.net/gh/pytorch/pytorch@v2.11.0/torch/utils/viz/MemoryViz.js",
+    "kind": "Official PyTorch MemoryViz, existing local snapshot"
+  }
+]

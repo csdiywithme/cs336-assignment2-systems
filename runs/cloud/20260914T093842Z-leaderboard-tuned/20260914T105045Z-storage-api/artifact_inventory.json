@@ -1,0 +1,386 @@
+[
+  {
+    "path": "environment.json",
+    "bytes": 4087
+  },
+  {
+    "path": "nvidia-smi.txt",
+    "bytes": 22634
+  },
+  {
+    "path": "nvlink-status.txt",
+    "bytes": 944
+  },
+  {
+    "path": "pip-freeze.txt",
+    "bytes": 1691
+  },
+  {
+    "path": "progress.json",
+    "bytes": 7310
+  },
+  {
+    "path": "summary.json",
+    "bytes": 7940
+  },
+  {
+    "path": "topology.txt",
+    "bytes": 89
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/leaderboard-ranks.json",
+    "bytes": 4547
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/rank0-progress.json",
+    "bytes": 1882
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/rank1-progress.json",
+    "bytes": 1878
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/result.json",
+    "bytes": 6003
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/status.json",
+    "bytes": 6904
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/stdout.log",
+    "bytes": 10181
+  },
+  {
+    "path": "source/__init__.py",
+    "bytes": 151
+  },
+  {
+    "path": "source/attention.py",
+    "bytes": 5416
+  },
+  {
+    "path": "source/checkpointing.py",
+    "bytes": 783
+  },
+  {
+    "path": "source/ddp.py",
+    "bytes": 2092
+  },
+  {
+    "path": "source/experiment_plans.py",
+    "bytes": 6456
+  },
+  {
+    "path": "source/experiments.py",
+    "bytes": 26196
+  },
+  {
+    "path": "source/fsdp.py",
+    "bytes": 8580
+  },
+  {
+    "path": "source/nsight_summary.py",
+    "bytes": 3692
+  },
+  {
+    "path": "source/optimized_model.py",
+    "bytes": 4881
+  },
+  {
+    "path": "source/profiling.py",
+    "bytes": 3700
+  },
+  {
+    "path": "source/sharded_optimizer.py",
+    "bytes": 2834
+  },
+  {
+    "path": "source/triton_attention.py",
+    "bytes": 7023
+  },
+  {
+    "path": "source/triton_optimizer.py",
+    "bytes": 764
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/27Q7DUCWW2SL4372E52IR3H7VUOUO5RUTHSN3HH2L6CSNQXASFSA/__grp___backward_kv.json",
+    "bytes": 1318
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/27Q7DUCWW2SL4372E52IR3H7VUOUO5RUTHSN3HH2L6CSNQXASFSA/_backward_kv.cubin",
+    "bytes": 187512
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/27Q7DUCWW2SL4372E52IR3H7VUOUO5RUTHSN3HH2L6CSNQXASFSA/_backward_kv.json",
+    "bytes": 1103
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/27Q7DUCWW2SL4372E52IR3H7VUOUO5RUTHSN3HH2L6CSNQXASFSA/_backward_kv.llir",
+    "bytes": 309220
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/27Q7DUCWW2SL4372E52IR3H7VUOUO5RUTHSN3HH2L6CSNQXASFSA/_backward_kv.ptx",
+    "bytes": 133358
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/27Q7DUCWW2SL4372E52IR3H7VUOUO5RUTHSN3HH2L6CSNQXASFSA/_backward_kv.source",
+    "bytes": 47773
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/27Q7DUCWW2SL4372E52IR3H7VUOUO5RUTHSN3HH2L6CSNQXASFSA/_backward_kv.ttgir",
+    "bytes": 59021
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/27Q7DUCWW2SL4372E52IR3H7VUOUO5RUTHSN3HH2L6CSNQXASFSA/_backward_kv.ttir",
+    "bytes": 17704
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/36RFKECUW6WUKVHN354OHMPD34QNNGBIY3KFTFDTTINZVI65DG6Q/__triton_launcher.cpython-313-x86_64-linux-gnu.so",
+    "bytes": 21456
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/77NNNEUZ3IJOQFHAPQOAH2TMPI6XDVGAVLSETB3SUTUUIDAWX3OA/cuda_utils.cpython-313-x86_64-linux-gnu.so",
+    "bytes": 27608
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/ABNW6X2D3MH2DGOFIH6S6QE5LR2IYXBH24F7NOW76GTLIWHMVXTQ/__triton_launcher.cpython-313-x86_64-linux-gnu.so",
+    "bytes": 21456
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/AGDLHWEHWDCRSRPDUJOWL5AHTAC3MZVJQVR47PKZKLTQNY5SBAQQ/__triton_launcher.cpython-313-x86_64-linux-gnu.so",
+    "bytes": 21456
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/GKATPE6M4VORUMZBTLOWJFAX6ZDBO6UGFK4SWVFI44AQR7KE23UA/__grp___adamw.json",
+    "bytes": 1234
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/GKATPE6M4VORUMZBTLOWJFAX6ZDBO6UGFK4SWVFI44AQR7KE23UA/_adamw.cubin",
+    "bytes": 19512
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/GKATPE6M4VORUMZBTLOWJFAX6ZDBO6UGFK4SWVFI44AQR7KE23UA/_adamw.json",
+    "bytes": 1090
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/GKATPE6M4VORUMZBTLOWJFAX6ZDBO6UGFK4SWVFI44AQR7KE23UA/_adamw.llir",
+    "bytes": 30098
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/GKATPE6M4VORUMZBTLOWJFAX6ZDBO6UGFK4SWVFI44AQR7KE23UA/_adamw.ptx",
+    "bytes": 12332
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/GKATPE6M4VORUMZBTLOWJFAX6ZDBO6UGFK4SWVFI44AQR7KE23UA/_adamw.source",
+    "bytes": 9701
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/GKATPE6M4VORUMZBTLOWJFAX6ZDBO6UGFK4SWVFI44AQR7KE23UA/_adamw.ttgir",
+    "bytes": 7039
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/GKATPE6M4VORUMZBTLOWJFAX6ZDBO6UGFK4SWVFI44AQR7KE23UA/_adamw.ttir",
+    "bytes": 6341
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/HMRG34BCIXVLZK3EMCI2ZVGJ3SE36TOELMM5UXHNA2EENKZX7LMA/__grp___adamw.json",
+    "bytes": 1234
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/HMRG34BCIXVLZK3EMCI2ZVGJ3SE36TOELMM5UXHNA2EENKZX7LMA/_adamw.cubin",
+    "bytes": 19512
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/HMRG34BCIXVLZK3EMCI2ZVGJ3SE36TOELMM5UXHNA2EENKZX7LMA/_adamw.json",
+    "bytes": 1090
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/HMRG34BCIXVLZK3EMCI2ZVGJ3SE36TOELMM5UXHNA2EENKZX7LMA/_adamw.llir",
+    "bytes": 30103
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/HMRG34BCIXVLZK3EMCI2ZVGJ3SE36TOELMM5UXHNA2EENKZX7LMA/_adamw.ptx",
+    "bytes": 12337
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/HMRG34BCIXVLZK3EMCI2ZVGJ3SE36TOELMM5UXHNA2EENKZX7LMA/_adamw.source",
+    "bytes": 9711
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/HMRG34BCIXVLZK3EMCI2ZVGJ3SE36TOELMM5UXHNA2EENKZX7LMA/_adamw.ttgir",
+    "bytes": 7044
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/HMRG34BCIXVLZK3EMCI2ZVGJ3SE36TOELMM5UXHNA2EENKZX7LMA/_adamw.ttir",
+    "bytes": 6346
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/MBWG6JU7RMY4WZ77J57QNVH7APZ3NS7YKMDEYRLVU2JS3Y272IZQ/__grp___forward.json",
+    "bytes": 1262
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/MBWG6JU7RMY4WZ77J57QNVH7APZ3NS7YKMDEYRLVU2JS3Y272IZQ/_forward.cubin",
+    "bytes": 230520
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/MBWG6JU7RMY4WZ77J57QNVH7APZ3NS7YKMDEYRLVU2JS3Y272IZQ/_forward.json",
+    "bytes": 1099
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/MBWG6JU7RMY4WZ77J57QNVH7APZ3NS7YKMDEYRLVU2JS3Y272IZQ/_forward.llir",
+    "bytes": 384590
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/MBWG6JU7RMY4WZ77J57QNVH7APZ3NS7YKMDEYRLVU2JS3Y272IZQ/_forward.ptx",
+    "bytes": 139183
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/MBWG6JU7RMY4WZ77J57QNVH7APZ3NS7YKMDEYRLVU2JS3Y272IZQ/_forward.source",
+    "bytes": 33818
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/MBWG6JU7RMY4WZ77J57QNVH7APZ3NS7YKMDEYRLVU2JS3Y272IZQ/_forward.ttgir",
+    "bytes": 44984
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/MBWG6JU7RMY4WZ77J57QNVH7APZ3NS7YKMDEYRLVU2JS3Y272IZQ/_forward.ttir",
+    "bytes": 17464
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/MOZNOSVBTMNHFIYDDDHH43CBY7AOFYTIN6UKRY23XXX5TTW24E5A/__grp___delta.json",
+    "bytes": 1234
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/MOZNOSVBTMNHFIYDDDHH43CBY7AOFYTIN6UKRY23XXX5TTW24E5A/_delta.cubin",
+    "bytes": 26920
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/MOZNOSVBTMNHFIYDDDHH43CBY7AOFYTIN6UKRY23XXX5TTW24E5A/_delta.json",
+    "bytes": 1092
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/MOZNOSVBTMNHFIYDDDHH43CBY7AOFYTIN6UKRY23XXX5TTW24E5A/_delta.llir",
+    "bytes": 23003
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/MOZNOSVBTMNHFIYDDDHH43CBY7AOFYTIN6UKRY23XXX5TTW24E5A/_delta.ptx",
+    "bytes": 26037
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/MOZNOSVBTMNHFIYDDDHH43CBY7AOFYTIN6UKRY23XXX5TTW24E5A/_delta.source",
+    "bytes": 11909
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/MOZNOSVBTMNHFIYDDDHH43CBY7AOFYTIN6UKRY23XXX5TTW24E5A/_delta.ttgir",
+    "bytes": 7061
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/MOZNOSVBTMNHFIYDDDHH43CBY7AOFYTIN6UKRY23XXX5TTW24E5A/_delta.ttir",
+    "bytes": 5734
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/OHRLTHT7GUAHWL3TOPQXCVAHCFVISY6SAGJMDDRSNB37C4UWTPZA/__grp___adamw.json",
+    "bytes": 1234
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/OHRLTHT7GUAHWL3TOPQXCVAHCFVISY6SAGJMDDRSNB37C4UWTPZA/_adamw.cubin",
+    "bytes": 19512
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/OHRLTHT7GUAHWL3TOPQXCVAHCFVISY6SAGJMDDRSNB37C4UWTPZA/_adamw.json",
+    "bytes": 1090
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/OHRLTHT7GUAHWL3TOPQXCVAHCFVISY6SAGJMDDRSNB37C4UWTPZA/_adamw.llir",
+    "bytes": 30102
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/OHRLTHT7GUAHWL3TOPQXCVAHCFVISY6SAGJMDDRSNB37C4UWTPZA/_adamw.ptx",
+    "bytes": 12336
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/OHRLTHT7GUAHWL3TOPQXCVAHCFVISY6SAGJMDDRSNB37C4UWTPZA/_adamw.source",
+    "bytes": 9709
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/OHRLTHT7GUAHWL3TOPQXCVAHCFVISY6SAGJMDDRSNB37C4UWTPZA/_adamw.ttgir",
+    "bytes": 7043
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/OHRLTHT7GUAHWL3TOPQXCVAHCFVISY6SAGJMDDRSNB37C4UWTPZA/_adamw.ttir",
+    "bytes": 6345
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/QKOYB4W24HYBP4EGW4SVSZA6RZ4562IQ2KDXI4G55625T5NLZVYA/__triton_launcher.cpython-313-x86_64-linux-gnu.so",
+    "bytes": 21456
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/U4Q4UFBZQWGRJW2JPV5ZKUL2GHX2TE3AF4A445OPG3P7FTX7IASQ/__grp___backward_q.json",
+    "bytes": 1304
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/U4Q4UFBZQWGRJW2JPV5ZKUL2GHX2TE3AF4A445OPG3P7FTX7IASQ/_backward_q.cubin",
+    "bytes": 156328
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/U4Q4UFBZQWGRJW2JPV5ZKUL2GHX2TE3AF4A445OPG3P7FTX7IASQ/_backward_q.json",
+    "bytes": 1102
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/U4Q4UFBZQWGRJW2JPV5ZKUL2GHX2TE3AF4A445OPG3P7FTX7IASQ/_backward_q.llir",
+    "bytes": 233480
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/U4Q4UFBZQWGRJW2JPV5ZKUL2GHX2TE3AF4A445OPG3P7FTX7IASQ/_backward_q.ptx",
+    "bytes": 107056
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/U4Q4UFBZQWGRJW2JPV5ZKUL2GHX2TE3AF4A445OPG3P7FTX7IASQ/_backward_q.source",
+    "bytes": 41605
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/U4Q4UFBZQWGRJW2JPV5ZKUL2GHX2TE3AF4A445OPG3P7FTX7IASQ/_backward_q.ttgir",
+    "bytes": 46023
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/U4Q4UFBZQWGRJW2JPV5ZKUL2GHX2TE3AF4A445OPG3P7FTX7IASQ/_backward_q.ttir",
+    "bytes": 16134
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/W4RFM66Z5UQ5DU7FFERJVEQ65HOXMEHNUB2ZLDYCPMKMA6EGKABA/__triton_launcher.cpython-313-x86_64-linux-gnu.so",
+    "bytes": 21456
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/WHTJEFPTMXMHKHRR66LHLPOZ5NHMWXYQH73DALLMH3K6PDAX3QTA/__grp___adamw.json",
+    "bytes": 1234
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/WHTJEFPTMXMHKHRR66LHLPOZ5NHMWXYQH73DALLMH3K6PDAX3QTA/_adamw.cubin",
+    "bytes": 19512
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/WHTJEFPTMXMHKHRR66LHLPOZ5NHMWXYQH73DALLMH3K6PDAX3QTA/_adamw.json",
+    "bytes": 1090
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/WHTJEFPTMXMHKHRR66LHLPOZ5NHMWXYQH73DALLMH3K6PDAX3QTA/_adamw.llir",
+    "bytes": 30102
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/WHTJEFPTMXMHKHRR66LHLPOZ5NHMWXYQH73DALLMH3K6PDAX3QTA/_adamw.ptx",
+    "bytes": 12336
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/WHTJEFPTMXMHKHRR66LHLPOZ5NHMWXYQH73DALLMH3K6PDAX3QTA/_adamw.source",
+    "bytes": 9709
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/WHTJEFPTMXMHKHRR66LHLPOZ5NHMWXYQH73DALLMH3K6PDAX3QTA/_adamw.ttgir",
+    "bytes": 7043
+  },
+  {
+    "path": "000-leaderboard-tuned-8b-32768/cold-triton-cache/WHTJEFPTMXMHKHRR66LHLPOZ5NHMWXYQH73DALLMH3K6PDAX3QTA/_adamw.ttir",
+    "bytes": 6345
+  }
+]

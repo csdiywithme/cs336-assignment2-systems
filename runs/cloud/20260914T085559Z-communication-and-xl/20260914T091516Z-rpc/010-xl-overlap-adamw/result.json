@@ -1,0 +1,392 @@
+{
+  "config": {
+    "name": "xl-overlap-adamw",
+    "kind": "distributed",
+    "world": 2,
+    "size": "xl",
+    "strategy": "overlap",
+    "optimizer": "adamw",
+    "warmup": 5,
+    "steps": 10,
+    "timeout": 600
+  },
+  "started_utc": "2026-09-14T08:59:17.879965+00:00",
+  "measurements": {
+    "ranks": [
+      {
+        "memory_after_initialization": {
+          "allocated_bytes": 13762357248,
+          "reserved_bytes": 13763608576,
+          "peak_allocated_bytes": 13762357248,
+          "peak_reserved_bytes": 13763608576
+        },
+        "step": {
+          "samples_ms": [
+            567.5265499999966,
+            567.4943610000014,
+            567.4316710000085,
+            566.7789629999902,
+            566.2707189999878,
+            567.3320020000006,
+            568.0497919999823,
+            566.282813000015,
+            566.3829080000085,
+            567.5942149999855
+          ],
+          "mean_ms": 567.1143993999976,
+          "std_ms": 0.6340665251691754,
+          "median_ms": 567.3818365000045
+        },
+        "exposed_sync": {
+          "samples_ms": [
+            1.8422240000006695,
+            1.9153659999915362,
+            1.4199630000177876,
+            1.6944140000134666,
+            1.2189800000044215,
+            1.7490879999968456,
+            1.9167869999989762,
+            1.2699540000085108,
+            1.4349760000129663,
+            1.9297980000203552
+          ],
+          "mean_ms": 1.6391550000065536,
+          "std_ms": 0.278250854773682,
+          "median_ms": 1.7217510000051561
+        },
+        "memory_stages": [
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            }
+          },
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            }
+          },
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55930322432,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55930322432,
+              "peak_reserved_bytes": 65087209472
+            }
+          },
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            }
+          },
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            }
+          },
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            }
+          },
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            }
+          },
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            }
+          },
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            }
+          },
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            }
+          }
+        ],
+        "loss": 6.901320457458496,
+        "communication_note": "Exposed wait only; overlapped traffic is not counted as zero traffic."
+      },
+      {
+        "memory_after_initialization": {
+          "allocated_bytes": 13762357248,
+          "reserved_bytes": 13763608576,
+          "peak_allocated_bytes": 13762357248,
+          "peak_reserved_bytes": 13763608576
+        },
+        "step": {
+          "samples_ms": [
+            568.4758540000132,
+            568.2798670000011,
+            569.6072110000046,
+            567.4534249999965,
+            566.4305880000029,
+            567.8910710000196,
+            568.9157209999962,
+            566.4229740000053,
+            567.1851799999956,
+            571.2398109999981
+          ],
+          "mean_ms": 568.1901702000033,
+          "std_ms": 1.4827065867628872,
+          "median_ms": 568.0854690000103
+        },
+        "exposed_sync": {
+          "samples_ms": [
+            2.1413460000019313,
+            1.872523000002957,
+            2.0826390000081574,
+            1.8773550000048544,
+            1.0158430000046792,
+            1.7935430000193264,
+            1.8894699999805198,
+            1.2692550000110714,
+            1.945308000017576,
+            1.9943559999830995
+          ],
+          "mean_ms": 1.7881638000034172,
+          "std_ms": 0.36051999794944817,
+          "median_ms": 1.8834124999926871
+        },
+        "memory_stages": [
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            }
+          },
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            }
+          },
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55930322432,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55930322432,
+              "peak_reserved_bytes": 65087209472
+            }
+          },
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            }
+          },
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            }
+          },
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            }
+          },
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            }
+          },
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            }
+          },
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            }
+          },
+          {
+            "before_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            },
+            "after_optimizer": {
+              "allocated_bytes": 54703875072,
+              "reserved_bytes": 65087209472,
+              "peak_allocated_bytes": 55929273856,
+              "peak_reserved_bytes": 65087209472
+            }
+          }
+        ],
+        "loss": 6.901320457458496,
+        "communication_note": "Exposed wait only; overlapped traffic is not counted as zero traffic."
+      }
+    ]
+  },
+  "status": "ok",
+  "wall_seconds": 22.24590253829956
+}

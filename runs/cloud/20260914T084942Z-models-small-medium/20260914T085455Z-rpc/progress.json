@@ -1,0 +1,2342 @@
+[
+  {
+    "name": "small-fp32-forward-w5",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"small-fp32-forward-w5\", \"kind\": \"model\", \"size\": \"small\", \"dtype\": \"fp32\", \"mode\": \"forward\", \"warmup\": 5, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/000-small-fp32-forward-w5"
+    ],
+    "started": 1789375789.8625846,
+    "returncode": 0,
+    "seconds": 4.308907508850098,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "small-fp32-forward-w5",
+        "kind": "model",
+        "size": "small",
+        "dtype": "fp32",
+        "mode": "forward",
+        "warmup": 5,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:49:51.074375+00:00",
+      "measurements": {
+        "samples_ms": [
+          17.073364999999896,
+          16.642975999999976,
+          16.552637999999398,
+          16.525439000000475,
+          16.63025600000001,
+          16.612857000000147,
+          16.613946000000546,
+          16.585097000000104,
+          16.57802699999955,
+          16.571657000000073
+        ],
+        "mean_ms": 16.638625800000018,
+        "std_ms": 0.15691037569173905,
+        "median_ms": 16.598977000000126,
+        "last_scalar": -0.521477997303009,
+        "parameters": 128625408,
+        "initial_memory": {
+          "allocated_bytes": 516140032,
+          "reserved_bytes": 568328192,
+          "peak_allocated_bytes": 516140032,
+          "peak_reserved_bytes": 568328192
+        },
+        "memory": {
+          "allocated_bytes": 606579712,
+          "reserved_bytes": 4244635648,
+          "peak_allocated_bytes": 4105227264,
+          "peak_reserved_bytes": 4244635648
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 4105227264,
+            "reserved_bytes": 4244635648,
+            "peak_allocated_bytes": 4105227264,
+            "peak_reserved_bytes": 4244635648
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 2.346184015274048
+    }
+  },
+  {
+    "name": "small-fp32-backward-w5",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"small-fp32-backward-w5\", \"kind\": \"model\", \"size\": \"small\", \"dtype\": \"fp32\", \"mode\": \"backward\", \"warmup\": 5, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/001-small-fp32-backward-w5"
+    ],
+    "started": 1789375794.9938257,
+    "returncode": 0,
+    "seconds": 4.466423749923706,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "small-fp32-backward-w5",
+        "kind": "model",
+        "size": "small",
+        "dtype": "fp32",
+        "mode": "backward",
+        "warmup": 5,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:49:56.164973+00:00",
+      "measurements": {
+        "samples_ms": [
+          49.44124700000074,
+          48.990567000000595,
+          49.50745599999884,
+          49.13460400000069,
+          49.744560000000604,
+          49.740241000000296,
+          48.911750000000254,
+          49.65811299999956,
+          49.530056000000044,
+          49.06901600000069
+        ],
+        "mean_ms": 49.37276100000023,
+        "std_ms": 0.31795523451174734,
+        "median_ms": 49.47435149999979,
+        "last_scalar": 9.272378921508789,
+        "parameters": 128625408,
+        "initial_memory": {
+          "allocated_bytes": 516140032,
+          "reserved_bytes": 568328192,
+          "peak_allocated_bytes": 516140032,
+          "peak_reserved_bytes": 568328192
+        },
+        "memory": {
+          "allocated_bytes": 1055758848,
+          "reserved_bytes": 4546625536,
+          "peak_allocated_bytes": 4359507968,
+          "peak_reserved_bytes": 4546625536
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 4195667968,
+            "reserved_bytes": 4546625536,
+            "peak_allocated_bytes": 4195667968,
+            "peak_reserved_bytes": 4546625536
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 1137678848,
+            "reserved_bytes": 4546625536,
+            "peak_allocated_bytes": 4359507968,
+            "peak_reserved_bytes": 4546625536
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 2.490417242050171
+    }
+  },
+  {
+    "name": "small-fp32-train-w5",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"small-fp32-train-w5\", \"kind\": \"model\", \"size\": \"small\", \"dtype\": \"fp32\", \"mode\": \"train\", \"warmup\": 5, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/002-small-fp32-train-w5"
+    ],
+    "started": 1789375800.6881511,
+    "returncode": 0,
+    "seconds": 4.567533731460571,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "small-fp32-train-w5",
+        "kind": "model",
+        "size": "small",
+        "dtype": "fp32",
+        "mode": "train",
+        "warmup": 5,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:50:01.776263+00:00",
+      "measurements": {
+        "samples_ms": [
+          56.72253899999902,
+          56.89798500000265,
+          56.660640000000484,
+          56.159540999999535,
+          56.65546100000185,
+          56.49109400000185,
+          56.327628000001795,
+          56.42038599999921,
+          64.34623199999834,
+          56.530652999999376
+        ],
+        "mean_ms": 57.32121590000041,
+        "std_ms": 2.4772357309854294,
+        "median_ms": 56.59305700000061,
+        "last_scalar": 1.7698270082473755,
+        "parameters": 128625408,
+        "initial_memory": {
+          "allocated_bytes": 516140032,
+          "reserved_bytes": 568328192,
+          "peak_allocated_bytes": 516140032,
+          "peak_reserved_bytes": 568328192
+        },
+        "memory": {
+          "allocated_bytes": 2116432384,
+          "reserved_bytes": 5746196480,
+          "peak_allocated_bytes": 5408614400,
+          "peak_reserved_bytes": 5746196480
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 5244774400,
+            "reserved_bytes": 5746196480,
+            "peak_allocated_bytes": 5244774400,
+            "peak_reserved_bytes": 5746196480
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 2197828096,
+            "reserved_bytes": 5746196480,
+            "peak_allocated_bytes": 5408614400,
+            "peak_reserved_bytes": 5746196480
+          },
+          {
+            "stage": "after_optimizer",
+            "allocated_bytes": 2198352384,
+            "reserved_bytes": 5746196480,
+            "peak_allocated_bytes": 5408614400,
+            "peak_reserved_bytes": 5746196480
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 2.787358522415161
+    }
+  },
+  {
+    "name": "small-bf16-forward-w5",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"small-bf16-forward-w5\", \"kind\": \"model\", \"size\": \"small\", \"dtype\": \"bf16\", \"mode\": \"forward\", \"warmup\": 5, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/003-small-bf16-forward-w5"
+    ],
+    "started": 1789375806.250947,
+    "returncode": 0,
+    "seconds": 4.1110053062438965,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "small-bf16-forward-w5",
+        "kind": "model",
+        "size": "small",
+        "dtype": "bf16",
+        "mode": "forward",
+        "warmup": 5,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:50:07.340047+00:00",
+      "measurements": {
+        "samples_ms": [
+          7.193644000000887,
+          7.260932000001219,
+          7.275132000000184,
+          7.222624000000621,
+          7.223842999998453,
+          7.240843000001718,
+          7.221653000001993,
+          7.220664000001875,
+          7.218033000000901,
+          7.225923000000023
+        ],
+        "mean_ms": 7.230329100000787,
+        "std_ms": 0.023192217834819374,
+        "median_ms": 7.223233499999537,
+        "last_scalar": -0.51953125,
+        "parameters": 128625408,
+        "initial_memory": {
+          "allocated_bytes": 516140032,
+          "reserved_bytes": 568328192,
+          "peak_allocated_bytes": 516140032,
+          "peak_reserved_bytes": 568328192
+        },
+        "memory": {
+          "allocated_bytes": 565619712,
+          "reserved_bytes": 3242196992,
+          "peak_allocated_bytes": 3189386240,
+          "peak_reserved_bytes": 3242196992
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 3183094784,
+            "reserved_bytes": 3242196992,
+            "peak_allocated_bytes": 3189386240,
+            "peak_reserved_bytes": 3242196992
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 2.3920235633850098
+    }
+  },
+  {
+    "name": "small-bf16-backward-w5",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"small-bf16-backward-w5\", \"kind\": \"model\", \"size\": \"small\", \"dtype\": \"bf16\", \"mode\": \"backward\", \"warmup\": 5, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/004-small-bf16-backward-w5"
+    ],
+    "started": 1789375811.1274216,
+    "returncode": 0,
+    "seconds": 5.685331106185913,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "small-bf16-backward-w5",
+        "kind": "model",
+        "size": "small",
+        "dtype": "bf16",
+        "mode": "backward",
+        "warmup": 5,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:50:12.297935+00:00",
+      "measurements": {
+        "samples_ms": [
+          25.845030999999352,
+          26.562904999998693,
+          27.000844999999885,
+          26.41900899999783,
+          22.435680000000957,
+          25.223286000002787,
+          24.295418000001234,
+          27.230700000000496,
+          22.892339999998512,
+          24.231078999999767
+        ],
+        "mean_ms": 25.21362929999995,
+        "std_ms": 1.694725938927391,
+        "median_ms": 25.53415850000107,
+        "last_scalar": 9.272369384765625,
+        "parameters": 128625408,
+        "initial_memory": {
+          "allocated_bytes": 516140032,
+          "reserved_bytes": 568328192,
+          "peak_allocated_bytes": 516140032,
+          "peak_reserved_bytes": 568328192
+        },
+        "memory": {
+          "allocated_bytes": 1077860864,
+          "reserved_bytes": 3678404608,
+          "peak_allocated_bytes": 3439013888,
+          "peak_reserved_bytes": 3678404608
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 3275173888,
+            "reserved_bytes": 3678404608,
+            "peak_allocated_bytes": 3357093888,
+            "peak_reserved_bytes": 3678404608
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 1118820864,
+            "reserved_bytes": 3678404608,
+            "peak_allocated_bytes": 3439013888,
+            "peak_reserved_bytes": 3678404608
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 3.637993335723877
+    }
+  },
+  {
+    "name": "small-bf16-train-w5",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"small-bf16-train-w5\", \"kind\": \"model\", \"size\": \"small\", \"dtype\": \"bf16\", \"mode\": \"train\", \"warmup\": 5, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/005-small-bf16-train-w5"
+    ],
+    "started": 1789375818.054032,
+    "returncode": 0,
+    "seconds": 4.570986747741699,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "small-bf16-train-w5",
+        "kind": "model",
+        "size": "small",
+        "dtype": "bf16",
+        "mode": "train",
+        "warmup": 5,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:50:19.176662+00:00",
+      "measurements": {
+        "samples_ms": [
+          30.015374999997846,
+          29.29196200000206,
+          32.16581599999557,
+          30.759107999998037,
+          31.843893000001344,
+          35.30290199999797,
+          33.2572789999972,
+          33.28960900000055,
+          32.4010389999998,
+          30.25103899999948
+        ],
+        "mean_ms": 31.857802199998986,
+        "std_ms": 1.8267877603152278,
+        "median_ms": 32.00485449999846,
+        "last_scalar": 2.965770721435547,
+        "parameters": 128625408,
+        "initial_memory": {
+          "allocated_bytes": 516140032,
+          "reserved_bytes": 568328192,
+          "peak_allocated_bytes": 516140032,
+          "peak_reserved_bytes": 568328192
+        },
+        "memory": {
+          "allocated_bytes": 2122232320,
+          "reserved_bytes": 4777312256,
+          "peak_allocated_bytes": 4478191616,
+          "peak_reserved_bytes": 4777312256
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 4314351616,
+            "reserved_bytes": 4777312256,
+            "peak_allocated_bytes": 4396271616,
+            "peak_reserved_bytes": 4777312256
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 2163880448,
+            "reserved_bytes": 4777312256,
+            "peak_allocated_bytes": 4478191616,
+            "peak_reserved_bytes": 4777312256
+          },
+          {
+            "stage": "after_optimizer",
+            "allocated_bytes": 2163192320,
+            "reserved_bytes": 4777312256,
+            "peak_allocated_bytes": 4478191616,
+            "peak_reserved_bytes": 4777312256
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 2.724045753479004
+    }
+  },
+  {
+    "name": "small-fp32-forward-w0",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"small-fp32-forward-w0\", \"kind\": \"model\", \"size\": \"small\", \"dtype\": \"fp32\", \"mode\": \"forward\", \"warmup\": 0, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/006-small-fp32-forward-w0"
+    ],
+    "started": 1789375823.4331543,
+    "returncode": 0,
+    "seconds": 4.513204336166382,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "small-fp32-forward-w0",
+        "kind": "model",
+        "size": "small",
+        "dtype": "fp32",
+        "mode": "forward",
+        "warmup": 0,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:50:24.519375+00:00",
+      "measurements": {
+        "samples_ms": [
+          164.12208499999537,
+          16.790320000005465,
+          16.496228000001167,
+          16.46388900000062,
+          16.461657999997215,
+          16.485817999999597,
+          16.543337000001657,
+          16.524057000005143,
+          16.56072600000158,
+          16.53683699999675
+        ],
+        "mean_ms": 31.298495500000456,
+        "std_ms": 46.66954760837066,
+        "median_ms": 16.530447000000947,
+        "last_scalar": -0.521477997303009,
+        "parameters": 128625408,
+        "initial_memory": {
+          "allocated_bytes": 516140032,
+          "reserved_bytes": 568328192,
+          "peak_allocated_bytes": 516140032,
+          "peak_reserved_bytes": 568328192
+        },
+        "memory": {
+          "allocated_bytes": 606579712,
+          "reserved_bytes": 4244635648,
+          "peak_allocated_bytes": 4105227264,
+          "peak_reserved_bytes": 4244635648
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 4105227264,
+            "reserved_bytes": 4244635648,
+            "peak_allocated_bytes": 4105227264,
+            "peak_reserved_bytes": 4244635648
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 2.5510523319244385
+    }
+  },
+  {
+    "name": "small-fp32-backward-w0",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"small-fp32-backward-w0\", \"kind\": \"model\", \"size\": \"small\", \"dtype\": \"fp32\", \"mode\": \"backward\", \"warmup\": 0, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/007-small-fp32-backward-w0"
+    ],
+    "started": 1789375828.9508834,
+    "returncode": 0,
+    "seconds": 4.110949754714966,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "small-fp32-backward-w0",
+        "kind": "model",
+        "size": "small",
+        "dtype": "fp32",
+        "mode": "backward",
+        "warmup": 0,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:50:30.033213+00:00",
+      "measurements": {
+        "samples_ms": [
+          397.93638400000475,
+          49.199010000002374,
+          48.304690999998456,
+          48.407017999998914,
+          48.44838700000054,
+          48.4997550000017,
+          48.56033400000115,
+          48.431066999995664,
+          48.50120599999741,
+          48.441607000000886
+        ],
+        "mean_ms": 83.47294590000018,
+        "std_ms": 110.49146115178213,
+        "median_ms": 48.47407100000112,
+        "last_scalar": 9.272378921508789,
+        "parameters": 128625408,
+        "initial_memory": {
+          "allocated_bytes": 516140032,
+          "reserved_bytes": 568328192,
+          "peak_allocated_bytes": 516140032,
+          "peak_reserved_bytes": 568328192
+        },
+        "memory": {
+          "allocated_bytes": 1055758848,
+          "reserved_bytes": 4546625536,
+          "peak_allocated_bytes": 4359507968,
+          "peak_reserved_bytes": 4546625536
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 4195667968,
+            "reserved_bytes": 4546625536,
+            "peak_allocated_bytes": 4195667968,
+            "peak_reserved_bytes": 4546625536
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 1137678848,
+            "reserved_bytes": 4546625536,
+            "peak_allocated_bytes": 4359507968,
+            "peak_reserved_bytes": 4546625536
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 2.227277994155884
+    }
+  },
+  {
+    "name": "small-fp32-train-w0",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"small-fp32-train-w0\", \"kind\": \"model\", \"size\": \"small\", \"dtype\": \"fp32\", \"mode\": \"train\", \"warmup\": 0, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/008-small-fp32-train-w0"
+    ],
+    "started": 1789375834.0872974,
+    "returncode": 0,
+    "seconds": 4.5300493240356445,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "small-fp32-train-w0",
+        "kind": "model",
+        "size": "small",
+        "dtype": "fp32",
+        "mode": "train",
+        "warmup": 0,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:50:35.226763+00:00",
+      "measurements": {
+        "samples_ms": [
+          418.4255890000017,
+          56.94050999999689,
+          56.338072999999156,
+          56.06955000000369,
+          56.64690699999397,
+          56.50287999999648,
+          56.26956599999744,
+          56.34663299999687,
+          56.605487000005894,
+          56.61313699999937
+        ],
+        "mean_ms": 92.67583319999915,
+        "std_ms": 114.45705191185931,
+        "median_ms": 56.55418350000119,
+        "last_scalar": 5.790876865386963,
+        "parameters": 128625408,
+        "initial_memory": {
+          "allocated_bytes": 516140032,
+          "reserved_bytes": 568328192,
+          "peak_allocated_bytes": 516140032,
+          "peak_reserved_bytes": 568328192
+        },
+        "memory": {
+          "allocated_bytes": 2108158464,
+          "reserved_bytes": 5746196480,
+          "peak_allocated_bytes": 5407401984,
+          "peak_reserved_bytes": 5746196480
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 5243561984,
+            "reserved_bytes": 5746196480,
+            "peak_allocated_bytes": 5243561984,
+            "peak_reserved_bytes": 5746196480
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 2190602752,
+            "reserved_bytes": 5746196480,
+            "peak_allocated_bytes": 5407401984,
+            "peak_reserved_bytes": 5746196480
+          },
+          {
+            "stage": "after_optimizer",
+            "allocated_bytes": 2190078464,
+            "reserved_bytes": 5746196480,
+            "peak_allocated_bytes": 5407401984,
+            "peak_reserved_bytes": 5746196480
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 2.7226362228393555
+    }
+  },
+  {
+    "name": "small-fp32-forward-w1",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"small-fp32-forward-w1\", \"kind\": \"model\", \"size\": \"small\", \"dtype\": \"fp32\", \"mode\": \"forward\", \"warmup\": 1, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/009-small-fp32-forward-w1"
+    ],
+    "started": 1789375839.7801492,
+    "returncode": 0,
+    "seconds": 3.9080514907836914,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "small-fp32-forward-w1",
+        "kind": "model",
+        "size": "small",
+        "dtype": "fp32",
+        "mode": "forward",
+        "warmup": 1,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:50:40.960435+00:00",
+      "measurements": {
+        "samples_ms": [
+          16.752500999999143,
+          16.51256699999948,
+          16.480086999997923,
+          16.463207999997564,
+          16.509025999994265,
+          16.531786000001603,
+          16.535025999999675,
+          16.53650600000134,
+          16.54048599999669,
+          16.531436000001065
+        ],
+        "mean_ms": 16.539262899998874,
+        "std_ms": 0.07925190192983943,
+        "median_ms": 16.531611000001334,
+        "last_scalar": -0.521477997303009,
+        "parameters": 128625408,
+        "initial_memory": {
+          "allocated_bytes": 516140032,
+          "reserved_bytes": 568328192,
+          "peak_allocated_bytes": 516140032,
+          "peak_reserved_bytes": 568328192
+        },
+        "memory": {
+          "allocated_bytes": 606579712,
+          "reserved_bytes": 4244635648,
+          "peak_allocated_bytes": 4105227264,
+          "peak_reserved_bytes": 4244635648
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 4105227264,
+            "reserved_bytes": 4244635648,
+            "peak_allocated_bytes": 4105227264,
+            "peak_reserved_bytes": 4244635648
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 1.9713189601898193
+    }
+  },
+  {
+    "name": "small-fp32-backward-w1",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"small-fp32-backward-w1\", \"kind\": \"model\", \"size\": \"small\", \"dtype\": \"fp32\", \"mode\": \"backward\", \"warmup\": 1, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/010-small-fp32-backward-w1"
+    ],
+    "started": 1789375844.6830244,
+    "returncode": 0,
+    "seconds": 4.367389917373657,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "small-fp32-backward-w1",
+        "kind": "model",
+        "size": "small",
+        "dtype": "fp32",
+        "mode": "backward",
+        "warmup": 1,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:50:45.985753+00:00",
+      "measurements": {
+        "samples_ms": [
+          49.03076099999737,
+          48.817485000000715,
+          48.7351579999995,
+          48.864915000002895,
+          48.50708300000406,
+          48.68690899999706,
+          48.5392229999988,
+          48.578991999995935,
+          48.65909899999821,
+          49.39965300000182
+        ],
+        "mean_ms": 48.781927799999636,
+        "std_ms": 0.26948195107199424,
+        "median_ms": 48.71103349999828,
+        "last_scalar": 9.272378921508789,
+        "parameters": 128625408,
+        "initial_memory": {
+          "allocated_bytes": 516140032,
+          "reserved_bytes": 568328192,
+          "peak_allocated_bytes": 516140032,
+          "peak_reserved_bytes": 568328192
+        },
+        "memory": {
+          "allocated_bytes": 1055758848,
+          "reserved_bytes": 4546625536,
+          "peak_allocated_bytes": 4359507968,
+          "peak_reserved_bytes": 4546625536
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 4195667968,
+            "reserved_bytes": 4546625536,
+            "peak_allocated_bytes": 4195667968,
+            "peak_reserved_bytes": 4546625536
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 1137678848,
+            "reserved_bytes": 4546625536,
+            "peak_allocated_bytes": 4359507968,
+            "peak_reserved_bytes": 4546625536
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 2.3541316986083984
+    }
+  },
+  {
+    "name": "small-fp32-train-w1",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"small-fp32-train-w1\", \"kind\": \"model\", \"size\": \"small\", \"dtype\": \"fp32\", \"mode\": \"train\", \"warmup\": 1, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/011-small-fp32-train-w1"
+    ],
+    "started": 1789375850.106791,
+    "returncode": 0,
+    "seconds": 4.258605480194092,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "small-fp32-train-w1",
+        "kind": "model",
+        "size": "small",
+        "dtype": "fp32",
+        "mode": "train",
+        "warmup": 1,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:50:51.174543+00:00",
+      "measurements": {
+        "samples_ms": [
+          59.27008300000125,
+          56.90389800000162,
+          56.40320000000543,
+          56.311472000004414,
+          56.72260200000778,
+          56.403848999991624,
+          56.58479599999566,
+          56.2704919999959,
+          56.63344500000278,
+          56.375861000006466
+        ],
+        "mean_ms": 56.78796980000129,
+        "std_ms": 0.8946768143482524,
+        "median_ms": 56.49432249999364,
+        "last_scalar": 4.957366943359375,
+        "parameters": 128625408,
+        "initial_memory": {
+          "allocated_bytes": 516140032,
+          "reserved_bytes": 568328192,
+          "peak_allocated_bytes": 516140032,
+          "peak_reserved_bytes": 568328192
+        },
+        "memory": {
+          "allocated_bytes": 2111615488,
+          "reserved_bytes": 5746196480,
+          "peak_allocated_bytes": 5406877696,
+          "peak_reserved_bytes": 5746196480
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 5243037696,
+            "reserved_bytes": 5746196480,
+            "peak_allocated_bytes": 5243037696,
+            "peak_reserved_bytes": 5746196480
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 2192388608,
+            "reserved_bytes": 5746196480,
+            "peak_allocated_bytes": 5406877696,
+            "peak_reserved_bytes": 5746196480
+          },
+          {
+            "stage": "after_optimizer",
+            "allocated_bytes": 2193535488,
+            "reserved_bytes": 5746196480,
+            "peak_allocated_bytes": 5406877696,
+            "peak_reserved_bytes": 5746196480
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 2.4793484210968018
+    }
+  },
+  {
+    "name": "small-fp32-forward-w2",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"small-fp32-forward-w2\", \"kind\": \"model\", \"size\": \"small\", \"dtype\": \"fp32\", \"mode\": \"forward\", \"warmup\": 2, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/012-small-fp32-forward-w2"
+    ],
+    "started": 1789375855.2262068,
+    "returncode": 0,
+    "seconds": 3.8606417179107666,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "small-fp32-forward-w2",
+        "kind": "model",
+        "size": "small",
+        "dtype": "fp32",
+        "mode": "forward",
+        "warmup": 2,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:50:56.479780+00:00",
+      "measurements": {
+        "samples_ms": [
+          16.504385999994042,
+          16.474396999996088,
+          16.461308000003783,
+          16.539485999999215,
+          16.536154999997166,
+          16.52505600000609,
+          16.523646000010217,
+          16.52990600000237,
+          16.54081600000268,
+          16.53948499999558
+        ],
+        "mean_ms": 16.517464100000723,
+        "std_ms": 0.028469317150292724,
+        "median_ms": 16.52748100000423,
+        "last_scalar": -0.521477997303009,
+        "parameters": 128625408,
+        "initial_memory": {
+          "allocated_bytes": 516140032,
+          "reserved_bytes": 568328192,
+          "peak_allocated_bytes": 516140032,
+          "peak_reserved_bytes": 568328192
+        },
+        "memory": {
+          "allocated_bytes": 606579712,
+          "reserved_bytes": 4244635648,
+          "peak_allocated_bytes": 4105227264,
+          "peak_reserved_bytes": 4244635648
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 4105227264,
+            "reserved_bytes": 4244635648,
+            "peak_allocated_bytes": 4105227264,
+            "peak_reserved_bytes": 4244635648
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 1.9553520679473877
+    }
+  },
+  {
+    "name": "small-fp32-backward-w2",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"small-fp32-backward-w2\", \"kind\": \"model\", \"size\": \"small\", \"dtype\": \"fp32\", \"mode\": \"backward\", \"warmup\": 2, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/013-small-fp32-backward-w2"
+    ],
+    "started": 1789375860.1473923,
+    "returncode": 0,
+    "seconds": 4.057550668716431,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "small-fp32-backward-w2",
+        "kind": "model",
+        "size": "small",
+        "dtype": "fp32",
+        "mode": "backward",
+        "warmup": 2,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:51:01.303692+00:00",
+      "measurements": {
+        "samples_ms": [
+          48.91004300000645,
+          48.513822999993295,
+          48.89599399999156,
+          48.50812200000121,
+          48.40934499999605,
+          48.74358700000414,
+          48.87890399999151,
+          48.56271100000242,
+          48.29057800000669,
+          48.51080200000979
+        ],
+        "mean_ms": 48.62239090000031,
+        "std_ms": 0.21970595290589603,
+        "median_ms": 48.53826699999786,
+        "last_scalar": 9.272378921508789,
+        "parameters": 128625408,
+        "initial_memory": {
+          "allocated_bytes": 516140032,
+          "reserved_bytes": 568328192,
+          "peak_allocated_bytes": 516140032,
+          "peak_reserved_bytes": 568328192
+        },
+        "memory": {
+          "allocated_bytes": 1055758848,
+          "reserved_bytes": 4546625536,
+          "peak_allocated_bytes": 4359507968,
+          "peak_reserved_bytes": 4546625536
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 4195667968,
+            "reserved_bytes": 4546625536,
+            "peak_allocated_bytes": 4195667968,
+            "peak_reserved_bytes": 4546625536
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 1137678848,
+            "reserved_bytes": 4546625536,
+            "peak_allocated_bytes": 4359507968,
+            "peak_reserved_bytes": 4546625536
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 2.241853713989258
+    }
+  },
+  {
+    "name": "small-fp32-train-w2",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"small-fp32-train-w2\", \"kind\": \"model\", \"size\": \"small\", \"dtype\": \"fp32\", \"mode\": \"train\", \"warmup\": 2, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/014-small-fp32-train-w2"
+    ],
+    "started": 1789375865.2922657,
+    "returncode": 0,
+    "seconds": 4.261899948120117,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "small-fp32-train-w2",
+        "kind": "model",
+        "size": "small",
+        "dtype": "fp32",
+        "mode": "train",
+        "warmup": 2,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:51:06.341277+00:00",
+      "measurements": {
+        "samples_ms": [
+          56.41752599998995,
+          56.32493899999247,
+          56.431627000009144,
+          56.60998300000131,
+          56.86810600001024,
+          56.12867300000346,
+          56.185471999995684,
+          57.093890999993846,
+          56.5393739999962,
+          61.332003000003965
+        ],
+        "mean_ms": 56.99315939999963,
+        "std_ms": 1.5526672734538607,
+        "median_ms": 56.48550050000267,
+        "last_scalar": 4.655406951904297,
+        "parameters": 128625408,
+        "initial_memory": {
+          "allocated_bytes": 516140032,
+          "reserved_bytes": 568328192,
+          "peak_allocated_bytes": 516140032,
+          "peak_reserved_bytes": 568328192
+        },
+        "memory": {
+          "allocated_bytes": 2114236928,
+          "reserved_bytes": 5746196480,
+          "peak_allocated_bytes": 5407975424,
+          "peak_reserved_bytes": 5746196480
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 5244135424,
+            "reserved_bytes": 5746196480,
+            "peak_allocated_bytes": 5244135424,
+            "peak_reserved_bytes": 5746196480
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 2196206080,
+            "reserved_bytes": 5746196480,
+            "peak_allocated_bytes": 5407975424,
+            "peak_reserved_bytes": 5746196480
+          },
+          {
+            "stage": "after_optimizer",
+            "allocated_bytes": 2196156928,
+            "reserved_bytes": 5746196480,
+            "peak_allocated_bytes": 5407975424,
+            "peak_reserved_bytes": 5746196480
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 2.512235641479492
+    }
+  },
+  {
+    "name": "medium-fp32-forward-w5",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"medium-fp32-forward-w5\", \"kind\": \"model\", \"size\": \"medium\", \"dtype\": \"fp32\", \"mode\": \"forward\", \"warmup\": 5, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/015-medium-fp32-forward-w5"
+    ],
+    "started": 1789375870.3969805,
+    "returncode": 0,
+    "seconds": 4.3610687255859375,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "medium-fp32-forward-w5",
+        "kind": "model",
+        "size": "medium",
+        "dtype": "fp32",
+        "mode": "forward",
+        "warmup": 5,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:51:11.560119+00:00",
+      "measurements": {
+        "samples_ms": [
+          47.41047600001025,
+          47.262089000000174,
+          47.28004899999405,
+          47.501113999999234,
+          47.373075999999514,
+          47.31321900000296,
+          47.27287000000047,
+          47.2620500000005,
+          47.26977999999349,
+          47.265659000004234
+        ],
+        "mean_ms": 47.32103820000049,
+        "std_ms": 0.08154388806146211,
+        "median_ms": 47.27645949999726,
+        "last_scalar": 0.2825976610183716,
+        "parameters": 423183360,
+        "initial_memory": {
+          "allocated_bytes": 1694863360,
+          "reserved_bytes": 1696595968,
+          "peak_allocated_bytes": 1694863360,
+          "peak_reserved_bytes": 1696595968
+        },
+        "memory": {
+          "allocated_bytes": 1785303040,
+          "reserved_bytes": 11400118272,
+          "peak_allocated_bytes": 11087622144,
+          "peak_reserved_bytes": 11400118272
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 11087622144,
+            "reserved_bytes": 11400118272,
+            "peak_allocated_bytes": 11087622144,
+            "peak_reserved_bytes": 11400118272
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 2.4865529537200928
+    }
+  },
+  {
+    "name": "medium-fp32-backward-w5",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"medium-fp32-backward-w5\", \"kind\": \"model\", \"size\": \"medium\", \"dtype\": \"fp32\", \"mode\": \"backward\", \"warmup\": 5, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/016-medium-fp32-backward-w5"
+    ],
+    "started": 1789375875.4692223,
+    "returncode": 0,
+    "seconds": 6.068474769592285,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "medium-fp32-backward-w5",
+        "kind": "model",
+        "size": "medium",
+        "dtype": "fp32",
+        "mode": "backward",
+        "warmup": 5,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:51:16.648492+00:00",
+      "measurements": {
+        "samples_ms": [
+          140.2686319999873,
+          139.9679390000017,
+          139.87744099999588,
+          140.06333799999027,
+          140.03440000000467,
+          139.58802000000503,
+          140.19198699999436,
+          139.85747499999945,
+          139.63395999999761,
+          139.55545099999256
+        ],
+        "mean_ms": 139.90386429999688,
+        "std_ms": 0.24933135046214056,
+        "median_ms": 139.9226899999988,
+        "last_scalar": 9.305209159851074,
+        "parameters": 423183360,
+        "initial_memory": {
+          "allocated_bytes": 1694863360,
+          "reserved_bytes": 1696595968,
+          "peak_allocated_bytes": 1694863360,
+          "peak_reserved_bytes": 1696595968
+        },
+        "memory": {
+          "allocated_bytes": 3405619712,
+          "reserved_bytes": 11869880320,
+          "peak_allocated_bytes": 11342754816,
+          "peak_reserved_bytes": 11869880320
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 11178914816,
+            "reserved_bytes": 11869880320,
+            "peak_allocated_bytes": 11178914816,
+            "peak_reserved_bytes": 11869880320
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 3487539712,
+            "reserved_bytes": 11869880320,
+            "peak_allocated_bytes": 11342754816,
+            "peak_reserved_bytes": 11869880320
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 4.174895524978638
+    }
+  },
+  {
+    "name": "medium-fp32-train-w5",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"medium-fp32-train-w5\", \"kind\": \"model\", \"size\": \"medium\", \"dtype\": \"fp32\", \"mode\": \"train\", \"warmup\": 5, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/017-medium-fp32-train-w5"
+    ],
+    "started": 1789375882.2718148,
+    "returncode": 0,
+    "seconds": 6.623827219009399,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "medium-fp32-train-w5",
+        "kind": "model",
+        "size": "medium",
+        "dtype": "fp32",
+        "mode": "train",
+        "warmup": 5,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:51:23.461316+00:00",
+      "measurements": {
+        "samples_ms": [
+          156.80486600000165,
+          157.356692999997,
+          157.3416030000061,
+          157.257627000007,
+          288.10476900000026,
+          157.1672890000002,
+          157.1860479999998,
+          156.73607899999809,
+          157.09633900000597,
+          157.90032799999665
+        ],
+        "mean_ms": 170.29516410000127,
+        "std_ms": 41.39531249229302,
+        "median_ms": 157.2218375000034,
+        "last_scalar": 6.444460391998291,
+        "parameters": 423183360,
+        "initial_memory": {
+          "allocated_bytes": 1694863360,
+          "reserved_bytes": 1696595968,
+          "peak_allocated_bytes": 1694863360,
+          "peak_reserved_bytes": 1696595968
+        },
+        "memory": {
+          "allocated_bytes": 6792069632,
+          "reserved_bytes": 15294529536,
+          "peak_allocated_bytes": 14730187776,
+          "peak_reserved_bytes": 15294529536
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 14566347776,
+            "reserved_bytes": 15294529536,
+            "peak_allocated_bytes": 14566347776,
+            "peak_reserved_bytes": 15294529536
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 6873006592,
+            "reserved_bytes": 15294529536,
+            "peak_allocated_bytes": 14730187776,
+            "peak_reserved_bytes": 15294529536
+          },
+          {
+            "stage": "after_optimizer",
+            "allocated_bytes": 6873989632,
+            "reserved_bytes": 15294529536,
+            "peak_allocated_bytes": 14730187776,
+            "peak_reserved_bytes": 15294529536
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 4.711420774459839
+    }
+  },
+  {
+    "name": "medium-bf16-forward-w5",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"medium-bf16-forward-w5\", \"kind\": \"model\", \"size\": \"medium\", \"dtype\": \"bf16\", \"mode\": \"forward\", \"warmup\": 5, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/018-medium-bf16-forward-w5"
+    ],
+    "started": 1789375889.5267322,
+    "returncode": 0,
+    "seconds": 4.063042163848877,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "medium-bf16-forward-w5",
+        "kind": "model",
+        "size": "medium",
+        "dtype": "bf16",
+        "mode": "forward",
+        "warmup": 5,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:51:30.702252+00:00",
+      "measurements": {
+        "samples_ms": [
+          17.63237900000547,
+          17.20840900000553,
+          17.19633900000872,
+          17.217827999999713,
+          17.22677800000838,
+          17.18671000000427,
+          17.245367999990435,
+          17.255058000003487,
+          17.245188000003964,
+          17.21507899999608
+        ],
+        "mean_ms": 17.262913600002605,
+        "std_ms": 0.13166666520504808,
+        "median_ms": 17.222303000004047,
+        "last_scalar": 0.283203125,
+        "parameters": 423183360,
+        "initial_memory": {
+          "allocated_bytes": 1694863360,
+          "reserved_bytes": 1696595968,
+          "peak_allocated_bytes": 1694863360,
+          "peak_reserved_bytes": 1696595968
+        },
+        "memory": {
+          "allocated_bytes": 1744343040,
+          "reserved_bytes": 8782872576,
+          "peak_allocated_bytes": 8756080640,
+          "peak_reserved_bytes": 8782872576
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 8747692032,
+            "reserved_bytes": 8782872576,
+            "peak_allocated_bytes": 8756080640,
+            "peak_reserved_bytes": 8782872576
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 1.980329990386963
+    }
+  },
+  {
+    "name": "medium-bf16-backward-w5",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"medium-bf16-backward-w5\", \"kind\": \"model\", \"size\": \"medium\", \"dtype\": \"bf16\", \"mode\": \"backward\", \"warmup\": 5, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/019-medium-bf16-backward-w5"
+    ],
+    "started": 1789375894.611177,
+    "returncode": 0,
+    "seconds": 4.869468688964844,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "medium-bf16-backward-w5",
+        "kind": "model",
+        "size": "medium",
+        "dtype": "bf16",
+        "mode": "backward",
+        "warmup": 5,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:51:35.806024+00:00",
+      "measurements": {
+        "samples_ms": [
+          51.93002899999044,
+          52.165473000002294,
+          50.87809300000856,
+          50.2953969999993,
+          51.22448500000587,
+          50.701556999996455,
+          50.81932500000619,
+          51.554907999999955,
+          52.273220999992986,
+          51.78297200001225
+        ],
+        "mean_ms": 51.36254600000143,
+        "std_ms": 0.6777722404101943,
+        "median_ms": 51.38969650000291,
+        "last_scalar": 9.305181503295898,
+        "parameters": 423183360,
+        "initial_memory": {
+          "allocated_bytes": 1694863360,
+          "reserved_bytes": 1696595968,
+          "peak_allocated_bytes": 1694863360,
+          "peak_reserved_bytes": 1696595968
+        },
+        "memory": {
+          "allocated_bytes": 3406471680,
+          "reserved_bytes": 9319743488,
+          "peak_allocated_bytes": 9002824704,
+          "peak_reserved_bytes": 9319743488
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 8838984704,
+            "reserved_bytes": 9319743488,
+            "peak_allocated_bytes": 8920904704,
+            "peak_reserved_bytes": 9319743488
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 3447431680,
+            "reserved_bytes": 9319743488,
+            "peak_allocated_bytes": 9002824704,
+            "peak_reserved_bytes": 9319743488
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 2.8947365283966064
+    }
+  },
+  {
+    "name": "medium-bf16-train-w5",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"medium-bf16-train-w5\", \"kind\": \"model\", \"size\": \"medium\", \"dtype\": \"bf16\", \"mode\": \"train\", \"warmup\": 5, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/020-medium-bf16-train-w5"
+    ],
+    "started": 1789375900.78949,
+    "returncode": 0,
+    "seconds": 5.172774314880371,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "medium-bf16-train-w5",
+        "kind": "model",
+        "size": "medium",
+        "dtype": "bf16",
+        "mode": "train",
+        "warmup": 5,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:51:41.984342+00:00",
+      "measurements": {
+        "samples_ms": [
+          67.70076000000813,
+          67.10041399999511,
+          69.49917800000094,
+          69.38527999999167,
+          67.9909129999885,
+          68.42760299998929,
+          67.51813399999662,
+          67.46505499999955,
+          68.12543000000915,
+          67.4059660000097
+        ],
+        "mean_ms": 68.06187329999887,
+        "std_ms": 0.8230666790010742,
+        "median_ms": 67.84583649999831,
+        "last_scalar": 6.555251598358154,
+        "parameters": 423183360,
+        "initial_memory": {
+          "allocated_bytes": 1694863360,
+          "reserved_bytes": 1696595968,
+          "peak_allocated_bytes": 1694863360,
+          "peak_reserved_bytes": 1696595968
+        },
+        "memory": {
+          "allocated_bytes": 6795870720,
+          "reserved_bytes": 12639535104,
+          "peak_allocated_bytes": 12394189824,
+          "peak_reserved_bytes": 12639535104
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 12230349824,
+            "reserved_bytes": 12639535104,
+            "peak_allocated_bytes": 12312269824,
+            "peak_reserved_bytes": 12639535104
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 6835847680,
+            "reserved_bytes": 12639535104,
+            "peak_allocated_bytes": 12394189824,
+            "peak_reserved_bytes": 12639535104
+          },
+          {
+            "stage": "after_optimizer",
+            "allocated_bytes": 6836830720,
+            "reserved_bytes": 12639535104,
+            "peak_allocated_bytes": 12394189824,
+            "peak_reserved_bytes": 12639535104
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 3.275571346282959
+    }
+  },
+  {
+    "name": "medium-fp32-forward-w0",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"medium-fp32-forward-w0\", \"kind\": \"model\", \"size\": \"medium\", \"dtype\": \"fp32\", \"mode\": \"forward\", \"warmup\": 0, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/021-medium-fp32-forward-w0"
+    ],
+    "started": 1789375907.184895,
+    "returncode": 0,
+    "seconds": 4.17905068397522,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "medium-fp32-forward-w0",
+        "kind": "model",
+        "size": "medium",
+        "dtype": "fp32",
+        "mode": "forward",
+        "warmup": 0,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:51:48.411232+00:00",
+      "measurements": {
+        "samples_ms": [
+          218.5688859999999,
+          47.749745000004395,
+          47.28785499999333,
+          47.23669700000244,
+          47.242807000003495,
+          47.22733699999537,
+          47.2458369999913,
+          47.22784700000204,
+          47.216207000005284,
+          47.261176000006344
+        ],
+        "mean_ms": 64.42643940000039,
+        "std_ms": 54.160372650741394,
+        "median_ms": 47.244321999997396,
+        "last_scalar": 0.2825976610183716,
+        "parameters": 423183360,
+        "initial_memory": {
+          "allocated_bytes": 1694863360,
+          "reserved_bytes": 1696595968,
+          "peak_allocated_bytes": 1694863360,
+          "peak_reserved_bytes": 1696595968
+        },
+        "memory": {
+          "allocated_bytes": 1785303040,
+          "reserved_bytes": 11400118272,
+          "peak_allocated_bytes": 11087622144,
+          "peak_reserved_bytes": 11400118272
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 11087622144,
+            "reserved_bytes": 11400118272,
+            "peak_allocated_bytes": 11087622144,
+            "peak_reserved_bytes": 11400118272
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 2.2859346866607666
+    }
+  },
+  {
+    "name": "medium-fp32-backward-w0",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"medium-fp32-backward-w0\", \"kind\": \"model\", \"size\": \"medium\", \"dtype\": \"fp32\", \"mode\": \"backward\", \"warmup\": 0, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/022-medium-fp32-backward-w0"
+    ],
+    "started": 1789375912.2504606,
+    "returncode": 0,
+    "seconds": 5.419524908065796,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "medium-fp32-backward-w0",
+        "kind": "model",
+        "size": "medium",
+        "dtype": "fp32",
+        "mode": "backward",
+        "warmup": 0,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:51:53.503240+00:00",
+      "measurements": {
+        "samples_ms": [
+          478.1269100000145,
+          140.63387500002023,
+          140.2615629999957,
+          139.66549699998154,
+          139.52861799998573,
+          140.31992999997556,
+          139.79789200001846,
+          139.57430799999315,
+          139.5303889999866,
+          139.9814279999987
+        ],
+        "mean_ms": 173.74204099999702,
+        "std_ms": 106.95061350382792,
+        "median_ms": 139.88966000000858,
+        "last_scalar": 9.305209159851074,
+        "parameters": 423183360,
+        "initial_memory": {
+          "allocated_bytes": 1694863360,
+          "reserved_bytes": 1696595968,
+          "peak_allocated_bytes": 1694863360,
+          "peak_reserved_bytes": 1696595968
+        },
+        "memory": {
+          "allocated_bytes": 3405619712,
+          "reserved_bytes": 11869880320,
+          "peak_allocated_bytes": 11342754816,
+          "peak_reserved_bytes": 11869880320
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 11178914816,
+            "reserved_bytes": 11869880320,
+            "peak_allocated_bytes": 11178914816,
+            "peak_reserved_bytes": 11869880320
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 3487539712,
+            "reserved_bytes": 11869880320,
+            "peak_allocated_bytes": 11342754816,
+            "peak_reserved_bytes": 11869880320
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 3.3709514141082764
+    }
+  },
+  {
+    "name": "medium-fp32-train-w0",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"medium-fp32-train-w0\", \"kind\": \"model\", \"size\": \"medium\", \"dtype\": \"fp32\", \"mode\": \"train\", \"warmup\": 0, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/023-medium-fp32-train-w0"
+    ],
+    "started": 1789375918.7969208,
+    "returncode": 0,
+    "seconds": 5.417420387268066,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "medium-fp32-train-w0",
+        "kind": "model",
+        "size": "medium",
+        "dtype": "fp32",
+        "mode": "train",
+        "warmup": 0,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:51:59.890860+00:00",
+      "measurements": {
+        "samples_ms": [
+          579.914070000001,
+          157.35994100000994,
+          156.9502810000074,
+          157.1053680000034,
+          156.8157250000013,
+          156.68730699999855,
+          157.01679900001864,
+          156.75052599999617,
+          156.74980599999344,
+          156.50478199998474
+        ],
+        "mean_ms": 199.18546050000145,
+        "std_ms": 133.77461354062322,
+        "median_ms": 156.88300300000435,
+        "last_scalar": 6.394672393798828,
+        "parameters": 423183360,
+        "initial_memory": {
+          "allocated_bytes": 1694863360,
+          "reserved_bytes": 1696595968,
+          "peak_allocated_bytes": 1694863360,
+          "peak_reserved_bytes": 1696595968
+        },
+        "memory": {
+          "allocated_bytes": 6795018752,
+          "reserved_bytes": 15294529536,
+          "peak_allocated_bytes": 14734119936,
+          "peak_reserved_bytes": 15294529536
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 14570279936,
+            "reserved_bytes": 15294529536,
+            "peak_allocated_bytes": 14570279936,
+            "peak_reserved_bytes": 15294529536
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 6876938752,
+            "reserved_bytes": 15294529536,
+            "peak_allocated_bytes": 14734119936,
+            "peak_reserved_bytes": 15294529536
+          },
+          {
+            "stage": "after_optimizer",
+            "allocated_bytes": 6876938752,
+            "reserved_bytes": 15294529536,
+            "peak_allocated_bytes": 14734119936,
+            "peak_reserved_bytes": 15294529536
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 3.5152177810668945
+    }
+  },
+  {
+    "name": "medium-fp32-forward-w1",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"medium-fp32-forward-w1\", \"kind\": \"model\", \"size\": \"medium\", \"dtype\": \"fp32\", \"mode\": \"forward\", \"warmup\": 1, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/024-medium-fp32-forward-w1"
+    ],
+    "started": 1789375925.646965,
+    "returncode": 0,
+    "seconds": 4.1633827686309814,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "medium-fp32-forward-w1",
+        "kind": "model",
+        "size": "medium",
+        "dtype": "fp32",
+        "mode": "forward",
+        "warmup": 1,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:52:06.733647+00:00",
+      "measurements": {
+        "samples_ms": [
+          47.5360579999915,
+          47.26003499999365,
+          47.272665000008374,
+          47.24920499998575,
+          47.24013599999921,
+          47.078507999998465,
+          47.2940630000096,
+          47.255024000008916,
+          47.06284899998536,
+          47.23489400001313
+        ],
+        "mean_ms": 47.248343699999396,
+        "std_ms": 0.1287305811401174,
+        "median_ms": 47.25211449999733,
+        "last_scalar": 0.2825976610183716,
+        "parameters": 423183360,
+        "initial_memory": {
+          "allocated_bytes": 1694863360,
+          "reserved_bytes": 1696595968,
+          "peak_allocated_bytes": 1694863360,
+          "peak_reserved_bytes": 1696595968
+        },
+        "memory": {
+          "allocated_bytes": 1785303040,
+          "reserved_bytes": 11400118272,
+          "peak_allocated_bytes": 11087622144,
+          "peak_reserved_bytes": 11400118272
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 11087622144,
+            "reserved_bytes": 11400118272,
+            "peak_allocated_bytes": 11087622144,
+            "peak_reserved_bytes": 11400118272
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 2.3798420429229736
+    }
+  },
+  {
+    "name": "medium-fp32-backward-w1",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"medium-fp32-backward-w1\", \"kind\": \"model\", \"size\": \"medium\", \"dtype\": \"fp32\", \"mode\": \"backward\", \"warmup\": 1, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/025-medium-fp32-backward-w1"
+    ],
+    "started": 1789375930.7756987,
+    "returncode": 0,
+    "seconds": 5.007941722869873,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "medium-fp32-backward-w1",
+        "kind": "model",
+        "size": "medium",
+        "dtype": "fp32",
+        "mode": "backward",
+        "warmup": 1,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:52:11.800651+00:00",
+      "measurements": {
+        "samples_ms": [
+          140.273647000015,
+          140.03791299998625,
+          140.0287339999977,
+          140.02606399998285,
+          139.85629699999436,
+          139.4794269999977,
+          140.30957700001068,
+          139.51351500000442,
+          139.5471650000104,
+          140.25459800001272
+        ],
+        "mean_ms": 139.9326937000012,
+        "std_ms": 0.3208592152963367,
+        "median_ms": 140.02739899999028,
+        "last_scalar": 9.305209159851074,
+        "parameters": 423183360,
+        "initial_memory": {
+          "allocated_bytes": 1694863360,
+          "reserved_bytes": 1696595968,
+          "peak_allocated_bytes": 1694863360,
+          "peak_reserved_bytes": 1696595968
+        },
+        "memory": {
+          "allocated_bytes": 3405619712,
+          "reserved_bytes": 11869880320,
+          "peak_allocated_bytes": 11342754816,
+          "peak_reserved_bytes": 11869880320
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 11178914816,
+            "reserved_bytes": 11869880320,
+            "peak_allocated_bytes": 11178914816,
+            "peak_reserved_bytes": 11869880320
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 3487539712,
+            "reserved_bytes": 11869880320,
+            "peak_allocated_bytes": 11342754816,
+            "peak_reserved_bytes": 11869880320
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 3.3151605129241943
+    }
+  },
+  {
+    "name": "medium-fp32-train-w1",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"medium-fp32-train-w1\", \"kind\": \"model\", \"size\": \"medium\", \"dtype\": \"fp32\", \"mode\": \"train\", \"warmup\": 1, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/026-medium-fp32-train-w1"
+    ],
+    "started": 1789375937.8817306,
+    "returncode": 0,
+    "seconds": 5.410177707672119,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "medium-fp32-train-w1",
+        "kind": "model",
+        "size": "medium",
+        "dtype": "fp32",
+        "mode": "train",
+        "warmup": 1,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:52:18.923483+00:00",
+      "measurements": {
+        "samples_ms": [
+          170.8798800000011,
+          156.8453760000068,
+          157.07686999999737,
+          156.6967499999805,
+          156.3197579999951,
+          156.91017500000726,
+          156.49165400000697,
+          156.84689799999774,
+          156.67947200000754,
+          157.22288899999626
+        ],
+        "mean_ms": 158.19697219999966,
+        "std_ms": 4.464060107270334,
+        "median_ms": 156.84613700000227,
+        "last_scalar": 7.313313007354736,
+        "parameters": 423183360,
+        "initial_memory": {
+          "allocated_bytes": 1694863360,
+          "reserved_bytes": 1696595968,
+          "peak_allocated_bytes": 1694863360,
+          "peak_reserved_bytes": 1696595968
+        },
+        "memory": {
+          "allocated_bytes": 6794035712,
+          "reserved_bytes": 15294529536,
+          "peak_allocated_bytes": 14734119936,
+          "peak_reserved_bytes": 15294529536
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 14570279936,
+            "reserved_bytes": 15294529536,
+            "peak_allocated_bytes": 14570279936,
+            "peak_reserved_bytes": 15294529536
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 6876938752,
+            "reserved_bytes": 15294529536,
+            "peak_allocated_bytes": 14734119936,
+            "peak_reserved_bytes": 15294529536
+          },
+          {
+            "stage": "after_optimizer",
+            "allocated_bytes": 6875955712,
+            "reserved_bytes": 15294529536,
+            "peak_allocated_bytes": 14734119936,
+            "peak_reserved_bytes": 15294529536
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 3.594336986541748
+    }
+  },
+  {
+    "name": "medium-fp32-forward-w2",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"medium-fp32-forward-w2\", \"kind\": \"model\", \"size\": \"medium\", \"dtype\": \"fp32\", \"mode\": \"forward\", \"warmup\": 2, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/027-medium-fp32-forward-w2"
+    ],
+    "started": 1789375944.6637757,
+    "returncode": 0,
+    "seconds": 3.954015016555786,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "medium-fp32-forward-w2",
+        "kind": "model",
+        "size": "medium",
+        "dtype": "fp32",
+        "mode": "forward",
+        "warmup": 2,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:52:25.729921+00:00",
+      "measurements": {
+        "samples_ms": [
+          47.32325200001242,
+          47.2407139999973,
+          47.26539299997512,
+          47.27102300000752,
+          47.110566999975845,
+          47.26394300001857,
+          47.25526300001093,
+          48.404066000017565,
+          47.26990300000011,
+          47.24142300000267
+        ],
+        "mean_ms": 47.364554700001804,
+        "std_ms": 0.36921913065929585,
+        "median_ms": 47.264667999996846,
+        "last_scalar": 0.2825976610183716,
+        "parameters": 423183360,
+        "initial_memory": {
+          "allocated_bytes": 1694863360,
+          "reserved_bytes": 1696595968,
+          "peak_allocated_bytes": 1694863360,
+          "peak_reserved_bytes": 1696595968
+        },
+        "memory": {
+          "allocated_bytes": 1785303040,
+          "reserved_bytes": 11400118272,
+          "peak_allocated_bytes": 11087622144,
+          "peak_reserved_bytes": 11400118272
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 11087622144,
+            "reserved_bytes": 11400118272,
+            "peak_allocated_bytes": 11087622144,
+            "peak_reserved_bytes": 11400118272
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 2.229511260986328
+    }
+  },
+  {
+    "name": "medium-fp32-backward-w2",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"medium-fp32-backward-w2\", \"kind\": \"model\", \"size\": \"medium\", \"dtype\": \"fp32\", \"mode\": \"backward\", \"warmup\": 2, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/028-medium-fp32-backward-w2"
+    ],
+    "started": 1789375949.460048,
+    "returncode": 0,
+    "seconds": 5.460750102996826,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "medium-fp32-backward-w2",
+        "kind": "model",
+        "size": "medium",
+        "dtype": "fp32",
+        "mode": "backward",
+        "warmup": 2,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:52:30.627681+00:00",
+      "measurements": {
+        "samples_ms": [
+          139.64092899999514,
+          140.24421299998835,
+          139.9462299999925,
+          140.22158400001672,
+          139.6869170000059,
+          139.50411100000792,
+          139.6868369999993,
+          139.6230679999917,
+          139.95215999997868,
+          139.68786399999544
+        ],
+        "mean_ms": 139.81939129999716,
+        "std_ms": 0.2578028617425664,
+        "median_ms": 139.68739050000067,
+        "last_scalar": 9.305209159851074,
+        "parameters": 423183360,
+        "initial_memory": {
+          "allocated_bytes": 1694863360,
+          "reserved_bytes": 1696595968,
+          "peak_allocated_bytes": 1694863360,
+          "peak_reserved_bytes": 1696595968
+        },
+        "memory": {
+          "allocated_bytes": 3405619712,
+          "reserved_bytes": 11869880320,
+          "peak_allocated_bytes": 11342754816,
+          "peak_reserved_bytes": 11869880320
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 11178914816,
+            "reserved_bytes": 11869880320,
+            "peak_allocated_bytes": 11178914816,
+            "peak_reserved_bytes": 11869880320
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 3487539712,
+            "reserved_bytes": 11869880320,
+            "peak_allocated_bytes": 11342754816,
+            "peak_reserved_bytes": 11869880320
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 3.6503000259399414
+    }
+  },
+  {
+    "name": "medium-fp32-train-w2",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"medium-fp32-train-w2\", \"kind\": \"model\", \"size\": \"medium\", \"dtype\": \"fp32\", \"mode\": \"train\", \"warmup\": 2, \"steps\": 10, \"timeout\": 500}",
+      "--output",
+      "/data/20260914T084942Z-models-small-medium/029-medium-fp32-train-w2"
+    ],
+    "started": 1789375956.232025,
+    "returncode": 0,
+    "seconds": 5.4624409675598145,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "medium-fp32-train-w2",
+        "kind": "model",
+        "size": "medium",
+        "dtype": "fp32",
+        "mode": "train",
+        "warmup": 2,
+        "steps": 10,
+        "timeout": 500
+      },
+      "started_utc": "2026-09-14T08:52:37.224406+00:00",
+      "measurements": {
+        "samples_ms": [
+          156.6243960000122,
+          156.64869500000123,
+          156.44254000000046,
+          156.70149400000355,
+          156.4957499999764,
+          156.67629600000055,
+          156.88570200001095,
+          156.83952200001272,
+          156.66953699999908,
+          156.9393899999909
+        ],
+        "mean_ms": 156.6923322000008,
+        "std_ms": 0.15934422201024756,
+        "median_ms": 156.67291649999981,
+        "last_scalar": 6.977879047393799,
+        "parameters": 423183360,
+        "initial_memory": {
+          "allocated_bytes": 1694863360,
+          "reserved_bytes": 1696595968,
+          "peak_allocated_bytes": 1694863360,
+          "peak_reserved_bytes": 1696595968
+        },
+        "memory": {
+          "allocated_bytes": 6795018752,
+          "reserved_bytes": 15294529536,
+          "peak_allocated_bytes": 14732153856,
+          "peak_reserved_bytes": 15294529536
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 14568313856,
+            "reserved_bytes": 15294529536,
+            "peak_allocated_bytes": 14568313856,
+            "peak_reserved_bytes": 15294529536
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 6875955712,
+            "reserved_bytes": 15294529536,
+            "peak_allocated_bytes": 14732153856,
+            "peak_reserved_bytes": 15294529536
+          },
+          {
+            "stage": "after_optimizer",
+            "allocated_bytes": 6876938752,
+            "reserved_bytes": 15294529536,
+            "peak_allocated_bytes": 14732153856,
+            "peak_reserved_bytes": 15294529536
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 3.716195583343506
+    }
+  }
+]

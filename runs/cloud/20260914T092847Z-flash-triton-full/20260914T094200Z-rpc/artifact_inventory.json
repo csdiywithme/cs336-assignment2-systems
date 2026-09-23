@@ -1,0 +1,1362 @@
+[
+  {
+    "path": "environment.json",
+    "bytes": 28861
+  },
+  {
+    "path": "nvidia-smi.txt",
+    "bytes": 11462
+  },
+  {
+    "path": "nvlink-status.txt",
+    "bytes": 472
+  },
+  {
+    "path": "pip-freeze.txt",
+    "bytes": 1691
+  },
+  {
+    "path": "progress.json",
+    "bytes": 169643
+  },
+  {
+    "path": "summary.json",
+    "bytes": 180590
+  },
+  {
+    "path": "topology.txt",
+    "bytes": 603
+  },
+  {
+    "path": "000-flash-triton-full-fp32-s128-d16/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "000-flash-triton-full-fp32-s128-d16/result.json",
+    "bytes": 1237
+  },
+  {
+    "path": "000-flash-triton-full-fp32-s128-d16/status.json",
+    "bytes": 1976
+  },
+  {
+    "path": "000-flash-triton-full-fp32-s128-d16/stdout.log",
+    "bytes": 1238
+  },
+  {
+    "path": "001-flash-triton-full-fp32-s128-d32/partial.json",
+    "bytes": 450
+  },
+  {
+    "path": "001-flash-triton-full-fp32-s128-d32/result.json",
+    "bytes": 1236
+  },
+  {
+    "path": "001-flash-triton-full-fp32-s128-d32/status.json",
+    "bytes": 1975
+  },
+  {
+    "path": "001-flash-triton-full-fp32-s128-d32/stdout.log",
+    "bytes": 1237
+  },
+  {
+    "path": "002-flash-triton-full-fp32-s128-d64/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "002-flash-triton-full-fp32-s128-d64/result.json",
+    "bytes": 1239
+  },
+  {
+    "path": "002-flash-triton-full-fp32-s128-d64/status.json",
+    "bytes": 1977
+  },
+  {
+    "path": "002-flash-triton-full-fp32-s128-d64/stdout.log",
+    "bytes": 1240
+  },
+  {
+    "path": "003-flash-triton-full-fp32-s128-d128/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "003-flash-triton-full-fp32-s128-d128/result.json",
+    "bytes": 1241
+  },
+  {
+    "path": "003-flash-triton-full-fp32-s128-d128/status.json",
+    "bytes": 1983
+  },
+  {
+    "path": "003-flash-triton-full-fp32-s128-d128/stdout.log",
+    "bytes": 1242
+  },
+  {
+    "path": "004-flash-triton-full-fp32-s256-d16/partial.json",
+    "bytes": 451
+  },
+  {
+    "path": "004-flash-triton-full-fp32-s256-d16/result.json",
+    "bytes": 1237
+  },
+  {
+    "path": "004-flash-triton-full-fp32-s256-d16/status.json",
+    "bytes": 1976
+  },
+  {
+    "path": "004-flash-triton-full-fp32-s256-d16/stdout.log",
+    "bytes": 1238
+  },
+  {
+    "path": "005-flash-triton-full-fp32-s256-d32/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "005-flash-triton-full-fp32-s256-d32/result.json",
+    "bytes": 1238
+  },
+  {
+    "path": "005-flash-triton-full-fp32-s256-d32/status.json",
+    "bytes": 1976
+  },
+  {
+    "path": "005-flash-triton-full-fp32-s256-d32/stdout.log",
+    "bytes": 1239
+  },
+  {
+    "path": "006-flash-triton-full-fp32-s256-d64/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "006-flash-triton-full-fp32-s256-d64/result.json",
+    "bytes": 1238
+  },
+  {
+    "path": "006-flash-triton-full-fp32-s256-d64/status.json",
+    "bytes": 1977
+  },
+  {
+    "path": "006-flash-triton-full-fp32-s256-d64/stdout.log",
+    "bytes": 1239
+  },
+  {
+    "path": "007-flash-triton-full-fp32-s256-d128/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "007-flash-triton-full-fp32-s256-d128/result.json",
+    "bytes": 1239
+  },
+  {
+    "path": "007-flash-triton-full-fp32-s256-d128/status.json",
+    "bytes": 1981
+  },
+  {
+    "path": "007-flash-triton-full-fp32-s256-d128/stdout.log",
+    "bytes": 1240
+  },
+  {
+    "path": "008-flash-triton-full-fp32-s512-d16/partial.json",
+    "bytes": 454
+  },
+  {
+    "path": "008-flash-triton-full-fp32-s512-d16/result.json",
+    "bytes": 1240
+  },
+  {
+    "path": "008-flash-triton-full-fp32-s512-d16/status.json",
+    "bytes": 1980
+  },
+  {
+    "path": "008-flash-triton-full-fp32-s512-d16/stdout.log",
+    "bytes": 1241
+  },
+  {
+    "path": "009-flash-triton-full-fp32-s512-d32/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "009-flash-triton-full-fp32-s512-d32/result.json",
+    "bytes": 1233
+  },
+  {
+    "path": "009-flash-triton-full-fp32-s512-d32/status.json",
+    "bytes": 1972
+  },
+  {
+    "path": "009-flash-triton-full-fp32-s512-d32/stdout.log",
+    "bytes": 1234
+  },
+  {
+    "path": "010-flash-triton-full-fp32-s512-d64/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "010-flash-triton-full-fp32-s512-d64/result.json",
+    "bytes": 1239
+  },
+  {
+    "path": "010-flash-triton-full-fp32-s512-d64/status.json",
+    "bytes": 1978
+  },
+  {
+    "path": "010-flash-triton-full-fp32-s512-d64/stdout.log",
+    "bytes": 1240
+  },
+  {
+    "path": "011-flash-triton-full-fp32-s512-d128/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "011-flash-triton-full-fp32-s512-d128/result.json",
+    "bytes": 1242
+  },
+  {
+    "path": "011-flash-triton-full-fp32-s512-d128/status.json",
+    "bytes": 1985
+  },
+  {
+    "path": "011-flash-triton-full-fp32-s512-d128/stdout.log",
+    "bytes": 1243
+  },
+  {
+    "path": "012-flash-triton-full-fp32-s1024-d16/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "012-flash-triton-full-fp32-s1024-d16/result.json",
+    "bytes": 1239
+  },
+  {
+    "path": "012-flash-triton-full-fp32-s1024-d16/status.json",
+    "bytes": 1981
+  },
+  {
+    "path": "012-flash-triton-full-fp32-s1024-d16/stdout.log",
+    "bytes": 1240
+  },
+  {
+    "path": "013-flash-triton-full-fp32-s1024-d32/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "013-flash-triton-full-fp32-s1024-d32/result.json",
+    "bytes": 1240
+  },
+  {
+    "path": "013-flash-triton-full-fp32-s1024-d32/status.json",
+    "bytes": 1983
+  },
+  {
+    "path": "013-flash-triton-full-fp32-s1024-d32/stdout.log",
+    "bytes": 1241
+  },
+  {
+    "path": "014-flash-triton-full-fp32-s1024-d64/partial.json",
+    "bytes": 454
+  },
+  {
+    "path": "014-flash-triton-full-fp32-s1024-d64/result.json",
+    "bytes": 1243
+  },
+  {
+    "path": "014-flash-triton-full-fp32-s1024-d64/status.json",
+    "bytes": 1985
+  },
+  {
+    "path": "014-flash-triton-full-fp32-s1024-d64/stdout.log",
+    "bytes": 1244
+  },
+  {
+    "path": "015-flash-triton-full-fp32-s1024-d128/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "015-flash-triton-full-fp32-s1024-d128/result.json",
+    "bytes": 1242
+  },
+  {
+    "path": "015-flash-triton-full-fp32-s1024-d128/status.json",
+    "bytes": 1988
+  },
+  {
+    "path": "015-flash-triton-full-fp32-s1024-d128/stdout.log",
+    "bytes": 1243
+  },
+  {
+    "path": "016-flash-triton-full-fp32-s2048-d16/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "016-flash-triton-full-fp32-s2048-d16/result.json",
+    "bytes": 1241
+  },
+  {
+    "path": "016-flash-triton-full-fp32-s2048-d16/status.json",
+    "bytes": 1984
+  },
+  {
+    "path": "016-flash-triton-full-fp32-s2048-d16/stdout.log",
+    "bytes": 1242
+  },
+  {
+    "path": "017-flash-triton-full-fp32-s2048-d32/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "017-flash-triton-full-fp32-s2048-d32/result.json",
+    "bytes": 1241
+  },
+  {
+    "path": "017-flash-triton-full-fp32-s2048-d32/status.json",
+    "bytes": 1984
+  },
+  {
+    "path": "017-flash-triton-full-fp32-s2048-d32/stdout.log",
+    "bytes": 1242
+  },
+  {
+    "path": "018-flash-triton-full-fp32-s2048-d64/partial.json",
+    "bytes": 451
+  },
+  {
+    "path": "018-flash-triton-full-fp32-s2048-d64/result.json",
+    "bytes": 1240
+  },
+  {
+    "path": "018-flash-triton-full-fp32-s2048-d64/status.json",
+    "bytes": 1982
+  },
+  {
+    "path": "018-flash-triton-full-fp32-s2048-d64/stdout.log",
+    "bytes": 1241
+  },
+  {
+    "path": "019-flash-triton-full-fp32-s2048-d128/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "019-flash-triton-full-fp32-s2048-d128/result.json",
+    "bytes": 1243
+  },
+  {
+    "path": "019-flash-triton-full-fp32-s2048-d128/status.json",
+    "bytes": 1990
+  },
+  {
+    "path": "019-flash-triton-full-fp32-s2048-d128/stdout.log",
+    "bytes": 1244
+  },
+  {
+    "path": "020-flash-triton-full-fp32-s4096-d16/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "020-flash-triton-full-fp32-s4096-d16/result.json",
+    "bytes": 1243
+  },
+  {
+    "path": "020-flash-triton-full-fp32-s4096-d16/status.json",
+    "bytes": 1986
+  },
+  {
+    "path": "020-flash-triton-full-fp32-s4096-d16/stdout.log",
+    "bytes": 1244
+  },
+  {
+    "path": "021-flash-triton-full-fp32-s4096-d32/partial.json",
+    "bytes": 451
+  },
+  {
+    "path": "021-flash-triton-full-fp32-s4096-d32/result.json",
+    "bytes": 1240
+  },
+  {
+    "path": "021-flash-triton-full-fp32-s4096-d32/status.json",
+    "bytes": 1983
+  },
+  {
+    "path": "021-flash-triton-full-fp32-s4096-d32/stdout.log",
+    "bytes": 1241
+  },
+  {
+    "path": "022-flash-triton-full-fp32-s4096-d64/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "022-flash-triton-full-fp32-s4096-d64/result.json",
+    "bytes": 1240
+  },
+  {
+    "path": "022-flash-triton-full-fp32-s4096-d64/status.json",
+    "bytes": 1983
+  },
+  {
+    "path": "022-flash-triton-full-fp32-s4096-d64/stdout.log",
+    "bytes": 1241
+  },
+  {
+    "path": "023-flash-triton-full-fp32-s4096-d128/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "023-flash-triton-full-fp32-s4096-d128/result.json",
+    "bytes": 1242
+  },
+  {
+    "path": "023-flash-triton-full-fp32-s4096-d128/status.json",
+    "bytes": 1988
+  },
+  {
+    "path": "023-flash-triton-full-fp32-s4096-d128/stdout.log",
+    "bytes": 1243
+  },
+  {
+    "path": "024-flash-triton-full-fp32-s8192-d16/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "024-flash-triton-full-fp32-s8192-d16/result.json",
+    "bytes": 1239
+  },
+  {
+    "path": "024-flash-triton-full-fp32-s8192-d16/status.json",
+    "bytes": 1981
+  },
+  {
+    "path": "024-flash-triton-full-fp32-s8192-d16/stdout.log",
+    "bytes": 1240
+  },
+  {
+    "path": "025-flash-triton-full-fp32-s8192-d32/partial.json",
+    "bytes": 451
+  },
+  {
+    "path": "025-flash-triton-full-fp32-s8192-d32/result.json",
+    "bytes": 1240
+  },
+  {
+    "path": "025-flash-triton-full-fp32-s8192-d32/status.json",
+    "bytes": 1983
+  },
+  {
+    "path": "025-flash-triton-full-fp32-s8192-d32/stdout.log",
+    "bytes": 1241
+  },
+  {
+    "path": "026-flash-triton-full-fp32-s8192-d64/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "026-flash-triton-full-fp32-s8192-d64/result.json",
+    "bytes": 1241
+  },
+  {
+    "path": "026-flash-triton-full-fp32-s8192-d64/status.json",
+    "bytes": 1983
+  },
+  {
+    "path": "026-flash-triton-full-fp32-s8192-d64/stdout.log",
+    "bytes": 1242
+  },
+  {
+    "path": "027-flash-triton-full-fp32-s8192-d128/partial.json",
+    "bytes": 451
+  },
+  {
+    "path": "027-flash-triton-full-fp32-s8192-d128/result.json",
+    "bytes": 1241
+  },
+  {
+    "path": "027-flash-triton-full-fp32-s8192-d128/status.json",
+    "bytes": 1987
+  },
+  {
+    "path": "027-flash-triton-full-fp32-s8192-d128/stdout.log",
+    "bytes": 1242
+  },
+  {
+    "path": "028-flash-triton-full-fp32-s16384-d16/partial.json",
+    "bytes": 450
+  },
+  {
+    "path": "028-flash-triton-full-fp32-s16384-d16/result.json",
+    "bytes": 1239
+  },
+  {
+    "path": "028-flash-triton-full-fp32-s16384-d16/status.json",
+    "bytes": 1986
+  },
+  {
+    "path": "028-flash-triton-full-fp32-s16384-d16/stdout.log",
+    "bytes": 1240
+  },
+  {
+    "path": "029-flash-triton-full-fp32-s16384-d32/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "029-flash-triton-full-fp32-s16384-d32/result.json",
+    "bytes": 1239
+  },
+  {
+    "path": "029-flash-triton-full-fp32-s16384-d32/status.json",
+    "bytes": 1986
+  },
+  {
+    "path": "029-flash-triton-full-fp32-s16384-d32/stdout.log",
+    "bytes": 1240
+  },
+  {
+    "path": "030-flash-triton-full-fp32-s16384-d64/partial.json",
+    "bytes": 451
+  },
+  {
+    "path": "030-flash-triton-full-fp32-s16384-d64/result.json",
+    "bytes": 1241
+  },
+  {
+    "path": "030-flash-triton-full-fp32-s16384-d64/status.json",
+    "bytes": 1988
+  },
+  {
+    "path": "030-flash-triton-full-fp32-s16384-d64/stdout.log",
+    "bytes": 1242
+  },
+  {
+    "path": "031-flash-triton-full-fp32-s16384-d128/partial.json",
+    "bytes": 451
+  },
+  {
+    "path": "031-flash-triton-full-fp32-s16384-d128/result.json",
+    "bytes": 1243
+  },
+  {
+    "path": "031-flash-triton-full-fp32-s16384-d128/status.json",
+    "bytes": 1994
+  },
+  {
+    "path": "031-flash-triton-full-fp32-s16384-d128/stdout.log",
+    "bytes": 1244
+  },
+  {
+    "path": "032-flash-triton-full-fp32-s32768-d16/partial.json",
+    "bytes": 451
+  },
+  {
+    "path": "032-flash-triton-full-fp32-s32768-d16/result.json",
+    "bytes": 1241
+  },
+  {
+    "path": "032-flash-triton-full-fp32-s32768-d16/status.json",
+    "bytes": 1989
+  },
+  {
+    "path": "032-flash-triton-full-fp32-s32768-d16/stdout.log",
+    "bytes": 1242
+  },
+  {
+    "path": "033-flash-triton-full-fp32-s32768-d32/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "033-flash-triton-full-fp32-s32768-d32/result.json",
+    "bytes": 1243
+  },
+  {
+    "path": "033-flash-triton-full-fp32-s32768-d32/status.json",
+    "bytes": 1990
+  },
+  {
+    "path": "033-flash-triton-full-fp32-s32768-d32/stdout.log",
+    "bytes": 1244
+  },
+  {
+    "path": "034-flash-triton-full-fp32-s32768-d64/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "034-flash-triton-full-fp32-s32768-d64/result.json",
+    "bytes": 1243
+  },
+  {
+    "path": "034-flash-triton-full-fp32-s32768-d64/status.json",
+    "bytes": 1990
+  },
+  {
+    "path": "034-flash-triton-full-fp32-s32768-d64/stdout.log",
+    "bytes": 1244
+  },
+  {
+    "path": "035-flash-triton-full-fp32-s32768-d128/partial.json",
+    "bytes": 450
+  },
+  {
+    "path": "035-flash-triton-full-fp32-s32768-d128/result.json",
+    "bytes": 1244
+  },
+  {
+    "path": "035-flash-triton-full-fp32-s32768-d128/status.json",
+    "bytes": 1995
+  },
+  {
+    "path": "035-flash-triton-full-fp32-s32768-d128/stdout.log",
+    "bytes": 1245
+  },
+  {
+    "path": "036-flash-triton-full-fp32-s65536-d16/partial.json",
+    "bytes": 450
+  },
+  {
+    "path": "036-flash-triton-full-fp32-s65536-d16/result.json",
+    "bytes": 1242
+  },
+  {
+    "path": "036-flash-triton-full-fp32-s65536-d16/status.json",
+    "bytes": 1989
+  },
+  {
+    "path": "036-flash-triton-full-fp32-s65536-d16/stdout.log",
+    "bytes": 1243
+  },
+  {
+    "path": "037-flash-triton-full-fp32-s65536-d32/partial.json",
+    "bytes": 451
+  },
+  {
+    "path": "037-flash-triton-full-fp32-s65536-d32/result.json",
+    "bytes": 1241
+  },
+  {
+    "path": "037-flash-triton-full-fp32-s65536-d32/status.json",
+    "bytes": 1988
+  },
+  {
+    "path": "037-flash-triton-full-fp32-s65536-d32/stdout.log",
+    "bytes": 1242
+  },
+  {
+    "path": "038-flash-triton-full-fp32-s65536-d64/partial.json",
+    "bytes": 451
+  },
+  {
+    "path": "038-flash-triton-full-fp32-s65536-d64/result.json",
+    "bytes": 1242
+  },
+  {
+    "path": "038-flash-triton-full-fp32-s65536-d64/status.json",
+    "bytes": 1989
+  },
+  {
+    "path": "038-flash-triton-full-fp32-s65536-d64/stdout.log",
+    "bytes": 1243
+  },
+  {
+    "path": "039-flash-triton-full-fp32-s65536-d128/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "039-flash-triton-full-fp32-s65536-d128/result.json",
+    "bytes": 1247
+  },
+  {
+    "path": "039-flash-triton-full-fp32-s65536-d128/status.json",
+    "bytes": 1996
+  },
+  {
+    "path": "039-flash-triton-full-fp32-s65536-d128/stdout.log",
+    "bytes": 1248
+  },
+  {
+    "path": "040-flash-triton-full-bf16-s128-d16/partial.json",
+    "bytes": 451
+  },
+  {
+    "path": "040-flash-triton-full-bf16-s128-d16/result.json",
+    "bytes": 1237
+  },
+  {
+    "path": "040-flash-triton-full-bf16-s128-d16/status.json",
+    "bytes": 1976
+  },
+  {
+    "path": "040-flash-triton-full-bf16-s128-d16/stdout.log",
+    "bytes": 1238
+  },
+  {
+    "path": "041-flash-triton-full-bf16-s128-d32/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "041-flash-triton-full-bf16-s128-d32/result.json",
+    "bytes": 1238
+  },
+  {
+    "path": "041-flash-triton-full-bf16-s128-d32/status.json",
+    "bytes": 1977
+  },
+  {
+    "path": "041-flash-triton-full-bf16-s128-d32/stdout.log",
+    "bytes": 1239
+  },
+  {
+    "path": "042-flash-triton-full-bf16-s128-d64/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "042-flash-triton-full-bf16-s128-d64/result.json",
+    "bytes": 1239
+  },
+  {
+    "path": "042-flash-triton-full-bf16-s128-d64/status.json",
+    "bytes": 1978
+  },
+  {
+    "path": "042-flash-triton-full-bf16-s128-d64/stdout.log",
+    "bytes": 1240
+  },
+  {
+    "path": "043-flash-triton-full-bf16-s128-d128/partial.json",
+    "bytes": 454
+  },
+  {
+    "path": "043-flash-triton-full-bf16-s128-d128/result.json",
+    "bytes": 1242
+  },
+  {
+    "path": "043-flash-triton-full-bf16-s128-d128/status.json",
+    "bytes": 1985
+  },
+  {
+    "path": "043-flash-triton-full-bf16-s128-d128/stdout.log",
+    "bytes": 1243
+  },
+  {
+    "path": "044-flash-triton-full-bf16-s256-d16/partial.json",
+    "bytes": 450
+  },
+  {
+    "path": "044-flash-triton-full-bf16-s256-d16/result.json",
+    "bytes": 1236
+  },
+  {
+    "path": "044-flash-triton-full-bf16-s256-d16/status.json",
+    "bytes": 1975
+  },
+  {
+    "path": "044-flash-triton-full-bf16-s256-d16/stdout.log",
+    "bytes": 1237
+  },
+  {
+    "path": "045-flash-triton-full-bf16-s256-d32/partial.json",
+    "bytes": 451
+  },
+  {
+    "path": "045-flash-triton-full-bf16-s256-d32/result.json",
+    "bytes": 1238
+  },
+  {
+    "path": "045-flash-triton-full-bf16-s256-d32/status.json",
+    "bytes": 1977
+  },
+  {
+    "path": "045-flash-triton-full-bf16-s256-d32/stdout.log",
+    "bytes": 1239
+  },
+  {
+    "path": "046-flash-triton-full-bf16-s256-d64/partial.json",
+    "bytes": 454
+  },
+  {
+    "path": "046-flash-triton-full-bf16-s256-d64/result.json",
+    "bytes": 1240
+  },
+  {
+    "path": "046-flash-triton-full-bf16-s256-d64/status.json",
+    "bytes": 1978
+  },
+  {
+    "path": "046-flash-triton-full-bf16-s256-d64/stdout.log",
+    "bytes": 1241
+  },
+  {
+    "path": "047-flash-triton-full-bf16-s256-d128/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "047-flash-triton-full-bf16-s256-d128/result.json",
+    "bytes": 1240
+  },
+  {
+    "path": "047-flash-triton-full-bf16-s256-d128/status.json",
+    "bytes": 1982
+  },
+  {
+    "path": "047-flash-triton-full-bf16-s256-d128/stdout.log",
+    "bytes": 1241
+  },
+  {
+    "path": "048-flash-triton-full-bf16-s512-d16/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "048-flash-triton-full-bf16-s512-d16/result.json",
+    "bytes": 1238
+  },
+  {
+    "path": "048-flash-triton-full-bf16-s512-d16/status.json",
+    "bytes": 1976
+  },
+  {
+    "path": "048-flash-triton-full-bf16-s512-d16/stdout.log",
+    "bytes": 1239
+  },
+  {
+    "path": "049-flash-triton-full-bf16-s512-d32/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "049-flash-triton-full-bf16-s512-d32/result.json",
+    "bytes": 1240
+  },
+  {
+    "path": "049-flash-triton-full-bf16-s512-d32/status.json",
+    "bytes": 1979
+  },
+  {
+    "path": "049-flash-triton-full-bf16-s512-d32/stdout.log",
+    "bytes": 1241
+  },
+  {
+    "path": "050-flash-triton-full-bf16-s512-d64/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "050-flash-triton-full-bf16-s512-d64/result.json",
+    "bytes": 1238
+  },
+  {
+    "path": "050-flash-triton-full-bf16-s512-d64/status.json",
+    "bytes": 1974
+  },
+  {
+    "path": "050-flash-triton-full-bf16-s512-d64/stdout.log",
+    "bytes": 1239
+  },
+  {
+    "path": "051-flash-triton-full-bf16-s512-d128/partial.json",
+    "bytes": 454
+  },
+  {
+    "path": "051-flash-triton-full-bf16-s512-d128/result.json",
+    "bytes": 1243
+  },
+  {
+    "path": "051-flash-triton-full-bf16-s512-d128/status.json",
+    "bytes": 1985
+  },
+  {
+    "path": "051-flash-triton-full-bf16-s512-d128/stdout.log",
+    "bytes": 1244
+  },
+  {
+    "path": "052-flash-triton-full-bf16-s1024-d16/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "052-flash-triton-full-bf16-s1024-d16/result.json",
+    "bytes": 1241
+  },
+  {
+    "path": "052-flash-triton-full-bf16-s1024-d16/status.json",
+    "bytes": 1982
+  },
+  {
+    "path": "052-flash-triton-full-bf16-s1024-d16/stdout.log",
+    "bytes": 1242
+  },
+  {
+    "path": "053-flash-triton-full-bf16-s1024-d32/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "053-flash-triton-full-bf16-s1024-d32/result.json",
+    "bytes": 1241
+  },
+  {
+    "path": "053-flash-triton-full-bf16-s1024-d32/status.json",
+    "bytes": 1984
+  },
+  {
+    "path": "053-flash-triton-full-bf16-s1024-d32/stdout.log",
+    "bytes": 1242
+  },
+  {
+    "path": "054-flash-triton-full-bf16-s1024-d64/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "054-flash-triton-full-bf16-s1024-d64/result.json",
+    "bytes": 1241
+  },
+  {
+    "path": "054-flash-triton-full-bf16-s1024-d64/status.json",
+    "bytes": 1983
+  },
+  {
+    "path": "054-flash-triton-full-bf16-s1024-d64/stdout.log",
+    "bytes": 1242
+  },
+  {
+    "path": "055-flash-triton-full-bf16-s1024-d128/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "055-flash-triton-full-bf16-s1024-d128/result.json",
+    "bytes": 1244
+  },
+  {
+    "path": "055-flash-triton-full-bf16-s1024-d128/status.json",
+    "bytes": 1991
+  },
+  {
+    "path": "055-flash-triton-full-bf16-s1024-d128/stdout.log",
+    "bytes": 1245
+  },
+  {
+    "path": "056-flash-triton-full-bf16-s2048-d16/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "056-flash-triton-full-bf16-s2048-d16/result.json",
+    "bytes": 1240
+  },
+  {
+    "path": "056-flash-triton-full-bf16-s2048-d16/status.json",
+    "bytes": 1983
+  },
+  {
+    "path": "056-flash-triton-full-bf16-s2048-d16/stdout.log",
+    "bytes": 1241
+  },
+  {
+    "path": "057-flash-triton-full-bf16-s2048-d32/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "057-flash-triton-full-bf16-s2048-d32/result.json",
+    "bytes": 1242
+  },
+  {
+    "path": "057-flash-triton-full-bf16-s2048-d32/status.json",
+    "bytes": 1985
+  },
+  {
+    "path": "057-flash-triton-full-bf16-s2048-d32/stdout.log",
+    "bytes": 1243
+  },
+  {
+    "path": "058-flash-triton-full-bf16-s2048-d64/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "058-flash-triton-full-bf16-s2048-d64/result.json",
+    "bytes": 1241
+  },
+  {
+    "path": "058-flash-triton-full-bf16-s2048-d64/status.json",
+    "bytes": 1983
+  },
+  {
+    "path": "058-flash-triton-full-bf16-s2048-d64/stdout.log",
+    "bytes": 1242
+  },
+  {
+    "path": "059-flash-triton-full-bf16-s2048-d128/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "059-flash-triton-full-bf16-s2048-d128/result.json",
+    "bytes": 1245
+  },
+  {
+    "path": "059-flash-triton-full-bf16-s2048-d128/status.json",
+    "bytes": 1992
+  },
+  {
+    "path": "059-flash-triton-full-bf16-s2048-d128/stdout.log",
+    "bytes": 1246
+  },
+  {
+    "path": "060-flash-triton-full-bf16-s4096-d16/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "060-flash-triton-full-bf16-s4096-d16/result.json",
+    "bytes": 1242
+  },
+  {
+    "path": "060-flash-triton-full-bf16-s4096-d16/status.json",
+    "bytes": 1985
+  },
+  {
+    "path": "060-flash-triton-full-bf16-s4096-d16/stdout.log",
+    "bytes": 1243
+  },
+  {
+    "path": "061-flash-triton-full-bf16-s4096-d32/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "061-flash-triton-full-bf16-s4096-d32/result.json",
+    "bytes": 1243
+  },
+  {
+    "path": "061-flash-triton-full-bf16-s4096-d32/status.json",
+    "bytes": 1986
+  },
+  {
+    "path": "061-flash-triton-full-bf16-s4096-d32/stdout.log",
+    "bytes": 1244
+  },
+  {
+    "path": "062-flash-triton-full-bf16-s4096-d64/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "062-flash-triton-full-bf16-s4096-d64/result.json",
+    "bytes": 1243
+  },
+  {
+    "path": "062-flash-triton-full-bf16-s4096-d64/status.json",
+    "bytes": 1986
+  },
+  {
+    "path": "062-flash-triton-full-bf16-s4096-d64/stdout.log",
+    "bytes": 1244
+  },
+  {
+    "path": "063-flash-triton-full-bf16-s4096-d128/partial.json",
+    "bytes": 451
+  },
+  {
+    "path": "063-flash-triton-full-bf16-s4096-d128/result.json",
+    "bytes": 1242
+  },
+  {
+    "path": "063-flash-triton-full-bf16-s4096-d128/status.json",
+    "bytes": 1989
+  },
+  {
+    "path": "063-flash-triton-full-bf16-s4096-d128/stdout.log",
+    "bytes": 1243
+  },
+  {
+    "path": "064-flash-triton-full-bf16-s8192-d16/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "064-flash-triton-full-bf16-s8192-d16/result.json",
+    "bytes": 1242
+  },
+  {
+    "path": "064-flash-triton-full-bf16-s8192-d16/status.json",
+    "bytes": 1985
+  },
+  {
+    "path": "064-flash-triton-full-bf16-s8192-d16/stdout.log",
+    "bytes": 1243
+  },
+  {
+    "path": "065-flash-triton-full-bf16-s8192-d32/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "065-flash-triton-full-bf16-s8192-d32/result.json",
+    "bytes": 1240
+  },
+  {
+    "path": "065-flash-triton-full-bf16-s8192-d32/status.json",
+    "bytes": 1983
+  },
+  {
+    "path": "065-flash-triton-full-bf16-s8192-d32/stdout.log",
+    "bytes": 1241
+  },
+  {
+    "path": "066-flash-triton-full-bf16-s8192-d64/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "066-flash-triton-full-bf16-s8192-d64/result.json",
+    "bytes": 1240
+  },
+  {
+    "path": "066-flash-triton-full-bf16-s8192-d64/status.json",
+    "bytes": 1983
+  },
+  {
+    "path": "066-flash-triton-full-bf16-s8192-d64/stdout.log",
+    "bytes": 1241
+  },
+  {
+    "path": "067-flash-triton-full-bf16-s8192-d128/partial.json",
+    "bytes": 453
+  },
+  {
+    "path": "067-flash-triton-full-bf16-s8192-d128/result.json",
+    "bytes": 1244
+  },
+  {
+    "path": "067-flash-triton-full-bf16-s8192-d128/status.json",
+    "bytes": 1991
+  },
+  {
+    "path": "067-flash-triton-full-bf16-s8192-d128/stdout.log",
+    "bytes": 1245
+  },
+  {
+    "path": "068-flash-triton-full-bf16-s16384-d16/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "068-flash-triton-full-bf16-s16384-d16/result.json",
+    "bytes": 1243
+  },
+  {
+    "path": "068-flash-triton-full-bf16-s16384-d16/status.json",
+    "bytes": 1990
+  },
+  {
+    "path": "068-flash-triton-full-bf16-s16384-d16/stdout.log",
+    "bytes": 1244
+  },
+  {
+    "path": "069-flash-triton-full-bf16-s16384-d32/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "069-flash-triton-full-bf16-s16384-d32/result.json",
+    "bytes": 1243
+  },
+  {
+    "path": "069-flash-triton-full-bf16-s16384-d32/status.json",
+    "bytes": 1990
+  },
+  {
+    "path": "069-flash-triton-full-bf16-s16384-d32/stdout.log",
+    "bytes": 1244
+  },
+  {
+    "path": "070-flash-triton-full-bf16-s16384-d64/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "070-flash-triton-full-bf16-s16384-d64/result.json",
+    "bytes": 1243
+  },
+  {
+    "path": "070-flash-triton-full-bf16-s16384-d64/status.json",
+    "bytes": 1989
+  },
+  {
+    "path": "070-flash-triton-full-bf16-s16384-d64/stdout.log",
+    "bytes": 1244
+  },
+  {
+    "path": "071-flash-triton-full-bf16-s16384-d128/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "071-flash-triton-full-bf16-s16384-d128/result.json",
+    "bytes": 1245
+  },
+  {
+    "path": "071-flash-triton-full-bf16-s16384-d128/status.json",
+    "bytes": 1996
+  },
+  {
+    "path": "071-flash-triton-full-bf16-s16384-d128/stdout.log",
+    "bytes": 1246
+  },
+  {
+    "path": "072-flash-triton-full-bf16-s32768-d16/partial.json",
+    "bytes": 451
+  },
+  {
+    "path": "072-flash-triton-full-bf16-s32768-d16/result.json",
+    "bytes": 1241
+  },
+  {
+    "path": "072-flash-triton-full-bf16-s32768-d16/status.json",
+    "bytes": 1988
+  },
+  {
+    "path": "072-flash-triton-full-bf16-s32768-d16/stdout.log",
+    "bytes": 1242
+  },
+  {
+    "path": "073-flash-triton-full-bf16-s32768-d32/partial.json",
+    "bytes": 451
+  },
+  {
+    "path": "073-flash-triton-full-bf16-s32768-d32/result.json",
+    "bytes": 1241
+  },
+  {
+    "path": "073-flash-triton-full-bf16-s32768-d32/status.json",
+    "bytes": 1988
+  },
+  {
+    "path": "073-flash-triton-full-bf16-s32768-d32/stdout.log",
+    "bytes": 1242
+  },
+  {
+    "path": "074-flash-triton-full-bf16-s32768-d64/partial.json",
+    "bytes": 452
+  },
+  {
+    "path": "074-flash-triton-full-bf16-s32768-d64/result.json",
+    "bytes": 1242
+  },
+  {
+    "path": "074-flash-triton-full-bf16-s32768-d64/status.json",
+    "bytes": 1988
+  },
+  {
+    "path": "074-flash-triton-full-bf16-s32768-d64/stdout.log",
+    "bytes": 1243
+  },
+  {
+    "path": "075-flash-triton-full-bf16-s32768-d128/partial.json",
+    "bytes": 449
+  },
+  {
+    "path": "075-flash-triton-full-bf16-s32768-d128/result.json",
+    "bytes": 1242
+  },
+  {
+    "path": "075-flash-triton-full-bf16-s32768-d128/status.json",
+    "bytes": 1993
+  },
+  {
+    "path": "075-flash-triton-full-bf16-s32768-d128/stdout.log",
+    "bytes": 1243
+  },
+  {
+    "path": "076-flash-triton-full-bf16-s65536-d16/partial.json",
+    "bytes": 451
+  },
+  {
+    "path": "076-flash-triton-full-bf16-s65536-d16/result.json",
+    "bytes": 1240
+  },
+  {
+    "path": "076-flash-triton-full-bf16-s65536-d16/status.json",
+    "bytes": 1987
+  },
+  {
+    "path": "076-flash-triton-full-bf16-s65536-d16/stdout.log",
+    "bytes": 1241
+  },
+  {
+    "path": "077-flash-triton-full-bf16-s65536-d32/partial.json",
+    "bytes": 451
+  },
+  {
+    "path": "077-flash-triton-full-bf16-s65536-d32/result.json",
+    "bytes": 1242
+  },
+  {
+    "path": "077-flash-triton-full-bf16-s65536-d32/status.json",
+    "bytes": 1989
+  },
+  {
+    "path": "077-flash-triton-full-bf16-s65536-d32/stdout.log",
+    "bytes": 1243
+  },
+  {
+    "path": "078-flash-triton-full-bf16-s65536-d64/partial.json",
+    "bytes": 450
+  },
+  {
+    "path": "078-flash-triton-full-bf16-s65536-d64/result.json",
+    "bytes": 1241
+  },
+  {
+    "path": "078-flash-triton-full-bf16-s65536-d64/status.json",
+    "bytes": 1987
+  },
+  {
+    "path": "078-flash-triton-full-bf16-s65536-d64/stdout.log",
+    "bytes": 1242
+  },
+  {
+    "path": "079-flash-triton-full-bf16-s65536-d128/partial.json",
+    "bytes": 451
+  },
+  {
+    "path": "079-flash-triton-full-bf16-s65536-d128/result.json",
+    "bytes": 1245
+  },
+  {
+    "path": "079-flash-triton-full-bf16-s65536-d128/status.json",
+    "bytes": 1996
+  },
+  {
+    "path": "079-flash-triton-full-bf16-s65536-d128/stdout.log",
+    "bytes": 1246
+  },
+  {
+    "path": "source/__init__.py",
+    "bytes": 151
+  },
+  {
+    "path": "source/attention.py",
+    "bytes": 4548
+  },
+  {
+    "path": "source/checkpointing.py",
+    "bytes": 783
+  },
+  {
+    "path": "source/ddp.py",
+    "bytes": 2092
+  },
+  {
+    "path": "source/experiment_plans.py",
+    "bytes": 6098
+  },
+  {
+    "path": "source/experiments.py",
+    "bytes": 26094
+  },
+  {
+    "path": "source/fsdp.py",
+    "bytes": 8580
+  },
+  {
+    "path": "source/nsight_summary.py",
+    "bytes": 3692
+  },
+  {
+    "path": "source/optimized_model.py",
+    "bytes": 4783
+  },
+  {
+    "path": "source/profiling.py",
+    "bytes": 3700
+  },
+  {
+    "path": "source/sharded_optimizer.py",
+    "bytes": 2834
+  },
+  {
+    "path": "source/triton_attention.py",
+    "bytes": 6954
+  },
+  {
+    "path": "source/triton_optimizer.py",
+    "bytes": 764
+  }
+]

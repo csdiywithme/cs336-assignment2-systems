@@ -1,0 +1,448 @@
+[
+  {
+    "name": "large-compiled-forward",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"large-compiled-forward\", \"kind\": \"model\", \"size\": \"large\", \"dtype\": \"fp32\", \"mode\": \"forward\", \"compile\": true, \"warmup\": 5, \"steps\": 10, \"timeout\": 600}",
+      "--output",
+      "/data/20260914T093129Z-models-compile-large-xl/000-large-compiled-forward"
+    ],
+    "started": 1789378296.4692633,
+    "returncode": 0,
+    "seconds": 68.4763171672821,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "large-compiled-forward",
+        "kind": "model",
+        "size": "large",
+        "dtype": "fp32",
+        "mode": "forward",
+        "compile": true,
+        "warmup": 5,
+        "steps": 10,
+        "timeout": 600
+      },
+      "started_utc": "2026-09-14T09:31:37.678444+00:00",
+      "measurements": {
+        "samples_ms": [
+          87.3711769999943,
+          87.31246799999326,
+          87.05376199999648,
+          86.72006700000168,
+          86.6548389999906,
+          86.85895499999674,
+          86.74966800001016,
+          86.5156620000107,
+          86.86722699999905,
+          87.11307200000817
+        ],
+        "mean_ms": 86.92168970000012,
+        "std_ms": 0.2832410802236955,
+        "median_ms": 86.8630909999979,
+        "cuda_event_stages": {
+          "forward": {
+            "samples_ms": [
+              86.27193450927734,
+              86.28361511230469,
+              86.20703887939453,
+              85.90838623046875,
+              86.08946990966797,
+              86.05305480957031,
+              85.96959686279297,
+              85.96659088134766,
+              86.0572509765625,
+              86.1827163696289
+            ],
+            "mean_ms": 86.09896545410156,
+            "std_ms": 0.1321722874468158,
+            "median_ms": 86.07336044311523
+          }
+        },
+        "last_scalar": 0.07578138262033463,
+        "parameters": 969411840,
+        "initial_memory": {
+          "allocated_bytes": 3991057408,
+          "reserved_bytes": 4057989120,
+          "peak_allocated_bytes": 3991057408,
+          "peak_reserved_bytes": 4057989120
+        },
+        "memory": {
+          "allocated_bytes": 4081497088,
+          "reserved_bytes": 17817403392,
+          "peak_allocated_bytes": 17710470144,
+          "peak_reserved_bytes": 17817403392
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 17710470144,
+            "reserved_bytes": 17817403392,
+            "peak_allocated_bytes": 17710470144,
+            "peak_reserved_bytes": 17817403392
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 63.21122670173645
+    }
+  },
+  {
+    "name": "large-compiled-backward",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"large-compiled-backward\", \"kind\": \"model\", \"size\": \"large\", \"dtype\": \"fp32\", \"mode\": \"backward\", \"compile\": true, \"warmup\": 5, \"steps\": 10, \"timeout\": 600}",
+      "--output",
+      "/data/20260914T093129Z-models-compile-large-xl/001-large-compiled-backward"
+    ],
+    "started": 1789378366.3290508,
+    "returncode": 0,
+    "seconds": 61.72191667556763,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "large-compiled-backward",
+        "kind": "model",
+        "size": "large",
+        "dtype": "fp32",
+        "mode": "backward",
+        "compile": true,
+        "warmup": 5,
+        "steps": 10,
+        "timeout": 600
+      },
+      "started_utc": "2026-09-14T09:32:47.518123+00:00",
+      "measurements": {
+        "samples_ms": [
+          261.18717800000013,
+          261.1028000000033,
+          261.50371499997505,
+          261.50217500000394,
+          261.24681900000724,
+          261.5062630000011,
+          260.5886059999989,
+          261.4704829999823,
+          260.9342519999984,
+          261.35231500001055
+        ],
+        "mean_ms": 261.2394605999981,
+        "std_ms": 0.30080779488638715,
+        "median_ms": 261.2995670000089,
+        "cuda_event_stages": {
+          "forward": {
+            "samples_ms": [
+              86.35222625732422,
+              86.25724792480469,
+              86.55260467529297,
+              86.55343627929688,
+              86.38854217529297,
+              86.42387390136719,
+              86.16230773925781,
+              86.31366729736328,
+              86.20063781738281,
+              86.53462219238281
+            ],
+            "mean_ms": 86.37391662597656,
+            "std_ms": 0.14345287495579198,
+            "median_ms": 86.3703842163086
+          },
+          "loss": {
+            "samples_ms": [
+              0.06883200258016586,
+              0.06831999868154526,
+              0.06758400052785873,
+              0.06825599819421768,
+              0.06886400282382965,
+              0.0689919963479042,
+              0.06851200014352798,
+              0.06815999746322632,
+              0.06844799965620041,
+              0.06918399780988693
+            ],
+            "mean_ms": 0.0685151994228363,
+            "std_ms": 0.00047137730909590185,
+            "median_ms": 0.0684799998998642
+          },
+          "backward": {
+            "samples_ms": [
+              173.08489990234375,
+              173.19363403320312,
+              173.07183837890625,
+              173.02796936035156,
+              172.900390625,
+              173.07852172851562,
+              173.11106872558594,
+              173.15280151367188,
+              172.9988555908203,
+              173.07632446289062
+            ],
+            "mean_ms": 173.06963043212892,
+            "std_ms": 0.08148632221888809,
+            "median_ms": 173.07742309570312
+          }
+        },
+        "last_scalar": 9.318534851074219,
+        "parameters": 969411840,
+        "initial_memory": {
+          "allocated_bytes": 3991057408,
+          "reserved_bytes": 4057989120,
+          "peak_allocated_bytes": 3991057408,
+          "peak_reserved_bytes": 4057989120
+        },
+        "memory": {
+          "allocated_bytes": 7885744640,
+          "reserved_bytes": 18312331264,
+          "peak_allocated_bytes": 17964750848,
+          "peak_reserved_bytes": 18312331264
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 17800910848,
+            "reserved_bytes": 18312331264,
+            "peak_allocated_bytes": 17800910848,
+            "peak_reserved_bytes": 18312331264
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 7967664640,
+            "reserved_bytes": 18312331264,
+            "peak_allocated_bytes": 17964750848,
+            "peak_reserved_bytes": 18312331264
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 56.440704584121704
+    }
+  },
+  {
+    "name": "xl-compiled-forward",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"xl-compiled-forward\", \"kind\": \"model\", \"size\": \"xl\", \"dtype\": \"fp32\", \"mode\": \"forward\", \"compile\": true, \"warmup\": 5, \"steps\": 10, \"timeout\": 600}",
+      "--output",
+      "/data/20260914T093129Z-models-compile-large-xl/002-xl-compiled-forward"
+    ],
+    "started": 1789378429.9244993,
+    "returncode": 0,
+    "seconds": 60.99332809448242,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "xl-compiled-forward",
+        "kind": "model",
+        "size": "xl",
+        "dtype": "fp32",
+        "mode": "forward",
+        "compile": true,
+        "warmup": 5,
+        "steps": 10,
+        "timeout": 600
+      },
+      "started_utc": "2026-09-14T09:33:51.171594+00:00",
+      "measurements": {
+        "samples_ms": [
+          268.94512999999165,
+          268.47267700000543,
+          268.340778999999,
+          269.05823699999587,
+          268.7369920000151,
+          268.3521090000056,
+          268.8634200000024,
+          268.6716040000192,
+          268.30056000000013,
+          269.0818869999987
+        ],
+        "mean_ms": 268.6823395000033,
+        "std_ms": 0.30208865239541166,
+        "median_ms": 268.70429800001716,
+        "cuda_event_stages": {
+          "forward": {
+            "samples_ms": [
+              268.0460205078125,
+              267.6889343261719,
+              267.78582763671875,
+              268.11016845703125,
+              267.8771057128906,
+              267.61676025390625,
+              268.0383605957031,
+              267.8280944824219,
+              267.6026306152344,
+              268.146484375
+            ],
+            "mean_ms": 267.87403869628906,
+            "std_ms": 0.2029184240856887,
+            "median_ms": 267.85260009765625
+          }
+        },
+        "last_scalar": -0.21375013887882233,
+        "parameters": 3406809600,
+        "initial_memory": {
+          "allocated_bytes": 13762373632,
+          "reserved_bytes": 13763608576,
+          "peak_allocated_bytes": 13762373632,
+          "peak_reserved_bytes": 13763608576
+        },
+        "memory": {
+          "allocated_bytes": 13852813312,
+          "reserved_bytes": 36316381184,
+          "peak_allocated_bytes": 35932424192,
+          "peak_reserved_bytes": 36316381184
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 35932424192,
+            "reserved_bytes": 36316381184,
+            "peak_allocated_bytes": 35932424192,
+            "peak_reserved_bytes": 36316381184
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 56.60116100311279
+    }
+  },
+  {
+    "name": "xl-compiled-backward",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"xl-compiled-backward\", \"kind\": \"model\", \"size\": \"xl\", \"dtype\": \"fp32\", \"mode\": \"backward\", \"compile\": true, \"warmup\": 5, \"steps\": 10, \"timeout\": 600}",
+      "--output",
+      "/data/20260914T093129Z-models-compile-large-xl/003-xl-compiled-backward"
+    ],
+    "started": 1789378493.0882623,
+    "returncode": 0,
+    "seconds": 58.4775595664978,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "xl-compiled-backward",
+        "kind": "model",
+        "size": "xl",
+        "dtype": "fp32",
+        "mode": "backward",
+        "compile": true,
+        "warmup": 5,
+        "steps": 10,
+        "timeout": 600
+      },
+      "started_utc": "2026-09-14T09:34:54.132524+00:00",
+      "measurements": {
+        "samples_ms": [
+          785.6343139999922,
+          785.8931560000144,
+          786.2677910000002,
+          785.7746740000096,
+          786.0011209999982,
+          786.3581569999951,
+          785.5801900000188,
+          785.8841270000028,
+          785.1583090000247,
+          785.2241749999962
+        ],
+        "mean_ms": 785.7776014000052,
+        "std_ms": 0.3945894062412566,
+        "median_ms": 785.8294005000062,
+        "cuda_event_stages": {
+          "forward": {
+            "samples_ms": [
+              268.0915832519531,
+              268.122802734375,
+              267.9731750488281,
+              268.1319274902344,
+              268.0534362792969,
+              268.09747314453125,
+              267.9877014160156,
+              268.0652160644531,
+              267.78900146484375,
+              267.8074951171875
+            ],
+            "mean_ms": 268.01198120117186,
+            "std_ms": 0.12405030534397804,
+            "median_ms": 268.059326171875
+          },
+          "loss": {
+            "samples_ms": [
+              0.0655359998345375,
+              0.0655359998345375,
+              0.06656000018119812,
+              0.0655359998345375,
+              0.0655680000782013,
+              0.0655359998345375,
+              0.06764800101518631,
+              0.06550399959087372,
+              0.06639999896287918,
+              0.06560000032186508
+            ],
+            "mean_ms": 0.06594239994883537,
+            "std_ms": 0.0007157089535210859,
+            "median_ms": 0.0655519999563694
+          },
+          "backward": {
+            "samples_ms": [
+              516.0571899414062,
+              516.26611328125,
+              516.9264526367188,
+              516.1697998046875,
+              516.7269287109375,
+              516.87841796875,
+              516.39501953125,
+              516.3788452148438,
+              516.1565551757812,
+              516.2723388671875
+            ],
+            "mean_ms": 516.4227661132812,
+            "std_ms": 0.3113067710569894,
+            "median_ms": 516.3255920410156
+          }
+        },
+        "last_scalar": 9.4176664352417,
+        "parameters": 3406809600,
+        "initial_memory": {
+          "allocated_bytes": 13762373632,
+          "reserved_bytes": 13763608576,
+          "peak_allocated_bytes": 13762373632,
+          "peak_reserved_bytes": 13763608576
+        },
+        "memory": {
+          "allocated_bytes": 27406651904,
+          "reserved_bytes": 40542142464,
+          "peak_allocated_bytes": 36312538112,
+          "peak_reserved_bytes": 40542142464
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 36022864896,
+            "reserved_bytes": 40542142464,
+            "peak_allocated_bytes": 36022864896,
+            "peak_reserved_bytes": 40542142464
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 27488571904,
+            "reserved_bytes": 40542142464,
+            "peak_allocated_bytes": 36312538112,
+            "peak_reserved_bytes": 40542142464
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 53.96413254737854
+    }
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "name": "flash-triton-bf16-s8192-d128",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"flash-triton-bf16-s8192-d128\", \"kind\": \"attention\", \"implementation\": \"triton\", \"batch\": 1, \"seq\": 8192, \"dim\": 128, \"dtype\": \"bf16\", \"causal\": true, \"triton_bench\": true, \"steps\": 10, \"warmup\": 5, \"timeout\": 240}",
+    "--output",
+    "/data/20260914T092409Z-flash-triton-compiled-backward/067-flash-triton-bf16-s8192-d128"
+  ],
+  "started": 1789378663.6877887,
+  "returncode": 0,
+  "seconds": 8.951029062271118,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "flash-triton-bf16-s8192-d128",
+      "kind": "attention",
+      "implementation": "triton",
+      "batch": 1,
+      "seq": 8192,
+      "dim": 128,
+      "dtype": "bf16",
+      "causal": true,
+      "triton_bench": true,
+      "steps": 10,
+      "warmup": 5,
+      "timeout": 240
+    },
+    "started_utc": "2026-09-14T09:37:44.770847+00:00",
+    "measurements": {
+      "forward": {
+        "mean_ms": 0.169854185788344,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory_before_backward": {
+        "allocated_bytes": 10518528,
+        "reserved_bytes": 291504128,
+        "peak_allocated_bytes": 278953984,
+        "peak_reserved_bytes": 291504128
+      },
+      "backward": {
+        "mean_ms": 1.8878338164296644,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "end_to_end": {
+        "mean_ms": 2.0541468364436453,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory": {
+        "allocated_bytes": 23199744,
+        "reserved_bytes": 1117782016,
+        "peak_allocated_bytes": 1105395712,
+        "peak_reserved_bytes": 1251999744
+      }
+    },
+    "status": "ok",
+    "wall_seconds": 6.407907009124756
+  }
+}

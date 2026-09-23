@@ -1,0 +1,18 @@
+{
+  "config": {
+    "name": "nsys-small-s256",
+    "kind": "model",
+    "size": "small",
+    "seq": 256,
+    "mode": "train",
+    "dtype": "fp32",
+    "warmup": 5,
+    "steps": 1,
+    "nsys": true,
+    "timeout": 300
+  },
+  "started_utc": "2026-09-14T08:58:09.612347+00:00",
+  "status": "failed",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/cs336_systems/experiments.py\", line 395, in main\n    result[\"measurements\"] = kinds[cfg[\"kind\"]](cfg, out)\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/cs336_systems/experiments.py\", line 142, in model_benchmark\n    step()\n    ~~~~^^\n  File \"/workspace/cs336_systems/experiments.py\", line 117, in step\n    logits = model(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 253, in forward\n    x = layer(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 382, in forward\n    x_attn = self.attn(self.ln1(x))\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 520, in forward\n    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)\nTypeError: annotate_attention.<locals>.attention() got an unexpected keyword argument 'K'. Did you mean 'k'?\n",
+  "wall_seconds": 1.7405567169189453
+}

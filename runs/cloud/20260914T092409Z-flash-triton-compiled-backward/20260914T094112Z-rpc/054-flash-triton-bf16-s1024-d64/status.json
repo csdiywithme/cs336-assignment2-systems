@@ -1,0 +1,67 @@
+{
+  "name": "flash-triton-bf16-s1024-d64",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"flash-triton-bf16-s1024-d64\", \"kind\": \"attention\", \"implementation\": \"triton\", \"batch\": 1, \"seq\": 1024, \"dim\": 64, \"dtype\": \"bf16\", \"causal\": true, \"triton_bench\": true, \"steps\": 10, \"warmup\": 5, \"timeout\": 240}",
+    "--output",
+    "/data/20260914T092409Z-flash-triton-compiled-backward/054-flash-triton-bf16-s1024-d64"
+  ],
+  "started": 1789378519.0383372,
+  "returncode": 0,
+  "seconds": 9.110142230987549,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "flash-triton-bf16-s1024-d64",
+      "kind": "attention",
+      "implementation": "triton",
+      "batch": 1,
+      "seq": 1024,
+      "dim": 64,
+      "dtype": "bf16",
+      "causal": true,
+      "triton_bench": true,
+      "steps": 10,
+      "warmup": 5,
+      "timeout": 240
+    },
+    "started_utc": "2026-09-14T09:35:20.176247+00:00",
+    "measurements": {
+      "forward": {
+        "mean_ms": 0.018878502956433604,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory_before_backward": {
+        "allocated_bytes": 659456,
+        "reserved_bytes": 270532608,
+        "peak_allocated_bytes": 269094912,
+        "peak_reserved_bytes": 270532608
+      },
+      "backward": {
+        "mean_ms": 0.14419089419089154,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "end_to_end": {
+        "mean_ms": 0.19248707946334967,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory": {
+        "allocated_bytes": 9437184,
+        "reserved_bytes": 538968064,
+        "peak_allocated_bytes": 290988032,
+        "peak_reserved_bytes": 538968064
+      }
+    },
+    "status": "ok",
+    "wall_seconds": 5.8963634967803955
+  }
+}

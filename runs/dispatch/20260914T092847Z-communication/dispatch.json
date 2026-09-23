@@ -1,0 +1,7 @@
+{
+  "run_id": "20260914T092847Z-communication",
+  "call_id": "fc-01M2FKYTDXSXBSS0C14AT8NZ7M",
+  "gpu_count": 6,
+  "timeout_seconds": 900,
+  "plan": "communication"
+}

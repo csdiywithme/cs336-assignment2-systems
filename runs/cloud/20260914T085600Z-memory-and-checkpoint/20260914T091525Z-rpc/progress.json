@@ -1,0 +1,1281 @@
+[
+  {
+    "name": "memory-xl-s128-fp32-forward",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"memory-xl-s128-fp32-forward\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 128, \"dtype\": \"fp32\", \"mode\": \"forward\", \"memory_history\": true, \"warmup\": 2, \"steps\": 2, \"timeout\": 600}",
+      "--output",
+      "/data/20260914T085600Z-memory-and-checkpoint/000-memory-xl-s128-fp32-forward"
+    ],
+    "started": 1789376166.2636247,
+    "returncode": 0,
+    "seconds": 5.928616523742676,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "memory-xl-s128-fp32-forward",
+        "kind": "model",
+        "size": "xl",
+        "seq": 128,
+        "dtype": "fp32",
+        "mode": "forward",
+        "memory_history": true,
+        "warmup": 2,
+        "steps": 2,
+        "timeout": 600
+      },
+      "started_utc": "2026-09-14T08:56:07.563347+00:00",
+      "measurements": {
+        "samples_ms": [
+          91.1291159999994,
+          89.5713090000001
+        ],
+        "mean_ms": 90.35021249999974,
+        "std_ms": 1.1015358934793775,
+        "median_ms": 90.35021249999974,
+        "cuda_event_stages": {
+          "forward": {
+            "samples_ms": [
+              90.08573150634766,
+              88.97110748291016
+            ],
+            "mean_ms": 89.5284194946289,
+            "std_ms": 0.7881582054460895,
+            "median_ms": 89.5284194946289
+          }
+        },
+        "last_scalar": -0.2137499302625656,
+        "parameters": 3406809600,
+        "initial_memory": {
+          "allocated_bytes": 13762226176,
+          "reserved_bytes": 13763608576,
+          "peak_allocated_bytes": 13762226176,
+          "peak_reserved_bytes": 13763608576
+        },
+        "memory": {
+          "allocated_bytes": 13791717376,
+          "reserved_bytes": 19537068032,
+          "peak_allocated_bytes": 19384430592,
+          "peak_reserved_bytes": 19537068032
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 19384430592,
+            "reserved_bytes": 19537068032,
+            "peak_allocated_bytes": 19384430592,
+            "peak_reserved_bytes": 19537068032
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 3.6843159198760986
+    }
+  },
+  {
+    "name": "memory-xl-s128-fp32-train",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"memory-xl-s128-fp32-train\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 128, \"dtype\": \"fp32\", \"mode\": \"train\", \"memory_history\": true, \"warmup\": 2, \"steps\": 2, \"timeout\": 600}",
+      "--output",
+      "/data/20260914T085600Z-memory-and-checkpoint/001-memory-xl-s128-fp32-train"
+    ],
+    "started": 1789376173.0020993,
+    "returncode": 0,
+    "seconds": 7.186368703842163,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "memory-xl-s128-fp32-train",
+        "kind": "model",
+        "size": "xl",
+        "seq": 128,
+        "dtype": "fp32",
+        "mode": "train",
+        "memory_history": true,
+        "warmup": 2,
+        "steps": 2,
+        "timeout": 600
+      },
+      "started_utc": "2026-09-14T08:56:14.206484+00:00",
+      "measurements": {
+        "samples_ms": [
+          346.3072829999998,
+          345.54151500000074
+        ],
+        "mean_ms": 345.9243990000003,
+        "std_ms": 0.5414797456150029,
+        "median_ms": 345.9243990000003,
+        "cuda_event_stages": {
+          "forward": {
+            "samples_ms": [
+              89.63571166992188,
+              89.2991714477539
+            ],
+            "mean_ms": 89.46744155883789,
+            "std_ms": 0.23796987323699798,
+            "median_ms": 89.46744155883789
+          },
+          "loss": {
+            "samples_ms": [
+              0.03481600061058998,
+              0.03376000002026558
+            ],
+            "mean_ms": 0.03428800031542778,
+            "std_ms": 0.0007467051783553819,
+            "median_ms": 0.03428800031542778
+          },
+          "backward": {
+            "samples_ms": [
+              175.24937438964844,
+              175.22586059570312
+            ],
+            "mean_ms": 175.23761749267578,
+            "std_ms": 0.016626763150153653,
+            "median_ms": 175.23761749267578
+          },
+          "optimizer": {
+            "samples_ms": [
+              79.38265228271484,
+              79.3232650756836
+            ],
+            "mean_ms": 79.35295867919922,
+            "std_ms": 0.04199309680752629,
+            "median_ms": 79.35295867919922
+          }
+        },
+        "last_scalar": 7.228424549102783,
+        "parameters": 3406809600,
+        "initial_memory": {
+          "allocated_bytes": 13762226176,
+          "reserved_bytes": 13763608576,
+          "peak_allocated_bytes": 13762226176,
+          "peak_reserved_bytes": 13763608576
+        },
+        "memory": {
+          "allocated_bytes": 54661341696,
+          "reserved_bytes": 61519953920,
+          "peak_allocated_bytes": 55206601216,
+          "peak_reserved_bytes": 61519953920
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 46668399616,
+            "reserved_bytes": 61519953920,
+            "peak_allocated_bytes": 46668399616,
+            "peak_reserved_bytes": 61519953920
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 54682313216,
+            "reserved_bytes": 61519953920,
+            "peak_allocated_bytes": 54687573504,
+            "peak_reserved_bytes": 61519953920
+          },
+          {
+            "stage": "after_optimizer",
+            "allocated_bytes": 54682313216,
+            "reserved_bytes": 61519953920,
+            "peak_allocated_bytes": 55206601216,
+            "peak_reserved_bytes": 61519953920
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 5.038370370864868
+    }
+  },
+  {
+    "name": "memory-xl-s128-bf16-forward",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"memory-xl-s128-bf16-forward\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 128, \"dtype\": \"bf16\", \"mode\": \"forward\", \"memory_history\": true, \"warmup\": 2, \"steps\": 2, \"timeout\": 600}",
+      "--output",
+      "/data/20260914T085600Z-memory-and-checkpoint/002-memory-xl-s128-bf16-forward"
+    ],
+    "started": 1789376181.793968,
+    "returncode": 0,
+    "seconds": 4.6629838943481445,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "memory-xl-s128-bf16-forward",
+        "kind": "model",
+        "size": "xl",
+        "seq": 128,
+        "dtype": "bf16",
+        "mode": "forward",
+        "memory_history": true,
+        "warmup": 2,
+        "steps": 2,
+        "timeout": 600
+      },
+      "started_utc": "2026-09-14T08:56:22.877995+00:00",
+      "measurements": {
+        "samples_ms": [
+          42.312227000000036,
+          41.146619000002715
+        ],
+        "mean_ms": 41.729423000001375,
+        "std_ms": 0.8242093210033943,
+        "median_ms": 41.729423000001375,
+        "cuda_event_stages": {
+          "forward": {
+            "samples_ms": [
+              35.034400939941406,
+              34.7564811706543
+            ],
+            "mean_ms": 34.89544105529785,
+            "std_ms": 0.19651895348871581,
+            "median_ms": 34.89544105529785
+          }
+        },
+        "last_scalar": -0.2138671875,
+        "parameters": 3406809600,
+        "initial_memory": {
+          "allocated_bytes": 13762226176,
+          "reserved_bytes": 13763608576,
+          "peak_allocated_bytes": 13762226176,
+          "peak_reserved_bytes": 13763608576
+        },
+        "memory": {
+          "allocated_bytes": 13780985856,
+          "reserved_bytes": 24333254656,
+          "peak_allocated_bytes": 24094732288,
+          "peak_reserved_bytes": 24333254656
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 24089489408,
+            "reserved_bytes": 24333254656,
+            "peak_allocated_bytes": 24094732288,
+            "peak_reserved_bytes": 24333254656
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 2.6758460998535156
+    }
+  },
+  {
+    "name": "memory-xl-s128-bf16-train",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"memory-xl-s128-bf16-train\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 128, \"dtype\": \"bf16\", \"mode\": \"train\", \"memory_history\": true, \"warmup\": 2, \"steps\": 2, \"timeout\": 600}",
+      "--output",
+      "/data/20260914T085600Z-memory-and-checkpoint/003-memory-xl-s128-bf16-train"
+    ],
+    "started": 1789376187.452804,
+    "returncode": 0,
+    "seconds": 6.480510711669922,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "memory-xl-s128-bf16-train",
+        "kind": "model",
+        "size": "xl",
+        "seq": 128,
+        "dtype": "bf16",
+        "mode": "train",
+        "memory_history": true,
+        "warmup": 2,
+        "steps": 2,
+        "timeout": 600
+      },
+      "started_utc": "2026-09-14T08:56:28.604903+00:00",
+      "measurements": {
+        "samples_ms": [
+          200.73275400000057,
+          201.526482000002
+        ],
+        "mean_ms": 201.1296180000013,
+        "std_ms": 0.561250451218652,
+        "median_ms": 201.1296180000013,
+        "cuda_event_stages": {
+          "forward": {
+            "samples_ms": [
+              36.50259017944336,
+              35.03254318237305
+            ],
+            "mean_ms": 35.7675666809082,
+            "std_ms": 1.0394802002913388,
+            "median_ms": 35.7675666809082
+          },
+          "loss": {
+            "samples_ms": [
+              0.1629759967327118,
+              0.11241599917411804
+            ],
+            "mean_ms": 0.13769599795341492,
+            "std_ms": 0.03575131713045693,
+            "median_ms": 0.13769599795341492
+          },
+          "backward": {
+            "samples_ms": [
+              82.59632110595703,
+              85.05494689941406
+            ],
+            "mean_ms": 83.82563400268555,
+            "std_ms": 1.7385109709536228,
+            "median_ms": 83.82563400268555
+          },
+          "optimizer": {
+            "samples_ms": [
+              79.37474822998047,
+              79.7251205444336
+            ],
+            "mean_ms": 79.54993438720703,
+            "std_ms": 0.2477506394898301,
+            "median_ms": 79.54993438720703
+          }
+        },
+        "last_scalar": 7.269082069396973,
+        "parameters": 3406809600,
+        "initial_memory": {
+          "allocated_bytes": 13762226176,
+          "reserved_bytes": 13763608576,
+          "peak_allocated_bytes": 13762226176,
+          "peak_reserved_bytes": 13763608576
+        },
+        "memory": {
+          "allocated_bytes": 54660981248,
+          "reserved_bytes": 62566432768,
+          "peak_allocated_bytes": 55195509248,
+          "peak_reserved_bytes": 62566432768
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 51369296896,
+            "reserved_bytes": 62566432768,
+            "peak_allocated_bytes": 51389776896,
+            "peak_reserved_bytes": 62566432768
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 54671221248,
+            "reserved_bytes": 62566432768,
+            "peak_allocated_bytes": 54687507456,
+            "peak_reserved_bytes": 62566432768
+          },
+          {
+            "stage": "after_optimizer",
+            "allocated_bytes": 54671221248,
+            "reserved_bytes": 62566432768,
+            "peak_allocated_bytes": 55195509248,
+            "peak_reserved_bytes": 62566432768
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 4.343771934509277
+    }
+  },
+  {
+    "name": "memory-xl-s2048-fp32-forward",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"memory-xl-s2048-fp32-forward\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 2048, \"dtype\": \"fp32\", \"mode\": \"forward\", \"memory_history\": true, \"warmup\": 2, \"steps\": 2, \"timeout\": 600}",
+      "--output",
+      "/data/20260914T085600Z-memory-and-checkpoint/004-memory-xl-s2048-fp32-forward"
+    ],
+    "started": 1789376195.8832877,
+    "returncode": 0,
+    "seconds": 4.822101593017578,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "memory-xl-s2048-fp32-forward",
+        "kind": "model",
+        "size": "xl",
+        "seq": 2048,
+        "dtype": "fp32",
+        "mode": "forward",
+        "memory_history": true,
+        "warmup": 2,
+        "steps": 2,
+        "timeout": 600
+      },
+      "started_utc": "2026-09-14T08:56:36.985251+00:00",
+      "status": "oom",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/cs336_systems/experiments.py\", line 395, in main\n    result[\"measurements\"] = kinds[cfg[\"kind\"]](cfg, out)\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/cs336_systems/experiments.py\", line 142, in model_benchmark\n    step()\n    ~~~~^^\n  File \"/workspace/cs336_systems/experiments.py\", line 117, in step\n    logits = model(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 253, in forward\n    x = layer(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 382, in forward\n    x_attn = self.attn(self.ln1(x))\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 520, in forward\n    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 432, in scaled_dot_product_attention\n    attention_weights = softmax(attention_scores, dim=-1)  # Softmax over the key dimension\n  File \"/workspace/cs336-basics/cs336_basics/nn_utils.py\", line 6, in softmax\n    exponentiated_rescaled_input = torch.exp(rescaled_input)\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 GiB. GPU 0 has a total capacity of 178.35 GiB of which 15.88 MiB is free. Process 1 has 178.32 GiB memory in use. Of the allocated memory 176.07 GiB is allocated by PyTorch, and 1.50 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n",
+      "memory": {
+        "allocated_bytes": 189049989120,
+        "reserved_bytes": 190660476928,
+        "peak_allocated_bytes": 189051037696,
+        "peak_reserved_bytes": 190662574080
+      },
+      "wall_seconds": 2.802312135696411
+    }
+  },
+  {
+    "name": "memory-xl-s2048-fp32-train",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"memory-xl-s2048-fp32-train\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 2048, \"dtype\": \"fp32\", \"mode\": \"train\", \"memory_history\": true, \"warmup\": 2, \"steps\": 2, \"timeout\": 600}",
+      "--output",
+      "/data/20260914T085600Z-memory-and-checkpoint/005-memory-xl-s2048-fp32-train"
+    ],
+    "started": 1789376201.4607089,
+    "returncode": 0,
+    "seconds": 4.97041130065918,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "memory-xl-s2048-fp32-train",
+        "kind": "model",
+        "size": "xl",
+        "seq": 2048,
+        "dtype": "fp32",
+        "mode": "train",
+        "memory_history": true,
+        "warmup": 2,
+        "steps": 2,
+        "timeout": 600
+      },
+      "started_utc": "2026-09-14T08:56:42.670718+00:00",
+      "status": "oom",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/cs336_systems/experiments.py\", line 395, in main\n    result[\"measurements\"] = kinds[cfg[\"kind\"]](cfg, out)\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/cs336_systems/experiments.py\", line 142, in model_benchmark\n    step()\n    ~~~~^^\n  File \"/workspace/cs336_systems/experiments.py\", line 117, in step\n    logits = model(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 253, in forward\n    x = layer(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 382, in forward\n    x_attn = self.attn(self.ln1(x))\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 520, in forward\n    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 432, in scaled_dot_product_attention\n    attention_weights = softmax(attention_scores, dim=-1)  # Softmax over the key dimension\n  File \"/workspace/cs336-basics/cs336_basics/nn_utils.py\", line 6, in softmax\n    exponentiated_rescaled_input = torch.exp(rescaled_input)\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 GiB. GPU 0 has a total capacity of 178.35 GiB of which 15.88 MiB is free. Process 1 has 178.32 GiB memory in use. Of the allocated memory 176.07 GiB is allocated by PyTorch, and 1.50 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n",
+      "memory": {
+        "allocated_bytes": 189049989120,
+        "reserved_bytes": 190660476928,
+        "peak_allocated_bytes": 189051037696,
+        "peak_reserved_bytes": 190662574080
+      },
+      "wall_seconds": 2.9215381145477295
+    }
+  },
+  {
+    "name": "memory-xl-s2048-bf16-forward",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"memory-xl-s2048-bf16-forward\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 2048, \"dtype\": \"bf16\", \"mode\": \"forward\", \"memory_history\": true, \"warmup\": 2, \"steps\": 2, \"timeout\": 600}",
+      "--output",
+      "/data/20260914T085600Z-memory-and-checkpoint/006-memory-xl-s2048-bf16-forward"
+    ],
+    "started": 1789376207.2160602,
+    "returncode": 0,
+    "seconds": 6.16645884513855,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "memory-xl-s2048-bf16-forward",
+        "kind": "model",
+        "size": "xl",
+        "seq": 2048,
+        "dtype": "bf16",
+        "mode": "forward",
+        "memory_history": true,
+        "warmup": 2,
+        "steps": 2,
+        "timeout": 600
+      },
+      "started_utc": "2026-09-14T08:56:48.350439+00:00",
+      "measurements": {
+        "samples_ms": [
+          355.37266299999715,
+          354.8152299999998
+        ],
+        "mean_ms": 355.0939464999985,
+        "std_ms": 0.39416465435527387,
+        "median_ms": 355.0939464999985,
+        "cuda_event_stages": {
+          "forward": {
+            "samples_ms": [
+              354.5790710449219,
+              354.04058837890625
+            ],
+            "mean_ms": 354.30982971191406,
+            "std_ms": 0.3807647446910593,
+            "median_ms": 354.30982971191406
+          }
+        },
+        "last_scalar": -0.2138671875,
+        "parameters": 3406809600,
+        "initial_memory": {
+          "allocated_bytes": 13762963456,
+          "reserved_bytes": 13763608576,
+          "peak_allocated_bytes": 13762963456,
+          "peak_reserved_bytes": 13763608576
+        },
+        "memory": {
+          "allocated_bytes": 13935323136,
+          "reserved_bytes": 176838148096,
+          "peak_allocated_bytes": 175732942848,
+          "peak_reserved_bytes": 176838148096
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 173903833088,
+            "reserved_bytes": 176838148096,
+            "peak_allocated_bytes": 175732942848,
+            "peak_reserved_bytes": 176838148096
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 4.015208959579468
+    }
+  },
+  {
+    "name": "memory-xl-s2048-bf16-train",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"memory-xl-s2048-bf16-train\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 2048, \"dtype\": \"bf16\", \"mode\": \"train\", \"memory_history\": true, \"warmup\": 2, \"steps\": 2, \"timeout\": 600}",
+      "--output",
+      "/data/20260914T085600Z-memory-and-checkpoint/007-memory-xl-s2048-bf16-train"
+    ],
+    "started": 1789376214.5716264,
+    "returncode": 0,
+    "seconds": 5.215967655181885,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "memory-xl-s2048-bf16-train",
+        "kind": "model",
+        "size": "xl",
+        "seq": 2048,
+        "dtype": "bf16",
+        "mode": "train",
+        "memory_history": true,
+        "warmup": 2,
+        "steps": 2,
+        "timeout": 600
+      },
+      "started_utc": "2026-09-14T08:56:55.730876+00:00",
+      "status": "oom",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/cs336_systems/experiments.py\", line 395, in main\n    result[\"measurements\"] = kinds[cfg[\"kind\"]](cfg, out)\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/cs336_systems/experiments.py\", line 142, in model_benchmark\n    step()\n    ~~~~^^\n  File \"/workspace/cs336_systems/experiments.py\", line 117, in step\n    logits = model(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 253, in forward\n    x = layer(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 382, in forward\n    x_attn = self.attn(self.ln1(x))\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 520, in forward\n    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 432, in scaled_dot_product_attention\n    attention_weights = softmax(attention_scores, dim=-1)  # Softmax over the key dimension\n  File \"/workspace/cs336-basics/cs336_basics/nn_utils.py\", line 6, in softmax\n    exponentiated_rescaled_input = torch.exp(rescaled_input)\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 GiB. GPU 0 has a total capacity of 178.35 GiB of which 847.88 MiB is free. Process 1 has 177.51 GiB memory in use. Of the allocated memory 175.68 GiB is allocated by PyTorch, and 1.01 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n",
+      "memory": {
+        "allocated_bytes": 188634773504,
+        "reserved_bytes": 189720952832,
+        "peak_allocated_bytes": 188635297792,
+        "peak_reserved_bytes": 189725147136
+      },
+      "wall_seconds": 3.23856520652771
+    }
+  },
+  {
+    "name": "checkpoint-1",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"checkpoint-1\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 2048, \"dtype\": \"fp32\", \"mode\": \"backward\", \"checkpoint_segments\": 1, \"warmup\": 2, \"steps\": 3, \"timeout\": 600}",
+      "--output",
+      "/data/20260914T085600Z-memory-and-checkpoint/008-checkpoint-1"
+    ],
+    "started": 1789376221.6413977,
+    "returncode": 0,
+    "seconds": 5.929117679595947,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "checkpoint-1",
+        "kind": "model",
+        "size": "xl",
+        "seq": 2048,
+        "dtype": "fp32",
+        "mode": "backward",
+        "checkpoint_segments": 1,
+        "warmup": 2,
+        "steps": 3,
+        "timeout": 600
+      },
+      "started_utc": "2026-09-14T08:57:02.768294+00:00",
+      "status": "oom",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/cs336_systems/experiments.py\", line 395, in main\n    result[\"measurements\"] = kinds[cfg[\"kind\"]](cfg, out)\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/cs336_systems/experiments.py\", line 142, in model_benchmark\n    step()\n    ~~~~^^\n  File \"/workspace/cs336_systems/experiments.py\", line 127, in step\n    loss.backward()\n    ~~~~~~~~~~~~~^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/_tensor.py\", line 631, in backward\n    torch.autograd.backward(\n    ~~~~~~~~~~~~~~~~~~~~~~~^\n        self, gradient, retain_graph, create_graph, inputs=inputs\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/usr/local/lib/python3.13/site-packages/torch/autograd/__init__.py\", line 381, in backward\n    _engine_run_backward(\n    ~~~~~~~~~~~~~~~~~~~~^\n        tensors,\n        ^^^^^^^^\n    ...<5 lines>...\n        accumulate_grad=True,\n        ^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/usr/local/lib/python3.13/site-packages/torch/autograd/graph.py\", line 869, in _engine_run_backward\n    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        t_outputs, *args, **kwargs\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )  # Calls into the C++ engine to run the backward pass\n    ^\n  File \"/usr/local/lib/python3.13/site-packages/torch/utils/checkpoint.py\", line 1173, in unpack_hook\n    _run_fn_with_dynamo_disabled(frame.recompute_fn, *args)\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/_compile.py\", line 54, in inner\n    return disable_fn(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py\", line 1263, in _fn\n    return fn(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/site-packages/torch/utils/checkpoint.py\", line 1139, in _run_fn_with_dynamo_disabled\n    return fn(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/site-packages/torch/utils/checkpoint.py\", line 1607, in recompute_fn\n    fn(*args, **kwargs)\n    ~~^^^^^^^^^^^^^^^^^\n  File \"/workspace/cs336_systems/experiments.py\", line 84, in run\n    value = layer(value)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 382, in forward\n    x_attn = self.attn(self.ln1(x))\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 520, in forward\n    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 427, in scaled_dot_product_attention\n    attention_scores = einsum(Q, K, \"... query d_k, ... key d_k -> ... query key\") / math.sqrt(d_k)\n                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 GiB. GPU 0 has a total capacity of 178.35 GiB of which 69.88 MiB is free. Process 1 has 178.27 GiB memory in use. Of the allocated memory 174.55 GiB is allocated by PyTorch, and 2.90 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n",
+      "memory": {
+        "allocated_bytes": 185191732224,
+        "reserved_bytes": 190536744960,
+        "peak_allocated_bytes": 187423101952,
+        "peak_reserved_bytes": 190578688000
+      },
+      "wall_seconds": 4.054732322692871
+    }
+  },
+  {
+    "name": "checkpoint-2",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"checkpoint-2\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 2048, \"dtype\": \"fp32\", \"mode\": \"backward\", \"checkpoint_segments\": 2, \"warmup\": 2, \"steps\": 3, \"timeout\": 600}",
+      "--output",
+      "/data/20260914T085600Z-memory-and-checkpoint/009-checkpoint-2"
+    ],
+    "started": 1789376228.6137538,
+    "returncode": 0,
+    "seconds": 34.65103006362915,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "checkpoint-2",
+        "kind": "model",
+        "size": "xl",
+        "seq": 2048,
+        "dtype": "fp32",
+        "mode": "backward",
+        "checkpoint_segments": 2,
+        "warmup": 2,
+        "steps": 3,
+        "timeout": 600
+      },
+      "started_utc": "2026-09-14T08:57:09.843630+00:00",
+      "measurements": {
+        "samples_ms": [
+          5151.357035000004,
+          5151.01892700001,
+          5151.9172739999985
+        ],
+        "mean_ms": 5151.431078666671,
+        "std_ms": 0.45372754107195307,
+        "median_ms": 5151.357035000004,
+        "cuda_event_stages": {
+          "forward": {
+            "samples_ms": [
+              1310.7183837890625,
+              1310.702392578125,
+              1310.773193359375
+            ],
+            "mean_ms": 1310.7313232421875,
+            "std_ms": 0.037131654175152795,
+            "median_ms": 1310.7183837890625
+          },
+          "loss": {
+            "samples_ms": [
+              0.19305600225925446,
+              0.1934400051832199,
+              0.19382399320602417
+            ],
+            "mean_ms": 0.19344000021616617,
+            "std_ms": 0.00038399547340895086,
+            "median_ms": 0.1934400051832199
+          },
+          "backward": {
+            "samples_ms": [
+              3838.200439453125,
+              3838.486328125,
+              3838.584716796875
+            ],
+            "mean_ms": 3838.423828125,
+            "std_ms": 0.19961702515038368,
+            "median_ms": 3838.486328125
+          }
+        },
+        "last_scalar": 9.408011436462402,
+        "parameters": 3406809600,
+        "initial_memory": {
+          "allocated_bytes": 13762963456,
+          "reserved_bytes": 13763608576,
+          "peak_allocated_bytes": 13762963456,
+          "peak_reserved_bytes": 13763608576
+        },
+        "memory": {
+          "allocated_bytes": 27407438336,
+          "reserved_bytes": 141176078336,
+          "peak_allocated_bytes": 137035545600,
+          "peak_reserved_bytes": 141176078336
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 14854827008,
+            "reserved_bytes": 141176078336,
+            "peak_allocated_bytes": 22962399232,
+            "peak_reserved_bytes": 141176078336
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 27735118336,
+            "reserved_bytes": 141176078336,
+            "peak_allocated_bytes": 137035545600,
+            "peak_reserved_bytes": 141176078336
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 32.67217540740967
+    }
+  },
+  {
+    "name": "checkpoint-4",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"checkpoint-4\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 2048, \"dtype\": \"fp32\", \"mode\": \"backward\", \"checkpoint_segments\": 4, \"warmup\": 2, \"steps\": 3, \"timeout\": 600}",
+      "--output",
+      "/data/20260914T085600Z-memory-and-checkpoint/010-checkpoint-4"
+    ],
+    "started": 1789376264.1040792,
+    "returncode": 0,
+    "seconds": 34.51293325424194,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "checkpoint-4",
+        "kind": "model",
+        "size": "xl",
+        "seq": 2048,
+        "dtype": "fp32",
+        "mode": "backward",
+        "checkpoint_segments": 4,
+        "warmup": 2,
+        "steps": 3,
+        "timeout": 600
+      },
+      "started_utc": "2026-09-14T08:57:45.212672+00:00",
+      "measurements": {
+        "samples_ms": [
+          5136.104501000005,
+          5136.408924999998,
+          5137.422466999993
+        ],
+        "mean_ms": 5136.645297666665,
+        "std_ms": 0.6900453770887697,
+        "median_ms": 5136.408924999998,
+        "cuda_event_stages": {
+          "forward": {
+            "samples_ms": [
+              1310.767333984375,
+              1310.6661376953125,
+              1310.684814453125
+            ],
+            "mean_ms": 1310.7060953776042,
+            "std_ms": 0.053850074651956244,
+            "median_ms": 1310.684814453125
+          },
+          "loss": {
+            "samples_ms": [
+              0.19523200392723083,
+              0.1934719979763031,
+              0.19299200177192688
+            ],
+            "mean_ms": 0.19389866789182028,
+            "std_ms": 0.0011793802722392653,
+            "median_ms": 0.1934719979763031
+          },
+          "backward": {
+            "samples_ms": [
+              3823.756103515625,
+              3823.926025390625,
+              3824.86376953125
+            ],
+            "mean_ms": 3824.1819661458335,
+            "std_ms": 0.5965402360068428,
+            "median_ms": 3823.926025390625
+          }
+        },
+        "last_scalar": 9.408011436462402,
+        "parameters": 3406809600,
+        "initial_memory": {
+          "allocated_bytes": 13762963456,
+          "reserved_bytes": 13763608576,
+          "peak_allocated_bytes": 13762963456,
+          "peak_reserved_bytes": 13763608576
+        },
+        "memory": {
+          "allocated_bytes": 27407241728,
+          "reserved_bytes": 89628082176,
+          "peak_allocated_bytes": 85841411072,
+          "peak_reserved_bytes": 89628082176
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 15022599168,
+            "reserved_bytes": 89628082176,
+            "peak_allocated_bytes": 23130171392,
+            "peak_reserved_bytes": 89628082176
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 27734921728,
+            "reserved_bytes": 89628082176,
+            "peak_allocated_bytes": 85841411072,
+            "peak_reserved_bytes": 89628082176
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 32.596879959106445
+    }
+  },
+  {
+    "name": "checkpoint-8",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"checkpoint-8\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 2048, \"dtype\": \"fp32\", \"mode\": \"backward\", \"checkpoint_segments\": 8, \"warmup\": 2, \"steps\": 3, \"timeout\": 600}",
+      "--output",
+      "/data/20260914T085600Z-memory-and-checkpoint/011-checkpoint-8"
+    ],
+    "started": 1789376299.5017357,
+    "returncode": 0,
+    "seconds": 34.27884244918823,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "checkpoint-8",
+        "kind": "model",
+        "size": "xl",
+        "seq": 2048,
+        "dtype": "fp32",
+        "mode": "backward",
+        "checkpoint_segments": 8,
+        "warmup": 2,
+        "steps": 3,
+        "timeout": 600
+      },
+      "started_utc": "2026-09-14T08:58:20.715467+00:00",
+      "measurements": {
+        "samples_ms": [
+          5106.8556929999995,
+          5106.078299999979,
+          5106.066171999999
+        ],
+        "mean_ms": 5106.333388333326,
+        "std_ms": 0.4523697555293412,
+        "median_ms": 5106.078299999979,
+        "cuda_event_stages": {
+          "forward": {
+            "samples_ms": [
+              1310.966796875,
+              1310.64892578125,
+              1310.64453125
+            ],
+            "mean_ms": 1310.75341796875,
+            "std_ms": 0.18480461628585343,
+            "median_ms": 1310.64892578125
+          },
+          "loss": {
+            "samples_ms": [
+              0.19350400567054749,
+              0.19257600605487823,
+              0.19353599846363068
+            ],
+            "mean_ms": 0.19320533672968546,
+            "std_ms": 0.0005452510507943191,
+            "median_ms": 0.19350400567054749
+          },
+          "backward": {
+            "samples_ms": [
+              3793.60986328125,
+              3793.975341796875,
+              3793.9599609375
+            ],
+            "mean_ms": 3793.848388671875,
+            "std_ms": 0.20671215297699602,
+            "median_ms": 3793.9599609375
+          }
+        },
+        "last_scalar": 9.408011436462402,
+        "parameters": 3406809600,
+        "initial_memory": {
+          "allocated_bytes": 13762963456,
+          "reserved_bytes": 13763608576,
+          "peak_allocated_bytes": 13762963456,
+          "peak_reserved_bytes": 13763608576
+        },
+        "memory": {
+          "allocated_bytes": 27407405568,
+          "reserved_bytes": 63854084096,
+          "peak_allocated_bytes": 60238314496,
+          "peak_reserved_bytes": 63854084096
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 15358143488,
+            "reserved_bytes": 63854084096,
+            "peak_allocated_bytes": 23465715712,
+            "peak_reserved_bytes": 63854084096
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 27735085568,
+            "reserved_bytes": 63854084096,
+            "peak_allocated_bytes": 60238314496,
+            "peak_reserved_bytes": 63854084096
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 32.37944531440735
+    }
+  },
+  {
+    "name": "checkpoint-16",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"checkpoint-16\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 2048, \"dtype\": \"fp32\", \"mode\": \"backward\", \"checkpoint_segments\": 16, \"warmup\": 2, \"steps\": 3, \"timeout\": 600}",
+      "--output",
+      "/data/20260914T085600Z-memory-and-checkpoint/012-checkpoint-16"
+    ],
+    "started": 1789376334.8987043,
+    "returncode": 0,
+    "seconds": 33.761178493499756,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "checkpoint-16",
+        "kind": "model",
+        "size": "xl",
+        "seq": 2048,
+        "dtype": "fp32",
+        "mode": "backward",
+        "checkpoint_segments": 16,
+        "warmup": 2,
+        "steps": 3,
+        "timeout": 600
+      },
+      "started_utc": "2026-09-14T08:58:55.986330+00:00",
+      "measurements": {
+        "samples_ms": [
+          5045.984608999987,
+          5046.608321999997,
+          5045.982798000012
+        ],
+        "mean_ms": 5046.191909666665,
+        "std_ms": 0.360624795935281,
+        "median_ms": 5045.984608999987,
+        "cuda_event_stages": {
+          "forward": {
+            "samples_ms": [
+              1310.6678466796875,
+              1310.89697265625,
+              1310.641357421875
+            ],
+            "mean_ms": 1310.7353922526042,
+            "std_ms": 0.140558138599752,
+            "median_ms": 1310.6678466796875
+          },
+          "loss": {
+            "samples_ms": [
+              0.19251200556755066,
+              0.192671999335289,
+              0.19366399943828583
+            ],
+            "mean_ms": 0.19294933478037515,
+            "std_ms": 0.0006240662475881094,
+            "median_ms": 0.192671999335289
+          },
+          "backward": {
+            "samples_ms": [
+              3733.63427734375,
+              3733.91357421875,
+              3733.49169921875
+            ],
+            "mean_ms": 3733.6798502604165,
+            "std_ms": 0.21459798917133452,
+            "median_ms": 3733.63427734375
+          }
+        },
+        "last_scalar": 9.408011436462402,
+        "parameters": 3406809600,
+        "initial_memory": {
+          "allocated_bytes": 13762963456,
+          "reserved_bytes": 13763608576,
+          "peak_allocated_bytes": 13762963456,
+          "peak_reserved_bytes": 13763608576
+        },
+        "memory": {
+          "allocated_bytes": 27407241728,
+          "reserved_bytes": 50967085056,
+          "peak_allocated_bytes": 47434947584,
+          "peak_reserved_bytes": 50967085056
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 16029232128,
+            "reserved_bytes": 50967085056,
+            "peak_allocated_bytes": 24136804352,
+            "peak_reserved_bytes": 50967085056
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 27734921728,
+            "reserved_bytes": 50967085056,
+            "peak_allocated_bytes": 47434947584,
+            "peak_reserved_bytes": 50967085056
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 31.99739646911621
+    }
+  },
+  {
+    "name": "checkpoint-32",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"checkpoint-32\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 2048, \"dtype\": \"fp32\", \"mode\": \"backward\", \"checkpoint_segments\": 32, \"warmup\": 2, \"steps\": 3, \"timeout\": 600}",
+      "--output",
+      "/data/20260914T085600Z-memory-and-checkpoint/013-checkpoint-32"
+    ],
+    "started": 1789376369.5538554,
+    "returncode": 0,
+    "seconds": 33.514137268066406,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "checkpoint-32",
+        "kind": "model",
+        "size": "xl",
+        "seq": 2048,
+        "dtype": "fp32",
+        "mode": "backward",
+        "checkpoint_segments": 32,
+        "warmup": 2,
+        "steps": 3,
+        "timeout": 600
+      },
+      "started_utc": "2026-09-14T08:59:30.710404+00:00",
+      "measurements": {
+        "samples_ms": [
+          4925.922523999987,
+          4927.705165999982,
+          4927.4593960000175
+        ],
+        "mean_ms": 4927.029028666662,
+        "std_ms": 0.9661082528634645,
+        "median_ms": 4927.4593960000175,
+        "cuda_event_stages": {
+          "forward": {
+            "samples_ms": [
+              1310.579833984375,
+              1310.978515625,
+              1310.8741455078125
+            ],
+            "mean_ms": 1310.8108317057292,
+            "std_ms": 0.2067443851560328,
+            "median_ms": 1310.8741455078125
+          },
+          "loss": {
+            "samples_ms": [
+              0.19337600469589233,
+              0.19324800372123718,
+              0.19286400079727173
+            ],
+            "mean_ms": 0.19316266973813376,
+            "std_ms": 0.0002664552768381548,
+            "median_ms": 0.19324800372123718
+          },
+          "backward": {
+            "samples_ms": [
+              3613.69287109375,
+              3613.979736328125,
+              3614.06640625
+            ],
+            "mean_ms": 3613.9130045572915,
+            "std_ms": 0.1955044121435431,
+            "median_ms": 3613.979736328125
+          }
+        },
+        "last_scalar": 9.408011436462402,
+        "parameters": 3406809600,
+        "initial_memory": {
+          "allocated_bytes": 13762963456,
+          "reserved_bytes": 13763608576,
+          "peak_allocated_bytes": 13762963456,
+          "peak_reserved_bytes": 13763608576
+        },
+        "memory": {
+          "allocated_bytes": 27407241728,
+          "reserved_bytes": 44522536960,
+          "peak_allocated_bytes": 41034394624,
+          "peak_reserved_bytes": 44522536960
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 17371409408,
+            "reserved_bytes": 44522536960,
+            "peak_allocated_bytes": 25395095552,
+            "peak_reserved_bytes": 44522536960
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 27734921728,
+            "reserved_bytes": 44522536960,
+            "peak_allocated_bytes": 41034394624,
+            "peak_reserved_bytes": 44522536960
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 31.625929594039917
+    }
+  },
+  {
+    "name": "checkpoint-64",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"checkpoint-64\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 2048, \"dtype\": \"fp32\", \"mode\": \"backward\", \"checkpoint_segments\": 64, \"warmup\": 2, \"steps\": 3, \"timeout\": 600}",
+      "--output",
+      "/data/20260914T085600Z-memory-and-checkpoint/014-checkpoint-64"
+    ],
+    "started": 1789376404.3352664,
+    "returncode": 0,
+    "seconds": 33.265604734420776,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "checkpoint-64",
+        "kind": "model",
+        "size": "xl",
+        "seq": 2048,
+        "dtype": "fp32",
+        "mode": "backward",
+        "checkpoint_segments": 64,
+        "warmup": 2,
+        "steps": 3,
+        "timeout": 600
+      },
+      "started_utc": "2026-09-14T09:00:05.622110+00:00",
+      "measurements": {
+        "samples_ms": [
+          4864.7191869999915,
+          4864.816393000012,
+          4864.69424400002
+        ],
+        "mean_ms": 4864.743274666675,
+        "std_ms": 0.06453879697060882,
+        "median_ms": 4864.7191869999915,
+        "cuda_event_stages": {
+          "forward": {
+            "samples_ms": [
+              1310.637939453125,
+              1310.6455078125,
+              1310.6942138671875
+            ],
+            "mean_ms": 1310.6592203776042,
+            "std_ms": 0.030540600040297693,
+            "median_ms": 1310.6455078125
+          },
+          "loss": {
+            "samples_ms": [
+              0.1966720074415207,
+              0.19472000002861023,
+              0.19244800508022308
+            ],
+            "mean_ms": 0.19461333751678467,
+            "std_ms": 0.0021140202590404955,
+            "median_ms": 0.19472000002861023
+          },
+          "backward": {
+            "samples_ms": [
+              3552.24169921875,
+              3552.154541015625,
+              3552.09228515625
+            ],
+            "mean_ms": 3552.162841796875,
+            "std_ms": 0.0750521002051824,
+            "median_ms": 3552.154541015625
+          }
+        },
+        "last_scalar": 9.408011436462402,
+        "parameters": 3406809600,
+        "initial_memory": {
+          "allocated_bytes": 13762963456,
+          "reserved_bytes": 13763608576,
+          "peak_allocated_bytes": 13762963456,
+          "peak_reserved_bytes": 13763608576
+        },
+        "memory": {
+          "allocated_bytes": 27407241728,
+          "reserved_bytes": 44522536960,
+          "peak_allocated_bytes": 41035443200,
+          "peak_reserved_bytes": 44522536960
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 20055763968,
+            "reserved_bytes": 44522536960,
+            "peak_allocated_bytes": 27995564032,
+            "peak_reserved_bytes": 44522536960
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 27734921728,
+            "reserved_bytes": 44522536960,
+            "peak_allocated_bytes": 41035443200,
+            "peak_reserved_bytes": 44522536960
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 31.20565676689148
+    }
+  },
+  {
+    "name": "saved-block-xl-s2048",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"saved-block-xl-s2048\", \"kind\": \"saved_block\", \"seq\": 2048}",
+      "--output",
+      "/data/20260914T085600Z-memory-and-checkpoint/015-saved-block-xl-s2048"
+    ],
+    "started": 1789376438.6537912,
+    "returncode": 1,
+    "seconds": 3.454296588897705,
+    "status": "failed",
+    "result": {
+      "config": {
+        "name": "saved-block-xl-s2048",
+        "kind": "saved_block",
+        "seq": 2048
+      },
+      "started_utc": "2026-09-14T09:00:39.886721+00:00",
+      "status": "failed",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/cs336_systems/experiments.py\", line 395, in main\n    result[\"measurements\"] = kinds[cfg[\"kind\"]](cfg, out)\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/cs336_systems/experiments.py\", line 379, in saved_block\n    return saved_tensor_accounting(block, x)\n  File \"/workspace/cs336_systems/profiling.py\", line 50, in saved_tensor_accounting\n    y = block(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1885, in _call_impl\n    return inner()\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1833, in inner\n    result = forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 382, in forward\n    x_attn = self.attn(self.ln1(x))\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1885, in _call_impl\n    return inner()\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1833, in inner\n    result = forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 491, in forward\n    *batch_dims, sequence_length, d_model = x.size()\n                                            ^^^^^^\nAttributeError: 'str' object has no attribute 'size'\n",
+      "wall_seconds": 1.508418083190918
+    }
+  }
+]

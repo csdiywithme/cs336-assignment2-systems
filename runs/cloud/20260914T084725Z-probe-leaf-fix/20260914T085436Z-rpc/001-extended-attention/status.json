@@ -1,0 +1,16 @@
+{
+  "name": "extended-attention",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"extended-attention\", \"kind\": \"validate_attention\", \"timeout\": 600}",
+    "--output",
+    "/data/20260914T084725Z-probe-leaf-fix/001-extended-attention"
+  ],
+  "started": 1789375664.365305,
+  "returncode": 0,
+  "seconds": 36.139262437820435,
+  "status": "ok"
+}

@@ -1,0 +1,67 @@
+{
+  "name": "flash-triton-full-bf16-s32768-d32",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"flash-triton-full-bf16-s32768-d32\", \"kind\": \"attention\", \"implementation\": \"triton-full\", \"batch\": 1, \"seq\": 32768, \"dim\": 32, \"dtype\": \"bf16\", \"causal\": true, \"triton_bench\": true, \"steps\": 10, \"warmup\": 5, \"timeout\": 240}",
+    "--output",
+    "/data/20260914T092847Z-flash-triton-full/073-flash-triton-full-bf16-s32768-d32"
+  ],
+  "started": 1789378756.3899314,
+  "returncode": 0,
+  "seconds": 6.178061246871948,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "flash-triton-full-bf16-s32768-d32",
+      "kind": "attention",
+      "implementation": "triton-full",
+      "batch": 1,
+      "seq": 32768,
+      "dim": 32,
+      "dtype": "bf16",
+      "causal": true,
+      "triton_bench": true,
+      "steps": 10,
+      "warmup": 5,
+      "timeout": 240
+    },
+    "started_utc": "2026-09-14T09:39:17.460207+00:00",
+    "measurements": {
+      "forward": {
+        "mean_ms": 0.8607179202602409,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory_before_backward": {
+        "allocated_bytes": 10616832,
+        "reserved_bytes": 291504128,
+        "peak_allocated_bytes": 279052288,
+        "peak_reserved_bytes": 291504128
+      },
+      "backward": {
+        "mean_ms": 2.307234048843384,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "end_to_end": {
+        "mean_ms": 3.163445216158162,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory": {
+        "allocated_bytes": 14680064,
+        "reserved_bytes": 291504128,
+        "peak_allocated_bytes": 285474816,
+        "peak_reserved_bytes": 291504128
+      }
+    },
+    "status": "ok",
+    "wall_seconds": 4.315943241119385
+  }
+}

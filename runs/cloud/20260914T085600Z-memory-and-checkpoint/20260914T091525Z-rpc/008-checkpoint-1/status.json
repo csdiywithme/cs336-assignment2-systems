@@ -1,0 +1,40 @@
+{
+  "name": "checkpoint-1",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"checkpoint-1\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 2048, \"dtype\": \"fp32\", \"mode\": \"backward\", \"checkpoint_segments\": 1, \"warmup\": 2, \"steps\": 3, \"timeout\": 600}",
+    "--output",
+    "/data/20260914T085600Z-memory-and-checkpoint/008-checkpoint-1"
+  ],
+  "started": 1789376221.6413977,
+  "returncode": 0,
+  "seconds": 5.929117679595947,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "checkpoint-1",
+      "kind": "model",
+      "size": "xl",
+      "seq": 2048,
+      "dtype": "fp32",
+      "mode": "backward",
+      "checkpoint_segments": 1,
+      "warmup": 2,
+      "steps": 3,
+      "timeout": 600
+    },
+    "started_utc": "2026-09-14T08:57:02.768294+00:00",
+    "status": "oom",
+    "traceback": "Traceback (most recent call last):\n  File \"/workspace/cs336_systems/experiments.py\", line 395, in main\n    result[\"measurements\"] = kinds[cfg[\"kind\"]](cfg, out)\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/cs336_systems/experiments.py\", line 142, in model_benchmark\n    step()\n    ~~~~^^\n  File \"/workspace/cs336_systems/experiments.py\", line 127, in step\n    loss.backward()\n    ~~~~~~~~~~~~~^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/_tensor.py\", line 631, in backward\n    torch.autograd.backward(\n    ~~~~~~~~~~~~~~~~~~~~~~~^\n        self, gradient, retain_graph, create_graph, inputs=inputs\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/usr/local/lib/python3.13/site-packages/torch/autograd/__init__.py\", line 381, in backward\n    _engine_run_backward(\n    ~~~~~~~~~~~~~~~~~~~~^\n        tensors,\n        ^^^^^^^^\n    ...<5 lines>...\n        accumulate_grad=True,\n        ^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/usr/local/lib/python3.13/site-packages/torch/autograd/graph.py\", line 869, in _engine_run_backward\n    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        t_outputs, *args, **kwargs\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )  # Calls into the C++ engine to run the backward pass\n    ^\n  File \"/usr/local/lib/python3.13/site-packages/torch/utils/checkpoint.py\", line 1173, in unpack_hook\n    _run_fn_with_dynamo_disabled(frame.recompute_fn, *args)\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/_compile.py\", line 54, in inner\n    return disable_fn(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py\", line 1263, in _fn\n    return fn(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/site-packages/torch/utils/checkpoint.py\", line 1139, in _run_fn_with_dynamo_disabled\n    return fn(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/site-packages/torch/utils/checkpoint.py\", line 1607, in recompute_fn\n    fn(*args, **kwargs)\n    ~~^^^^^^^^^^^^^^^^^\n  File \"/workspace/cs336_systems/experiments.py\", line 84, in run\n    value = layer(value)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 382, in forward\n    x_attn = self.attn(self.ln1(x))\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 520, in forward\n    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 427, in scaled_dot_product_attention\n    attention_scores = einsum(Q, K, \"... query d_k, ... key d_k -> ... query key\") / math.sqrt(d_k)\n                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 GiB. GPU 0 has a total capacity of 178.35 GiB of which 69.88 MiB is free. Process 1 has 178.27 GiB memory in use. Of the allocated memory 174.55 GiB is allocated by PyTorch, and 2.90 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n",
+    "memory": {
+      "allocated_bytes": 185191732224,
+      "reserved_bytes": 190536744960,
+      "peak_allocated_bytes": 187423101952,
+      "peak_reserved_bytes": 190578688000
+    },
+    "wall_seconds": 4.054732322692871
+  }
+}

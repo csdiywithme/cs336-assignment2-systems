@@ -1,0 +1,429 @@
+[
+  {
+    "name": "nsys-small-s256",
+    "command": [
+      "nsys",
+      "profile",
+      "--trace=cuda,nvtx,osrt,cublas",
+      "--sample=none",
+      "--cpuctxsw=none",
+      "--capture-range=nvtx",
+      "--nvtx-capture=measurement",
+      "--capture-range-end=stop",
+      "--env-var=NSYS_NVTX_PROFILER_REGISTER_ONLY=0",
+      "--cuda-memory-usage=true",
+      "--pytorch=autograd-nvtx",
+      "--export=sqlite",
+      "-o",
+      "/data/20260914T085757Z-nsys-probe-and-fit-nvtx-filter-fix/000-nsys-small-s256/profile",
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"nsys-small-s256\", \"kind\": \"model\", \"size\": \"small\", \"seq\": 256, \"mode\": \"train\", \"dtype\": \"fp32\", \"warmup\": 5, \"steps\": 1, \"nsys\": true, \"timeout\": 300}",
+      "--output",
+      "/data/20260914T085757Z-nsys-probe-and-fit-nvtx-filter-fix/000-nsys-small-s256"
+    ],
+    "started": 1789376285.6564097,
+    "returncode": 1,
+    "seconds": 6.650404214859009,
+    "status": "failed",
+    "trace_created": false,
+    "result": {
+      "config": {
+        "name": "nsys-small-s256",
+        "kind": "model",
+        "size": "small",
+        "seq": 256,
+        "mode": "train",
+        "dtype": "fp32",
+        "warmup": 5,
+        "steps": 1,
+        "nsys": true,
+        "timeout": 300
+      },
+      "started_utc": "2026-09-14T08:58:09.612347+00:00",
+      "status": "failed",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/cs336_systems/experiments.py\", line 395, in main\n    result[\"measurements\"] = kinds[cfg[\"kind\"]](cfg, out)\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/cs336_systems/experiments.py\", line 142, in model_benchmark\n    step()\n    ~~~~^^\n  File \"/workspace/cs336_systems/experiments.py\", line 117, in step\n    logits = model(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 253, in forward\n    x = layer(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 382, in forward\n    x_attn = self.attn(self.ln1(x))\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 520, in forward\n    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)\nTypeError: annotate_attention.<locals>.attention() got an unexpected keyword argument 'K'. Did you mean 'k'?\n",
+      "wall_seconds": 1.7405567169189453
+    }
+  },
+  {
+    "name": "fit-small-4096",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"fit-small-4096\", \"kind\": \"model\", \"size\": \"small\", \"seq\": 4096, \"mode\": \"train\", \"dtype\": \"fp32\", \"warmup\": 1, \"steps\": 1, \"timeout\": 300}",
+      "--output",
+      "/data/20260914T085757Z-nsys-probe-and-fit-nvtx-filter-fix/001-fit-small-4096"
+    ],
+    "started": 1789376293.591688,
+    "returncode": 0,
+    "seconds": 6.728225231170654,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "fit-small-4096",
+        "kind": "model",
+        "size": "small",
+        "seq": 4096,
+        "mode": "train",
+        "dtype": "fp32",
+        "warmup": 1,
+        "steps": 1,
+        "timeout": 300
+      },
+      "started_utc": "2026-09-14T08:58:14.836438+00:00",
+      "measurements": {
+        "samples_ms": [
+          758.7242419999995
+        ],
+        "mean_ms": 758.7242419999995,
+        "std_ms": 0.0,
+        "median_ms": 758.7242419999995,
+        "cuda_event_stages": {
+          "forward": {
+            "samples_ms": [
+              254.914306640625
+            ],
+            "mean_ms": 254.914306640625,
+            "std_ms": 0.0,
+            "median_ms": 254.914306640625
+          },
+          "loss": {
+            "samples_ms": [
+              0.361407995223999
+            ],
+            "mean_ms": 0.361407995223999,
+            "std_ms": 0.0,
+            "median_ms": 0.361407995223999
+          },
+          "backward": {
+            "samples_ms": [
+              495.327392578125
+            ],
+            "mean_ms": 495.327392578125,
+            "std_ms": 0.0,
+            "median_ms": 495.327392578125
+          },
+          "optimizer": {
+            "samples_ms": [
+              7.695456027984619
+            ],
+            "mean_ms": 7.695456027984619,
+            "std_ms": 0.0,
+            "median_ms": 7.695456027984619
+          }
+        },
+        "last_scalar": 8.853391647338867,
+        "parameters": 128625408,
+        "initial_memory": {
+          "allocated_bytes": 517286912,
+          "reserved_bytes": 570425344,
+          "peak_allocated_bytes": 517286912,
+          "peak_reserved_bytes": 570425344
+        },
+        "memory": {
+          "allocated_bytes": 2092118528,
+          "reserved_bytes": 113799856128,
+          "peak_allocated_bytes": 109681942528,
+          "peak_reserved_bytes": 113799856128
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 98699757568,
+            "reserved_bytes": 113799856128,
+            "peak_allocated_bytes": 102472434688,
+            "peak_reserved_bytes": 113799856128
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 2746642944,
+            "reserved_bytes": 113799856128,
+            "peak_allocated_bytes": 109681942528,
+            "peak_reserved_bytes": 113799856128
+          },
+          {
+            "stage": "after_optimizer",
+            "allocated_bytes": 2747478528,
+            "reserved_bytes": 113799856128,
+            "peak_allocated_bytes": 109681942528,
+            "peak_reserved_bytes": 113799856128
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 4.692079782485962
+    }
+  },
+  {
+    "name": "fit-small-8192",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"fit-small-8192\", \"kind\": \"model\", \"size\": \"small\", \"seq\": 8192, \"mode\": \"train\", \"dtype\": \"fp32\", \"warmup\": 1, \"steps\": 1, \"timeout\": 300}",
+      "--output",
+      "/data/20260914T085757Z-nsys-probe-and-fit-nvtx-filter-fix/002-fit-small-8192"
+    ],
+    "started": 1789376301.4878497,
+    "returncode": 0,
+    "seconds": 4.216954231262207,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "fit-small-8192",
+        "kind": "model",
+        "size": "small",
+        "seq": 8192,
+        "mode": "train",
+        "dtype": "fp32",
+        "warmup": 1,
+        "steps": 1,
+        "timeout": 300
+      },
+      "started_utc": "2026-09-14T08:58:22.556765+00:00",
+      "status": "oom",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/cs336_systems/experiments.py\", line 395, in main\n    result[\"measurements\"] = kinds[cfg[\"kind\"]](cfg, out)\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/cs336_systems/experiments.py\", line 142, in model_benchmark\n    step()\n    ~~~~^^\n  File \"/workspace/cs336_systems/experiments.py\", line 117, in step\n    logits = model(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 253, in forward\n    x = layer(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 382, in forward\n    x_attn = self.attn(self.ln1(x))\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 520, in forward\n    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 432, in scaled_dot_product_attention\n    attention_weights = softmax(attention_scores, dim=-1)  # Softmax over the key dimension\n  File \"/workspace/cs336-basics/cs336_basics/nn_utils.py\", line 6, in softmax\n    exponentiated_rescaled_input = torch.exp(rescaled_input)\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 12.00 GiB. GPU 0 has a total capacity of 178.35 GiB of which 8.37 GiB is free. Process 1 has 169.96 GiB memory in use. Of the allocated memory 159.52 GiB is allocated by PyTorch, and 9.69 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n",
+      "memory": {
+        "allocated_bytes": 171282934784,
+        "reserved_bytes": 181684666368,
+        "peak_allocated_bytes": 171285031936,
+        "peak_reserved_bytes": 181885992960
+      },
+      "wall_seconds": 2.443305015563965
+    }
+  },
+  {
+    "name": "fit-small-16384",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"fit-small-16384\", \"kind\": \"model\", \"size\": \"small\", \"seq\": 16384, \"mode\": \"train\", \"dtype\": \"fp32\", \"warmup\": 1, \"steps\": 1, \"timeout\": 300}",
+      "--output",
+      "/data/20260914T085757Z-nsys-probe-and-fit-nvtx-filter-fix/003-fit-small-16384"
+    ],
+    "started": 1789376307.3979554,
+    "returncode": 0,
+    "seconds": 4.007809638977051,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "fit-small-16384",
+        "kind": "model",
+        "size": "small",
+        "seq": 16384,
+        "mode": "train",
+        "dtype": "fp32",
+        "warmup": 1,
+        "steps": 1,
+        "timeout": 300
+      },
+      "started_utc": "2026-09-14T08:58:28.412184+00:00",
+      "status": "oom",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/cs336_systems/experiments.py\", line 395, in main\n    result[\"measurements\"] = kinds[cfg[\"kind\"]](cfg, out)\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/cs336_systems/experiments.py\", line 142, in model_benchmark\n    step()\n    ~~~~^^\n  File \"/workspace/cs336_systems/experiments.py\", line 117, in step\n    logits = model(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 253, in forward\n    x = layer(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 382, in forward\n    x_attn = self.attn(self.ln1(x))\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 520, in forward\n    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 432, in scaled_dot_product_attention\n    attention_weights = softmax(attention_scores, dim=-1)  # Softmax over the key dimension\n  File \"/workspace/cs336-basics/cs336_basics/nn_utils.py\", line 7, in softmax\n    return exponentiated_rescaled_input / torch.sum(exponentiated_rescaled_input, dim=dim, keepdim=True)\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 48.00 GiB. GPU 0 has a total capacity of 178.35 GiB of which 31.56 GiB is free. Process 1 has 146.77 GiB memory in use. Of the allocated memory 145.88 GiB is allocated by PyTorch, and 142.43 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n",
+      "memory": {
+        "allocated_bytes": 156632689664,
+        "reserved_bytes": 156785180672,
+        "peak_allocated_bytes": 156635835392,
+        "peak_reserved_bytes": 157288497152
+      },
+      "wall_seconds": 2.135869264602661
+    }
+  },
+  {
+    "name": "fit-xl-1024",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"fit-xl-1024\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 1024, \"mode\": \"train\", \"dtype\": \"fp32\", \"warmup\": 1, \"steps\": 1, \"timeout\": 300}",
+      "--output",
+      "/data/20260914T085757Z-nsys-probe-and-fit-nvtx-filter-fix/004-fit-xl-1024"
+    ],
+    "started": 1789376312.455978,
+    "returncode": 0,
+    "seconds": 9.476784706115723,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "fit-xl-1024",
+        "kind": "model",
+        "size": "xl",
+        "seq": 1024,
+        "mode": "train",
+        "dtype": "fp32",
+        "warmup": 1,
+        "steps": 1,
+        "timeout": 300
+      },
+      "started_utc": "2026-09-14T08:58:33.568584+00:00",
+      "measurements": {
+        "samples_ms": [
+          1782.4756159999993
+        ],
+        "mean_ms": 1782.4756159999993,
+        "std_ms": 0.0,
+        "median_ms": 1782.4756159999993,
+        "cuda_event_stages": {
+          "forward": {
+            "samples_ms": [
+              566.122802734375
+            ],
+            "mean_ms": 566.122802734375,
+            "std_ms": 0.0,
+            "median_ms": 566.122802734375
+          },
+          "loss": {
+            "samples_ms": [
+              0.11264000087976456
+            ],
+            "mean_ms": 0.11264000087976456,
+            "std_ms": 0.0,
+            "median_ms": 0.11264000087976456
+          },
+          "backward": {
+            "samples_ms": [
+              1135.4542236328125
+            ],
+            "mean_ms": 1135.4542236328125,
+            "std_ms": 0.0,
+            "median_ms": 1135.4542236328125
+          },
+          "optimizer": {
+            "samples_ms": [
+              79.94086456298828
+            ],
+            "mean_ms": 79.94086456298828,
+            "std_ms": 0.0,
+            "median_ms": 79.94086456298828
+          }
+        },
+        "last_scalar": 10.09678840637207,
+        "parameters": 3406809600,
+        "initial_memory": {
+          "allocated_bytes": 13762570240,
+          "reserved_bytes": 13763608576,
+          "peak_allocated_bytes": 13762570240,
+          "peak_reserved_bytes": 13763608576
+        },
+        "memory": {
+          "allocated_bytes": 54661325312,
+          "reserved_bytes": 125931880448,
+          "peak_allocated_bytes": 117533903872,
+          "peak_reserved_bytes": 125931880448
+        },
+        "stages": [
+          {
+            "stage": "after_forward",
+            "allocated_bytes": 116197604352,
+            "reserved_bytes": 123987820544,
+            "peak_allocated_bytes": 116197604352,
+            "peak_reserved_bytes": 123987820544
+          },
+          {
+            "stage": "after_backward_before_optimizer",
+            "allocated_bytes": 54825165312,
+            "reserved_bytes": 125931880448,
+            "peak_allocated_bytes": 117533903872,
+            "peak_reserved_bytes": 125931880448
+          },
+          {
+            "stage": "after_optimizer",
+            "allocated_bytes": 54825165312,
+            "reserved_bytes": 125931880448,
+            "peak_allocated_bytes": 117533903872,
+            "peak_reserved_bytes": 125931880448
+          }
+        ]
+      },
+      "status": "ok",
+      "wall_seconds": 7.621785640716553
+    }
+  },
+  {
+    "name": "fit-xl-2048",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"fit-xl-2048\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 2048, \"mode\": \"train\", \"dtype\": \"fp32\", \"warmup\": 1, \"steps\": 1, \"timeout\": 300}",
+      "--output",
+      "/data/20260914T085757Z-nsys-probe-and-fit-nvtx-filter-fix/005-fit-xl-2048"
+    ],
+    "started": 1789376323.2613142,
+    "returncode": 0,
+    "seconds": 4.682258129119873,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "fit-xl-2048",
+        "kind": "model",
+        "size": "xl",
+        "seq": 2048,
+        "mode": "train",
+        "dtype": "fp32",
+        "warmup": 1,
+        "steps": 1,
+        "timeout": 300
+      },
+      "started_utc": "2026-09-14T08:58:44.270002+00:00",
+      "status": "oom",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/cs336_systems/experiments.py\", line 395, in main\n    result[\"measurements\"] = kinds[cfg[\"kind\"]](cfg, out)\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/cs336_systems/experiments.py\", line 142, in model_benchmark\n    step()\n    ~~~~^^\n  File \"/workspace/cs336_systems/experiments.py\", line 117, in step\n    logits = model(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 253, in forward\n    x = layer(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 382, in forward\n    x_attn = self.attn(self.ln1(x))\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 520, in forward\n    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 427, in scaled_dot_product_attention\n    attention_scores = einsum(Q, K, \"... query d_k, ... key d_k -> ... query key\") / math.sqrt(d_k)\n                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 GiB. GPU 0 has a total capacity of 178.35 GiB of which 2.01 GiB is free. Process 1 has 176.32 GiB memory in use. Of the allocated memory 174.06 GiB is allocated by PyTorch, and 1.50 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n",
+      "memory": {
+        "allocated_bytes": 184752924672,
+        "reserved_bytes": 188512993280,
+        "peak_allocated_bytes": 186900408320,
+        "peak_reserved_bytes": 188515090432
+      },
+      "wall_seconds": 2.9741158485412598
+    }
+  },
+  {
+    "name": "fit-xl-4096",
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "cs336_systems.experiments",
+      "--config",
+      "{\"name\": \"fit-xl-4096\", \"kind\": \"model\", \"size\": \"xl\", \"seq\": 4096, \"mode\": \"train\", \"dtype\": \"fp32\", \"warmup\": 1, \"steps\": 1, \"timeout\": 300}",
+      "--output",
+      "/data/20260914T085757Z-nsys-probe-and-fit-nvtx-filter-fix/006-fit-xl-4096"
+    ],
+    "started": 1789376329.3039465,
+    "returncode": 0,
+    "seconds": 4.515202045440674,
+    "status": "ok",
+    "result": {
+      "config": {
+        "name": "fit-xl-4096",
+        "kind": "model",
+        "size": "xl",
+        "seq": 4096,
+        "mode": "train",
+        "dtype": "fp32",
+        "warmup": 1,
+        "steps": 1,
+        "timeout": 300
+      },
+      "started_utc": "2026-09-14T08:58:50.369486+00:00",
+      "status": "oom",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/cs336_systems/experiments.py\", line 395, in main\n    result[\"measurements\"] = kinds[cfg[\"kind\"]](cfg, out)\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/cs336_systems/experiments.py\", line 142, in model_benchmark\n    step()\n    ~~~~^^\n  File \"/workspace/cs336_systems/experiments.py\", line 117, in step\n    logits = model(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 253, in forward\n    x = layer(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 382, in forward\n    x_attn = self.attn(self.ln1(x))\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 520, in forward\n    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 427, in scaled_dot_product_attention\n    attention_scores = einsum(Q, K, \"... query d_k, ... key d_k -> ... query key\") / math.sqrt(d_k)\n                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacity of 178.35 GiB of which 3.49 GiB is free. Process 1 has 174.84 GiB memory in use. Of the allocated memory 166.74 GiB is allocated by PyTorch, and 7.34 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n",
+      "memory": {
+        "allocated_bytes": 170450069504,
+        "reserved_bytes": 186925449216,
+        "peak_allocated_bytes": 182579865600,
+        "peak_reserved_bytes": 187093221376
+      },
+      "wall_seconds": 2.7252492904663086
+    }
+  }
+]

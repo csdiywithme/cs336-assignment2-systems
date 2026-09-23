@@ -1,0 +1,136 @@
+{
+  "backend": "CPU/Gloo",
+  "rounds": [
+    {
+      "round": 1,
+      "command": [
+        "/Users/simida/csdiy/cs336/cs336-assignment2-systems/../cs336-assignment1-basics/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_ddp.py",
+        "tests/test_fsdp.py",
+        "tests/test_sharded_optimizer.py",
+        "--junitxml=/Users/simida/csdiy/cs336/cs336-assignment2-systems/runs/local/final-gloo-stability-localhost/repeat-1.xml"
+      ],
+      "wall_seconds": 14.013500749999366,
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "runs/local/final-gloo-stability-localhost/repeat-1.log",
+      "junit": "runs/local/final-gloo-stability-localhost/repeat-1.xml",
+      "source_hashes_unchanged": true,
+      "junit_counts": {
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "passed": 8
+    },
+    {
+      "round": 2,
+      "command": [
+        "/Users/simida/csdiy/cs336/cs336-assignment2-systems/../cs336-assignment1-basics/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_ddp.py",
+        "tests/test_fsdp.py",
+        "tests/test_sharded_optimizer.py",
+        "--junitxml=/Users/simida/csdiy/cs336/cs336-assignment2-systems/runs/local/final-gloo-stability-localhost/repeat-2.xml"
+      ],
+      "wall_seconds": 13.591403124999488,
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "runs/local/final-gloo-stability-localhost/repeat-2.log",
+      "junit": "runs/local/final-gloo-stability-localhost/repeat-2.xml",
+      "source_hashes_unchanged": true,
+      "junit_counts": {
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "passed": 8
+    },
+    {
+      "round": 3,
+      "command": [
+        "/Users/simida/csdiy/cs336/cs336-assignment2-systems/../cs336-assignment1-basics/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_ddp.py",
+        "tests/test_fsdp.py",
+        "tests/test_sharded_optimizer.py",
+        "--junitxml=/Users/simida/csdiy/cs336/cs336-assignment2-systems/runs/local/final-gloo-stability-localhost/repeat-3.xml"
+      ],
+      "wall_seconds": 16.838237916999788,
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "runs/local/final-gloo-stability-localhost/repeat-3.log",
+      "junit": "runs/local/final-gloo-stability-localhost/repeat-3.xml",
+      "source_hashes_unchanged": true,
+      "junit_counts": {
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "passed": 8
+    },
+    {
+      "round": 4,
+      "command": [
+        "/Users/simida/csdiy/cs336/cs336-assignment2-systems/../cs336-assignment1-basics/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_ddp.py",
+        "tests/test_fsdp.py",
+        "tests/test_sharded_optimizer.py",
+        "--junitxml=/Users/simida/csdiy/cs336/cs336-assignment2-systems/runs/local/final-gloo-stability-localhost/repeat-4.xml"
+      ],
+      "wall_seconds": 13.081385666999267,
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "runs/local/final-gloo-stability-localhost/repeat-4.log",
+      "junit": "runs/local/final-gloo-stability-localhost/repeat-4.xml",
+      "source_hashes_unchanged": true,
+      "junit_counts": {
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "passed": 8
+    },
+    {
+      "round": 5,
+      "command": [
+        "/Users/simida/csdiy/cs336/cs336-assignment2-systems/../cs336-assignment1-basics/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_ddp.py",
+        "tests/test_fsdp.py",
+        "tests/test_sharded_optimizer.py",
+        "--junitxml=/Users/simida/csdiy/cs336/cs336-assignment2-systems/runs/local/final-gloo-stability-localhost/repeat-5.xml"
+      ],
+      "wall_seconds": 13.318040542002564,
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "runs/local/final-gloo-stability-localhost/repeat-5.log",
+      "junit": "runs/local/final-gloo-stability-localhost/repeat-5.xml",
+      "source_hashes_unchanged": true,
+      "junit_counts": {
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "passed": 8
+    }
+  ],
+  "status": "passed_five_independent_cpu_gloo_rounds"
+}

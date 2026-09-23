@@ -1,0 +1,128 @@
+{
+  "name": "profile-small-s4096-nsys",
+  "command": [
+    "nsys",
+    "profile",
+    "--trace=cuda,nvtx,osrt,cublas",
+    "--sample=none",
+    "--cpuctxsw=none",
+    "--capture-range=nvtx",
+    "--nvtx-capture=measurement",
+    "--capture-range-end=stop",
+    "--env-var=NSYS_NVTX_PROFILER_REGISTER_ONLY=0",
+    "--cuda-memory-usage=true",
+    "--pytorch=autograd-nvtx",
+    "--export=sqlite",
+    "-o",
+    "/data/20260914T092252Z-profiles/005-profile-small-s4096-nsys/profile",
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"profile-small-s4096-nsys\", \"kind\": \"model\", \"size\": \"small\", \"seq\": 4096, \"mode\": \"train\", \"dtype\": \"fp32\", \"annotate\": true, \"nsys\": true, \"warmup\": 5, \"steps\": 1, \"timeout\": 300}",
+    "--output",
+    "/data/20260914T092252Z-profiles/005-profile-small-s4096-nsys"
+  ],
+  "started": 1789377861.0914452,
+  "returncode": 0,
+  "seconds": 25.68481159210205,
+  "status": "ok",
+  "trace_created": true,
+  "result": {
+    "config": {
+      "name": "profile-small-s4096-nsys",
+      "kind": "model",
+      "size": "small",
+      "seq": 4096,
+      "mode": "train",
+      "dtype": "fp32",
+      "annotate": true,
+      "nsys": true,
+      "warmup": 5,
+      "steps": 1,
+      "timeout": 300
+    },
+    "started_utc": "2026-09-14T09:24:23.484245+00:00",
+    "measurements": {
+      "samples_ms": [
+        765.5636709999953
+      ],
+      "mean_ms": 765.5636709999953,
+      "std_ms": 0.0,
+      "median_ms": 765.5636709999953,
+      "cuda_event_stages": {
+        "forward": {
+          "samples_ms": [
+            256.92706298828125
+          ],
+          "mean_ms": 256.92706298828125,
+          "std_ms": 0.0,
+          "median_ms": 256.92706298828125
+        },
+        "loss": {
+          "samples_ms": [
+            0.3646720051765442
+          ],
+          "mean_ms": 0.3646720051765442,
+          "std_ms": 0.0,
+          "median_ms": 0.3646720051765442
+        },
+        "backward": {
+          "samples_ms": [
+            498.74114990234375
+          ],
+          "mean_ms": 498.74114990234375,
+          "std_ms": 0.0,
+          "median_ms": 498.74114990234375
+        },
+        "optimizer": {
+          "samples_ms": [
+            7.730303764343262
+          ],
+          "mean_ms": 7.730303764343262,
+          "std_ms": 0.0,
+          "median_ms": 7.730303764343262
+        }
+      },
+      "last_scalar": 8.47366714477539,
+      "parameters": 128625408,
+      "initial_memory": {
+        "allocated_bytes": 517286912,
+        "reserved_bytes": 570425344,
+        "peak_allocated_bytes": 517286912,
+        "peak_reserved_bytes": 570425344
+      },
+      "memory": {
+        "allocated_bytes": 2094608896,
+        "reserved_bytes": 113799856128,
+        "peak_allocated_bytes": 109682417664,
+        "peak_reserved_bytes": 113799856128
+      },
+      "stages": [
+        {
+          "stage": "after_forward",
+          "allocated_bytes": 98700232704,
+          "reserved_bytes": 113799856128,
+          "peak_allocated_bytes": 102472909824,
+          "peak_reserved_bytes": 113799856128
+        },
+        {
+          "stage": "after_backward_before_optimizer",
+          "allocated_bytes": 2748871168,
+          "reserved_bytes": 113799856128,
+          "peak_allocated_bytes": 109682417664,
+          "peak_reserved_bytes": 113799856128
+        },
+        {
+          "stage": "after_optimizer",
+          "allocated_bytes": 2749968896,
+          "reserved_bytes": 113799856128,
+          "peak_allocated_bytes": 109682417664,
+          "peak_reserved_bytes": 113799856128
+        }
+      ]
+    },
+    "status": "ok",
+    "wall_seconds": 22.131279468536377
+  }
+}

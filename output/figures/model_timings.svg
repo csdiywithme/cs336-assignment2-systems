@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="490" height="290" preserveAspectRatio="xMinYMin meet" viewBox="0 0 490 290" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="490" height="290"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-290)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="0" y="274" style="font-family: A2Heiti; font-size: 12px;fill: rgb(7%,18%,25%); stroke:none;" transform="translate(0,548) scale(1,-1)">五种模型的稳态时间</text>
+			<path d="M 52,64 L 476,64 Z" style="stroke: rgb(86%,89%,91%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="40.568" y="61.0" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,122) scale(1,-1)">1</text>
+			<path d="M 52,107 L 476,107 Z" style="stroke: rgb(86%,89%,91%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="36.135999999999996" y="104.0" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,208) scale(1,-1)">10</text>
+			<path d="M 52,150 L 476,150 Z" style="stroke: rgb(86%,89%,91%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="31.704" y="147.0" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,294) scale(1,-1)">100</text>
+			<path d="M 52,193 L 476,193 Z" style="stroke: rgb(86%,89%,91%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="27.272" y="190.0" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,380) scale(1,-1)">1000</text>
+			<path d="M 52,236 L 476,236 Z" style="stroke: rgb(86%,89%,91%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="22.84" y="233.0" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,466) scale(1,-1)">10000</text>
+			<path d="M 52,64 L 52,236 Z" style="stroke: rgb(33%,41%,47%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="42.364" y="48" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,96) scale(1,-1)">small</text>
+			<text x="141.924" y="48" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,96) scale(1,-1)">medium</text>
+			<text x="253.972" y="48" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,96) scale(1,-1)">large</text>
+			<text x="367.28" y="48" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,96) scale(1,-1)">xl</text>
+			<text x="469.272" y="48" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,96) scale(1,-1)">10B</text>
+			<text x="52" y="248" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,496) scale(1,-1)">ms / step (log10)</text>
+			<circle cx="52.0" cy="116.50805054950682" r="2.2" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<circle cx="158.0" cy="136.02733336339338" r="2.2" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<circle cx="264.0" cy="150.77942431620858" r="2.2" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<circle cx="370.0" cy="170.05505850371316" r="2.2" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<circle cx="476.0" cy="191.87067283541518" r="2.2" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<polyline points="52 116.5081, 158 136.0273, 264 150.7794, 370 170.0551, 476 191.8707" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 1.4; fill: None; fill-rule: evenodd;"/>
+			<path d="M 10,19 L 28,19 Z" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="33" y="16" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,32) scale(1,-1)">FP32 / 前向</text>
+			<circle cx="52.0" cy="100.94379681017183" r="2.2" style="stroke: rgb(21%,41%,66%); stroke-linecap: butt; stroke-width: 1; fill: rgb(21%,41%,66%); fill-rule: evenodd;"/>
+			<circle cx="158.0" cy="117.19590616751199" r="2.2" style="stroke: rgb(21%,41%,66%); stroke-linecap: butt; stroke-width: 1; fill: rgb(21%,41%,66%); fill-rule: evenodd;"/>
+			<circle cx="264.0" cy="134.91749098913152" r="2.2" style="stroke: rgb(21%,41%,66%); stroke-linecap: butt; stroke-width: 1; fill: rgb(21%,41%,66%); fill-rule: evenodd;"/>
+			<circle cx="370.0" cy="137.04460883418216" r="2.2" style="stroke: rgb(21%,41%,66%); stroke-linecap: butt; stroke-width: 1; fill: rgb(21%,41%,66%); fill-rule: evenodd;"/>
+			<circle cx="476.0" cy="153.1133375226962" r="2.2" style="stroke: rgb(21%,41%,66%); stroke-linecap: butt; stroke-width: 1; fill: rgb(21%,41%,66%); fill-rule: evenodd;"/>
+			<polyline points="52 100.9438, 158 117.1959, 264 134.9175, 370 137.0446, 476 153.1133" style="stroke: rgb(21%,41%,66%); stroke-linecap: butt; stroke-width: 1.4; fill: None; fill-rule: evenodd;"/>
+			<path d="M 254,19 L 272,19 Z" style="stroke: rgb(21%,41%,66%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="277" y="16" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,32) scale(1,-1)">BF16 / 前向</text>
+			<circle cx="52.0" cy="136.81995881522562" r="2.2" style="stroke: rgb(73%,38%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(73%,38%,23%); fill-rule: evenodd;"/>
+			<circle cx="158.0" cy="156.27067754518188" r="2.2" style="stroke: rgb(73%,38%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(73%,38%,23%); fill-rule: evenodd;"/>
+			<circle cx="264.0" cy="171.21918450935482" r="2.2" style="stroke: rgb(73%,38%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(73%,38%,23%); fill-rule: evenodd;"/>
+			<circle cx="370.0" cy="190.22470761236855" r="2.2" style="stroke: rgb(73%,38%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(73%,38%,23%); fill-rule: evenodd;"/>
+			<circle cx="476.0" cy="212.2954762119275" r="2.2" style="stroke: rgb(73%,38%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(73%,38%,23%); fill-rule: evenodd;"/>
+			<polyline points="52 136.82, 158 156.2707, 264 171.2192, 370 190.2247, 476 212.2955" style="stroke: rgb(73%,38%,23%); stroke-linecap: butt; stroke-width: 1.4; fill: None; fill-rule: evenodd;"/>
+			<path d="M 10,32 L 28,32 Z" style="stroke: rgb(73%,38%,23%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="33" y="29" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,58) scale(1,-1)">FP32 / 前向+loss+反向</text>
+			<circle cx="52.0" cy="124.27032062570076" r="2.2" style="stroke: rgb(56%,40%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(56%,40%,65%); fill-rule: evenodd;"/>
+			<circle cx="158.0" cy="137.55780135853513" r="2.2" style="stroke: rgb(56%,40%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(56%,40%,65%); fill-rule: evenodd;"/>
+			<circle cx="264.0" cy="151.88063185391272" r="2.2" style="stroke: rgb(56%,40%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(56%,40%,65%); fill-rule: evenodd;"/>
+			<circle cx="370.0" cy="158.25126421656933" r="2.2" style="stroke: rgb(56%,40%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(56%,40%,65%); fill-rule: evenodd;"/>
+			<circle cx="476.0" cy="176.10679497043492" r="2.2" style="stroke: rgb(56%,40%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(56%,40%,65%); fill-rule: evenodd;"/>
+			<polyline points="52 124.2703, 158 137.5578, 264 151.8806, 370 158.2513, 476 176.1068" style="stroke: rgb(56%,40%,65%); stroke-linecap: butt; stroke-width: 1.4; fill: None; fill-rule: evenodd;"/>
+			<path d="M 254,32 L 272,32 Z" style="stroke: rgb(56%,40%,65%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="277" y="29" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,58) scale(1,-1)">BF16 / 前向+loss+反向</text>
+		</g>
+	</g>
+</svg>

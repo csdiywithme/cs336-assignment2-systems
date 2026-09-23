@@ -1,0 +1,22 @@
+{
+  "config": {
+    "name": "10B-fp32-train-w0",
+    "kind": "model",
+    "size": "10B",
+    "dtype": "fp32",
+    "mode": "train",
+    "warmup": 0,
+    "steps": 10,
+    "timeout": 500
+  },
+  "started_utc": "2026-09-14T09:02:56.528488+00:00",
+  "status": "oom",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/cs336_systems/experiments.py\", line 376, in main\n    result[\"measurements\"] = kinds[cfg[\"kind\"]](cfg, out)\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/cs336_systems/experiments.py\", line 139, in model_benchmark\n    result = timed(step, 0, cfg.get(\"steps\", 10))\n  File \"/workspace/cs336_systems/experiments.py\", line 50, in timed\n    fn()\n    ~~^^\n  File \"/workspace/cs336_systems/experiments.py\", line 124, in step\n    opt.step()\n    ~~~~~~~~^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/optim/optimizer.py\", line 533, in wrapper\n    out = func(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/optimizer.py\", line 76, in step\n    m_t = beta_1 * prev_m_t + ((1 - beta_1) * grad)\n                               ~~~~~~~~~~~~~^~~~~~\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 216.00 MiB. GPU 0 has a total capacity of 178.35 GiB of which 55.88 MiB is free. Process 1 has 178.28 GiB memory in use. Of the allocated memory 160.16 GiB is allocated by PyTorch, and 17.30 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n",
+  "memory": {
+    "allocated_bytes": 171744719360,
+    "reserved_bytes": 190549327872,
+    "peak_allocated_bytes": 171971211776,
+    "peak_reserved_bytes": 190549327872
+  },
+  "wall_seconds": 5.719428777694702
+}

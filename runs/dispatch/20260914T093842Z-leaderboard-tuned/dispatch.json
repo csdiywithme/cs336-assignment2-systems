@@ -1,0 +1,7 @@
+{
+  "run_id": "20260914T093842Z-leaderboard-tuned",
+  "call_id": "fc-01M2FMGZ23Q48TMQGTSDTDR5ED",
+  "gpu_count": 2,
+  "timeout_seconds": 720,
+  "plan": "leaderboard-tuned"
+}

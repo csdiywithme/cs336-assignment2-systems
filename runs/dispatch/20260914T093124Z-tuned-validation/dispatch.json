@@ -1,0 +1,7 @@
+{
+  "run_id": "20260914T093124Z-tuned-validation",
+  "call_id": "fc-01M2FM3K8EZMRY3RFPJHJCMAX6",
+  "gpu_count": 1,
+  "timeout_seconds": 1800,
+  "plan": "tuned-validation"
+}

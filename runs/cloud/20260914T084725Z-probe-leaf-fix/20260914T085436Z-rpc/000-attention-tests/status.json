@@ -1,0 +1,16 @@
+{
+  "name": "attention-tests",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "--tb=short",
+    "tests/test_attention.py",
+    "--junitxml=/data/20260914T084725Z-probe-leaf-fix/000-attention-tests/junit.xml"
+  ],
+  "started": 1789375651.2507474,
+  "returncode": 0,
+  "seconds": 11.929114580154419,
+  "status": "ok"
+}

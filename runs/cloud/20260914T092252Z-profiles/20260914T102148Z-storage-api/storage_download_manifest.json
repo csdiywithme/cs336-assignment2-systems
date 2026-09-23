@@ -1,0 +1,18 @@
+[
+  {
+    "path": "012-profile-saved-block-xl-s2048/profile.sqlite",
+    "bytes": 626688,
+    "remote": "20260914T092252Z-profiles/012-profile-saved-block-xl-s2048/profile.sqlite",
+    "status": "downloaded",
+    "sha256": "2e418403bde36ba9ee521b0a7484f0a2029c1b6a3260efbfc692c0df4041a378",
+    "received_bytes": 626688
+  },
+  {
+    "path": "012-profile-saved-block-xl-s2048/profile.nsys-rep",
+    "bytes": 167156,
+    "remote": "20260914T092252Z-profiles/012-profile-saved-block-xl-s2048/profile.nsys-rep",
+    "status": "downloaded",
+    "sha256": "2c245ad01345c738d4edbdf6056059660c237f9bf9b8b95754ffe764d1ac7ec8",
+    "received_bytes": 167156
+  }
+]

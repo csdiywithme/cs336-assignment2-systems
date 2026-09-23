@@ -1,0 +1,67 @@
+{
+  "name": "flash-triton-full-fp32-s128-d64",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"flash-triton-full-fp32-s128-d64\", \"kind\": \"attention\", \"implementation\": \"triton-full\", \"batch\": 1, \"seq\": 128, \"dim\": 64, \"dtype\": \"fp32\", \"causal\": true, \"triton_bench\": true, \"steps\": 10, \"warmup\": 5, \"timeout\": 240}",
+    "--output",
+    "/data/20260914T092847Z-flash-triton-full/002-flash-triton-full-fp32-s128-d64"
+  ],
+  "started": 1789378155.174912,
+  "returncode": 0,
+  "seconds": 6.632986545562744,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "flash-triton-full-fp32-s128-d64",
+      "kind": "attention",
+      "implementation": "triton-full",
+      "batch": 1,
+      "seq": 128,
+      "dim": 64,
+      "dtype": "fp32",
+      "causal": true,
+      "triton_bench": true,
+      "steps": 10,
+      "warmup": 5,
+      "timeout": 240
+    },
+    "started_utc": "2026-09-14T09:29:16.259184+00:00",
+    "measurements": {
+      "forward": {
+        "mean_ms": 0.011145043463540682,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory_before_backward": {
+        "allocated_bytes": 164352,
+        "reserved_bytes": 270532608,
+        "peak_allocated_bytes": 268599808,
+        "peak_reserved_bytes": 270532608
+      },
+      "backward": {
+        "mean_ms": 0.05343735343624924,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "end_to_end": {
+        "mean_ms": 0.06911789527043188,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory": {
+        "allocated_bytes": 229376,
+        "reserved_bytes": 270532608,
+        "peak_allocated_bytes": 268698624,
+        "peak_reserved_bytes": 270532608
+      }
+    },
+    "status": "ok",
+    "wall_seconds": 4.776392698287964
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "flash-eager-fp32-s65536-d16",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"flash-eager-fp32-s65536-d16\", \"kind\": \"attention\", \"implementation\": \"eager\", \"batch\": 1, \"seq\": 65536, \"dim\": 16, \"dtype\": \"fp32\", \"causal\": true, \"triton_bench\": true, \"steps\": 10, \"warmup\": 5, \"timeout\": 240}",
+    "--output",
+    "/data/20260914T091848Z-flash-eager/036-flash-eager-fp32-s65536-d16"
+  ],
+  "started": 1789377874.8274024,
+  "returncode": 0,
+  "seconds": 10.03105902671814,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "flash-eager-fp32-s65536-d16",
+      "kind": "attention",
+      "implementation": "eager",
+      "batch": 1,
+      "seq": 65536,
+      "dim": 16,
+      "dtype": "fp32",
+      "causal": true,
+      "triton_bench": true,
+      "steps": 10,
+      "warmup": 5,
+      "timeout": 240
+    },
+    "started_utc": "2026-09-14T09:24:36.671295+00:00",
+    "measurements": {
+      "forward": {
+        "mean_ms": 49.40003204345703,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory_before_backward": {
+        "allocated_bytes": 21504327680,
+        "reserved_bytes": 51583647744,
+        "peak_allocated_bytes": 43247599616,
+        "peak_reserved_bytes": 51583647744
+      },
+      "backward": {
+        "mean_ms": 58.31509170532227,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "end_to_end": {
+        "mean_ms": 107.7259521484375,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory": {
+        "allocated_bytes": 46399488,
+        "reserved_bytes": 85943386112,
+        "peak_allocated_bytes": 73325084672,
+        "peak_reserved_bytes": 85943386112
+      }
+    },
+    "status": "ok",
+    "wall_seconds": 7.24981164932251
+  }
+}

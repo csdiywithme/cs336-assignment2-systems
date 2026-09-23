@@ -1,0 +1,26 @@
+[
+  {
+    "path": "artifact_inventory.json",
+    "bytes": 1866,
+    "remote": "20260914T093845Z-profile-probe-cuda-software-trace/artifact_inventory.json",
+    "status": "downloaded",
+    "sha256": "7f34a02c1623df8eb1e9953f0b107c53b7678d701825bc50bde90bca76755a2c",
+    "received_bytes": 1866
+  },
+  {
+    "path": "000-nsys-small-s256/trace-analysis.log",
+    "bytes": 1202,
+    "remote": "20260914T093845Z-profile-probe-cuda-software-trace/000-nsys-small-s256/trace-analysis.log",
+    "status": "downloaded",
+    "sha256": "13c2cfe63e4afd4a33be7977492a7d3b0ecccd79b906ae854a7820e7d5a8ace0",
+    "received_bytes": 1202
+  },
+  {
+    "path": "000-nsys-small-s256/nsys_summary.json",
+    "bytes": 68964,
+    "remote": "20260914T093845Z-profile-probe-cuda-software-trace/000-nsys-small-s256/nsys_summary.json",
+    "status": "downloaded",
+    "sha256": "c11c2949305273eb91cca909ff2cf3401d51c85b689c31a4d9cd47ae10055d00",
+    "received_bytes": 68964
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "pdf": "output/pdf/assignment2_existing_evidence_report.pdf",
+  "sha256": "a4da82521b1d247dc95ac61e2a65f950cb4eb5481428c7cbc3c04ee21ea620ad",
+  "page_count": 59,
+  "status": "visually_reviewed",
+  "coverage": "All 59 pages reviewed in 10 contact sheets; pages 16, 33 and 58 inspected at full render resolution. After the indentation fix, changed pages 9 and 16 were individually re-inspected; other 57 rendered PNG files were byte-identical to the reviewed version.",
+  "final_render_changed_pages": [9, 16],
+  "visible_clipping_or_overlap": false,
+  "notes": "Automated text bounds and link checks are separately recorded. Source MemoryViz screenshots were not edited. Intermediate render images are reproducible and are not part of the evidence bundle."
+}

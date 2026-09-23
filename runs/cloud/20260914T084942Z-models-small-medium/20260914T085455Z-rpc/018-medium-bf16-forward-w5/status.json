@@ -1,0 +1,71 @@
+{
+  "name": "medium-bf16-forward-w5",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"medium-bf16-forward-w5\", \"kind\": \"model\", \"size\": \"medium\", \"dtype\": \"bf16\", \"mode\": \"forward\", \"warmup\": 5, \"steps\": 10, \"timeout\": 500}",
+    "--output",
+    "/data/20260914T084942Z-models-small-medium/018-medium-bf16-forward-w5"
+  ],
+  "started": 1789375889.5267322,
+  "returncode": 0,
+  "seconds": 4.063042163848877,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "medium-bf16-forward-w5",
+      "kind": "model",
+      "size": "medium",
+      "dtype": "bf16",
+      "mode": "forward",
+      "warmup": 5,
+      "steps": 10,
+      "timeout": 500
+    },
+    "started_utc": "2026-09-14T08:51:30.702252+00:00",
+    "measurements": {
+      "samples_ms": [
+        17.63237900000547,
+        17.20840900000553,
+        17.19633900000872,
+        17.217827999999713,
+        17.22677800000838,
+        17.18671000000427,
+        17.245367999990435,
+        17.255058000003487,
+        17.245188000003964,
+        17.21507899999608
+      ],
+      "mean_ms": 17.262913600002605,
+      "std_ms": 0.13166666520504808,
+      "median_ms": 17.222303000004047,
+      "last_scalar": 0.283203125,
+      "parameters": 423183360,
+      "initial_memory": {
+        "allocated_bytes": 1694863360,
+        "reserved_bytes": 1696595968,
+        "peak_allocated_bytes": 1694863360,
+        "peak_reserved_bytes": 1696595968
+      },
+      "memory": {
+        "allocated_bytes": 1744343040,
+        "reserved_bytes": 8782872576,
+        "peak_allocated_bytes": 8756080640,
+        "peak_reserved_bytes": 8782872576
+      },
+      "stages": [
+        {
+          "stage": "after_forward",
+          "allocated_bytes": 8747692032,
+          "reserved_bytes": 8782872576,
+          "peak_allocated_bytes": 8756080640,
+          "peak_reserved_bytes": 8782872576
+        }
+      ]
+    },
+    "status": "ok",
+    "wall_seconds": 1.980329990386963
+  }
+}

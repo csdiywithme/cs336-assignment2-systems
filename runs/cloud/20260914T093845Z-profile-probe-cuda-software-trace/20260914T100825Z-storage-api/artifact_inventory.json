@@ -1,0 +1,114 @@
+[
+  {
+    "path": "environment.json",
+    "bytes": 3889
+  },
+  {
+    "path": "nvidia-smi.txt",
+    "bytes": 11445
+  },
+  {
+    "path": "nvlink-status.txt",
+    "bytes": 472
+  },
+  {
+    "path": "pip-freeze.txt",
+    "bytes": 1691
+  },
+  {
+    "path": "progress.json",
+    "bytes": 3883
+  },
+  {
+    "path": "summary.json",
+    "bytes": 4381
+  },
+  {
+    "path": "topology.txt",
+    "bytes": 603
+  },
+  {
+    "path": "000-nsys-small-s256/nsys_summary.json",
+    "bytes": 68964
+  },
+  {
+    "path": "000-nsys-small-s256/nsys_timeline.json",
+    "bytes": 1045820
+  },
+  {
+    "path": "000-nsys-small-s256/profile.nsys-rep",
+    "bytes": 769235
+  },
+  {
+    "path": "000-nsys-small-s256/profile.sqlite",
+    "bytes": 3129344
+  },
+  {
+    "path": "000-nsys-small-s256/result.json",
+    "bytes": 2410
+  },
+  {
+    "path": "000-nsys-small-s256/status.json",
+    "bytes": 3625
+  },
+  {
+    "path": "000-nsys-small-s256/stdout.log",
+    "bytes": 8881
+  },
+  {
+    "path": "000-nsys-small-s256/trace-analysis.log",
+    "bytes": 1202
+  },
+  {
+    "path": "source/__init__.py",
+    "bytes": 151
+  },
+  {
+    "path": "source/attention.py",
+    "bytes": 5416
+  },
+  {
+    "path": "source/checkpointing.py",
+    "bytes": 783
+  },
+  {
+    "path": "source/ddp.py",
+    "bytes": 2092
+  },
+  {
+    "path": "source/experiment_plans.py",
+    "bytes": 6456
+  },
+  {
+    "path": "source/experiments.py",
+    "bytes": 26196
+  },
+  {
+    "path": "source/fsdp.py",
+    "bytes": 8580
+  },
+  {
+    "path": "source/nsight_summary.py",
+    "bytes": 3692
+  },
+  {
+    "path": "source/optimized_model.py",
+    "bytes": 4881
+  },
+  {
+    "path": "source/profiling.py",
+    "bytes": 3700
+  },
+  {
+    "path": "source/sharded_optimizer.py",
+    "bytes": 2834
+  },
+  {
+    "path": "source/triton_attention.py",
+    "bytes": 7023
+  },
+  {
+    "path": "source/triton_optimizer.py",
+    "bytes": 764
+  }
+]

@@ -1,0 +1,862 @@
+{
+  "name": "profile-saved-block-xl-s2048",
+  "command": [
+    "nsys",
+    "profile",
+    "--trace=cuda,nvtx,osrt,cublas",
+    "--sample=none",
+    "--cpuctxsw=none",
+    "--capture-range=nvtx",
+    "--nvtx-capture=measurement",
+    "--capture-range-end=stop",
+    "--env-var=NSYS_NVTX_PROFILER_REGISTER_ONLY=0",
+    "--cuda-memory-usage=true",
+    "--pytorch=autograd-nvtx",
+    "--export=sqlite",
+    "-o",
+    "/data/20260914T092252Z-profiles/012-profile-saved-block-xl-s2048/profile",
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"profile-saved-block-xl-s2048\", \"kind\": \"saved_block\", \"seq\": 2048, \"nsys\": true}",
+    "--output",
+    "/data/20260914T092252Z-profiles/012-profile-saved-block-xl-s2048"
+  ],
+  "started": 1789378038.637946,
+  "returncode": 0,
+  "seconds": 17.92309021949768,
+  "status": "ok",
+  "trace_created": true,
+  "result": {
+    "config": {
+      "name": "profile-saved-block-xl-s2048",
+      "kind": "saved_block",
+      "seq": 2048,
+      "nsys": true
+    },
+    "started_utc": "2026-09-14T09:27:21.210934+00:00",
+    "measurements": {
+      "records": [
+        {
+          "shape": [
+            4,
+            2048,
+            2560
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 83886080,
+          "storage_bytes": 83886080,
+          "storage_ptr": 47518947737600,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "ln1",
+          "producer": "leaf"
+        },
+        {
+          "shape": [
+            4,
+            2048,
+            1
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 32768,
+          "storage_bytes": 32768,
+          "storage_ptr": 47518026668032,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "ln1",
+          "producer": "RsqrtBackward0"
+        },
+        {
+          "shape": [
+            4,
+            2048,
+            1
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 32768,
+          "storage_bytes": 32768,
+          "storage_ptr": 47518026668032,
+          "parameter_or_buffer": false,
+          "duplicate": true,
+          "module": "ln1",
+          "producer": "RsqrtBackward0"
+        },
+        {
+          "shape": [
+            4,
+            2048,
+            2560
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 83886080,
+          "storage_bytes": 83886080,
+          "storage_ptr": 47518947737600,
+          "parameter_or_buffer": false,
+          "duplicate": true,
+          "module": "ln1",
+          "producer": "leaf"
+        },
+        {
+          "shape": [
+            4,
+            2048,
+            2560
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 83886080,
+          "storage_bytes": 83886080,
+          "storage_ptr": 47519048400896,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "ln1",
+          "producer": "MulBackward0"
+        },
+        {
+          "shape": [
+            2560
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 10240,
+          "storage_bytes": 10240,
+          "storage_ptr": 47518026647552,
+          "parameter_or_buffer": true,
+          "duplicate": false,
+          "module": "ln1",
+          "producer": "leaf"
+        },
+        {
+          "shape": [
+            1,
+            2560,
+            2560
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 26214400,
+          "storage_bytes": 26214400,
+          "storage_ptr": 47517538451456,
+          "parameter_or_buffer": true,
+          "duplicate": false,
+          "module": "attn.q_proj",
+          "producer": "ReshapeAliasBackward0"
+        },
+        {
+          "shape": [
+            1,
+            8192,
+            2560
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 83886080,
+          "storage_bytes": 83886080,
+          "storage_ptr": 47519216173056,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "attn.q_proj",
+          "producer": "ViewBackward0"
+        },
+        {
+          "shape": [
+            1,
+            2560,
+            2560
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 26214400,
+          "storage_bytes": 26214400,
+          "storage_ptr": 47517565714432,
+          "parameter_or_buffer": true,
+          "duplicate": false,
+          "module": "attn.k_proj",
+          "producer": "ReshapeAliasBackward0"
+        },
+        {
+          "shape": [
+            1,
+            8192,
+            2560
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 83886080,
+          "storage_bytes": 83886080,
+          "storage_ptr": 47519216173056,
+          "parameter_or_buffer": false,
+          "duplicate": true,
+          "module": "attn.k_proj",
+          "producer": "ViewBackward0"
+        },
+        {
+          "shape": [
+            1,
+            2560,
+            2560
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 26214400,
+          "storage_bytes": 26214400,
+          "storage_ptr": 47517592977408,
+          "parameter_or_buffer": true,
+          "duplicate": false,
+          "module": "attn.v_proj",
+          "producer": "ReshapeAliasBackward0"
+        },
+        {
+          "shape": [
+            1,
+            8192,
+            2560
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 83886080,
+          "storage_bytes": 83886080,
+          "storage_ptr": 47519216173056,
+          "parameter_or_buffer": false,
+          "duplicate": true,
+          "module": "attn.v_proj",
+          "producer": "ViewBackward0"
+        },
+        {
+          "shape": [
+            2048,
+            40
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 327680,
+          "storage_bytes": 655360,
+          "storage_ptr": 47518025992192,
+          "parameter_or_buffer": true,
+          "duplicate": false,
+          "module": "attn.positional_encoder",
+          "producer": "leaf"
+        },
+        {
+          "shape": [
+            2048,
+            40
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 327680,
+          "storage_bytes": 655360,
+          "storage_ptr": 47518025992192,
+          "parameter_or_buffer": true,
+          "duplicate": false,
+          "module": "attn.positional_encoder",
+          "producer": "leaf"
+        },
+        {
+          "shape": [
+            2048,
+            40
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 327680,
+          "storage_bytes": 655360,
+          "storage_ptr": 47518025992192,
+          "parameter_or_buffer": true,
+          "duplicate": false,
+          "module": "attn.positional_encoder",
+          "producer": "leaf"
+        },
+        {
+          "shape": [
+            2048,
+            40
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 327680,
+          "storage_bytes": 655360,
+          "storage_ptr": 47518025992192,
+          "parameter_or_buffer": true,
+          "duplicate": false,
+          "module": "attn.positional_encoder",
+          "producer": "leaf"
+        },
+        {
+          "shape": [
+            2048,
+            40
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 327680,
+          "storage_bytes": 655360,
+          "storage_ptr": 47518025992192,
+          "parameter_or_buffer": true,
+          "duplicate": false,
+          "module": "attn.positional_encoder",
+          "producer": "leaf"
+        },
+        {
+          "shape": [
+            2048,
+            40
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 327680,
+          "storage_bytes": 655360,
+          "storage_ptr": 47518025992192,
+          "parameter_or_buffer": true,
+          "duplicate": false,
+          "module": "attn.positional_encoder",
+          "producer": "leaf"
+        },
+        {
+          "shape": [
+            2048,
+            40
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 327680,
+          "storage_bytes": 655360,
+          "storage_ptr": 47518025992192,
+          "parameter_or_buffer": true,
+          "duplicate": false,
+          "module": "attn.positional_encoder",
+          "producer": "leaf"
+        },
+        {
+          "shape": [
+            2048,
+            40
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 327680,
+          "storage_bytes": 655360,
+          "storage_ptr": 47518025992192,
+          "parameter_or_buffer": true,
+          "duplicate": false,
+          "module": "attn.positional_encoder",
+          "producer": "leaf"
+        },
+        {
+          "shape": [
+            128,
+            80,
+            2048
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 83886080,
+          "storage_bytes": 83886080,
+          "storage_ptr": 47519316836352,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "attn",
+          "producer": "ReshapeAliasBackward0"
+        },
+        {
+          "shape": [
+            128,
+            2048,
+            80
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 83886080,
+          "storage_bytes": 83886080,
+          "storage_ptr": 47519987924992,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "attn",
+          "producer": "ViewBackward0"
+        },
+        {
+          "shape": [
+            1,
+            2048,
+            2048
+          ],
+          "dtype": "torch.bool",
+          "logical_bytes": 4194304,
+          "storage_bytes": 4194304,
+          "storage_ptr": 47517970595840,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "attn",
+          "producer": "leaf"
+        },
+        {
+          "shape": [
+            4,
+            32,
+            2048,
+            1
+          ],
+          "dtype": "torch.int64",
+          "logical_bytes": 2097152,
+          "storage_bytes": 2097152,
+          "storage_ptr": 47517974790144,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "attn",
+          "producer": "leaf"
+        },
+        {
+          "shape": [
+            4,
+            32,
+            2048,
+            2048
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 2147483648,
+          "storage_bytes": 2147483648,
+          "storage_ptr": 47524886872064,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "attn",
+          "producer": "ExpBackward0"
+        },
+        {
+          "shape": [
+            4,
+            32,
+            2048,
+            1
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 1048576,
+          "storage_bytes": 1048576,
+          "storage_ptr": 47520071811072,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "attn",
+          "producer": "SumBackward1"
+        },
+        {
+          "shape": [
+            4,
+            32,
+            2048,
+            2048
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 2147483648,
+          "storage_bytes": 2147483648,
+          "storage_ptr": 47524886872064,
+          "parameter_or_buffer": false,
+          "duplicate": true,
+          "module": "attn",
+          "producer": "ExpBackward0"
+        },
+        {
+          "shape": [
+            128,
+            2048,
+            80
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 83886080,
+          "storage_bytes": 83886080,
+          "storage_ptr": 47519585271808,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "attn",
+          "producer": "UnsafeViewBackward0"
+        },
+        {
+          "shape": [
+            128,
+            2048,
+            2048
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 2147483648,
+          "storage_bytes": 2147483648,
+          "storage_ptr": 47527034355712,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "attn",
+          "producer": "ViewBackward0"
+        },
+        {
+          "shape": [
+            1,
+            2560,
+            2560
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 26214400,
+          "storage_bytes": 26214400,
+          "storage_ptr": 47517620240384,
+          "parameter_or_buffer": true,
+          "duplicate": false,
+          "module": "attn.output_proj",
+          "producer": "ReshapeAliasBackward0"
+        },
+        {
+          "shape": [
+            1,
+            8192,
+            2560
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 83886080,
+          "storage_bytes": 83886080,
+          "storage_ptr": 47522823274496,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "attn.output_proj",
+          "producer": "ViewBackward0"
+        },
+        {
+          "shape": [
+            4,
+            2048,
+            2560
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 83886080,
+          "storage_bytes": 83886080,
+          "storage_ptr": 47519685935104,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "ln2",
+          "producer": "AddBackward0"
+        },
+        {
+          "shape": [
+            4,
+            2048,
+            1
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 32768,
+          "storage_bytes": 32768,
+          "storage_ptr": 47518026700800,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "ln2",
+          "producer": "RsqrtBackward0"
+        },
+        {
+          "shape": [
+            4,
+            2048,
+            1
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 32768,
+          "storage_bytes": 32768,
+          "storage_ptr": 47518026700800,
+          "parameter_or_buffer": false,
+          "duplicate": true,
+          "module": "ln2",
+          "producer": "RsqrtBackward0"
+        },
+        {
+          "shape": [
+            4,
+            2048,
+            2560
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 83886080,
+          "storage_bytes": 83886080,
+          "storage_ptr": 47519685935104,
+          "parameter_or_buffer": false,
+          "duplicate": true,
+          "module": "ln2",
+          "producer": "AddBackward0"
+        },
+        {
+          "shape": [
+            4,
+            2048,
+            2560
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 83886080,
+          "storage_bytes": 83886080,
+          "storage_ptr": 47522907160576,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "ln2",
+          "producer": "MulBackward0"
+        },
+        {
+          "shape": [
+            2560
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 10240,
+          "storage_bytes": 10240,
+          "storage_ptr": 47518026657792,
+          "parameter_or_buffer": true,
+          "duplicate": false,
+          "module": "ln2",
+          "producer": "leaf"
+        },
+        {
+          "shape": [
+            1,
+            2560,
+            10240
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 104857600,
+          "storage_bytes": 104857600,
+          "storage_ptr": 47517647503360,
+          "parameter_or_buffer": true,
+          "duplicate": false,
+          "module": "ffn.w1",
+          "producer": "ReshapeAliasBackward0"
+        },
+        {
+          "shape": [
+            1,
+            8192,
+            2560
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 83886080,
+          "storage_bytes": 83886080,
+          "storage_ptr": 47522991046656,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "ffn.w1",
+          "producer": "ViewBackward0"
+        },
+        {
+          "shape": [
+            4,
+            2048,
+            10240
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 335544320,
+          "storage_bytes": 335544320,
+          "storage_ptr": 47523410477056,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "ffn",
+          "producer": "SigmoidBackward0"
+        },
+        {
+          "shape": [
+            4,
+            2048,
+            10240
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 335544320,
+          "storage_bytes": 335544320,
+          "storage_ptr": 47523410477056,
+          "parameter_or_buffer": false,
+          "duplicate": true,
+          "module": "ffn",
+          "producer": "SigmoidBackward0"
+        },
+        {
+          "shape": [
+            4,
+            2048,
+            10240
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 335544320,
+          "storage_bytes": 335544320,
+          "storage_ptr": 47523074932736,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "ffn",
+          "producer": "ViewBackward0"
+        },
+        {
+          "shape": [
+            1,
+            2560,
+            10240
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 104857600,
+          "storage_bytes": 104857600,
+          "storage_ptr": 47517857218560,
+          "parameter_or_buffer": true,
+          "duplicate": false,
+          "module": "ffn.w3",
+          "producer": "ReshapeAliasBackward0"
+        },
+        {
+          "shape": [
+            1,
+            8192,
+            2560
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 83886080,
+          "storage_bytes": 83886080,
+          "storage_ptr": 47522991046656,
+          "parameter_or_buffer": false,
+          "duplicate": true,
+          "module": "ffn.w3",
+          "producer": "ViewBackward0"
+        },
+        {
+          "shape": [
+            4,
+            2048,
+            10240
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 335544320,
+          "storage_bytes": 335544320,
+          "storage_ptr": 47524081565696,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "ffn",
+          "producer": "ViewBackward0"
+        },
+        {
+          "shape": [
+            4,
+            2048,
+            10240
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 335544320,
+          "storage_bytes": 335544320,
+          "storage_ptr": 47523746021376,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "ffn",
+          "producer": "MulBackward0"
+        },
+        {
+          "shape": [
+            1,
+            10240,
+            2560
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 104857600,
+          "storage_bytes": 104857600,
+          "storage_ptr": 47517752360960,
+          "parameter_or_buffer": true,
+          "duplicate": false,
+          "module": "ffn.w2",
+          "producer": "ReshapeAliasBackward0"
+        },
+        {
+          "shape": [
+            1,
+            8192,
+            10240
+          ],
+          "dtype": "torch.float32",
+          "logical_bytes": 335544320,
+          "storage_bytes": 335544320,
+          "storage_ptr": 47524417110016,
+          "parameter_or_buffer": false,
+          "duplicate": false,
+          "module": "ffn.w2",
+          "producer": "ViewBackward0"
+        }
+      ],
+      "unique_saved_bytes": 6818955264,
+      "top_operations": [
+        {
+          "name": "attn:ViewBackward0",
+          "bytes": 2231369728,
+          "percent": 32.723043950446424
+        },
+        {
+          "name": "attn:ExpBackward0",
+          "bytes": 2147483648,
+          "percent": 31.49285432824919
+        },
+        {
+          "name": "ffn:ViewBackward0",
+          "bytes": 671088640,
+          "percent": 9.841516977577871
+        },
+        {
+          "name": "ffn:SigmoidBackward0",
+          "bytes": 335544320,
+          "percent": 4.920758488788936
+        },
+        {
+          "name": "ffn:MulBackward0",
+          "bytes": 335544320,
+          "percent": 4.920758488788936
+        },
+        {
+          "name": "ffn.w2:ViewBackward0",
+          "bytes": 335544320,
+          "percent": 4.920758488788936
+        },
+        {
+          "name": "ln1:leaf",
+          "bytes": 83886080,
+          "percent": 1.230189622197234
+        },
+        {
+          "name": "ln1:MulBackward0",
+          "bytes": 83886080,
+          "percent": 1.230189622197234
+        },
+        {
+          "name": "attn.q_proj:ViewBackward0",
+          "bytes": 83886080,
+          "percent": 1.230189622197234
+        },
+        {
+          "name": "attn:ReshapeAliasBackward0",
+          "bytes": 83886080,
+          "percent": 1.230189622197234
+        },
+        {
+          "name": "attn:UnsafeViewBackward0",
+          "bytes": 83886080,
+          "percent": 1.230189622197234
+        },
+        {
+          "name": "attn.output_proj:ViewBackward0",
+          "bytes": 83886080,
+          "percent": 1.230189622197234
+        },
+        {
+          "name": "ln2:AddBackward0",
+          "bytes": 83886080,
+          "percent": 1.230189622197234
+        },
+        {
+          "name": "ln2:MulBackward0",
+          "bytes": 83886080,
+          "percent": 1.230189622197234
+        },
+        {
+          "name": "ffn.w1:ViewBackward0",
+          "bytes": 83886080,
+          "percent": 1.230189622197234
+        },
+        {
+          "name": "attn:leaf",
+          "bytes": 6291456,
+          "percent": 0.09226422166479255
+        },
+        {
+          "name": "attn:SumBackward1",
+          "bytes": 1048576,
+          "percent": 0.015377370277465425
+        },
+        {
+          "name": "ln1:RsqrtBackward0",
+          "bytes": 32768,
+          "percent": 0.00048054282117079454
+        },
+        {
+          "name": "ln2:RsqrtBackward0",
+          "bytes": 32768,
+          "percent": 0.00048054282117079454
+        }
+      ],
+      "before_forward_bytes": 508186624,
+      "after_forward_bytes": 7335661568,
+      "after_backward_bytes": 1112449024,
+      "peak_bytes": 14345501696,
+      "parameter_gradient_bytes": 419450880,
+      "input_gradient_bytes": 83886080
+    },
+    "status": "ok",
+    "wall_seconds": 14.287699460983276
+  }
+}

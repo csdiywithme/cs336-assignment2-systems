@@ -1,0 +1,11 @@
+{
+  "config": {
+    "name": "extended-attention",
+    "kind": "validate_attention",
+    "timeout": 600
+  },
+  "started_utc": "2026-09-14T08:20:52.295843+00:00",
+  "status": "failed",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/cs336_systems/experiments.py\", line 348, in main\n    result[\"measurements\"] = kinds[cfg[\"kind\"]](cfg, out)\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/cs336_systems/experiments.py\", line 152, in validate_attention\n    errors += [float((a.grad.float() - b.grad).abs().max()) for a, b in zip(inputs, refs)]\n                      ^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'float'\n",
+  "wall_seconds": 8.00205659866333
+}

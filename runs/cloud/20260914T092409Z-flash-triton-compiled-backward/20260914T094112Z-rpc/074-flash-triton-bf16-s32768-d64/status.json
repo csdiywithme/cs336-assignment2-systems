@@ -1,0 +1,67 @@
+{
+  "name": "flash-triton-bf16-s32768-d64",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"flash-triton-bf16-s32768-d64\", \"kind\": \"attention\", \"implementation\": \"triton\", \"batch\": 1, \"seq\": 32768, \"dim\": 64, \"dtype\": \"bf16\", \"causal\": true, \"triton_bench\": true, \"steps\": 10, \"warmup\": 5, \"timeout\": 240}",
+    "--output",
+    "/data/20260914T092409Z-flash-triton-compiled-backward/074-flash-triton-bf16-s32768-d64"
+  ],
+  "started": 1789378746.5220208,
+  "returncode": 0,
+  "seconds": 10.772568702697754,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "flash-triton-bf16-s32768-d64",
+      "kind": "attention",
+      "implementation": "triton",
+      "batch": 1,
+      "seq": 32768,
+      "dim": 64,
+      "dtype": "bf16",
+      "causal": true,
+      "triton_bench": true,
+      "steps": 10,
+      "warmup": 5,
+      "timeout": 240
+    },
+    "started_utc": "2026-09-14T09:39:07.667676+00:00",
+    "measurements": {
+      "forward": {
+        "mean_ms": 0.9812106302120541,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory_before_backward": {
+        "allocated_bytes": 21102592,
+        "reserved_bytes": 291504128,
+        "peak_allocated_bytes": 289538048,
+        "peak_reserved_bytes": 291504128
+      },
+      "backward": {
+        "mean_ms": 16.79455061519847,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "end_to_end": {
+        "mean_ms": 17.770773887634277,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory": {
+        "allocated_bytes": 37879808,
+        "reserved_bytes": 17471373312,
+        "peak_allocated_bytes": 13208256512,
+        "peak_reserved_bytes": 17471373312
+      }
+    },
+    "status": "ok",
+    "wall_seconds": 7.971223592758179
+  }
+}

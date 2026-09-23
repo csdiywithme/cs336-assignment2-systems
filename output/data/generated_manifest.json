@@ -1,0 +1,52 @@
+[
+  {
+    "path": "output/data/all_attempts.json",
+    "sha256": "af93c73e7c844ae6ff357f53e2c7c5d9764e0ba68398098a27d442bbdce5ce70",
+    "bytes": 3132136
+  },
+  {
+    "path": "output/data/cost_ledger.json",
+    "sha256": "2d22c32291ead2304be3ad3af570b1ba841e70d6ec8a7b6d29895754603c13ec",
+    "bytes": 21311
+  },
+  {
+    "path": "output/data/coverage_snapshot.json",
+    "sha256": "dc32a8db50702c002ce7143999aeb2d286ed2d80145863b9f7552f01119d51b8",
+    "bytes": 2337
+  },
+  {
+    "path": "output/data/evidence_index.json",
+    "sha256": "d9df7de3221f6e700bc35a73989f182b2ced05e897461b21e3b5f50af6361250",
+    "bytes": 986940
+  },
+  {
+    "path": "output/data/local_test_history.json",
+    "sha256": "74d389ca95262defc92844e66c063b0a45e8453915578c243fdae0e25bd18ad4",
+    "bytes": 2036
+  },
+  {
+    "path": "output/data/profiling_evidence.json",
+    "sha256": "4a7a1da8df6b48b1cb5cc336108f33c66ecfe59fa508dec45b34a09a07a3e3f2",
+    "bytes": 147934
+  },
+  {
+    "path": "output/data/required_matrix.json",
+    "sha256": "87f83600d5a13be25d79b7bda1cda0ae96912ef8095bb8b291935299af9b6db5",
+    "bytes": 84308
+  },
+  {
+    "path": "output/data/run_registry.json",
+    "sha256": "7e1a5b15ac2361f6afc327325c8f6bcc50fd69f5ec6892c30328ccef52d804ac",
+    "bytes": 2548247
+  },
+  {
+    "path": "output/data/sample_audit.json",
+    "sha256": "c3c91dc47363f83dc7e3b6e5285c193b55356dcb64d88e8b74fc128dc0d74b4d",
+    "bytes": 359837
+  },
+  {
+    "path": "output/tables/EXPERIMENT_TABLES.md",
+    "sha256": "2e0a8ea1aea2c1bfd339ca81695f61499982c45ebfc58697507e5364f42d11b1",
+    "bytes": 60989
+  }
+]

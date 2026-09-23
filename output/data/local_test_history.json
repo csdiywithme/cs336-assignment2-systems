@@ -1,0 +1,101 @@
+[
+  {
+    "source": "runs/local/extended-tests.xml",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 2,
+    "seconds": 0.757
+  },
+  {
+    "source": "runs/local/final-gloo-stability/repeat-1.xml",
+    "tests": 8,
+    "failures": 8,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 0,
+    "seconds": 9.559
+  },
+  {
+    "source": "runs/local/final-gloo-stability-localhost/repeat-1.xml",
+    "tests": 8,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 8,
+    "seconds": 12.561
+  },
+  {
+    "source": "runs/local/final-gloo-stability-localhost/repeat-2.xml",
+    "tests": 8,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 8,
+    "seconds": 12.56
+  },
+  {
+    "source": "runs/local/final-gloo-stability-localhost/repeat-3.xml",
+    "tests": 8,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 8,
+    "seconds": 15.816
+  },
+  {
+    "source": "runs/local/final-gloo-stability-localhost/repeat-4.xml",
+    "tests": 8,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 8,
+    "seconds": 12.06
+  },
+  {
+    "source": "runs/local/final-gloo-stability-localhost/repeat-5.xml",
+    "tests": 8,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 8,
+    "seconds": 12.298
+  },
+  {
+    "source": "runs/local/fsdp-prefetch-optimizer-load.xml",
+    "tests": 14,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 4,
+    "passed": 10,
+    "seconds": 11.558
+  },
+  {
+    "source": "runs/local/initial/cs336-assignment2-first-tests.xml",
+    "tests": 14,
+    "failures": 8,
+    "errors": 0,
+    "skipped": 4,
+    "passed": 2,
+    "seconds": 10.438
+  },
+  {
+    "source": "runs/local/initial/cs336-assignment2-unrestricted-tests.xml",
+    "tests": 14,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 4,
+    "passed": 10,
+    "seconds": 13.737
+  },
+  {
+    "source": "runs/local/report-final-cpu-tests.xml",
+    "tests": 18,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 4,
+    "passed": 14,
+    "seconds": 12.856
+  }
+]

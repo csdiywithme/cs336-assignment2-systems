@@ -1,0 +1,7 @@
+{
+  "run_id": "20260914T091834Z-profile-probe-keyword-fix",
+  "call_id": "fc-01M2FKC3CRC2129WZ52QYB48F6",
+  "gpu_count": 1,
+  "timeout_seconds": 1800,
+  "plan": "profile-probe"
+}

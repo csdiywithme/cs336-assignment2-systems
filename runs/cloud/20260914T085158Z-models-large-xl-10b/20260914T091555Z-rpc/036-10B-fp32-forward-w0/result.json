@@ -1,0 +1,74 @@
+{
+  "config": {
+    "name": "10B-fp32-forward-w0",
+    "kind": "model",
+    "size": "10B",
+    "dtype": "fp32",
+    "mode": "forward",
+    "warmup": 0,
+    "steps": 10,
+    "timeout": 500
+  },
+  "started_utc": "2026-09-14T09:01:47.720134+00:00",
+  "measurements": {
+    "samples_ms": [
+      1208.4370310000168,
+      942.8452439999546,
+      941.928469000004,
+      942.2632430000704,
+      942.0438910000257,
+      942.0705140000791,
+      942.5438069999927,
+      942.3507379999592,
+      941.8730830000186,
+      941.6102559999899
+    ],
+    "mean_ms": 968.7966276000111,
+    "std_ms": 84.20179562739608,
+    "median_ms": 942.1668785000747,
+    "cuda_event_stages": {
+      "forward": {
+        "samples_ms": [
+          1206.6220703125,
+          939.8731689453125,
+          939.7393798828125,
+          939.745849609375,
+          939.77099609375,
+          939.8252563476562,
+          939.7474365234375,
+          939.9063110351562,
+          939.6983032226562,
+          939.6801147460938
+        ],
+        "mean_ms": 966.460888671875,
+        "std_ms": 84.38406878186262,
+        "median_ms": 939.7592163085938
+      }
+    },
+    "last_scalar": -1.463966727256775,
+    "parameters": 12832823808,
+    "initial_memory": {
+      "allocated_bytes": 51541764096,
+      "reserved_bytes": 51543801856,
+      "peak_allocated_bytes": 51541764096,
+      "peak_reserved_bytes": 51543801856
+    },
+    "memory": {
+      "allocated_bytes": 51632203776,
+      "reserved_bytes": 113300733952,
+      "peak_allocated_bytes": 110943307776,
+      "peak_reserved_bytes": 113300733952
+    },
+    "stages": [
+      {
+        "stage": "after_forward",
+        "allocated_bytes": 110943307776,
+        "reserved_bytes": 113300733952,
+        "peak_allocated_bytes": 110943307776,
+        "peak_reserved_bytes": 113300733952
+      }
+    ]
+  },
+  "status": "ok",
+  "wall_seconds": 13.133974552154541
+}

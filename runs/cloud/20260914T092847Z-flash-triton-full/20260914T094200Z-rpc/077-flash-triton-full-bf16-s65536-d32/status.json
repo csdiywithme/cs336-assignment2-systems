@@ -1,0 +1,67 @@
+{
+  "name": "flash-triton-full-bf16-s65536-d32",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"flash-triton-full-bf16-s65536-d32\", \"kind\": \"attention\", \"implementation\": \"triton-full\", \"batch\": 1, \"seq\": 65536, \"dim\": 32, \"dtype\": \"bf16\", \"causal\": true, \"triton_bench\": true, \"steps\": 10, \"warmup\": 5, \"timeout\": 240}",
+    "--output",
+    "/data/20260914T092847Z-flash-triton-full/077-flash-triton-full-bf16-s65536-d32"
+  ],
+  "started": 1789378791.4668524,
+  "returncode": 0,
+  "seconds": 6.277669906616211,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "flash-triton-full-bf16-s65536-d32",
+      "kind": "attention",
+      "implementation": "triton-full",
+      "batch": 1,
+      "seq": 65536,
+      "dim": 32,
+      "dtype": "bf16",
+      "causal": true,
+      "triton_bench": true,
+      "steps": 10,
+      "warmup": 5,
+      "timeout": 240
+    },
+    "started_utc": "2026-09-14T09:39:52.599376+00:00",
+    "measurements": {
+      "forward": {
+        "mean_ms": 3.0373384539286294,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory_before_backward": {
+        "allocated_bytes": 21233664,
+        "reserved_bytes": 291504128,
+        "peak_allocated_bytes": 289669120,
+        "peak_reserved_bytes": 291504128
+      },
+      "backward": {
+        "mean_ms": 8.319860131399972,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "end_to_end": {
+        "mean_ms": 11.350263412182148,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory": {
+        "allocated_bytes": 29360128,
+        "reserved_bytes": 559939584,
+        "peak_allocated_bytes": 302514176,
+        "peak_reserved_bytes": 559939584
+      }
+    },
+    "status": "ok",
+    "wall_seconds": 4.415934085845947
+  }
+}

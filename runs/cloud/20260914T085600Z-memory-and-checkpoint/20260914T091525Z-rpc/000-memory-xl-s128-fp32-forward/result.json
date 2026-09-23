@@ -1,0 +1,60 @@
+{
+  "config": {
+    "name": "memory-xl-s128-fp32-forward",
+    "kind": "model",
+    "size": "xl",
+    "seq": 128,
+    "dtype": "fp32",
+    "mode": "forward",
+    "memory_history": true,
+    "warmup": 2,
+    "steps": 2,
+    "timeout": 600
+  },
+  "started_utc": "2026-09-14T08:56:07.563347+00:00",
+  "measurements": {
+    "samples_ms": [
+      91.1291159999994,
+      89.5713090000001
+    ],
+    "mean_ms": 90.35021249999974,
+    "std_ms": 1.1015358934793775,
+    "median_ms": 90.35021249999974,
+    "cuda_event_stages": {
+      "forward": {
+        "samples_ms": [
+          90.08573150634766,
+          88.97110748291016
+        ],
+        "mean_ms": 89.5284194946289,
+        "std_ms": 0.7881582054460895,
+        "median_ms": 89.5284194946289
+      }
+    },
+    "last_scalar": -0.2137499302625656,
+    "parameters": 3406809600,
+    "initial_memory": {
+      "allocated_bytes": 13762226176,
+      "reserved_bytes": 13763608576,
+      "peak_allocated_bytes": 13762226176,
+      "peak_reserved_bytes": 13763608576
+    },
+    "memory": {
+      "allocated_bytes": 13791717376,
+      "reserved_bytes": 19537068032,
+      "peak_allocated_bytes": 19384430592,
+      "peak_reserved_bytes": 19537068032
+    },
+    "stages": [
+      {
+        "stage": "after_forward",
+        "allocated_bytes": 19384430592,
+        "reserved_bytes": 19537068032,
+        "peak_allocated_bytes": 19384430592,
+        "peak_reserved_bytes": 19537068032
+      }
+    ]
+  },
+  "status": "ok",
+  "wall_seconds": 3.6843159198760986
+}

@@ -1,0 +1,130 @@
+[
+  {
+    "path": "environment.json",
+    "bytes": 4564
+  },
+  {
+    "path": "nvidia-smi.txt",
+    "bytes": 11460
+  },
+  {
+    "path": "nvlink-status.txt",
+    "bytes": 472
+  },
+  {
+    "path": "pip-freeze.txt",
+    "bytes": 1691
+  },
+  {
+    "path": "progress.json",
+    "bytes": 13886
+  },
+  {
+    "path": "summary.json",
+    "bytes": 15011
+  },
+  {
+    "path": "topology.txt",
+    "bytes": 603
+  },
+  {
+    "path": "000-large-compiled-forward/result.json",
+    "bytes": 1901
+  },
+  {
+    "path": "000-large-compiled-forward/status.json",
+    "bytes": 2605
+  },
+  {
+    "path": "000-large-compiled-forward/stdout.log",
+    "bytes": 2181
+  },
+  {
+    "path": "001-large-compiled-backward/result.json",
+    "bytes": 3113
+  },
+  {
+    "path": "001-large-compiled-backward/status.json",
+    "bytes": 3904
+  },
+  {
+    "path": "001-large-compiled-backward/stdout.log",
+    "bytes": 3393
+  },
+  {
+    "path": "002-xl-compiled-forward/result.json",
+    "bytes": 1914
+  },
+  {
+    "path": "002-xl-compiled-forward/status.json",
+    "bytes": 2607
+  },
+  {
+    "path": "002-xl-compiled-forward/stdout.log",
+    "bytes": 2194
+  },
+  {
+    "path": "003-xl-compiled-backward/result.json",
+    "bytes": 3090
+  },
+  {
+    "path": "003-xl-compiled-backward/status.json",
+    "bytes": 3868
+  },
+  {
+    "path": "003-xl-compiled-backward/stdout.log",
+    "bytes": 3370
+  },
+  {
+    "path": "source/__init__.py",
+    "bytes": 151
+  },
+  {
+    "path": "source/attention.py",
+    "bytes": 5184
+  },
+  {
+    "path": "source/checkpointing.py",
+    "bytes": 783
+  },
+  {
+    "path": "source/ddp.py",
+    "bytes": 2092
+  },
+  {
+    "path": "source/experiment_plans.py",
+    "bytes": 6456
+  },
+  {
+    "path": "source/experiments.py",
+    "bytes": 26196
+  },
+  {
+    "path": "source/fsdp.py",
+    "bytes": 8580
+  },
+  {
+    "path": "source/nsight_summary.py",
+    "bytes": 3692
+  },
+  {
+    "path": "source/optimized_model.py",
+    "bytes": 4881
+  },
+  {
+    "path": "source/profiling.py",
+    "bytes": 3700
+  },
+  {
+    "path": "source/sharded_optimizer.py",
+    "bytes": 2834
+  },
+  {
+    "path": "source/triton_attention.py",
+    "bytes": 7023
+  },
+  {
+    "path": "source/triton_optimizer.py",
+    "bytes": 764
+  }
+]

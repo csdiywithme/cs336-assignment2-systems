@@ -1,0 +1,42 @@
+[
+  {
+    "path": "006-memory-xl-s2048-bf16-forward/memory_snapshot.pickle",
+    "bytes": 6358788,
+    "remote": "20260914T085600Z-memory-and-checkpoint/006-memory-xl-s2048-bf16-forward/memory_snapshot.pickle",
+    "status": "downloaded",
+    "sha256": "8b154e328e85d67bc6d875f50cb1d2b5917af24c19b5b77c3b7d19c8cc60f087",
+    "received_bytes": 6358788
+  },
+  {
+    "path": "003-memory-xl-s128-bf16-train/memory_snapshot.pickle",
+    "bytes": 15785817,
+    "remote": "20260914T085600Z-memory-and-checkpoint/003-memory-xl-s128-bf16-train/memory_snapshot.pickle",
+    "status": "downloaded",
+    "sha256": "272810c4c4e0c89f28f2643a4c9dfd660d96b75f5f23f4555facbdfc8df0abca",
+    "received_bytes": 15785817
+  },
+  {
+    "path": "002-memory-xl-s128-bf16-forward/memory_snapshot.pickle",
+    "bytes": 6389445,
+    "remote": "20260914T085600Z-memory-and-checkpoint/002-memory-xl-s128-bf16-forward/memory_snapshot.pickle",
+    "status": "downloaded",
+    "sha256": "246da25459ad4ee58b92effee00d5b1cbe24865278f84f01180dca1dcf56e7c9",
+    "received_bytes": 6389445
+  },
+  {
+    "path": "001-memory-xl-s128-fp32-train/memory_snapshot.pickle",
+    "bytes": 13519759,
+    "remote": "20260914T085600Z-memory-and-checkpoint/001-memory-xl-s128-fp32-train/memory_snapshot.pickle",
+    "status": "downloaded",
+    "sha256": "eeae8fd0c929be4b0e06d57dfbb9ae18f33b98d0d59f7321e29f6a503e8cefdc",
+    "received_bytes": 13519759
+  },
+  {
+    "path": "000-memory-xl-s128-fp32-forward/memory_snapshot.pickle",
+    "bytes": 4855741,
+    "remote": "20260914T085600Z-memory-and-checkpoint/000-memory-xl-s128-fp32-forward/memory_snapshot.pickle",
+    "status": "downloaded",
+    "sha256": "4f3b4a73726cd83916054d8c1fb6ff8d4a104edd487f1f39127df18c28d05eda",
+    "received_bytes": 4855741
+  }
+]

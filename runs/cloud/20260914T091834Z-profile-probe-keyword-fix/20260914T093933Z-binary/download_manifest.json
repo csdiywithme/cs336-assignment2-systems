@@ -1,0 +1,17 @@
+[
+  {
+    "path": "000-nsys-small-s256/gui/gui.log",
+    "bytes": 622,
+    "sha256": "06f077b2ca92e76d061304861e38375f9d93431be0c800d992db98935c00e934"
+  },
+  {
+    "path": "000-nsys-small-s256/gui/metadata.json",
+    "bytes": 243,
+    "sha256": "b2b9a72d8a172de45ab614f656282c635c78df8ec617decbb4f0ae54fdaa062c"
+  },
+  {
+    "path": "000-nsys-small-s256/gui/overview.png",
+    "bytes": 88987,
+    "sha256": "4999ff965a43f5c0cc702e3e50b5e682f9998aeb53a26d7c946da564e02bcf8a"
+  }
+]

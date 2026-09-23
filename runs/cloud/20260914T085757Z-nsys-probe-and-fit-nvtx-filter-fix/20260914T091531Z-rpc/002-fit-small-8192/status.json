@@ -1,0 +1,39 @@
+{
+  "name": "fit-small-8192",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"fit-small-8192\", \"kind\": \"model\", \"size\": \"small\", \"seq\": 8192, \"mode\": \"train\", \"dtype\": \"fp32\", \"warmup\": 1, \"steps\": 1, \"timeout\": 300}",
+    "--output",
+    "/data/20260914T085757Z-nsys-probe-and-fit-nvtx-filter-fix/002-fit-small-8192"
+  ],
+  "started": 1789376301.4878497,
+  "returncode": 0,
+  "seconds": 4.216954231262207,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "fit-small-8192",
+      "kind": "model",
+      "size": "small",
+      "seq": 8192,
+      "mode": "train",
+      "dtype": "fp32",
+      "warmup": 1,
+      "steps": 1,
+      "timeout": 300
+    },
+    "started_utc": "2026-09-14T08:58:22.556765+00:00",
+    "status": "oom",
+    "traceback": "Traceback (most recent call last):\n  File \"/workspace/cs336_systems/experiments.py\", line 395, in main\n    result[\"measurements\"] = kinds[cfg[\"kind\"]](cfg, out)\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/cs336_systems/experiments.py\", line 142, in model_benchmark\n    step()\n    ~~~~^^\n  File \"/workspace/cs336_systems/experiments.py\", line 117, in step\n    logits = model(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 253, in forward\n    x = layer(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 382, in forward\n    x_attn = self.attn(self.ln1(x))\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 520, in forward\n    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 432, in scaled_dot_product_attention\n    attention_weights = softmax(attention_scores, dim=-1)  # Softmax over the key dimension\n  File \"/workspace/cs336-basics/cs336_basics/nn_utils.py\", line 6, in softmax\n    exponentiated_rescaled_input = torch.exp(rescaled_input)\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 12.00 GiB. GPU 0 has a total capacity of 178.35 GiB of which 8.37 GiB is free. Process 1 has 169.96 GiB memory in use. Of the allocated memory 159.52 GiB is allocated by PyTorch, and 9.69 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n",
+    "memory": {
+      "allocated_bytes": 171282934784,
+      "reserved_bytes": 181684666368,
+      "peak_allocated_bytes": 171285031936,
+      "peak_reserved_bytes": 181885992960
+    },
+    "wall_seconds": 2.443305015563965
+  }
+}

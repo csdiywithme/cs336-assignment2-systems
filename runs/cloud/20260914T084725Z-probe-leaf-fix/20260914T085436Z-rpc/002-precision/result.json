@@ -1,0 +1,50 @@
+{
+  "config": {
+    "name": "precision",
+    "kind": "precision"
+  },
+  "started_utc": "2026-09-14T08:48:23.346965+00:00",
+  "measurements": {
+    "accumulations": [
+      {
+        "accumulator": "torch.float32",
+        "increment": "torch.float32",
+        "value": 10.000133514404297
+      },
+      {
+        "accumulator": "torch.float16",
+        "increment": "torch.float16",
+        "value": 9.953125
+      },
+      {
+        "accumulator": "torch.float32",
+        "increment": "torch.float16",
+        "value": 10.00213623046875
+      },
+      {
+        "variant": "explicit_cast",
+        "value": 10.00213623046875
+      }
+    ],
+    "autocast": {
+      "fc1": "torch.float16",
+      "layernorm": "torch.float32",
+      "logits": "torch.float16",
+      "loss": "torch.float32",
+      "parameters": {
+        "fc1.weight": "torch.float32",
+        "ln.weight": "torch.float32",
+        "ln.bias": "torch.float32",
+        "fc2.weight": "torch.float32"
+      },
+      "gradients": {
+        "fc1.weight": "torch.float32",
+        "ln.weight": "torch.float32",
+        "ln.bias": "torch.float32",
+        "fc2.weight": "torch.float32"
+      }
+    }
+  },
+  "status": "ok",
+  "wall_seconds": 0.5447077751159668
+}

@@ -1,0 +1,67 @@
+{
+  "name": "flash-triton-full-bf16-s128-d32",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"flash-triton-full-bf16-s128-d32\", \"kind\": \"attention\", \"implementation\": \"triton-full\", \"batch\": 1, \"seq\": 128, \"dim\": 32, \"dtype\": \"bf16\", \"causal\": true, \"triton_bench\": true, \"steps\": 10, \"warmup\": 5, \"timeout\": 240}",
+    "--output",
+    "/data/20260914T092847Z-flash-triton-full/041-flash-triton-full-bf16-s128-d32"
+  ],
+  "started": 1789378498.1574404,
+  "returncode": 0,
+  "seconds": 5.869048595428467,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "flash-triton-full-bf16-s128-d32",
+      "kind": "attention",
+      "implementation": "triton-full",
+      "batch": 1,
+      "seq": 128,
+      "dim": 32,
+      "dtype": "bf16",
+      "causal": true,
+      "triton_bench": true,
+      "steps": 10,
+      "warmup": 5,
+      "timeout": 240
+    },
+    "started_utc": "2026-09-14T09:34:59.284664+00:00",
+    "measurements": {
+      "forward": {
+        "mean_ms": 0.008191058770000167,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory_before_backward": {
+        "allocated_bytes": 41472,
+        "reserved_bytes": 270532608,
+        "peak_allocated_bytes": 268476928,
+        "peak_reserved_bytes": 270532608
+      },
+      "backward": {
+        "mean_ms": 0.05853944766616646,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "end_to_end": {
+        "mean_ms": 0.07974469866142696,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory": {
+        "allocated_bytes": 57344,
+        "reserved_bytes": 270532608,
+        "peak_allocated_bytes": 268502016,
+        "peak_reserved_bytes": 270532608
+      }
+    },
+    "status": "ok",
+    "wall_seconds": 3.9490668773651123
+  }
+}

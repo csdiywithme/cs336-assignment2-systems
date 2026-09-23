@@ -1,0 +1,7 @@
+{
+  "run_id": "20260914T093845Z-profile-probe-cuda-software-trace",
+  "call_id": "fc-01M2FMH2DNATGCWR9WDAJDA3JT",
+  "gpu_count": 1,
+  "timeout_seconds": 1800,
+  "plan": "profile-probe"
+}

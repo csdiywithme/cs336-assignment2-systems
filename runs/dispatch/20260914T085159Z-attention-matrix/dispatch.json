@@ -1,0 +1,7 @@
+{
+  "run_id": "20260914T085159Z-attention-matrix",
+  "call_id": "fc-01M2FHVDNTBPMEPHS9CPKNX15Y",
+  "gpu_count": 1,
+  "timeout_seconds": 1800,
+  "plan": "attention"
+}

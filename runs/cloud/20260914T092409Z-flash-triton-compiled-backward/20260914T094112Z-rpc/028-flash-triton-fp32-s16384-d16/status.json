@@ -1,0 +1,67 @@
+{
+  "name": "flash-triton-fp32-s16384-d16",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"flash-triton-fp32-s16384-d16\", \"kind\": \"attention\", \"implementation\": \"triton\", \"batch\": 1, \"seq\": 16384, \"dim\": 16, \"dtype\": \"fp32\", \"causal\": true, \"triton_bench\": true, \"steps\": 10, \"warmup\": 5, \"timeout\": 240}",
+    "--output",
+    "/data/20260914T092409Z-flash-triton-compiled-backward/028-flash-triton-fp32-s16384-d16"
+  ],
+  "started": 1789378183.3567257,
+  "returncode": 0,
+  "seconds": 9.75282621383667,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "flash-triton-fp32-s16384-d16",
+      "kind": "attention",
+      "implementation": "triton",
+      "batch": 1,
+      "seq": 16384,
+      "dim": 16,
+      "dtype": "fp32",
+      "causal": true,
+      "triton_bench": true,
+      "steps": 10,
+      "warmup": 5,
+      "timeout": 240
+    },
+    "started_utc": "2026-09-14T09:29:44.500096+00:00",
+    "measurements": {
+      "forward": {
+        "mean_ms": 0.6697573830252108,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory_before_backward": {
+        "allocated_bytes": 5308416,
+        "reserved_bytes": 274726912,
+        "peak_allocated_bytes": 273743872,
+        "peak_reserved_bytes": 274726912
+      },
+      "backward": {
+        "mean_ms": 2.9291386380791664,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "end_to_end": {
+        "mean_ms": 3.595723767029612,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory": {
+        "allocated_bytes": 15859712,
+        "reserved_bytes": 4573888512,
+        "peak_allocated_bytes": 3503554560,
+        "peak_reserved_bytes": 4573888512
+      }
+    },
+    "status": "ok",
+    "wall_seconds": 6.871458530426025
+  }
+}

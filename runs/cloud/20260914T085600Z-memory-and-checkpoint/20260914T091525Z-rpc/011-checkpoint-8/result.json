@@ -1,0 +1,89 @@
+{
+  "config": {
+    "name": "checkpoint-8",
+    "kind": "model",
+    "size": "xl",
+    "seq": 2048,
+    "dtype": "fp32",
+    "mode": "backward",
+    "checkpoint_segments": 8,
+    "warmup": 2,
+    "steps": 3,
+    "timeout": 600
+  },
+  "started_utc": "2026-09-14T08:58:20.715467+00:00",
+  "measurements": {
+    "samples_ms": [
+      5106.8556929999995,
+      5106.078299999979,
+      5106.066171999999
+    ],
+    "mean_ms": 5106.333388333326,
+    "std_ms": 0.4523697555293412,
+    "median_ms": 5106.078299999979,
+    "cuda_event_stages": {
+      "forward": {
+        "samples_ms": [
+          1310.966796875,
+          1310.64892578125,
+          1310.64453125
+        ],
+        "mean_ms": 1310.75341796875,
+        "std_ms": 0.18480461628585343,
+        "median_ms": 1310.64892578125
+      },
+      "loss": {
+        "samples_ms": [
+          0.19350400567054749,
+          0.19257600605487823,
+          0.19353599846363068
+        ],
+        "mean_ms": 0.19320533672968546,
+        "std_ms": 0.0005452510507943191,
+        "median_ms": 0.19350400567054749
+      },
+      "backward": {
+        "samples_ms": [
+          3793.60986328125,
+          3793.975341796875,
+          3793.9599609375
+        ],
+        "mean_ms": 3793.848388671875,
+        "std_ms": 0.20671215297699602,
+        "median_ms": 3793.9599609375
+      }
+    },
+    "last_scalar": 9.408011436462402,
+    "parameters": 3406809600,
+    "initial_memory": {
+      "allocated_bytes": 13762963456,
+      "reserved_bytes": 13763608576,
+      "peak_allocated_bytes": 13762963456,
+      "peak_reserved_bytes": 13763608576
+    },
+    "memory": {
+      "allocated_bytes": 27407405568,
+      "reserved_bytes": 63854084096,
+      "peak_allocated_bytes": 60238314496,
+      "peak_reserved_bytes": 63854084096
+    },
+    "stages": [
+      {
+        "stage": "after_forward",
+        "allocated_bytes": 15358143488,
+        "reserved_bytes": 63854084096,
+        "peak_allocated_bytes": 23465715712,
+        "peak_reserved_bytes": 63854084096
+      },
+      {
+        "stage": "after_backward_before_optimizer",
+        "allocated_bytes": 27735085568,
+        "reserved_bytes": 63854084096,
+        "peak_allocated_bytes": 60238314496,
+        "peak_reserved_bytes": 63854084096
+      }
+    ]
+  },
+  "status": "ok",
+  "wall_seconds": 32.37944531440735
+}

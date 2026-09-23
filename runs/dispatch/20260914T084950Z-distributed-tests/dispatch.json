@@ -1,0 +1,7 @@
+{
+  "run_id": "20260914T084950Z-distributed-tests",
+  "call_id": "fc-01M2FHQFQBBBDV87348Q6TCRZW",
+  "gpu_count": 2,
+  "timeout_seconds": 1800,
+  "plan": "distributed-tests"
+}

@@ -1,0 +1,124 @@
+{
+  "generated_at": "2026-09-14T10:56:55.902608+00:00",
+  "attempts": 448,
+  "statuses": {
+    "ok": 431,
+    "failed": 4,
+    "oom": 13
+  },
+  "outer_statuses": {
+    "ok": 444,
+    "failed": 4
+  },
+  "completed_jobs_downloaded": 27,
+  "runtime_cost_estimate_usd": 16.85469719214138,
+  "cost_is_incomplete_subtotal_not_invoice": true,
+  "matrices": {
+    "models": {
+      "expected": 75,
+      "statuses": {
+        "ok": 70,
+        "oom": 5
+      }
+    },
+    "models_compile_including_missing_train": {
+      "expected": 15,
+      "statuses": {
+        "ok": 10,
+        "missing_local_evidence": 5
+      }
+    },
+    "attention": {
+      "expected": 40,
+      "statuses": {
+        "ok": 40
+      }
+    },
+    "flash": {
+      "expected": 240,
+      "statuses": {
+        "ok": 240
+      }
+    },
+    "communication": {
+      "expected": 24,
+      "statuses": {
+        "ok": 24
+      }
+    },
+    "distributed_xl": {
+      "expected": 5,
+      "statuses": {
+        "ok": 5
+      }
+    },
+    "memory": {
+      "expected": 8,
+      "statuses": {
+        "ok": 5,
+        "oom": 3
+      }
+    },
+    "checkpoint": {
+      "expected": 7,
+      "statuses": {
+        "oom": 1,
+        "ok": 6
+      }
+    },
+    "distributed_repeat_recommended": {
+      "expected": 5,
+      "statuses": {
+        "ok": 5
+      }
+    }
+  },
+  "sample_audit": {
+    "statistic_objects": 635,
+    "issues": 0,
+    "do_bench_cases": 240,
+    "nonfinite_do_bench_cases": 0,
+    "cross_rank_inconsistencies": 0
+  },
+  "artifacts": {
+    "memory_snapshots": 5,
+    "nsight_sqlite": 2,
+    "nsight_reports": 2,
+    "verified_gpu_profile_cases": 1,
+    "memoryviz_main_screenshots": 2
+  },
+  "profiling_required_configurations": [
+    {
+      "size": "small",
+      "seq": 256,
+      "verified_gpu_kernel_source_indices": [
+        "E446"
+      ]
+    },
+    {
+      "size": "small",
+      "seq": 1024,
+      "verified_gpu_kernel_source_indices": []
+    },
+    {
+      "size": "small",
+      "seq": 4096,
+      "verified_gpu_kernel_source_indices": []
+    },
+    {
+      "size": "xl",
+      "seq": 256,
+      "verified_gpu_kernel_source_indices": []
+    },
+    {
+      "size": "xl",
+      "seq": 512,
+      "verified_gpu_kernel_source_indices": []
+    },
+    {
+      "size": "xl",
+      "seq": 1024,
+      "verified_gpu_kernel_source_indices": []
+    }
+  ]
+}

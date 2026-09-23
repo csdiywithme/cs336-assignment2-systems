@@ -1,0 +1,177 @@
+{
+  "captured_at": "2026-09-14T09:28:41.012491+00:00",
+  "dispatch": {
+    "run_id": "20260914T092247Z-leaderboard-first-full",
+    "call_id": "fc-01M2FKKTPT1WKXXNP6W93SPZ72",
+    "gpu_count": 2,
+    "timeout_seconds": 720,
+    "plan": "leaderboard"
+  },
+  "result": {
+    "run_id": "20260914T092247Z-leaderboard-first-full",
+    "seconds": 65.40226483345032,
+    "cases": [
+      {
+        "name": "leaderboard-8b-32768",
+        "command": [
+          "/usr/local/bin/python",
+          "-m",
+          "cs336_systems.experiments",
+          "--config",
+          "{\"name\": \"leaderboard-8b-32768\", \"kind\": \"leaderboard\", \"seq\": 32768, \"warmup\": 2, \"steps\": 3, \"chunk\": 512, \"timeout\": 590}",
+          "--output",
+          "/data/20260914T092247Z-leaderboard-first-full/000-leaderboard-8b-32768"
+        ],
+        "started": 1789377777.6838772,
+        "returncode": 0,
+        "seconds": 60.2457389831543,
+        "status": "ok",
+        "result": {
+          "config": {
+            "name": "leaderboard-8b-32768",
+            "kind": "leaderboard",
+            "seq": 32768,
+            "warmup": 2,
+            "steps": 3,
+            "chunk": 512,
+            "timeout": 590
+          },
+          "started_utc": "2026-09-14T09:22:58.898730+00:00",
+          "measurements": {
+            "rank_max_step": {
+              "samples_ms": [
+                9831.027827,
+                9692.502015999999,
+                9583.723315999996
+              ],
+              "mean_ms": 9702.417719666664,
+              "std_ms": 123.95007533132691,
+              "median_ms": 9692.502015999999
+            },
+            "ranks": [
+              {
+                "measurements": [
+                  {
+                    "iteration": 0,
+                    "warmup": true,
+                    "step_ms": 12652.196431,
+                    "loss": 11.956314086914062,
+                    "allocated_bytes": 95202214912,
+                    "reserved_bytes": 98073313280,
+                    "peak_allocated_bytes": 95202214912,
+                    "peak_reserved_bytes": 98073313280
+                  },
+                  {
+                    "iteration": 1,
+                    "warmup": true,
+                    "step_ms": 9870.848691,
+                    "loss": 11.582962036132812,
+                    "allocated_bytes": 95202214912,
+                    "reserved_bytes": 109181927424,
+                    "peak_allocated_bytes": 105114328576,
+                    "peak_reserved_bytes": 109181927424
+                  },
+                  {
+                    "iteration": 2,
+                    "warmup": false,
+                    "step_ms": 9831.027827,
+                    "loss": 11.148432731628418,
+                    "allocated_bytes": 95202214912,
+                    "reserved_bytes": 109181927424,
+                    "peak_allocated_bytes": 105112231424,
+                    "peak_reserved_bytes": 109181927424
+                  },
+                  {
+                    "iteration": 3,
+                    "warmup": false,
+                    "step_ms": 9692.502015999999,
+                    "loss": 12.246834754943848,
+                    "allocated_bytes": 95202214912,
+                    "reserved_bytes": 109181927424,
+                    "peak_allocated_bytes": 105112231424,
+                    "peak_reserved_bytes": 109181927424
+                  },
+                  {
+                    "iteration": 4,
+                    "warmup": false,
+                    "step_ms": 9583.723315999996,
+                    "loss": 10.8021240234375,
+                    "allocated_bytes": 95202214912,
+                    "reserved_bytes": 109181927424,
+                    "peak_allocated_bytes": 105112231424,
+                    "peak_reserved_bytes": 109181927424
+                  }
+                ],
+                "cold_start_total_seconds": 54.291164556999995,
+                "parameters": 8125698048
+              },
+              {
+                "measurements": [
+                  {
+                    "iteration": 0,
+                    "warmup": true,
+                    "step_ms": 12652.552159,
+                    "loss": 11.956932067871094,
+                    "allocated_bytes": 99883222016,
+                    "reserved_bytes": 102749962240,
+                    "peak_allocated_bytes": 99883222016,
+                    "peak_reserved_bytes": 102749962240
+                  },
+                  {
+                    "iteration": 1,
+                    "warmup": true,
+                    "step_ms": 9870.786546000001,
+                    "loss": 11.555781364440918,
+                    "allocated_bytes": 99883222016,
+                    "reserved_bytes": 113627889664,
+                    "peak_allocated_bytes": 109794287104,
+                    "peak_reserved_bytes": 113627889664
+                  },
+                  {
+                    "iteration": 2,
+                    "warmup": false,
+                    "step_ms": 9830.983410999997,
+                    "loss": 10.331107139587402,
+                    "allocated_bytes": 99883222016,
+                    "reserved_bytes": 113627889664,
+                    "peak_allocated_bytes": 109793238528,
+                    "peak_reserved_bytes": 113627889664
+                  },
+                  {
+                    "iteration": 3,
+                    "warmup": false,
+                    "step_ms": 9692.486873,
+                    "loss": 10.994848251342773,
+                    "allocated_bytes": 99883222016,
+                    "reserved_bytes": 113627889664,
+                    "peak_allocated_bytes": 109793238528,
+                    "peak_reserved_bytes": 113627889664
+                  },
+                  {
+                    "iteration": 4,
+                    "warmup": false,
+                    "step_ms": 9583.666440999998,
+                    "loss": 14.40101146697998,
+                    "allocated_bytes": 99883222016,
+                    "reserved_bytes": 113627889664,
+                    "peak_allocated_bytes": 109793238528,
+                    "peak_reserved_bytes": 113627889664
+                  }
+                ],
+                "cold_start_total_seconds": 54.29391690600001,
+                "parameters": 8125698048
+              }
+            ],
+            "loss_reduction": "global token mean; equal local batch/token counts on both ranks",
+            "timing": "Synchronized wall-clock full forward, CE, backward, gradient all-reduce, AdamW, owner broadcast"
+          },
+          "status": "ok",
+          "wall_seconds": 58.741684675216675
+        }
+      }
+    ],
+    "estimated_compute_usd": 0.12968484289295196,
+    "cost_note": "Runtime estimate, not invoice; excludes startup/build/storage."
+  },
+  "status": "returned"
+}

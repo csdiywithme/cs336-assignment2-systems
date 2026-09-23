@@ -1,0 +1,67 @@
+{
+  "name": "flash-triton-bf16-s16384-d128",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"flash-triton-bf16-s16384-d128\", \"kind\": \"attention\", \"implementation\": \"triton\", \"batch\": 1, \"seq\": 16384, \"dim\": 128, \"dtype\": \"bf16\", \"causal\": true, \"triton_bench\": true, \"steps\": 10, \"warmup\": 5, \"timeout\": 240}",
+    "--output",
+    "/data/20260914T092409Z-flash-triton-compiled-backward/071-flash-triton-bf16-s16384-d128"
+  ],
+  "started": 1789378708.0107205,
+  "returncode": 0,
+  "seconds": 9.965469360351562,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "flash-triton-bf16-s16384-d128",
+      "kind": "attention",
+      "implementation": "triton",
+      "batch": 1,
+      "seq": 16384,
+      "dim": 128,
+      "dtype": "bf16",
+      "causal": true,
+      "triton_bench": true,
+      "steps": 10,
+      "warmup": 5,
+      "timeout": 240
+    },
+    "started_utc": "2026-09-14T09:38:29.282119+00:00",
+    "measurements": {
+      "forward": {
+        "mean_ms": 0.47889821223132517,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory_before_backward": {
+        "allocated_bytes": 21037056,
+        "reserved_bytes": 291504128,
+        "peak_allocated_bytes": 289472512,
+        "peak_reserved_bytes": 291504128
+      },
+      "backward": {
+        "mean_ms": 6.977680717195783,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "end_to_end": {
+        "mean_ms": 7.4476865866245365,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory": {
+        "allocated_bytes": 37879808,
+        "reserved_bytes": 4586471424,
+        "peak_allocated_bytes": 3544449024,
+        "peak_reserved_bytes": 4586471424
+      }
+    },
+    "status": "ok",
+    "wall_seconds": 7.054010629653931
+  }
+}

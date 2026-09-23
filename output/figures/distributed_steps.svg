@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="490" height="265" preserveAspectRatio="xMinYMin meet" viewBox="0 0 490 265" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="490" height="265"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-265)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="0" y="249" style="font-family: A2Heiti; font-size: 12px;fill: rgb(7%,18%,25%); stroke:none;" transform="translate(0,498) scale(1,-1)">双 B200 / xl：完整训练步时间</text>
+			<path d="M 47,50 L 478,50 Z" style="stroke: rgb(86%,89%,91%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="36.568" y="47.0" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,94) scale(1,-1)">0</text>
+			<path d="M 47,91.75 L 478,91.75 Z" style="stroke: rgb(86%,89%,91%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="27.704" y="88.75" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,177) scale(1,-1)">171</text>
+			<path d="M 47,133.5 L 478,133.5 Z" style="stroke: rgb(86%,89%,91%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="27.704" y="130.5" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,261) scale(1,-1)">342</text>
+			<path d="M 47,175.25 L 478,175.25 Z" style="stroke: rgb(86%,89%,91%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="27.704" y="172.25" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,344) scale(1,-1)">513</text>
+			<path d="M 47,217 L 478,217 Z" style="stroke: rgb(86%,89%,91%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="27.704" y="214.0" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,428) scale(1,-1)">684</text>
+			<text x="47" y="229" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,458) scale(1,-1)">ms / step</text>
+			<text x="79.312" y="36" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,72) scale(1,-1)">naive</text>
+			<rect x="64.24" y="50" width="51.72" height="143.9655172413793" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<text x="77.91199999999999" y="200.9655172413793" style="font-family: A2Heiti; font-size: 8px;fill: rgb(7%,18%,25%); stroke:none;" transform="translate(0,401) scale(1,-1)">590.08</text>
+			<text x="170.156" y="36" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,72) scale(1,-1)">flat</text>
+			<rect x="150.44" y="50" width="51.72" height="143.71282925770015" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<text x="164.11200000000002" y="200.71282925770015" style="font-family: A2Heiti; font-size: 8px;fill: rgb(7%,18%,25%); stroke:none;" transform="translate(0,401) scale(1,-1)">589.05</text>
+			<text x="247.6" y="36" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,72) scale(1,-1)">overlap</text>
+			<rect x="236.64" y="50" width="51.72000000000003" height="138.62430499811364" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<text x="250.312" y="195.62430499811364" style="font-family: A2Heiti; font-size: 8px;fill: rgb(7%,18%,25%); stroke:none;" transform="translate(0,391) scale(1,-1)">568.19</text>
+			<text x="333.8" y="36" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,72) scale(1,-1)">overlap</text>
+			<text x="330.268" y="25" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,50) scale(1,-1)">+sharded</text>
+			<rect x="322.84" y="50" width="51.71999999999997" height="136.12933584757653" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<text x="336.512" y="193.12933584757653" style="font-family: A2Heiti; font-size: 8px;fill: rgb(7%,18%,25%); stroke:none;" transform="translate(0,386) scale(1,-1)">557.96</text>
+			<text x="425.624" y="36" style="font-family: A2Heiti; font-size: 8px;fill: rgb(33%,41%,47%); stroke:none;" transform="translate(0,72) scale(1,-1)">FSDP</text>
+			<rect x="409.04" y="50" width="51.71999999999997" height="132.96660111128077" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<text x="422.71200000000005" y="189.96660111128077" style="font-family: A2Heiti; font-size: 8px;fill: rgb(7%,18%,25%); stroke:none;" transform="translate(0,379) scale(1,-1)">545.00</text>
+		</g>
+	</g>
+</svg>

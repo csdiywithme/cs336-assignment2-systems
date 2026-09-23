@@ -1,0 +1,218 @@
+[
+  {
+    "path": "summary.json",
+    "bytes": 7615,
+    "remote": "20260914T093858Z-models-compile-10b/summary.json",
+    "status": "downloaded",
+    "sha256": "3eef13b9fc0b951c571045cc3b4f9303a55c4785af1c26d487178a0390ce99a0",
+    "received_bytes": 7615
+  },
+  {
+    "path": "artifact_inventory.json",
+    "bytes": 1713,
+    "remote": "20260914T093858Z-models-compile-10b/artifact_inventory.json",
+    "status": "downloaded",
+    "sha256": "b59d37f2ed24e3830e2e7a94ac75f42e95749bc9ce45857b019ad97cc72b71e7",
+    "received_bytes": 1713
+  },
+  {
+    "path": "progress.json",
+    "bytes": 6939,
+    "remote": "20260914T093858Z-models-compile-10b/progress.json",
+    "status": "downloaded",
+    "sha256": "4474731faf8603ecf6205cb0d11a56f954de517dce497d661ffb90b7c183f8ab",
+    "received_bytes": 6939
+  },
+  {
+    "path": "001-10B-compiled-backward/stdout.log",
+    "bytes": 3394,
+    "remote": "20260914T093858Z-models-compile-10b/001-10B-compiled-backward/stdout.log",
+    "status": "downloaded",
+    "sha256": "69ae7d26de4196859e84317b069cb0d38e4338a5cb13211fcc9238c63958dc59",
+    "received_bytes": 3394
+  },
+  {
+    "path": "001-10B-compiled-backward/status.json",
+    "bytes": 3893,
+    "remote": "20260914T093858Z-models-compile-10b/001-10B-compiled-backward/status.json",
+    "status": "downloaded",
+    "sha256": "5e603220f9c0e80beba991513ba6e0a20fb259d0e40c68f1b51df4236e8fbe85",
+    "received_bytes": 3893
+  },
+  {
+    "path": "001-10B-compiled-backward/result.json",
+    "bytes": 3114,
+    "remote": "20260914T093858Z-models-compile-10b/001-10B-compiled-backward/result.json",
+    "status": "downloaded",
+    "sha256": "823ddfc64183186532027a500a205f9168dadfe6276b6629ecd374588b4d4426",
+    "received_bytes": 3114
+  },
+  {
+    "path": "000-10B-compiled-forward/stdout.log",
+    "bytes": 2182,
+    "remote": "20260914T093858Z-models-compile-10b/000-10B-compiled-forward/stdout.log",
+    "status": "downloaded",
+    "sha256": "5609d5a7111e563f69468b68550c4b714c415e3255f98aa773913aa29143eaa0",
+    "received_bytes": 2182
+  },
+  {
+    "path": "000-10B-compiled-forward/status.json",
+    "bytes": 2594,
+    "remote": "20260914T093858Z-models-compile-10b/000-10B-compiled-forward/status.json",
+    "status": "downloaded",
+    "sha256": "053ceca0d99768aa674c4ffb0d40a30cc474c70ea256ed649a2428607a88a254",
+    "received_bytes": 2594
+  },
+  {
+    "path": "000-10B-compiled-forward/result.json",
+    "bytes": 1902,
+    "remote": "20260914T093858Z-models-compile-10b/000-10B-compiled-forward/result.json",
+    "status": "downloaded",
+    "sha256": "15395e3436d018ab489e095d33e6d859bdf6ee051bac40899c5589cf2dc73659",
+    "received_bytes": 1902
+  },
+  {
+    "path": "topology.txt",
+    "bytes": 603,
+    "remote": "20260914T093858Z-models-compile-10b/topology.txt",
+    "status": "downloaded",
+    "sha256": "dccab91183a1bfe73d6a47cddaaa840c2aef64dcbf65ed3fcc7c774ceecc39ee",
+    "received_bytes": 603
+  },
+  {
+    "path": "source/triton_optimizer.py",
+    "bytes": 764,
+    "remote": "20260914T093858Z-models-compile-10b/source/triton_optimizer.py",
+    "status": "downloaded",
+    "sha256": "eb2ed254d7bbec01ed8be2739904cb9f052a2189a6e9310d2307e6bf4fbd2c02",
+    "received_bytes": 764
+  },
+  {
+    "path": "source/triton_attention.py",
+    "bytes": 7023,
+    "remote": "20260914T093858Z-models-compile-10b/source/triton_attention.py",
+    "status": "downloaded",
+    "sha256": "4fc6b54f45f3ec237bf8b570fb7747ba0250e1e057c049a52049db1dfc8001eb",
+    "received_bytes": 7023
+  },
+  {
+    "path": "source/sharded_optimizer.py",
+    "bytes": 2834,
+    "remote": "20260914T093858Z-models-compile-10b/source/sharded_optimizer.py",
+    "status": "downloaded",
+    "sha256": "f1a5f6ea0c559f5f0169be654371787ac21d3fa6d31bc3db53cba7387a8303c9",
+    "received_bytes": 2834
+  },
+  {
+    "path": "source/profiling.py",
+    "bytes": 3700,
+    "remote": "20260914T093858Z-models-compile-10b/source/profiling.py",
+    "status": "downloaded",
+    "sha256": "cdd49140e1c655413635a189bf915bc0a4f0f7bf1525b1dc57c497600fec4335",
+    "received_bytes": 3700
+  },
+  {
+    "path": "source/optimized_model.py",
+    "bytes": 4881,
+    "remote": "20260914T093858Z-models-compile-10b/source/optimized_model.py",
+    "status": "downloaded",
+    "sha256": "343ca47380992f7a738ae93e4e3a9ec3b132826aa8711ef62968ba73f77afe9f",
+    "received_bytes": 4881
+  },
+  {
+    "path": "source/nsight_summary.py",
+    "bytes": 3692,
+    "remote": "20260914T093858Z-models-compile-10b/source/nsight_summary.py",
+    "status": "downloaded",
+    "sha256": "98f56826007fb23706a94e31f2edaf611ac21cc18bd6fa7290e188364988013a",
+    "received_bytes": 3692
+  },
+  {
+    "path": "source/fsdp.py",
+    "bytes": 8580,
+    "remote": "20260914T093858Z-models-compile-10b/source/fsdp.py",
+    "status": "downloaded",
+    "sha256": "3708861a9d45e22deada16b90b48281bd1371f20c323163cf4268a0b5410092c",
+    "received_bytes": 8580
+  },
+  {
+    "path": "source/experiments.py",
+    "bytes": 26196,
+    "remote": "20260914T093858Z-models-compile-10b/source/experiments.py",
+    "status": "downloaded",
+    "sha256": "b50a93c1c0a3a8fd3893c8236f0d683054b1644ca39346fd38c69e6bab5434fe",
+    "received_bytes": 26196
+  },
+  {
+    "path": "source/experiment_plans.py",
+    "bytes": 6456,
+    "remote": "20260914T093858Z-models-compile-10b/source/experiment_plans.py",
+    "status": "downloaded",
+    "sha256": "c81a6a312325d4a808f110bfde911fc477c25f219e3925e8ff5033b4470696ef",
+    "received_bytes": 6456
+  },
+  {
+    "path": "source/ddp.py",
+    "bytes": 2092,
+    "remote": "20260914T093858Z-models-compile-10b/source/ddp.py",
+    "status": "downloaded",
+    "sha256": "2d4eca4130246a0f3a09cd372423fe01ac9b589fda48ea70106e0bc51c5e05e8",
+    "received_bytes": 2092
+  },
+  {
+    "path": "source/checkpointing.py",
+    "bytes": 783,
+    "remote": "20260914T093858Z-models-compile-10b/source/checkpointing.py",
+    "status": "downloaded",
+    "sha256": "60e5829096bfb9afde053979af41eafc70ac14c809e51df092d807129c23a8f5",
+    "received_bytes": 783
+  },
+  {
+    "path": "source/attention.py",
+    "bytes": 5416,
+    "remote": "20260914T093858Z-models-compile-10b/source/attention.py",
+    "status": "downloaded",
+    "sha256": "6147222fdbbdebd3d904b527bdcbd62009911382ba9762334bda4a645557b106",
+    "received_bytes": 5416
+  },
+  {
+    "path": "source/__init__.py",
+    "bytes": 151,
+    "remote": "20260914T093858Z-models-compile-10b/source/__init__.py",
+    "status": "downloaded",
+    "sha256": "7da6cd265923adde95304e89905879609644d72240c9e8adc94c35f74daaca7c",
+    "received_bytes": 151
+  },
+  {
+    "path": "pip-freeze.txt",
+    "bytes": 1691,
+    "remote": "20260914T093858Z-models-compile-10b/pip-freeze.txt",
+    "status": "downloaded",
+    "sha256": "6241e877cfcf6af3c9180b440e552ceab57ee0c57565ee8b08a7e818f23cafc4",
+    "received_bytes": 1691
+  },
+  {
+    "path": "nvlink-status.txt",
+    "bytes": 472,
+    "remote": "20260914T093858Z-models-compile-10b/nvlink-status.txt",
+    "status": "downloaded",
+    "sha256": "b41c84485eb6359370616436f7e1f72c6544a92d9dca03f82b1cbe178a48ce97",
+    "received_bytes": 472
+  },
+  {
+    "path": "nvidia-smi.txt",
+    "bytes": 11461,
+    "remote": "20260914T093858Z-models-compile-10b/nvidia-smi.txt",
+    "status": "downloaded",
+    "sha256": "b53ca7f7049cf2be00956a59e9acc94767499106d2173419fe538b85892735fa",
+    "received_bytes": 11461
+  },
+  {
+    "path": "environment.json",
+    "bytes": 4107,
+    "remote": "20260914T093858Z-models-compile-10b/environment.json",
+    "status": "downloaded",
+    "sha256": "d2e61df0ac84d1a0b894d53125cae21c9b4e485222a528847130331e85d22057",
+    "received_bytes": 4107
+  }
+]

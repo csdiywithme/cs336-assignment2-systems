@@ -1,0 +1,67 @@
+{
+  "name": "flash-triton-bf16-s32768-d128",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"flash-triton-bf16-s32768-d128\", \"kind\": \"attention\", \"implementation\": \"triton\", \"batch\": 1, \"seq\": 32768, \"dim\": 128, \"dtype\": \"bf16\", \"causal\": true, \"triton_bench\": true, \"steps\": 10, \"warmup\": 5, \"timeout\": 240}",
+    "--output",
+    "/data/20260914T092409Z-flash-triton-compiled-backward/075-flash-triton-bf16-s32768-d128"
+  ],
+  "started": 1789378759.694734,
+  "returncode": 0,
+  "seconds": 11.497922658920288,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "flash-triton-bf16-s32768-d128",
+      "kind": "attention",
+      "implementation": "triton",
+      "batch": 1,
+      "seq": 32768,
+      "dim": 128,
+      "dtype": "bf16",
+      "causal": true,
+      "triton_bench": true,
+      "steps": 10,
+      "warmup": 5,
+      "timeout": 240
+    },
+    "started_utc": "2026-09-14T09:39:20.819545+00:00",
+    "measurements": {
+      "forward": {
+        "mean_ms": 1.571681621695767,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory_before_backward": {
+        "allocated_bytes": 42074112,
+        "reserved_bytes": 333447168,
+        "peak_allocated_bytes": 310509568,
+        "peak_reserved_bytes": 333447168
+      },
+      "backward": {
+        "mean_ms": 27.380070304870607,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "end_to_end": {
+        "mean_ms": 28.9470272064209,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory": {
+        "allocated_bytes": 67239936,
+        "reserved_bytes": 17513316352,
+        "peak_allocated_bytes": 13254393856,
+        "peak_reserved_bytes": 17513316352
+      }
+    },
+    "status": "ok",
+    "wall_seconds": 8.639190196990967
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "forward": {
+    "mean_ms": 3.4588450807513613,
+    "method": "triton.testing.do_bench",
+    "warmup_ms": 100,
+    "rep_ms": 300
+  }
+}

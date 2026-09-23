@@ -1,0 +1,16 @@
+{
+  "name": "attention-tests",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "--tb=short",
+    "tests/test_attention.py",
+    "--junitxml=/data/20260914T082016Z-probe/000-attention-tests/junit.xml"
+  ],
+  "started": 1789374030.2369244,
+  "returncode": 0,
+  "seconds": 17.224974870681763,
+  "status": "ok"
+}

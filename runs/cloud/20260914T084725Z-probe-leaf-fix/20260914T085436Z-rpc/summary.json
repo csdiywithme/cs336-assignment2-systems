@@ -1,0 +1,56 @@
+{
+  "run_id": "20260914T084725Z-probe-leaf-fix",
+  "seconds": 55.62215614318848,
+  "cases": [
+    {
+      "name": "attention-tests",
+      "command": [
+        "/usr/local/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "--tb=short",
+        "tests/test_attention.py",
+        "--junitxml=/data/20260914T084725Z-probe-leaf-fix/000-attention-tests/junit.xml"
+      ],
+      "started": 1789375651.2507474,
+      "returncode": 0,
+      "seconds": 11.929114580154419,
+      "status": "ok"
+    },
+    {
+      "name": "extended-attention",
+      "command": [
+        "/usr/local/bin/python",
+        "-m",
+        "cs336_systems.experiments",
+        "--config",
+        "{\"name\": \"extended-attention\", \"kind\": \"validate_attention\", \"timeout\": 600}",
+        "--output",
+        "/data/20260914T084725Z-probe-leaf-fix/001-extended-attention"
+      ],
+      "started": 1789375664.365305,
+      "returncode": 0,
+      "seconds": 36.139262437820435,
+      "status": "ok"
+    },
+    {
+      "name": "precision",
+      "command": [
+        "/usr/local/bin/python",
+        "-m",
+        "cs336_systems.experiments",
+        "--config",
+        "{\"name\": \"precision\", \"kind\": \"precision\"}",
+        "--output",
+        "/data/20260914T084725Z-probe-leaf-fix/002-precision"
+      ],
+      "started": 1789375702.0982852,
+      "returncode": 0,
+      "seconds": 2.241424560546875,
+      "status": "ok"
+    }
+  ],
+  "estimated_compute_usd": 0.11029206097320556,
+  "cost_note": "Runtime estimate, not invoice; excludes startup/build/storage."
+}

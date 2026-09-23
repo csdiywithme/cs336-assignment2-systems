@@ -1,0 +1,67 @@
+{
+  "name": "flash-triton-full-bf16-s1024-d32",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"flash-triton-full-bf16-s1024-d32\", \"kind\": \"attention\", \"implementation\": \"triton-full\", \"batch\": 1, \"seq\": 1024, \"dim\": 32, \"dtype\": \"bf16\", \"causal\": true, \"triton_bench\": true, \"steps\": 10, \"warmup\": 5, \"timeout\": 240}",
+    "--output",
+    "/data/20260914T092847Z-flash-triton-full/053-flash-triton-full-bf16-s1024-d32"
+  ],
+  "started": 1789378595.4852574,
+  "returncode": 0,
+  "seconds": 5.526661157608032,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "flash-triton-full-bf16-s1024-d32",
+      "kind": "attention",
+      "implementation": "triton-full",
+      "batch": 1,
+      "seq": 1024,
+      "dim": 32,
+      "dtype": "bf16",
+      "causal": true,
+      "triton_bench": true,
+      "steps": 10,
+      "warmup": 5,
+      "timeout": 240
+    },
+    "started_utc": "2026-09-14T09:36:36.567632+00:00",
+    "measurements": {
+      "forward": {
+        "mean_ms": 0.01641553484423216,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory_before_backward": {
+        "allocated_bytes": 331776,
+        "reserved_bytes": 270532608,
+        "peak_allocated_bytes": 268767232,
+        "peak_reserved_bytes": 270532608
+      },
+      "backward": {
+        "mean_ms": 0.05142274748196535,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "end_to_end": {
+        "mean_ms": 0.06934963577793012,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory": {
+        "allocated_bytes": 458752,
+        "reserved_bytes": 270532608,
+        "peak_allocated_bytes": 268967936,
+        "peak_reserved_bytes": 270532608
+      }
+    },
+    "status": "ok",
+    "wall_seconds": 3.7030880451202393
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "nsys-small-s256",
+  "command": [
+    "nsys",
+    "profile",
+    "--trace=cuda,nvtx,osrt,cublas",
+    "--sample=none",
+    "--cpuctxsw=none",
+    "--capture-range=nvtx",
+    "--nvtx-capture=measurement",
+    "--capture-range-end=stop",
+    "--env-var=NSYS_NVTX_PROFILER_REGISTER_ONLY=0",
+    "--cuda-memory-usage=true",
+    "--pytorch=autograd-nvtx",
+    "--export=sqlite",
+    "-o",
+    "/data/20260914T085757Z-nsys-probe-and-fit-nvtx-filter-fix/000-nsys-small-s256/profile",
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"nsys-small-s256\", \"kind\": \"model\", \"size\": \"small\", \"seq\": 256, \"mode\": \"train\", \"dtype\": \"fp32\", \"warmup\": 5, \"steps\": 1, \"nsys\": true, \"timeout\": 300}",
+    "--output",
+    "/data/20260914T085757Z-nsys-probe-and-fit-nvtx-filter-fix/000-nsys-small-s256"
+  ],
+  "started": 1789376285.6564097,
+  "returncode": 1,
+  "seconds": 6.650404214859009,
+  "status": "failed",
+  "trace_created": false,
+  "result": {
+    "config": {
+      "name": "nsys-small-s256",
+      "kind": "model",
+      "size": "small",
+      "seq": 256,
+      "mode": "train",
+      "dtype": "fp32",
+      "warmup": 5,
+      "steps": 1,
+      "nsys": true,
+      "timeout": 300
+    },
+    "started_utc": "2026-09-14T08:58:09.612347+00:00",
+    "status": "failed",
+    "traceback": "Traceback (most recent call last):\n  File \"/workspace/cs336_systems/experiments.py\", line 395, in main\n    result[\"measurements\"] = kinds[cfg[\"kind\"]](cfg, out)\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/workspace/cs336_systems/experiments.py\", line 142, in model_benchmark\n    step()\n    ~~~~^^\n  File \"/workspace/cs336_systems/experiments.py\", line 117, in step\n    logits = model(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 253, in forward\n    x = layer(x)\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 382, in forward\n    x_attn = self.attn(self.ln1(x))\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/workspace/cs336-basics/cs336_basics/model.py\", line 520, in forward\n    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)\nTypeError: annotate_attention.<locals>.attention() got an unexpected keyword argument 'K'. Did you mean 'k'?\n",
+    "wall_seconds": 1.7405567169189453
+  }
+}

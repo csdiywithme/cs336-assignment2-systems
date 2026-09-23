@@ -1,0 +1,67 @@
+{
+  "name": "flash-triton-full-fp32-s2048-d16",
+  "command": [
+    "/usr/local/bin/python",
+    "-m",
+    "cs336_systems.experiments",
+    "--config",
+    "{\"name\": \"flash-triton-full-fp32-s2048-d16\", \"kind\": \"attention\", \"implementation\": \"triton-full\", \"batch\": 1, \"seq\": 2048, \"dim\": 16, \"dtype\": \"fp32\", \"causal\": true, \"triton_bench\": true, \"steps\": 10, \"warmup\": 5, \"timeout\": 240}",
+    "--output",
+    "/data/20260914T092847Z-flash-triton-full/016-flash-triton-full-fp32-s2048-d16"
+  ],
+  "started": 1789378273.4698162,
+  "returncode": 0,
+  "seconds": 6.075030565261841,
+  "status": "ok",
+  "result": {
+    "config": {
+      "name": "flash-triton-full-fp32-s2048-d16",
+      "kind": "attention",
+      "implementation": "triton-full",
+      "batch": 1,
+      "seq": 2048,
+      "dim": 16,
+      "dtype": "fp32",
+      "causal": true,
+      "triton_bench": true,
+      "steps": 10,
+      "warmup": 5,
+      "timeout": 240
+    },
+    "started_utc": "2026-09-14T09:31:14.506508+00:00",
+    "measurements": {
+      "forward": {
+        "mean_ms": 0.049138797742258655,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory_before_backward": {
+        "allocated_bytes": 663552,
+        "reserved_bytes": 270532608,
+        "peak_allocated_bytes": 269099008,
+        "peak_reserved_bytes": 270532608
+      },
+      "backward": {
+        "mean_ms": 0.18850811522761007,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "end_to_end": {
+        "mean_ms": 0.23142655933447964,
+        "method": "triton.testing.do_bench",
+        "warmup_ms": 100,
+        "rep_ms": 300
+      },
+      "memory": {
+        "allocated_bytes": 917504,
+        "reserved_bytes": 270532608,
+        "peak_allocated_bytes": 269500416,
+        "peak_reserved_bytes": 270532608
+      }
+    },
+    "status": "ok",
+    "wall_seconds": 4.291022539138794
+  }
+}

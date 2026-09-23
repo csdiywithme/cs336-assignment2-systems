@@ -1,0 +1,7 @@
+{
+  "run_id": "20260914T092406Z-distributed-profiles",
+  "call_id": "fc-01M2FKP7GDZ3ZAM8D9CMN4C5T7",
+  "gpu_count": 2,
+  "timeout_seconds": 1800,
+  "plan": "distributed-profiles"
+}

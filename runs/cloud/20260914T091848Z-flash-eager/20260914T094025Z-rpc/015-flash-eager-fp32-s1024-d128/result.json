@@ -1,0 +1,51 @@
+{
+  "config": {
+    "name": "flash-eager-fp32-s1024-d128",
+    "kind": "attention",
+    "implementation": "eager",
+    "batch": 1,
+    "seq": 1024,
+    "dim": 128,
+    "dtype": "fp32",
+    "causal": true,
+    "triton_bench": true,
+    "steps": 10,
+    "warmup": 5,
+    "timeout": 240
+  },
+  "started_utc": "2026-09-14T09:21:32.640154+00:00",
+  "measurements": {
+    "forward": {
+      "mean_ms": 0.1179790383623552,
+      "method": "triton.testing.do_bench",
+      "warmup_ms": 100,
+      "rep_ms": 300
+    },
+    "memory_before_backward": {
+      "allocated_bytes": 16384000,
+      "reserved_bytes": 295698432,
+      "peak_allocated_bytes": 290062336,
+      "peak_reserved_bytes": 295698432
+    },
+    "backward": {
+      "mean_ms": 0.2228018125620088,
+      "method": "triton.testing.do_bench",
+      "warmup_ms": 100,
+      "rep_ms": 300
+    },
+    "end_to_end": {
+      "mean_ms": 0.40246025425574133,
+      "method": "triton.testing.do_bench",
+      "warmup_ms": 100,
+      "rep_ms": 300
+    },
+    "memory": {
+      "allocated_bytes": 20709376,
+      "reserved_bytes": 564133888,
+      "peak_allocated_bytes": 306446336,
+      "peak_reserved_bytes": 564133888
+    }
+  },
+  "status": "ok",
+  "wall_seconds": 4.749134540557861
+}
