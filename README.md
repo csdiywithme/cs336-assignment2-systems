@@ -6,6 +6,17 @@ For a full description of the assignment, see the assignment handout at
 If you see any issues with the assignment handout or code, please feel free to
 raise a GitHub issue or open a pull request with a fix.
 
+## FSDP2 copy-engine experiment
+
+A follow-up to the distributed-training assignment uses two NVLink-connected
+B300s to compare FSDP2 all-gather on SMs and on the GPU copy engine. With
+symmetric-memory staging held fixed, the copy engine reduced median forward
+all-gather GPU active time from 447.093 to 277.811 µs and median full training
+step time from 515.899 to 512.257 ms (0.71%). In the captured steps, later
+forward blocks and backward had no exposed all-gather wait on either path.
+
+[Results and measurement data](output/fsdp2-ce/) · [Experiment and reproduction](experiments/fsdp2_ce/)
+
 ## Setup
 
 This directory is organized as follows:

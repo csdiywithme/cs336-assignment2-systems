@@ -1,0 +1,309 @@
+{
+  "status": "passed",
+  "gpu_model": "B300",
+  "stack": {
+    "torch": "2.12.1+cu132",
+    "cuda": "13.2",
+    "nccl": [
+      2,
+      29,
+      7
+    ],
+    "nsys": "NVIDIA Nsight Systems version 2026.5.1.161-265138896106v0"
+  },
+  "launcher_status": "failed",
+  "launcher_error": "Trace evidence did not pass for trace-zero",
+  "recovered_analysis": {
+    "case": "trace-zero",
+    "original_status": "failed",
+    "original_error": "Trace evidence did not pass for trace-zero",
+    "original_analysis_returncode": 2,
+    "verification": "Independently reanalyzed the original SQLite and confirmed CE AllGather plus GPU copies on both ranks."
+  },
+  "config": {
+    "vocab_size": 1024,
+    "context_length": 128,
+    "d_model": 256,
+    "num_layers": 4,
+    "num_heads": 4,
+    "d_ff": 1024,
+    "rope_theta": 10000.0,
+    "global_batch": 4,
+    "dtype": "float32",
+    "activation_checkpointing": false,
+    "tf32": false,
+    "optimizer": "torch.optim.AdamW",
+    "adamw_lr": 0.001,
+    "adamw_foreach": false,
+    "adamw_fused": false,
+    "reshard_after_forward": {
+      "block": true,
+      "root": false
+    },
+    "parameters": 4720896,
+    "input_sha256": "74e82f03b6c2571e6dcffff42aa3905101e6d2e5cf8e3df0e61370b3515053ec"
+  },
+  "topology": {
+    "driver_version": "610.57.04",
+    "bidirectional_cuda_peer_access": [
+      true,
+      true
+    ],
+    "single_node_nccl_log_artifacts": [
+      "trace-default/worker.log",
+      "trace-symm/worker.log",
+      "trace-zero/worker.log"
+    ],
+    "active_nvlink_status_artifact": "nvlink-status.txt",
+    "nvlink_domain_confirmed": true,
+    "nvlink_evidence": [
+      {
+        "artifact": "p2p-nvlink.txt",
+        "gpu0_to_gpu1": "OK",
+        "gpu1_to_gpu0": "OK"
+      },
+      {
+        "artifact": "trace-default/worker.log",
+        "nccl_gpu_nvlink_paths": [
+          "modal:179:179 [0] NCCL INFO GPU/0-66000 :GPU/0-66000 (0/5000.0/LOC) GPU/0-76000 (2/721.8/NVL) NVS/0-0 (1/721.8/NVL) CPU/0-ffffffffffffff (1/12.0/PHB) NET/0-0 (3/1.2/PHB)",
+          "modal:179:179 [0] NCCL INFO GPU/0-76000 :GPU/0-66000 (2/721.8/NVL) GPU/0-76000 (0/5000.0/LOC) NVS/0-0 (1/721.8/NVL) CPU/0-ffffffffffffff (1/12.0/PHB) NET/0-0 (3/1.2/PHB)",
+          "modal:180:180 [1] NCCL INFO GPU/0-66000 :GPU/0-66000 (0/5000.0/LOC) GPU/0-76000 (2/721.8/NVL) NVS/0-0 (1/721.8/NVL) CPU/0-ffffffffffffff (1/12.0/PHB) NET/0-0 (3/1.2/PHB)",
+          "modal:180:180 [1] NCCL INFO GPU/0-76000 :GPU/0-66000 (2/721.8/NVL) GPU/0-76000 (0/5000.0/LOC) NVS/0-0 (1/721.8/NVL) CPU/0-ffffffffffffff (1/12.0/PHB) NET/0-0 (3/1.2/PHB)"
+        ]
+      },
+      {
+        "artifact": "trace-symm/worker.log",
+        "nccl_gpu_nvlink_paths": [
+          "modal:278:278 [0] NCCL INFO GPU/0-66000 :GPU/0-66000 (0/5000.0/LOC) GPU/0-76000 (2/721.8/NVL) NVS/0-0 (1/721.8/NVL) CPU/0-ffffffffffffff (1/12.0/PHB) NET/0-0 (3/1.2/PHB)",
+          "modal:278:278 [0] NCCL INFO GPU/0-76000 :GPU/0-66000 (2/721.8/NVL) GPU/0-76000 (0/5000.0/LOC) NVS/0-0 (1/721.8/NVL) CPU/0-ffffffffffffff (1/12.0/PHB) NET/0-0 (3/1.2/PHB)",
+          "modal:279:279 [1] NCCL INFO GPU/0-66000 :GPU/0-66000 (0/5000.0/LOC) GPU/0-76000 (2/721.8/NVL) NVS/0-0 (1/721.8/NVL) CPU/0-ffffffffffffff (1/12.0/PHB) NET/0-0 (3/1.2/PHB)",
+          "modal:279:279 [1] NCCL INFO GPU/0-76000 :GPU/0-66000 (2/721.8/NVL) GPU/0-76000 (0/5000.0/LOC) NVS/0-0 (1/721.8/NVL) CPU/0-ffffffffffffff (1/12.0/PHB) NET/0-0 (3/1.2/PHB)"
+        ]
+      },
+      {
+        "artifact": "trace-zero/worker.log",
+        "nccl_gpu_nvlink_paths": [
+          "modal:377:377 [0] NCCL INFO GPU/0-66000 :GPU/0-66000 (0/5000.0/LOC) GPU/0-76000 (2/721.8/NVL) NVS/0-0 (1/721.8/NVL) CPU/0-ffffffffffffff (1/12.0/PHB) NET/0-0 (3/1.2/PHB)",
+          "modal:377:377 [0] NCCL INFO GPU/0-76000 :GPU/0-66000 (2/721.8/NVL) GPU/0-76000 (0/5000.0/LOC) NVS/0-0 (1/721.8/NVL) CPU/0-ffffffffffffff (1/12.0/PHB) NET/0-0 (3/1.2/PHB)",
+          "modal:378:378 [1] NCCL INFO GPU/0-66000 :GPU/0-66000 (0/5000.0/LOC) GPU/0-76000 (2/721.8/NVL) NVS/0-0 (1/721.8/NVL) CPU/0-ffffffffffffff (1/12.0/PHB) NET/0-0 (3/1.2/PHB)",
+          "modal:378:378 [1] NCCL INFO GPU/0-76000 :GPU/0-66000 (2/721.8/NVL) GPU/0-76000 (0/5000.0/LOC) NVS/0-0 (1/721.8/NVL) CPU/0-ffffffffffffff (1/12.0/PHB) NET/0-0 (3/1.2/PHB)"
+        ]
+      }
+    ],
+    "scope": "Two local B300 ranks exercised same-node NCCL copy-engine all-gather with CUDA P2P. Pairwise NVLink is independently confirmed only by an NVLink-specific peer matrix or a GPU-to-GPU NVL path in NCCL logs. Active links alone do not identify the peer or measure NVLink traffic."
+  },
+  "parity": {
+    "default": {
+      "passed": true,
+      "rank_losses": [
+        7.12821102142334,
+        7.138154029846191
+      ],
+      "max_abs_loss_error": null,
+      "gradients": {
+        "tensors": 39,
+        "elements": 4720896,
+        "max_abs_error": null
+      },
+      "parameters": {
+        "tensors": 39,
+        "elements": 4720896,
+        "max_abs_error": null
+      }
+    },
+    "symm": {
+      "passed": true,
+      "rank_losses": [
+        7.12821102142334,
+        7.138154029846191
+      ],
+      "max_abs_loss_error": 0.0,
+      "gradients": {
+        "tensors": 39,
+        "elements": 4720896,
+        "max_abs_error": 0
+      },
+      "parameters": {
+        "tensors": 39,
+        "elements": 4720896,
+        "max_abs_error": 0
+      }
+    },
+    "zero": {
+      "passed": true,
+      "rank_losses": [
+        7.12821102142334,
+        7.138154029846191
+      ],
+      "max_abs_loss_error": 0.0,
+      "gradients": {
+        "tensors": 39,
+        "elements": 4720896,
+        "max_abs_error": 0
+      },
+      "parameters": {
+        "tensors": 39,
+        "elements": 4720896,
+        "max_abs_error": 0
+      }
+    }
+  },
+  "traces": {
+    "default": {
+      "copy_engine_confirmed_all_ranks": false,
+      "copy_engine_only_all_gathers": false,
+      "ranks": {
+        "0": {
+          "process_id": 281477979832320,
+          "devices": [
+            0
+          ],
+          "gather_routes": {
+            "sm_kernel": 9
+          },
+          "exposed_wait_ms": {
+            "forward": {
+              "count": 5,
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "backward": {
+              "count": 4,
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            }
+          }
+        },
+        "1": {
+          "process_id": 281477996609536,
+          "devices": [
+            1
+          ],
+          "gather_routes": {
+            "sm_kernel": 9
+          },
+          "exposed_wait_ms": {
+            "forward": {
+              "count": 5,
+              "median": 0.1182398796081543,
+              "min": 0.09308803081512451,
+              "max": 0.12463998794555664
+            },
+            "backward": {
+              "count": 4,
+              "median": 0.5043196678161621,
+              "min": 0.0,
+              "max": 0.7627201080322266
+            }
+          }
+        }
+      }
+    },
+    "symm": {
+      "copy_engine_confirmed_all_ranks": false,
+      "copy_engine_only_all_gathers": false,
+      "ranks": {
+        "0": {
+          "process_id": 281479640776704,
+          "devices": [
+            0
+          ],
+          "gather_routes": {
+            "sm_kernel": 9
+          },
+          "exposed_wait_ms": {
+            "forward": {
+              "count": 5,
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "backward": {
+              "count": 4,
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            }
+          }
+        },
+        "1": {
+          "process_id": 281479657553920,
+          "devices": [
+            1
+          ],
+          "gather_routes": {
+            "sm_kernel": 9
+          },
+          "exposed_wait_ms": {
+            "forward": {
+              "count": 5,
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "backward": {
+              "count": 4,
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            }
+          }
+        }
+      }
+    },
+    "zero": {
+      "copy_engine_confirmed_all_ranks": true,
+      "copy_engine_only_all_gathers": true,
+      "ranks": {
+        "0": {
+          "process_id": 281481301721088,
+          "devices": [
+            0
+          ],
+          "gather_routes": {
+            "copy_engine": 9
+          },
+          "exposed_wait_ms": {
+            "forward": {
+              "count": 5,
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "backward": {
+              "count": 4,
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            }
+          }
+        },
+        "1": {
+          "process_id": 281481318498304,
+          "devices": [
+            1
+          ],
+          "gather_routes": {
+            "copy_engine": 9
+          },
+          "exposed_wait_ms": {
+            "forward": {
+              "count": 5,
+              "median": 1.164480209350586,
+              "min": 1.0020484924316406,
+              "max": 2.9873600006103516
+            },
+            "backward": {
+              "count": 4,
+              "median": 0.0,
+              "min": 0.0,
+              "max": 0.22265625
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1669 @@
+{
+  "variants": {
+    "default": {
+      "copy_engine_confirmed_all_ranks": false,
+      "copy_engine_only_all_gathers": false,
+      "ranks": {
+        "0": {
+          "devices": [
+            0
+          ],
+          "gather_routes": {
+            "sm_kernel": 130
+          },
+          "unmatched_wait_records": 0,
+          "steps": [
+            {
+              "step": 0,
+              "profiled_duration_ms": 533.5417140000231,
+              "phases": {
+                "forward": {
+                  "route_counts": {
+                    "sm_kernel": 33
+                  },
+                  "layer_scopes": 33,
+                  "wait_markers": 33,
+                  "positive_wait_markers": 1,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.8466558456420898,
+                  "wait_union_ms": 0.8466558456420898,
+                  "native_wait_links": 97,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "root"
+                  ]
+                },
+                "backward": {
+                  "route_counts": {
+                    "sm_kernel": 32
+                  },
+                  "layer_scopes": 32,
+                  "wait_markers": 32,
+                  "positive_wait_markers": 0,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.0,
+                  "wait_union_ms": 0,
+                  "native_wait_links": 96,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31"
+                  ]
+                }
+              },
+              "all_phase_wait_union_ms": 0.8466558456420898
+            },
+            {
+              "step": 1,
+              "profiled_duration_ms": 534.2634060000364,
+              "phases": {
+                "forward": {
+                  "route_counts": {
+                    "sm_kernel": 33
+                  },
+                  "layer_scopes": 33,
+                  "wait_markers": 33,
+                  "positive_wait_markers": 2,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 1.9711041450500488,
+                  "wait_union_ms": 1.9711041450500488,
+                  "native_wait_links": 97,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "root"
+                  ]
+                },
+                "backward": {
+                  "route_counts": {
+                    "sm_kernel": 32
+                  },
+                  "layer_scopes": 32,
+                  "wait_markers": 32,
+                  "positive_wait_markers": 0,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.0,
+                  "wait_union_ms": 0,
+                  "native_wait_links": 96,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31"
+                  ]
+                }
+              },
+              "all_phase_wait_union_ms": 1.9711041450500488
+            }
+          ]
+        },
+        "1": {
+          "devices": [
+            1
+          ],
+          "gather_routes": {
+            "sm_kernel": 130
+          },
+          "unmatched_wait_records": 0,
+          "steps": [
+            {
+              "step": 0,
+              "profiled_duration_ms": 536.4355469999964,
+              "phases": {
+                "forward": {
+                  "route_counts": {
+                    "sm_kernel": 33
+                  },
+                  "layer_scopes": 33,
+                  "wait_markers": 33,
+                  "positive_wait_markers": 1,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.28380775451660156,
+                  "wait_union_ms": 0.28380775451660156,
+                  "native_wait_links": 97,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "root"
+                  ]
+                },
+                "backward": {
+                  "route_counts": {
+                    "sm_kernel": 32
+                  },
+                  "layer_scopes": 32,
+                  "wait_markers": 32,
+                  "positive_wait_markers": 0,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.0,
+                  "wait_union_ms": 0,
+                  "native_wait_links": 96,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31"
+                  ]
+                }
+              },
+              "all_phase_wait_union_ms": 0.28380775451660156
+            },
+            {
+              "step": 1,
+              "profiled_duration_ms": 534.2180910000138,
+              "phases": {
+                "forward": {
+                  "route_counts": {
+                    "sm_kernel": 33
+                  },
+                  "layer_scopes": 33,
+                  "wait_markers": 33,
+                  "positive_wait_markers": 2,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.37487971782684326,
+                  "wait_union_ms": 0.37487971782684326,
+                  "native_wait_links": 97,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "root"
+                  ]
+                },
+                "backward": {
+                  "route_counts": {
+                    "sm_kernel": 32
+                  },
+                  "layer_scopes": 32,
+                  "wait_markers": 32,
+                  "positive_wait_markers": 0,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.0,
+                  "wait_union_ms": 0,
+                  "native_wait_links": 96,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31"
+                  ]
+                }
+              },
+              "all_phase_wait_union_ms": 0.37487971782684326
+            }
+          ]
+        }
+      },
+      "slowest_profiled": [
+        {
+          "step": 0,
+          "ranks": [
+            1
+          ],
+          "profiled_duration_ms": 536.4355469999964
+        },
+        {
+          "step": 1,
+          "ranks": [
+            0
+          ],
+          "profiled_duration_ms": 534.2634060000364
+        }
+      ]
+    },
+    "symm": {
+      "copy_engine_confirmed_all_ranks": true,
+      "copy_engine_only_all_gathers": true,
+      "ranks": {
+        "0": {
+          "devices": [
+            0
+          ],
+          "gather_routes": {
+            "copy_engine": 130
+          },
+          "unmatched_wait_records": 0,
+          "steps": [
+            {
+              "step": 0,
+              "profiled_duration_ms": 527.4934280000139,
+              "phases": {
+                "forward": {
+                  "route_counts": {
+                    "copy_engine": 33
+                  },
+                  "layer_scopes": 33,
+                  "wait_markers": 33,
+                  "positive_wait_markers": 1,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.20265603065490723,
+                  "wait_union_ms": 0.20265603065490723,
+                  "native_wait_links": 97,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "root"
+                  ]
+                },
+                "backward": {
+                  "route_counts": {
+                    "copy_engine": 32
+                  },
+                  "layer_scopes": 32,
+                  "wait_markers": 32,
+                  "positive_wait_markers": 0,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.0,
+                  "wait_union_ms": 0,
+                  "native_wait_links": 96,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31"
+                  ]
+                }
+              },
+              "all_phase_wait_union_ms": 0.20265603065490723
+            },
+            {
+              "step": 1,
+              "profiled_duration_ms": 526.421632999984,
+              "phases": {
+                "forward": {
+                  "route_counts": {
+                    "copy_engine": 33
+                  },
+                  "layer_scopes": 33,
+                  "wait_markers": 33,
+                  "positive_wait_markers": 1,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.17251205444335938,
+                  "wait_union_ms": 0.17251205444335938,
+                  "native_wait_links": 97,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "root"
+                  ]
+                },
+                "backward": {
+                  "route_counts": {
+                    "copy_engine": 32
+                  },
+                  "layer_scopes": 32,
+                  "wait_markers": 32,
+                  "positive_wait_markers": 0,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.0,
+                  "wait_union_ms": 0,
+                  "native_wait_links": 96,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31"
+                  ]
+                }
+              },
+              "all_phase_wait_union_ms": 0.17251205444335938
+            }
+          ]
+        },
+        "1": {
+          "devices": [
+            1
+          ],
+          "gather_routes": {
+            "copy_engine": 130
+          },
+          "unmatched_wait_records": 0,
+          "steps": [
+            {
+              "step": 0,
+              "profiled_duration_ms": 517.7319960000091,
+              "phases": {
+                "forward": {
+                  "route_counts": {
+                    "copy_engine": 33
+                  },
+                  "layer_scopes": 33,
+                  "wait_markers": 33,
+                  "positive_wait_markers": 1,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.16329598426818848,
+                  "wait_union_ms": 0.16329598426818848,
+                  "native_wait_links": 97,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "root"
+                  ]
+                },
+                "backward": {
+                  "route_counts": {
+                    "copy_engine": 32
+                  },
+                  "layer_scopes": 32,
+                  "wait_markers": 32,
+                  "positive_wait_markers": 0,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.0,
+                  "wait_union_ms": 0,
+                  "native_wait_links": 96,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31"
+                  ]
+                }
+              },
+              "all_phase_wait_union_ms": 0.16329598426818848
+            },
+            {
+              "step": 1,
+              "profiled_duration_ms": 522.0667340000205,
+              "phases": {
+                "forward": {
+                  "route_counts": {
+                    "copy_engine": 33
+                  },
+                  "layer_scopes": 33,
+                  "wait_markers": 33,
+                  "positive_wait_markers": 2,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 3.4374717473983765,
+                  "wait_union_ms": 3.4374717473983765,
+                  "native_wait_links": 97,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "root"
+                  ]
+                },
+                "backward": {
+                  "route_counts": {
+                    "copy_engine": 32
+                  },
+                  "layer_scopes": 32,
+                  "wait_markers": 32,
+                  "positive_wait_markers": 0,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.0,
+                  "wait_union_ms": 0,
+                  "native_wait_links": 96,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31"
+                  ]
+                }
+              },
+              "all_phase_wait_union_ms": 3.4374717473983765
+            }
+          ]
+        }
+      },
+      "slowest_profiled": [
+        {
+          "step": 0,
+          "ranks": [
+            0
+          ],
+          "profiled_duration_ms": 527.4934280000139
+        },
+        {
+          "step": 1,
+          "ranks": [
+            0
+          ],
+          "profiled_duration_ms": 526.421632999984
+        }
+      ]
+    },
+    "zero": {
+      "copy_engine_confirmed_all_ranks": true,
+      "copy_engine_only_all_gathers": true,
+      "ranks": {
+        "0": {
+          "devices": [
+            0
+          ],
+          "gather_routes": {
+            "copy_engine": 130
+          },
+          "unmatched_wait_records": 0,
+          "steps": [
+            {
+              "step": 0,
+              "profiled_duration_ms": 523.3997020000061,
+              "phases": {
+                "forward": {
+                  "route_counts": {
+                    "copy_engine": 33
+                  },
+                  "layer_scopes": 33,
+                  "wait_markers": 33,
+                  "positive_wait_markers": 1,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.16704010963439941,
+                  "wait_union_ms": 0.16704010963439941,
+                  "native_wait_links": 97,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "root"
+                  ]
+                },
+                "backward": {
+                  "route_counts": {
+                    "copy_engine": 32
+                  },
+                  "layer_scopes": 32,
+                  "wait_markers": 32,
+                  "positive_wait_markers": 0,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.0,
+                  "wait_union_ms": 0,
+                  "native_wait_links": 96,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31"
+                  ]
+                }
+              },
+              "all_phase_wait_union_ms": 0.16704010963439941
+            },
+            {
+              "step": 1,
+              "profiled_duration_ms": 518.9587940000138,
+              "phases": {
+                "forward": {
+                  "route_counts": {
+                    "copy_engine": 33
+                  },
+                  "layer_scopes": 33,
+                  "wait_markers": 33,
+                  "positive_wait_markers": 2,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 2.6357438564300537,
+                  "wait_union_ms": 2.6357438564300537,
+                  "native_wait_links": 97,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "root"
+                  ]
+                },
+                "backward": {
+                  "route_counts": {
+                    "copy_engine": 32
+                  },
+                  "layer_scopes": 32,
+                  "wait_markers": 32,
+                  "positive_wait_markers": 0,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.0,
+                  "wait_union_ms": 0,
+                  "native_wait_links": 96,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31"
+                  ]
+                }
+              },
+              "all_phase_wait_union_ms": 2.6357438564300537
+            }
+          ]
+        },
+        "1": {
+          "devices": [
+            1
+          ],
+          "gather_routes": {
+            "copy_engine": 130
+          },
+          "unmatched_wait_records": 0,
+          "steps": [
+            {
+              "step": 0,
+              "profiled_duration_ms": 518.8204180000184,
+              "phases": {
+                "forward": {
+                  "route_counts": {
+                    "copy_engine": 33
+                  },
+                  "layer_scopes": 33,
+                  "wait_markers": 33,
+                  "positive_wait_markers": 2,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.20991992950439453,
+                  "wait_union_ms": 0.20991992950439453,
+                  "native_wait_links": 97,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "root"
+                  ]
+                },
+                "backward": {
+                  "route_counts": {
+                    "copy_engine": 32
+                  },
+                  "layer_scopes": 32,
+                  "wait_markers": 32,
+                  "positive_wait_markers": 0,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.0,
+                  "wait_union_ms": 0,
+                  "native_wait_links": 96,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31"
+                  ]
+                }
+              },
+              "all_phase_wait_union_ms": 0.20991992950439453
+            },
+            {
+              "step": 1,
+              "profiled_duration_ms": 519.5788759999687,
+              "phases": {
+                "forward": {
+                  "route_counts": {
+                    "copy_engine": 33
+                  },
+                  "layer_scopes": 33,
+                  "wait_markers": 33,
+                  "positive_wait_markers": 2,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.20406389236450195,
+                  "wait_union_ms": 0.20406389236450195,
+                  "native_wait_links": 97,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "root"
+                  ]
+                },
+                "backward": {
+                  "route_counts": {
+                    "copy_engine": 32
+                  },
+                  "layer_scopes": 32,
+                  "wait_markers": 32,
+                  "positive_wait_markers": 0,
+                  "unmeasured_layer_scopes": 0,
+                  "wait_sum_ms": 0.0,
+                  "wait_union_ms": 0,
+                  "native_wait_links": 96,
+                  "measured_layers": [
+                    "00",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31"
+                  ]
+                }
+              },
+              "all_phase_wait_union_ms": 0.20406389236450195
+            }
+          ]
+        }
+      },
+      "slowest_profiled": [
+        {
+          "step": 0,
+          "ranks": [
+            0
+          ],
+          "profiled_duration_ms": 523.3997020000061
+        },
+        {
+          "step": 1,
+          "ranks": [
+            1
+          ],
+          "profiled_duration_ms": 519.5788759999687
+        }
+      ]
+    }
+  },
+  "comparisons": {
+    "symm_vs_default": {
+      "gemm_matching": "rank, step, layer, projection and launch order; require same kernel and launch geometry",
+      "all_matched_gemms": {
+        "matched": 896,
+        "baseline_median_ns": 352612.0,
+        "candidate_median_ns": 273027.0,
+        "paired_delta_median_ns": -288.0
+      },
+      "by_observed_overlap": {
+        "both": {
+          "matched": 172,
+          "baseline_median_ns": 341204.5,
+          "candidate_median_ns": 272291.0,
+          "paired_delta_median_ns": -68049.5
+        },
+        "baseline_only": {
+          "matched": 80,
+          "baseline_median_ns": 343940.0,
+          "candidate_median_ns": 271859.5,
+          "paired_delta_median_ns": -70017.0
+        },
+        "candidate_only": {
+          "matched": 40,
+          "baseline_median_ns": 271604.0,
+          "candidate_median_ns": 272675.0,
+          "paired_delta_median_ns": 992.0
+        },
+        "neither": {
+          "matched": 604,
+          "baseline_median_ns": 979755.5,
+          "candidate_median_ns": 979883.0,
+          "paired_delta_median_ns": 64.0
+        }
+      },
+      "unmatched_baseline": 0,
+      "unmatched_candidate": 0,
+      "kernel_mismatches": 0,
+      "wait_delta_rows": [
+        {
+          "rank": "0",
+          "step": 0,
+          "phase": "forward",
+          "matched_wait_layers": 33,
+          "delta_union_ms": -0.6439998149871826
+        },
+        {
+          "rank": "0",
+          "step": 0,
+          "phase": "backward",
+          "matched_wait_layers": 32,
+          "delta_union_ms": 0
+        },
+        {
+          "rank": "0",
+          "step": 1,
+          "phase": "forward",
+          "matched_wait_layers": 33,
+          "delta_union_ms": -1.7985920906066895
+        },
+        {
+          "rank": "0",
+          "step": 1,
+          "phase": "backward",
+          "matched_wait_layers": 32,
+          "delta_union_ms": 0
+        },
+        {
+          "rank": "1",
+          "step": 0,
+          "phase": "forward",
+          "matched_wait_layers": 33,
+          "delta_union_ms": -0.12051177024841309
+        },
+        {
+          "rank": "1",
+          "step": 0,
+          "phase": "backward",
+          "matched_wait_layers": 32,
+          "delta_union_ms": 0
+        },
+        {
+          "rank": "1",
+          "step": 1,
+          "phase": "forward",
+          "matched_wait_layers": 33,
+          "delta_union_ms": 3.062592029571533
+        },
+        {
+          "rank": "1",
+          "step": 1,
+          "phase": "backward",
+          "matched_wait_layers": 32,
+          "delta_union_ms": 0
+        }
+      ]
+    },
+    "zero_vs_symm": {
+      "gemm_matching": "rank, step, layer, projection and launch order; require same kernel and launch geometry",
+      "all_matched_gemms": {
+        "matched": 896,
+        "baseline_median_ns": 273027.0,
+        "candidate_median_ns": 272915.0,
+        "paired_delta_median_ns": -63.0
+      },
+      "by_observed_overlap": {
+        "both": {
+          "matched": 153,
+          "baseline_median_ns": 272547,
+          "candidate_median_ns": 272451,
+          "paired_delta_median_ns": -161
+        },
+        "baseline_only": {
+          "matched": 59,
+          "baseline_median_ns": 272131,
+          "candidate_median_ns": 271555,
+          "paired_delta_median_ns": -544
+        },
+        "candidate_only": {
+          "matched": 67,
+          "baseline_median_ns": 271716,
+          "candidate_median_ns": 272771,
+          "paired_delta_median_ns": 1120
+        },
+        "neither": {
+          "matched": 617,
+          "baseline_median_ns": 979883,
+          "candidate_median_ns": 979787,
+          "paired_delta_median_ns": -64
+        }
+      },
+      "unmatched_baseline": 0,
+      "unmatched_candidate": 0,
+      "kernel_mismatches": 0,
+      "wait_delta_rows": [
+        {
+          "rank": "0",
+          "step": 0,
+          "phase": "forward",
+          "matched_wait_layers": 33,
+          "delta_union_ms": -0.03561592102050781
+        },
+        {
+          "rank": "0",
+          "step": 0,
+          "phase": "backward",
+          "matched_wait_layers": 32,
+          "delta_union_ms": 0
+        },
+        {
+          "rank": "0",
+          "step": 1,
+          "phase": "forward",
+          "matched_wait_layers": 33,
+          "delta_union_ms": 2.4632318019866943
+        },
+        {
+          "rank": "0",
+          "step": 1,
+          "phase": "backward",
+          "matched_wait_layers": 32,
+          "delta_union_ms": 0
+        },
+        {
+          "rank": "1",
+          "step": 0,
+          "phase": "forward",
+          "matched_wait_layers": 33,
+          "delta_union_ms": 0.046623945236206055
+        },
+        {
+          "rank": "1",
+          "step": 0,
+          "phase": "backward",
+          "matched_wait_layers": 32,
+          "delta_union_ms": 0
+        },
+        {
+          "rank": "1",
+          "step": 1,
+          "phase": "forward",
+          "matched_wait_layers": 33,
+          "delta_union_ms": -3.2334078550338745
+        },
+        {
+          "rank": "1",
+          "step": 1,
+          "phase": "backward",
+          "matched_wait_layers": 32,
+          "delta_union_ms": 0
+        }
+      ]
+    },
+    "zero_vs_default": {
+      "gemm_matching": "rank, step, layer, projection and launch order; require same kernel and launch geometry",
+      "all_matched_gemms": {
+        "matched": 896,
+        "baseline_median_ns": 352612.0,
+        "candidate_median_ns": 272915.0,
+        "paired_delta_median_ns": -385.0
+      },
+      "by_observed_overlap": {
+        "both": {
+          "matched": 205,
+          "baseline_median_ns": 341412,
+          "candidate_median_ns": 272675,
+          "paired_delta_median_ns": -68321
+        },
+        "baseline_only": {
+          "matched": 47,
+          "baseline_median_ns": 355717,
+          "candidate_median_ns": 271779,
+          "paired_delta_median_ns": -77536
+        },
+        "candidate_only": {
+          "matched": 15,
+          "baseline_median_ns": 272132,
+          "candidate_median_ns": 272323,
+          "paired_delta_median_ns": 128
+        },
+        "neither": {
+          "matched": 629,
+          "baseline_median_ns": 979693,
+          "candidate_median_ns": 979692,
+          "paired_delta_median_ns": -32
+        }
+      },
+      "unmatched_baseline": 0,
+      "unmatched_candidate": 0,
+      "kernel_mismatches": 0,
+      "wait_delta_rows": [
+        {
+          "rank": "0",
+          "step": 0,
+          "phase": "forward",
+          "matched_wait_layers": 33,
+          "delta_union_ms": -0.6796157360076904
+        },
+        {
+          "rank": "0",
+          "step": 0,
+          "phase": "backward",
+          "matched_wait_layers": 32,
+          "delta_union_ms": 0
+        },
+        {
+          "rank": "0",
+          "step": 1,
+          "phase": "forward",
+          "matched_wait_layers": 33,
+          "delta_union_ms": 0.6646397113800049
+        },
+        {
+          "rank": "0",
+          "step": 1,
+          "phase": "backward",
+          "matched_wait_layers": 32,
+          "delta_union_ms": 0
+        },
+        {
+          "rank": "1",
+          "step": 0,
+          "phase": "forward",
+          "matched_wait_layers": 33,
+          "delta_union_ms": -0.07388782501220703
+        },
+        {
+          "rank": "1",
+          "step": 0,
+          "phase": "backward",
+          "matched_wait_layers": 32,
+          "delta_union_ms": 0
+        },
+        {
+          "rank": "1",
+          "step": 1,
+          "phase": "forward",
+          "matched_wait_layers": 33,
+          "delta_union_ms": -0.1708158254623413
+        },
+        {
+          "rank": "1",
+          "step": 1,
+          "phase": "backward",
+          "matched_wait_layers": 32,
+          "delta_union_ms": 0
+        }
+      ]
+    }
+  },
+  "wait_diagnostic": {
+    "samples": [
+      {
+        "rank": 0,
+        "step": 0,
+        "phase": "forward",
+        "measured_blocks": 31,
+        "exposed_wait_ms": 0.0
+      },
+      {
+        "rank": 0,
+        "step": 0,
+        "phase": "backward",
+        "measured_blocks": 32,
+        "exposed_wait_ms": 0.0
+      },
+      {
+        "rank": 1,
+        "step": 1,
+        "phase": "forward",
+        "measured_blocks": 31,
+        "exposed_wait_ms": 0.0
+      },
+      {
+        "rank": 1,
+        "step": 1,
+        "phase": "backward",
+        "measured_blocks": 32,
+        "exposed_wait_ms": 0.0
+      }
+    ],
+    "median_wait_ms": {
+      "forward": 0.0,
+      "backward": 0.0
+    },
+    "threshold_ms": 1.0,
+    "followup": null
+  },
+  "notes": [
+    "All timing here is profiled. Use the separately collected unprofiled complete steps for performance claims.",
+    "Exposed wait starts when the compute-ready marker reaches the GPU. Waits exclude earlier CPU issuance delay and later parameter copy-out. Per-phase union deduplicates overlapping marker intervals. A missing marker is unmeasured.",
+    "GEMM overlap counts use proven all-gather activity on the same rank. Unresolved routes may hide overlaps. Matched profiled kernel duration differences do not identify resource contention without further controls."
+  ]
+}
